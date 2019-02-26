@@ -1,0 +1,116 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	height: auto; /* Set the fixed height of the footer here */
+	line-height: 45px; /* Vertically center the text there */
+	color: #eeeeee;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.alert {
+	color: red;
+}
+
+.fill {
+	background-color: white;
+}
+
+.test {
+	margin-top: 0 0;
+	background: url("img/fingerprint1.jpg");
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: fixed;
+}
+
+.starter-template h1 {
+	font-family: 'Baloo Thambi', cursive;
+}
+
+.starter-template {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+    text-align: center;
+}
+
+#confirmBox
+{
+    display: none;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#confirmBox button {
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    padding: 2px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+}
+#confirmBox button:hover
+{
+    background-color: #ddd;
+}
+#confirmBox .message
+{
+    text-align: left;
+    margin-bottom: 8px;
+}
