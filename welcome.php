@@ -29,24 +29,37 @@
 	
 	require_once "../conf_db/config.php";
 ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="countdown.js"></script>
-	<script type="text/javascript" src="test.js"></script>
-	<link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
 </head>
 <body>
+
+      <nav class="navbar navbar-expand-lg bg-dark">
+		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<img src="img/hamb.png" height="15" width="20">
+			</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<!--
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		-->
+		</div>
+	  </nav>
+
 <div class="container color_white">
 <div id="cl"></div>
     <div class="page-header">
@@ -68,6 +81,7 @@
     </p>
 	
 	<div id="time"></div>
+
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -128,13 +142,17 @@
     </li>
   </ul>
 </nav>
+
+
 </div>
-	<nav class=" navbar-default">
-		<div class=" footer text-center">
-			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
+	<nav class="navbar-fixed-bottom">
+		<div class="footer text-center bg-dark">
+			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
 		</div>
 	</nav>
-
-
+	
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+  	<script type="text/javascript" src="countdown.js"></script>
+	<script type="text/javascript" src="test.js"></script>
 </body>
 </html>

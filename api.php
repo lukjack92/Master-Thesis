@@ -70,17 +70,18 @@ Check and try again.</div>";
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
-	<link href="test.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="fontello/css/fontello.css">
     <title>API - Log in</title>
   </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="#"> <i class="fas fa-home"></i> Home Page</a>
+		<a class="navbar-brand" href="index.php"> <i class="fas fa-home"></i> Home Page</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<!-- <span class="navbar-toggler-icon"></span> -->
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
+			<!--
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
@@ -88,6 +89,7 @@ Check and try again.</div>";
 				</li>
 			</ul>
 		</div>
+		-->
 	</nav>
 
 	<div class="bg-picture"> </div>

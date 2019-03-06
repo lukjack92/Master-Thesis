@@ -1,45 +1,7 @@
-body {
-	background-color: #363EA0 !important;
-	z-index: 1;
-	
-}
 
-nav a{
-	color: #eeeeee;
-}
 
-nav a:hover{
-	color: #dddddd;	
-}
 
-nav > button {
-	background-color: #eeeeee;
-}
 
-.container img {
-	max-width: 100%;
-	height: auto;
-	width: auto\9;
-}
-
-.container .center {
-	position: relative;
-	margin-top: 12%;
-  
-}
-
-.color-white {
-	background-color: white;	
-	border-radius: 25px;	
-	box-shadow: 15px 15px 20px; 
-}
-
-.alert {
-
-	background-color: red;
-	border-radius: 0px;
-	color: white;
-}
 
 .bg-form {
 	margin: 80px;

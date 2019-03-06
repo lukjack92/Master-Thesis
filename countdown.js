@@ -1,6 +1,18 @@
 "use strict";
 $(document).ready(function() {
 	
+	//Session time; 
+	var time = 10;
+	var test = document.getElementById('cl');
+	let drawIntrernal;
+	
+	$("html").mouseup(function() {
+		test.append(" Clicked");
+		console.log("Time 100 and clicked.");
+		time = 11;
+		
+	});
+	
 	//Function display, whether extend session or not.
 	function doConfirm(msg, yesFn, noFn) {
 		var confirmBox = $("#confirmBox");
@@ -15,14 +27,12 @@ $(document).ready(function() {
 			confirmBox.show();
 	}
 
-	//Session time; 
-	var time = 10;
-	
+
 	//Display what is time to expired session.
 	document.getElementById('time').innerHTML = "Time session " + time + "s";
 	
 	//Interval every 1 second (1000 millisecond).
-	setInterval(function() {
+	drawIntrernal = setInterval(function() {
 		var distance = --time;
 		document.getElementById('time').innerHTML = "Time session " + distance + "s";
 		
@@ -32,8 +42,10 @@ $(document).ready(function() {
 
 			doConfirm("Expired, restore session?", function yes()
 			{
-				alert("Restore");
-				window.location.href = "welcome.php";
+				//alert("Restore");
+				//window.location.href = "welcome.php";
+				window.location.href;
+				//location.reload();
 			}, function no() {
 				window.location.href = "logout.php";
 			});
