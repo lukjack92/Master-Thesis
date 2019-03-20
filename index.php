@@ -66,7 +66,7 @@ else {
 		while($row=mysqli_fetch_assoc($result)) {
 			$code = $row['code'];
 		}
-	}
+	} else echo "Baza padla!!";
 
 	if($_GET['code'] === $code) {
 

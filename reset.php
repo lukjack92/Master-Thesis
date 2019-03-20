@@ -23,32 +23,48 @@
 	
 	require_once "../conf_db/config.php";
 	
-	$password_err = $no_matched = $confirm_password_err = $success = "";
-	
+	$password_err = $no_matched = $confirm_password_err = $success = $old_password_err = "";
+
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		
 		// Validate password and confirm_password
-		if(empty($_POST["password"]))
-			$password_err = "<span class='alert'>Please enter a password.</span>";
-		elseif(strlen($_POST['password']) < 6) {
-			$password_err = "<span class='alert'>Password must have least 6 characters.</span>";
+		if(empty($_POST["old_password"])) {
+			$password_err = "<span class='alert'>Please enter a old password.</span>";
+		} else {
+
+			$sql = 'select * from users where login="'.$_SESSION["login"].'"';
+			$result = mysqli_query($link,$sql);
+			
+			if(mysqli_num_rows($result) > 0) {
+				// Output data of each rows
+				while($row = mysqli_fetch_assoc($result)) {
+					if(password_verify($_POST['old_password'], $row['password'])) { 
+						if(empty($_POST["password"])) {
+							$password_err = "<center class='alert_pass'>Please enter a password.</center>";
+						}elseif(strlen($_POST['password']) < 6) {
+							$password_err = "<center class='alert_pass'>Password must have least 6 characters.</center>";
+						}elseif(empty($_POST["confirm_password"])) {
+							$confirm_password_err = "<ceter class='alert_pass'>Please enter a confirm password.</center>";
+						}elseif($_POST["password"] === $_POST["confirm_password"]) {
+							//echo "Add to database";
+							$new_pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+							$query = 'update users set password = "'.$new_pass.'" where login="'.$_SESSION["login"].'"';
+							@mysqli_query($link, $query);
+							
+							$success = '<center class="alert alert-success">The password has been reset.</center>';
+							
+						} else { 
+							$success = '<center class="alert alert-danger">The password is no matched.</center>';
+						}	
+					} else {
+						$success = '<center class="alert alert-danger">Your old password isn&#39t correct!</center>';
+					}
+				}
+			}
 		}
-		if(empty($_POST["confirm_password"]))
-			$confirm_password_err = "<span class='alert'>Please enter a confirm password.</span>";
-		elseif($_POST["password"] === $_POST["confirm_password"])
-		{
-			//echo "Add to database";
-			
-			$new_pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-			$query = 'update users set password = "'.$new_pass.'" where login="'.$_SESSION["login"].'"';
-			@mysqli_query($link, $query);
-			
-			$success = '<div class="alert alert-success" role="alert"><center>The password has been reset.</center></div>';
-			
-		} else { $no_matched = '<span class="alert"><div class= "alert alert-danger" role="alert"><center>The password is no matched.</center></div></span>';}
 	}
 	
 	$_SESSION['LAST_ACTIVITY'] = $time;
-	
 ?>
 
 <!DOCTYPE html>
@@ -113,11 +129,16 @@
         <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
 	
-	 <div class=" col-md-offset-4 col-md-4">
+	 <div class="col-md-6 mx-auto bg-form-reset">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group has-feedback <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+			<div class="form-group has-feedback <?php echo (!empty($old_password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" autofocus required> 
+                <input type="password" name="old_password" placehol class="form-control" autofocus required> 
+                <span class="help-block"><?php echo $old_password_err; ?></span>
+            </div>
+			<div class="form-group has-feedback <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>New Password</label>
+                <input type="password" name="password" class="form-control" required> 
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group has-feedback <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
@@ -125,7 +146,6 @@
                 <input type="password" name="confirm_password" class="form-control" required>
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
-				<span class="help-block"><?php echo $no_matched; ?></span>
 				<span class="help-block"><?php echo $success; ?></span>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
@@ -133,15 +153,16 @@
         </form>
     </div>    
 	
+</div>	
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
 		</div>
 	</nav>
 	
-  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   	<script type="text/javascript" src="countdown.js"></script>
 	<script type="text/javascript" src="test.js"></script>
-</div>
+
 </body>
 </html>

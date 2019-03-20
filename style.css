@@ -3,12 +3,18 @@ body {
 	z-index: 1;
 }
 
-.alert {
+.alert_pass {
 	background-color: red;
 	border-radius: 0px;
 	color: white;
+	text-align: center;
 }
 
+.alert_reset {
+	background-color: green;
+	border-radius: 0px;
+	color: black;
+}
 
 nav a{
 	color: #eeeeee;
@@ -87,6 +93,15 @@ nav > button {
 	padding-bottom: 10px;
 }
 
+.bg-form-reset {
+	font-weight: bold;
+	text-align: left;
+	margin: 60px;
+	padding: 20px;
+	border: solid 1px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
 .bg-form {
 	margin: 80px;
 	padding: 40px;
@@ -99,6 +114,11 @@ nav > button {
 
 .container h1 {
 	font-family: 'Baloo Thambi', cursive;
+}
+
+.center_form {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .bg-form button {

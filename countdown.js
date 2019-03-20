@@ -4,12 +4,13 @@ $(document).ready(function() {
 	//Session time; 
 	var time = 10;
 	var test = document.getElementById('cl');
+	var label1 = document.getElementById('label1');
 	let drawIntrernal;
 	
 	$("html").mouseup(function() {
 		test.append(" Clicked");
 		console.log("Time 100 and clicked.");
-		time = 11;
+		time = 10;
 		
 	});
 	
@@ -33,7 +34,7 @@ $(document).ready(function() {
 	
 	//Interval every 1 second (1000 millisecond).
 	drawIntrernal = setInterval(function() {
-		var distance = --time;
+		var distance = time--;
 		document.getElementById('time').innerHTML = "Time session " + distance + "s";
 		
 		if(distance < 0) {
@@ -44,7 +45,9 @@ $(document).ready(function() {
 			{
 				//alert("Restore");
 				//window.location.href = "welcome.php";
-				window.location.href;
+				//console.log(window.location.href);
+				//window.location.href;]
+				location.reload();
 				//location.reload();
 			}, function no() {
 				window.location.href = "logout.php";
@@ -52,4 +55,14 @@ $(document).ready(function() {
 		}
 		
 	}, 1000);
+	
+	$('#checkBoxPer').change(function() {
+		if(this.checked != true){
+			this.value = "user"
+			label1.innerHTML = "user permission"
+		} else { 
+			this.value = "admin"
+			label1.innerHTML = "admin permission"
+		}
+	});  
 }); 

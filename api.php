@@ -3,7 +3,6 @@
 	// Initialize the session
 	session_start();
 	
-	
 	// Checking if the user is already logged in, if yes then redirect him to welcome page
 	if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
 		header("Location: welcome.php");
@@ -46,13 +45,13 @@
 						exit;
 						
 					} else {
-						$not_exist_err = "<div class='alert'>That password combination is not correct.
+						$not_exist_err = "<div class='alert alert_pass'>That password combination is not correct.
 Check and try again. </div>";
 					}
 				}
 			} else {
 					
-				$not_exist_err = "<div class='alert'>That username <b>" . $_POST['login'] . "</b> combination is not correct.
+				$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> combination is not correct.
 Check and try again.</div>";
 			}
 		}

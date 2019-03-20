@@ -62,89 +62,40 @@
 
 <div class="container color_white">
 <div id="cl"></div>
-    <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["login"]); ?></b>. Welcome to our site.</h1>
-		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>
-		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
-    </div>
+  
 	<div id="time"></div>
-
-	<div id="confirmBox">
+		<div id="confirmBox">
 		<div class="message"></div>
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
-
-    <p>
-        <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
-		<a href="user.php" class="btn btn-primary">Add new user Admin</a>
-		<a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
 	
-	<div id="time"></div>
-
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>#</th>
-				<th>FirstName</th>
-				<th>LastName</th>
-				<th>Company</th>
-				<th>Address</th>
-				<th>City</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-	
-			<?php 
-				$sql = 'select * from us_users';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-		
-				if(mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-					while($row = mysqli_fetch_assoc($result)) {
-			?>
-					<tr>
-						<td><?php echo ++$id ?></td>
-						<td><?php echo $row['first_name'] ?></td>
-						<td><?php echo $row['last_name'] ?></td>
-						<td><?php echo $row['company_name'] ?></td>
-						<td><?php echo $row['address'] ?></td>
-						<td><?php echo $row['city'] ?></td>
-						<td> <button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button></td>
-					</tr>
-			<?php	
-					}
-				} else {		
-					echo "No data.";
-				}
-			?>
-
-		</tbody>
-	</table> <!--
-	<nav aria-label="Page navigation">
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
--->
-
+	<label>
+	<form>
+		<div class="form-group ">
+			<label>New user</label>
+			<input type="email" class="form-control" id="inputEmail1" placeholder="Login" autofocus required>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control" id="inputPassword1" placeholder="Password" required>
+		</div>
+			<div class="form-group">
+			<label>FirstName</label>
+			<input type="password" class="form-control" id="inputFirstName" placeholder="FirstName" required>
+		</div>
+		<div class="form-group">
+			<label>LastName</label>
+			<input type="password" class="form-control" id="inputLastName" placeholder="LastName" required>
+		</div>
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="checkbox" id="checkBoxPer" value="user"></input>
+			<label class="form-check-label" for="inlineCheckbox1" id="label1">user permission</label>
+		</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+			<a href="welcome.php" class="btn btn-primary">Back</a>
+	</form>
+	</label>
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
