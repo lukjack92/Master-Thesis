@@ -21,7 +21,7 @@
 		exit;
 	}
 	
-	require_once "../conf_db/config.php";
+	require_once "conf_db/config.php";
 	
 	$password_err = $no_matched = $confirm_password_err = $success = $old_password_err = "";
 
@@ -47,7 +47,10 @@
 							$confirm_password_err = "<ceter class='alert_pass'>Please enter a confirm password.</center>";
 						}elseif($_POST["password"] === $_POST["confirm_password"]) {
 							//echo "Add to database";
-							$new_pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+							
+							$pass = htmlentities($_POST['password'],ENT_QUOTES,"UTF-8");
+
+							$new_pass = password_hash($pass, PASSWORD_DEFAULT);
 							$query = 'update users set password = "'.$new_pass.'" where login="'.$_SESSION["login"].'"';
 							@mysqli_query($link, $query);
 							
@@ -132,7 +135,7 @@
 	 <div class="col-md-6 mx-auto bg-form-reset">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 			<div class="form-group has-feedback <?php echo (!empty($old_password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
+                <label>Current Password</label>
                 <input type="password" name="old_password" placehol class="form-control" autofocus required> 
                 <span class="help-block"><?php echo $old_password_err; ?></span>
             </div>

@@ -59,10 +59,10 @@ $(document).ready(function() {
 	$('#checkBoxPer').change(function() {
 		if(this.checked != true){
 			this.value = "user"
-			label1.innerHTML = "user permission"
+			label.innerHTML = "user permissions"
 		} else { 
 			this.value = "admin"
-			label1.innerHTML = "admin permission"
+			label.innerHTML = "admin permissions"
 		}
 	});  
 }); 

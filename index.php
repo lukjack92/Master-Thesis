@@ -1,6 +1,6 @@
 <?php 
 
-require_once "../conf_db/config.php";
+require_once "conf_db/config.php";
 
 if(empty($_GET['code'])) {
 echo '
@@ -27,7 +27,7 @@ echo '
   </head>
   <body>
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="api.php"> <i class="fas fa-home"></i> Login to API</a>
+		<a class="navbar-brand" href="api.php"> <i class="fas fa-home"></i> Login</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -115,7 +115,7 @@ else {
   </head>
   <body>
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="api.php"> <i class="fas fa-home"></i> Login to API</a>
+		<a class="navbar-brand" href="api.php"> <i class="fas fa-home"></i> Login</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>

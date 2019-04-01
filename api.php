@@ -9,10 +9,11 @@
 		exit;
 	}
 	
-	require_once "../conf_db/config.php";
+	require_once "conf_db/config.php";
+	require_once "func/functions.php";
 	
 	$login_err = $password_err = $not_exist_err = "";
-	
+	 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		// Validate login and password
@@ -24,35 +25,53 @@
 		// Loading welcome.php page
 		if(!empty($_POST["login"]) && !empty($_POST["password"])) {
 			
-				
-			$sql = 'select * from users where login="'.$_POST["login"].'"';
+			$login = htmlentities($_POST["login"],ENT_QUOTES,"UTF-8");
+			$login = mysqli_real_escape_string($link,$login);
+			
+			$sql = 'select * from users where login="'.$login.'"';
 	
 			$result = mysqli_query($link,$sql);
 	
 			if(mysqli_num_rows($result) > 0) {
 				// Output data of each rows
-				while($row = mysqli_fetch_assoc($result)) {
+				if($row = mysqli_fetch_assoc($result)) {
 					
-					$_SESSION['firstName'] = htmlspecialchars($row['firstName']);
-					$_SESSION['lastName'] = $row['lastName'];
-					
-					if(password_verify($_POST['password'], $row['password'])) { 
-						$_SESSION['loggedIn'] = true;
-						$_SESSION['login'] = $_POST['login'];
-						
-						//Loading page welcome.php
-						header("Location: welcome.php");
-						exit;
-						
+					if($row['isActive'] == "true") {
+						$_SESSION['firstName'] = htmlspecialchars($row['firstName']);
+						$_SESSION['lastName'] = $row['lastName'];
+										
+						if(password_verify($_POST['password'], $row['password'])) { 
+							$_SESSION['loggedIn'] = true;
+							$_SESSION['login'] = $_POST['login'];
+							$_SESSION['permission'] = $row[permission];
+							echo $row['authCounter'];
+							$number = 0;
+							updateAuthCounter(0,$number,$link);
+							//$query = 'update users set authCounter = "'.$number.'" where login="'.$_POST['login'].'"';
+							//@mysqli_query($link, $query);						
+							
+							//Loading page welcome.php
+							//header("Location: welcome.php");
+							exit;
+						} else {
+							//Incorrect password
+							//echo $row['authCounter'];
+							//$num = $row['authCounter']+1;
+							//echo $num;
+							//$query = 'update users set authCounter = "'.$num.'" where login="'.$_POST['login'].'"';
+							//@mysqli_query($link, $query);
+							
+							echo $row['authCounter'];
+							updateAuthCounter(1,$row['authCounter'],$link);
+							
+							$not_exist_err = "<div class='alert alert_pass'>That password combination is not correct. Check and try again. </div>";
+						}
 					} else {
-						$not_exist_err = "<div class='alert alert_pass'>That password combination is not correct.
-Check and try again. </div>";
+						$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> isn&#39;t active. Please conntact to administrator.</div>";
 					}
 				}
-			} else {
-					
-				$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> combination is not correct.
-Check and try again.</div>";
+			} else {	
+				$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> combination is not correct. Check and try again.</div>";
 			}
 		}
     }

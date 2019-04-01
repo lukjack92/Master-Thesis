@@ -3,6 +3,7 @@
 	// Initialize the session
 	session_start();
 	
+	require_once "conf_db/config.php";
 	
 	/*
 	//Session timeout
@@ -24,10 +25,22 @@
 	}
 	
 	$_SESSION['LAST_ACTIVITY'] = $time;
-	
 	*/
 	
-	require_once "../conf_db/config.php";
+	$sql = 'select * from TB_USERS';
+	$result = mysqli_query($link,$sql);
+
+	while($row = mysqli_fetch_assoc($result)) {
+		echo $row['login'] ." ". $row['firstName'] ." ". $row['lastName'] ." ". $row['isActive'] ." ". $row['permission'] ." ". $row['update_time'];
+	}
+	
+	if($_SERVER["REQUEST_METHOD"] === "POST") {
+		echo $_POST["inputEmail"]."|";
+		echo $_POST["inputPassword"]."|";
+		echo $_POST["inputFirstName"]."|";
+		echo $_POST["inputLastName"]."|";
+		echo $_POST["checkBoxPer"]."|";
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,33 +82,34 @@
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
-	
-	<label>
-	<form>
-		<div class="form-group ">
-			<label>New user</label>
-			<input type="email" class="form-control" id="inputEmail1" placeholder="Login" autofocus required>
-		</div>
-		<div class="form-group">
-			<label>Password</label>
-			<input type="password" class="form-control" id="inputPassword1" placeholder="Password" required>
-		</div>
+	<?php echo $_SESSION['permission']; ?> 
+	<div class="col-md-8 mx-auto bg-form-reset">
+		<center><label>Add a new user</label></center>
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+			<div class="form-group ">
+				<label>New user</label>
+				<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="Login" autofocus >
+			</div>
 			<div class="form-group">
-			<label>FirstName</label>
-			<input type="password" class="form-control" id="inputFirstName" placeholder="FirstName" required>
-		</div>
-		<div class="form-group">
-			<label>LastName</label>
-			<input type="password" class="form-control" id="inputLastName" placeholder="LastName" required>
-		</div>
-		<div class="form-check form-check-inline">
-			<input class="form-check-input" type="checkbox" id="checkBoxPer" value="user"></input>
-			<label class="form-check-label" for="inlineCheckbox1" id="label1">user permission</label>
-		</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-			<a href="welcome.php" class="btn btn-primary">Back</a>
-	</form>
-	</label>
+				<label>Password</label>
+				<input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password" >
+			</div>
+				<div class="form-group">
+				<label>FirstName</label>
+				<input type="text" class="form-control" name="inputFirstName" id="inputFirstName" placeholder="FirstName" >
+			</div>
+			<div class="form-group">
+				<label>LastName</label>
+				<input type="text" class="form-control" name="inputLastName" id="inputLastName" placeholder="LastName">
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="checkBoxPer" id="checkBoxPer" value="user">
+				<label class="form-check-label" for="inlineCheckbox1" id="label">user permissions</label>
+			</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<a href="welcome.php" class="btn btn-primary">Back</a>
+		</form>
+	</div>
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">

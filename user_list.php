@@ -62,89 +62,14 @@
 
 <div class="container color_white">
 <div id="cl"></div>
-    <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["login"]); ?></b>. Welcome to our site.</h1>
-		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>
-		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
-    </div>
+  
 	<div id="time"></div>
-
-	<div id="confirmBox">
+		<div id="confirmBox">
 		<div class="message"></div>
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
-
-    <p>
-        <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
-		<a href="user.php" class="btn btn-primary">Add new user Admin</a>
-		<a href="user_list.php" class="btn btn-primary">List of users</a>
-		<a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
-	
-	<div id="time"></div>
-
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th>#</th>
-				<th>FirstName</th>
-				<th>LastName</th>
-				<th>Company</th>
-				<th>Address</th>
-				<th>City</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-	
-			<?php 
-				$sql = 'select * from us_users';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-		
-				if(mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-					while($row = mysqli_fetch_assoc($result)) {
-			?>
-					<tr>
-						<td><?php echo ++$id ?></td>
-						<td><?php echo $row['first_name'] ?></td>
-						<td><?php echo $row['last_name'] ?></td>
-						<td><?php echo $row['company_name'] ?></td>
-						<td><?php echo $row['address'] ?></td>
-						<td><?php echo $row['city'] ?></td>
-						<td> <button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button></td>
-					</tr>
-			<?php	
-					}
-				} else {		
-					echo "No data.";
-				}
-			?>
-
-		</tbody>
-	</table> <!--
-	<nav aria-label="Page navigation">
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
--->
+	<a href="welcome.php" class="btn btn-primary">Back page</a>
 
 </div>
 	<nav class="navbar-fixed-bottom">

@@ -220,7 +220,6 @@ nav > button {
 	font-family: 'Baloo Thambi', cursive;
 }
 
-
 table,
 thead,
 tr,
@@ -243,6 +242,7 @@ td {
     padding: 6px 8px 8px;
     box-sizing: border-box;
     text-align: center;
+	z-index: 1;
 }
 #confirmBox button {
     background-color: #ccc;
@@ -253,6 +253,7 @@ td {
     text-align: center;
     width: 80px;
     cursor: pointer;
+	z-index: 1;
 }
 #confirmBox button:hover
 {
@@ -262,4 +263,5 @@ td {
 {
     text-align: left;
     margin-bottom: 8px;
+	z-index: 1;
 }
