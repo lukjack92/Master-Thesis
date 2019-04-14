@@ -55,14 +55,25 @@ $(document).ready(function() {
 		}
 		
 	}, 1000);
-	
+/*	
 	$('#checkBoxPer').change(function() {
-		if(this.checked != true){
+		if(this.checked == true){
 			this.value = "user"
 			label.innerHTML = "user permissions"
 		} else { 
 			this.value = "admin"
 			label.innerHTML = "admin permissions"
 		}
-	});  
+	}); 
+*/
+
+	$('#checkBoxPer').change(function() {
+		if($(this).prop("checked") == true) {
+			$(this).val("admin");
+			label.innerHTML = "admin permissions";			
+		} else {
+			$(this).val("user");
+			label.innerHTML = "user permissions";
+		}
+	});
 }); 

@@ -34,37 +34,38 @@
 	
 			if(mysqli_num_rows($result) > 0) {
 				// Output data of each rows
-				if($row = mysqli_fetch_assoc($result)) {
+				if($row = mysqli_fetch_assoc($result)) {				
 					
 					if($row['isActive'] == "true") {
 						$_SESSION['firstName'] = htmlspecialchars($row['firstName']);
 						$_SESSION['lastName'] = $row['lastName'];
-										
+									
 						if(password_verify($_POST['password'], $row['password'])) { 
-							$_SESSION['loggedIn'] = true;
+							//$_SESSION['loggedIn'] = true;
 							$_SESSION['login'] = $_POST['login'];
-							$_SESSION['permission'] = $row[permission];
-							echo $row['authCounter'];
-							$number = 0;
-							updateAuthCounter(0,$number,$link);
-							//$query = 'update users set authCounter = "'.$number.'" where login="'.$_POST['login'].'"';
-							//@mysqli_query($link, $query);						
+							$_SESSION['permission'] = $row['permission'];
 							
-							//Loading page welcome.php
-							//header("Location: welcome.php");
-							exit;
+							updateAuthCounter_CheckTime(true,$row['authCounter'],$link,$row['update_time']);					
+							
+							if(!empty($_SESSION['errorCount'])) {
+								$not_exist_err = $_SESSION['errorCount'];
+								unset($_SESSION['errorCount']);
+							}
+							
+							if($_SESSION['loggedIn'] === true) {
+								//Loading page welcome.php
+								header("Location: welcome.php");
+								exit;
+							}
+							
 						} else {
 							//Incorrect password
-							//echo $row['authCounter'];
-							//$num = $row['authCounter']+1;
-							//echo $num;
-							//$query = 'update users set authCounter = "'.$num.'" where login="'.$_POST['login'].'"';
-							//@mysqli_query($link, $query);
+							updateAuthCounter_CheckTime(false,$row['authCounter'],$link,$row['update_time']);
 							
-							echo $row['authCounter'];
-							updateAuthCounter(1,$row['authCounter'],$link);
-							
-							$not_exist_err = "<div class='alert alert_pass'>That password combination is not correct. Check and try again. </div>";
+							if(!empty($_SESSION['errorCount'])) {
+								$not_exist_err = $_SESSION['errorCount'];
+								unset($_SESSION['errorCount']);
+							} else $not_exist_err = "<div class='alert alert_pass'>That password combination is not correct. Check and try again. </div>";
 						}
 					} else {
 						$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> isn&#39;t active. Please conntact to administrator.</div>";

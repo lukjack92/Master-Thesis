@@ -5,7 +5,7 @@
 	
 	// Check if the user is logged in, if not then redirect him to login page
 	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
-		header("Location: index.php");
+		header("Location: api.php");
 		exit;
 	}
 	
@@ -17,7 +17,7 @@
 		session_unset();
 		session_destroy();
 		session_start();
-		header("Location: index.php");
+		header("Location: api.php");
 		exit;
 	}
 	

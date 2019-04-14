@@ -3,6 +3,11 @@
 	// Initialize the session
 	session_start();
 	
+		// Check if the user is logged in, if not then redirect him to login page
+	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
+		header("Location: api.php");
+		exit;
+	}
 	
 	/*
 	//Session timeout
@@ -16,13 +21,7 @@
 		header("Location: index.php");
 		exit;
 	}
-		
-	// Check if the user is logged in, if not then redirect him to login page
-	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
-		header("Location: index.php");
-		exit;
-	}
-	
+
 	$_SESSION['LAST_ACTIVITY'] = $time;
 	
 	*/
@@ -67,6 +66,9 @@
 		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>
 		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
     </div>
+	
+	<?php echo date("Y-m-d H:i:s");?>
+	
 	<div id="time"></div>
 
 	<div id="confirmBox">
@@ -77,7 +79,7 @@
 
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
-		<a href="user.php" class="btn btn-primary">Add new user Admin</a>
+		<a href="user.php" class="btn btn-primary">Add new user</a>
 		<a href="user_list.php" class="btn btn-primary">List of users</a>
 		<a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>

@@ -64,13 +64,60 @@
 <div id="cl"></div>
   
 	<div id="time"></div>
-		<div id="confirmBox">
+	<div id="confirmBox">
 		<div class="message"></div>
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
 	<a href="welcome.php" class="btn btn-primary">Back page</a>
+<input type="checkbox" checked data-toggle="toggle">
 
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Login</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Is Active</th>
+				<th>Permission</th>
+				<?php if($_SESSION['permission'] == "admin"){ ?>
+					<th>Action</th>
+				<?php } ?>
+			</tr>
+		</thead>
+		<tbody>
+	
+			<?php 
+				$sql = 'select * from users';
+				$result = @mysqli_query($link, $sql);
+				$id = 0;
+		
+				if(mysqli_num_rows($result) > 0) {
+					// Output data of each rows
+					while($row = mysqli_fetch_assoc($result)) {
+			?>
+					<tr>
+						<td><?php echo ++$id ?></td>
+						<td><?php echo $row['login'] ?></td>
+						<td><?php echo $row['firstName'] ?></td>
+						<td><?php echo $row['lastName'] ?></td>
+						<td><?php echo $row['isActive'] ?></td>
+						<td><?php echo $row['permission'] ?></td>
+						<?php if($_SESSION['permission'] == "admin"){ ?>
+							<td> <button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button></td>
+						<?php } ?>
+					</tr>
+			<?php	
+					}
+				} else {		
+					echo "No data.";
+				}
+			?>
+
+		</tbody>
+	</table> 
+	
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">

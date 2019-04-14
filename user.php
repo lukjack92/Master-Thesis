@@ -4,7 +4,8 @@
 	session_start();
 	
 	require_once "conf_db/config.php";
-	
+	require_once "func/functions.php";
+	$error = "";
 	/*
 	//Session timeout
 	$time = $_SERVER['REQUEST_TIME'];
@@ -27,19 +28,32 @@
 	$_SESSION['LAST_ACTIVITY'] = $time;
 	*/
 	
-	$sql = 'select * from TB_USERS';
+	//for testing 
+	$sql = 'select * from users';
 	$result = mysqli_query($link,$sql);
 
 	while($row = mysqli_fetch_assoc($result)) {
-		echo $row['login'] ." ". $row['firstName'] ." ". $row['lastName'] ." ". $row['isActive'] ." ". $row['permission'] ." ". $row['update_time'];
+		echo "| ". $row['id'] ."| ". $row['login'] ." ". $row['firstName'] ." ". $row['lastName'] ." ". $row['isActive'] . " " . $row['authCounter'] ." ". $row['permission'] ." ". $row['update_time'];
 	}
-	
+	//-------------------------
 	if($_SERVER["REQUEST_METHOD"] === "POST") {
-		echo $_POST["inputEmail"]."|";
+
+	
+		/* INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'); 
+
+		echo $_POST["inputLogin"]."|";
 		echo $_POST["inputPassword"]."|";
 		echo $_POST["inputFirstName"]."|";
 		echo $_POST["inputLastName"]."|";
-		echo $_POST["checkBoxPer"]."|";
+		isset($_POST["checkBoxPer"]) ? $_POST["checkBoxPer"] = "admin" : $_POST["checkBoxPer"] = "user";
+		echo $_POST["checkBoxPer"];
+		*/
+		
+		isset($_POST["checkBoxPer"]) ? $_POST["checkBoxPer"] = "admin" : $_POST["checkBoxPer"] = "user";
+
+		addNewUser($_POST["inputLogin"], $_POST["inputPassword"], $_POST["inputFirstName"], $_POST["inputLastName"], $_POST["checkBoxPer"], $link);
+		echo $info = $_SESSION['error'];
 	}
 ?>
 <!DOCTYPE html>
@@ -53,7 +67,10 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
     <!-- Custom styles for this template -->
-
+	
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+	
 </head>
 <body>
 
@@ -88,27 +105,28 @@
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 			<div class="form-group ">
 				<label>New user</label>
-				<input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="Login" autofocus >
+				<input type="text" class="form-control" name="inputLogin" id="inputLogin" placeholder="Login" autofocus value="test"/>
 			</div>
 			<div class="form-group">
 				<label>Password</label>
-				<input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password" >
+				<input type="password" class="form-control" name="inputPassword" id="inputPassword" placeholder="Password" value="testy"/>
 			</div>
 				<div class="form-group">
 				<label>FirstName</label>
-				<input type="text" class="form-control" name="inputFirstName" id="inputFirstName" placeholder="FirstName" >
+				<input type="text" class="form-control" name="inputFirstName" id="inputFirstName" placeholder="FirstName" value="userTest" />
 			</div>
 			<div class="form-group">
 				<label>LastName</label>
-				<input type="text" class="form-control" name="inputLastName" id="inputLastName" placeholder="LastName">
+				<input type="text" class="form-control" name="inputLastName" id="inputLastName" placeholder="LastName" value="Testowy" />
 			</div>
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="checkbox" name="checkBoxPer" id="checkBoxPer" value="user">
+				<input class="form-check-input" type="checkbox" name="checkBoxPer" id="checkBoxPer" />
 				<label class="form-check-label" for="inlineCheckbox1" id="label">user permissions</label>
 			</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary" id="btn_submit">Submit</button>
 				<a href="welcome.php" class="btn btn-primary">Back</a>
-		</form>
+				<?php echo isset($info); ?>
+		</form>	
 	</div>
 </div>
 	<nav class="navbar-fixed-bottom">
@@ -117,7 +135,11 @@
 		</div>
 	</nav>
 	
-  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<!-- UIkit JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+	<!--My JS -->
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   	<script type="text/javascript" src="countdown.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 </body>
