@@ -1,4 +1,65 @@
 "use strict";
+
+function addRecord() {
+	var login = $("#login").val();
+	var first_name = $("#first_name").val();
+	var last_name = $("#last_name").val();
+	var pass = $("#password").val();
+	var permission = $("#inputState").val().toLowerCase();
+
+	var posting = $.post("addRecord.php", { 
+		login: login,
+		first_name: first_name,
+		last_name: last_name,
+		pass: pass,
+		permission: permission
+	});
+	
+	
+	posting.done(function(data) {
+		$("#add_new_record_modal").modal("hide");
+		$("#cl").empty().append(data);
+	});
+	
+	$("#login").val("");
+	$("#first_name").val("");
+	$("#last_name").val("");
+	$("#password").val("");
+	
+	//location.reload();
+}
+
+function deleteUser(id) {
+	
+	var posting = $.post("delRecord.php", {
+		id: id
+	});
+	
+	posting.done(function(data) {
+		$("#cl").empty().append(data);
+	});
+	
+	//location.reload();
+}
+
+function updateIsActive(id, active) {
+	
+	active ? active=false : active=true;  
+	
+	console.log(active);
+	
+	var posting = $.post("updateIsActive.php", {
+		id: id,
+		active: active
+	});
+	
+	posting.done(function(data) {
+		$("#cl").empty().append(data);
+	});
+	
+	//location.reload();
+}
+
 $(document).ready(function() {
 	
 	//Session time; 
@@ -9,7 +70,7 @@ $(document).ready(function() {
 	
 	$("html").mouseup(function() {
 		test.append(" Clicked");
-		console.log("Time 100 and clicked.");
+		//console.log("Time 100 and clicked.");
 		time = 10;
 		
 	});
@@ -21,11 +82,13 @@ $(document).ready(function() {
 			confirmBox.find(".yes,.no").unbind().click(function()
 			{
 				confirmBox.hide();
+				
 			});
 		
 			confirmBox.find(".yes").click(yesFn);
 			confirmBox.find(".no").click(noFn);
 			confirmBox.show();
+			
 	}
 
 
@@ -46,7 +109,7 @@ $(document).ready(function() {
 				//alert("Restore");
 				//window.location.href = "welcome.php";
 				//console.log(window.location.href);
-				//window.location.href;]
+				//window.location.href;
 				location.reload();
 				//location.reload();
 			}, function no() {

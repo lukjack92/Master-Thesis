@@ -1,61 +1,4 @@
 <?php
-/*
-function updateAuthCounter($number, $counter, $link, $time) {
-
-	$blocked_seconds = 45;
-	$current_time = time();
-
-	if($counter <= 2) {
-		
-		if($number == 0) {	
-		
-			$time = strtotime($time);
-			$time_to_blocked = $time+$blocked_seconds;
-			
-			$time_info = date("Y-m-d H:i:s",$time_to_blocked);
-			
-			if($current_time < $time_to_blocked) {
-				$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is equal 3. You have exceeded the numbers of login attempts and must be wait 5 minutes. Odblokuje się o ".$time_info."</div>"; 
-			} else {
-				$query = 'update users set authCounter = 0 where login="'.$_POST['login'].'"';
-				@mysqli_query($link, $query);
-			}
-			
-			$query = 'update users set authCounter = "'.$number.'" where login="'.$_POST['login'].'"';
-			@mysqli_query($link, $query);							
-		}
-	
-		if($number == 1) {
-			$number = $counter+1;
-			$query = 'update users set authCounter = "'.$number.'" where login="'.$_POST['login'].'"';
-			@mysqli_query($link, $query);						
-		}
-	} else {
-		
-		
-		$time = strtotime($time);
-		echo "</br>";
-		echo $time;
-		echo "</br>";
-		echo date("Y-m-d H:i:s",$time);
-		echo "</br>";
-		$time_to_blocked = $time+$blocked_seconds;
-		echo "Blocked: ".$time_to_blocked;
-		echo "</br>";
-		echo date("Y-m-d H:i:s",$time_to_blocked);
-		echo "</br>";
-		
-		echo "Current: ".$current_time;
-		echo "</br>";
-		if($current_time < $time_to_blocked) {
-			$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is equal 3. You have exceeded the numbers of login attempts and must be wait 5 minutes.</div>"; 
-		} else {
-			$query = 'update users set authCounter = 0 where login="'.$_POST['login'].'"';
-			@mysqli_query($link, $query);
-		}
-	}
-}
-*/
 
 function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 	
@@ -110,9 +53,7 @@ function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 	}
 }
 
-
 function addNewUser($login, $password, $firstName, $lastName, $permission, $link) {
-	
 	
 	$login = htmlentities($login,ENT_QUOTES,"UTF-8");
 	$login = mysqli_real_escape_string($link,$login);

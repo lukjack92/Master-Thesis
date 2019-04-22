@@ -3,6 +3,11 @@
 	// Initialize the session
 	session_start();
 	
+	// Check if the user is logged in, if not then redirect him to login page
+	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
+		header("Location: index.php");
+		exit;
+	}
 	
 	/*
 	//Session timeout
@@ -34,9 +39,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -63,19 +69,101 @@
 <div class="container color_white">
 <div id="cl"></div>
   
+  <?php if($_SESSION['permission'] == "admin"){ ?>
+  
+  <div class="alert alert-danger alert-dismissible fade show" id="danger" style="display:none" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+  <div class="alert alert-success alert-dismissible fade show" id="success" style="display:none" role="alert">
+  <strong>Holy guacamole!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  
+  <div class="pull-right">
+	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New User</button>
+  </div>
+  <?php } ?>
+
+<!-- Bootstrap Modal - To Add New Record -->
+<!-- Modal -->
+<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Add New User</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">Login</label>
+</div>
+<input type="text" id="login" name="login"placeholder="Login" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">First Name</label>
+</div>
+<input type="text" id="first_name" name="first_name"placeholder="First Name" class="form-control" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="last_name">Last Name</label>
+</div>
+<input type="text" id="last_name" name="last_name"placeholder="Last Name" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Password</label>
+</div>
+<input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Permission</label>
+</div>
+      <select id="inputState" class="form-control">
+      <option selected>User</option>
+      <option>Admin</option>
+      </select>
+</div>
+ 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-primary" onclick="addRecord()">Add User</button>
+</div>
+</div>
+</div>
+</div>
+  
 	<div id="time"></div>
+
 	<div id="confirmBox">
 		<div class="message"></div>
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
-	<a href="welcome.php" class="btn btn-primary">Back page</a>
-<input type="checkbox" checked data-toggle="toggle">
 
-	<table class="table table-bordered">
+	<a href="welcome.php" class="btn btn-primary">Back page</a>
+
+	<table class="table table table-bordered table-striped">
 		<thead>
 			<tr>
-				<th>#</th>
+				<th>No.</th>
 				<th>Login</th>
 				<th>First Name</th>
 				<th>Last Name</th>
@@ -87,7 +175,7 @@
 			</tr>
 		</thead>
 		<tbody>
-	
+
 			<?php 
 				$sql = 'select * from users';
 				$result = @mysqli_query($link, $sql);
@@ -99,13 +187,15 @@
 			?>
 					<tr>
 						<td><?php echo ++$id ?></td>
-						<td><?php echo $row['login'] ?></td>
+						<td><?php if($_SESSION["login"] == $row['login']) { ?> <b> <?php echo $row['login']; ?> </b> <?php } else { echo $row['login']; }?></td>
 						<td><?php echo $row['firstName'] ?></td>
 						<td><?php echo $row['lastName'] ?></td>
-						<td><?php echo $row['isActive'] ?></td>
+						<td> <?php if($_SESSION['permission'] == "admin"){ ?>
+							<input type="checkbox" <?php echo ($row['isActive']=="true" ? 'checked' : '') ?> onchange="updateIsActive(<?php echo $row['id']; ?>, <?php echo $row['isActive']; ?>)" data-toggle="toggle"></td>
+						<?php } else echo $row['isActive'] ?>
 						<td><?php echo $row['permission'] ?></td>
 						<?php if($_SESSION['permission'] == "admin"){ ?>
-							<td> <button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button></td>
+							<td> <button type="button" class="btn btn-primary">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser(<?php echo $row['id'] ?>)">Delete</button></td>
 						<?php } ?>
 					</tr>
 			<?php	
@@ -117,16 +207,19 @@
 
 		</tbody>
 	</table> 
-	
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
 		</div>
 	</nav>
-	
-  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
 	<script type="text/javascript" src="test.js"></script>
+	
 </body>
 </html>

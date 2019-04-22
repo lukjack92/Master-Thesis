@@ -41,7 +41,7 @@ echo '
 		-->
 		</div>
 	  </nav>
-    <!-- Begin page content -->
+    <!-- Begin page content -->	
 <div class="container">
     <main role="main" class=" center color-white">
       <h1 class="black" >API for the PHYSICS application</h1>
@@ -60,7 +60,7 @@ echo '
 }
 else {
 	$query = "select * from " . TB_CODE;
-
+	
 	if($result = mysqli_query($link,$query)) {
 		//Fetch row
 		while($row=mysqli_fetch_assoc($result)) {
@@ -72,7 +72,7 @@ else {
 
 		header('Content-Type: application/json; charset=utf-8');
 
-		$query_sql="select * from " . TB_TABLE;
+		$query_sql="select * from " . TB_USERS;
 		$result = $link->query($query_sql);
 
 		$json = Array();
