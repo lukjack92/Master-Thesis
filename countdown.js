@@ -33,6 +33,7 @@ function deleteUser(id) {
 	
 	var conf = confirm("Are you sure!!!");
 	
+	
 	if(conf == true) {
 		var posting = $.post("delUser.php", {
 			id: id
