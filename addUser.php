@@ -4,21 +4,21 @@ require_once "conf_db/config.php";
 
 if($_POST['login'] != "" && $_POST['first_name'] != "" && $_POST['last_name'] && $_POST['pass'] && $_POST['permission'])
 {
-	$login = htmlentities($_POST['login'],ENT_QUOTES,"UTF-8");
-	$login = mysqli_real_escape_string($link,$login);
+	//$login = htmlentities($_POST['login'],ENT_QUOTES,"UTF-8");
+	$login = mysqli_real_escape_string($link,$_POST['login']);
 	
-	$password = htmlentities($_POST['pass'],ENT_QUOTES,"UTF-8");
-	$password = password_hash($password, PASSWORD_DEFAULT);
+	//$password = htmlentities($_POST['pass'],ENT_QUOTES,"UTF-8");
+	$password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 	$password = mysqli_real_escape_string($link,$password);
 	
-	$firstName = htmlentities($_POST['first_name'],ENT_QUOTES,"UTF-8");
-	$firstName = mysqli_real_escape_string($link,$firstName);
+	//$firstName = htmlentities($_POST['first_name'],ENT_QUOTES,"UTF-8");
+	$firstName = mysqli_real_escape_string($link,$_POST['first_name']);
 	
-	$lastName = htmlentities($_POST['last_name'],ENT_QUOTES,"UTF-8");
-	$lastName = mysqli_real_escape_string($link,$lastName);
+	//$lastName = htmlentities($_POST['last_name'],ENT_QUOTES,"UTF-8");
+	$lastName = mysqli_real_escape_string($link,$_POST['last_name']);
 	
-	$permission = htmlentities($_POST['permission'],ENT_QUOTES,"UTF-8");
-	$permission = mysqli_real_escape_string($link,$permission);
+	//$permission = htmlentities($_POST['permission'],ENT_QUOTES,"UTF-8");
+	$permission = mysqli_real_escape_string($link,$_POST['permission']);
 
 	$sql = 'select * from users where login="'.$login.'"';
 	$result = mysqli_query($link,$sql);

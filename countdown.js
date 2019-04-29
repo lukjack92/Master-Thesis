@@ -7,7 +7,7 @@ function addRecord() {
 	var pass = $("#password").val();
 	var permission = $("#inputState").val().toLowerCase();
 
-	var posting = $.post("addRecord.php", { 
+	var posting = $.post("addUser.php", { 
 		login: login,
 		first_name: first_name,
 		last_name: last_name,
@@ -31,14 +31,17 @@ function addRecord() {
 
 function deleteUser(id) {
 	
-	var posting = $.post("delRecord.php", {
-		id: id
-	});
+	var conf = confirm("Are you sure!!!");
 	
-	posting.done(function(data) {
-		$("#cl").empty().append(data);
-	});
+	if(conf == true) {
+		var posting = $.post("delUser.php", {
+			id: id
+		});
 	
+		posting.done(function(data) {
+			$("#cl").empty().append(data);
+		});
+	}
 	//location.reload();
 }
 
@@ -56,8 +59,23 @@ function updateIsActive(id, active) {
 	posting.done(function(data) {
 		$("#cl").empty().append(data);
 	});
+}
+
+function getDetails(id) {
+
+	$("#updateUserModal").modal("show");
 	
-	//location.reload();
+	var login = $("tr:nth-child("+id+") td:nth-child(2)").text();
+	var first_name = $("tr:nth-child("+id+") td:nth-child(3)").text();
+	var last_name = $("tr:nth-child("+id+") td:nth-child(4)").text();
+	var permission = $("tr:nth-child("+id+") td:nth-child(6)").text();
+
+	permission = permission.substr(0,1).toUpperCase()+permission.substr(1,permission.length)
+
+	$("#update_login").val(login);
+    $("#update_first_name").val(first_name);
+    $("#update_last_name").val(last_name);
+    $("#updateInputState").val(permission);
 }
 
 $(document).ready(function() {
@@ -82,14 +100,13 @@ $(document).ready(function() {
 			confirmBox.find(".yes,.no").unbind().click(function()
 			{
 				confirmBox.hide();
-				
 			});
 		
 			confirmBox.find(".yes").click(yesFn);
 			confirmBox.find(".no").click(noFn);
 			confirmBox.show();
 			
-	}
+	} 
 
 
 	//Display what is time to expired session.

@@ -62,8 +62,8 @@
 <div class="container color_white">
 <div id="cl"></div>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["login"]); ?></b>. Welcome to our site.</h1>
-		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>
+        <h1>Hi, <b><?php echo $_SESSION["login"]; ?></b>. Welcome to our site.</h1>
+		<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
 		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
     </div>
 	
@@ -79,7 +79,7 @@
 
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
-		<a href="user.php" class="btn btn-primary">Add new user</a>
+		<!-- <a href="user.php" class="btn btn-primary">Add new user</a> -->
 		<a href="user_list.php" class="btn btn-primary">List of users</a>
 		<a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>

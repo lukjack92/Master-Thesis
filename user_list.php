@@ -150,6 +150,58 @@
 </div>
 </div>
   
+  
+<div class="modal fade" id="updateUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Update User</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">Login</label>
+</div>
+<input type="text" id="update_login" name="login"placeholder="Login" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">First Name</label>
+</div>
+<input type="text" id="update_first_name" name="first_name"placeholder="First Name" class="form-control" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="last_name">Last Name</label>
+</div>
+<input type="text" id="update_last_name" name="last_name"placeholder="Last Name" class="form-control" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="update_permission">Permission</label>
+</div>
+      <select id="updateInputState" class="form-control">
+      <option selected>User</option>
+      <option>Admin</option>
+      </select>
+</div>
+ 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-primary" onclick="updateRecord()">Update User</button>
+</div>
+</div>
+</div>
+</div>
+  
 	<div id="time"></div>
 
 	<div id="confirmBox">
@@ -187,15 +239,15 @@
 			?>
 					<tr>
 						<td><?php echo ++$id ?></td>
-						<td><?php if($_SESSION["login"] == $row['login']) { ?> <b> <?php echo $row['login']; ?> </b> <?php } else { echo $row['login']; }?></td>
-						<td><?php echo $row['firstName'] ?></td>
-						<td><?php echo $row['lastName'] ?></td>
+						<td id="login_modal"><?php if($_SESSION["login"] == $row['login']) { ?> <b> <?php echo $row['login']; ?> </b> <?php } else { echo $row['login']; }?></td>
+						<td id="fN_modal"><?php echo $row['firstName'] ?></td>
+						<td id="lN_modal"><?php echo $row['lastName'] ?></td>
 						<td> <?php if($_SESSION['permission'] == "admin"){ ?>
 							<input type="checkbox" <?php echo ($row['isActive']=="true" ? 'checked' : '') ?> onchange="updateIsActive(<?php echo $row['id']; ?>, <?php echo $row['isActive']; ?>)" data-toggle="toggle"></td>
 						<?php } else echo $row['isActive'] ?>
-						<td><?php echo $row['permission'] ?></td>
+						<td id="perm_modal"><?php echo $row['permission'] ?></td>
 						<?php if($_SESSION['permission'] == "admin"){ ?>
-							<td> <button type="button" class="btn btn-primary">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser(<?php echo $row['id'] ?>)">Delete</button></td>
+							<td> <button type="button" class="btn btn-primary" onclick="getDetails(<?php echo $id ?>)">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser(<?php echo $row['id'] ?>)">Delete</button></td>
 						<?php } ?>
 					</tr>
 			<?php	

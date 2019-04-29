@@ -14,7 +14,7 @@ echo '
     <meta name="author" content="Łukasz Jackowski">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Inccorect Code</title>
+    <title>Welcome</title>
 
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
@@ -46,7 +46,7 @@ echo '
     <main role="main" class=" center color-white">
       <h1 class="black" >API for the PHYSICS application</h1>
 		<img src="img/logo.jpg">
-        <p class="lead">It&#39;s API used by mobile application.</p>
+        <p class="lead">It&#39;s API have been using by mobile application.</p>
     </main>
 </div>
 	<nav class="navbar-fixed-bottom">
@@ -102,7 +102,7 @@ else {
     <meta name="author" content="Łukasz Jackowski">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Inccorect Code</title>
+    <title>Welcome</title>
 
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">

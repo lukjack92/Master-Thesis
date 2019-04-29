@@ -20,6 +20,7 @@ if($link === false){
 	//echo "Error, please check it.";
 } else {
 	//echo "Connected";
-	mysqli_query($link, "SET CHARSET utf8");
+	//mysqli_query($link, "SET CHARSET utf8");
+	//mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
 }
 ?>
