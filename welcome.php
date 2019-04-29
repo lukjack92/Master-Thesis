@@ -61,6 +61,7 @@
 
 <div class="container color_white">
 <div id="cl"></div>
+
     <div class="page-header">
         <h1>Hi, <b><?php echo $_SESSION["login"]; ?></b>. Welcome to our site.</h1>
 		<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
