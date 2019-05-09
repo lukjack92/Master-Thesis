@@ -196,7 +196,8 @@
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-<button type="button" class="btn btn-primary" onclick="updateRecord()">Update User</button>
+<button type="button" class="btn btn-primary" onclick="updateUser()">Update User</button>
+<input type="hidden" id="hidden_user_id">
 </div>
 </div>
 </div>
@@ -239,7 +240,7 @@
 			?>
 					<tr>
 						<td><?php echo ++$id ?></td>
-						<td id="login_modal"><?php if($_SESSION["login"] == $row['login']) { ?> <b> <?php echo $row['login']; ?> </b> <?php } else { echo $row['login']; }?></td>
+						<td id="login_modal"><?php if($_SESSION["login"] == $row['login']) { ?><b><?php echo $row['login']; ?></b><?php } else { echo $row['login']; }?></td>
 						<td id="fN_modal"><?php echo $row['firstName'] ?></td>
 						<td id="lN_modal"><?php echo $row['lastName'] ?></td>
 						<td> <?php if($_SESSION['permission'] == "admin"){ ?>
@@ -247,7 +248,7 @@
 						<?php } else echo $row['isActive'] ?>
 						<td id="perm_modal"><?php echo $row['permission'] ?></td>
 						<?php if($_SESSION['permission'] == "admin"){ ?>
-							<td> <button type="button" class="btn btn-primary" onclick="getDetails(<?php echo $id ?>)">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser(<?php echo $row['id'] ?>)">Delete</button></td>
+							<td> <button type="button" class="btn btn-primary" onclick="getDetails(<?php echo $id .",". $row['id']?>)">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser(<?php echo $row['id'] ?>)">Delete</button></td>
 						<?php } ?>
 					</tr>
 			<?php	

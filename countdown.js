@@ -33,7 +33,6 @@ function deleteUser(id) {
 	
 	var conf = confirm("Are you sure!!!");
 	
-	
 	if(conf == true) {
 		var posting = $.post("delUser.php", {
 			id: id
@@ -62,9 +61,13 @@ function updateIsActive(id, active) {
 	});
 }
 
-function getDetails(id) {
+function getDetails(id, userID) {
 
-	$("#updateUserModal").modal("show");
+	$("#hidden_user_id").val(userID);
+	$("#update_login").val("");
+    $("#update_first_name").val("");
+    $("#update_last_name").val("");
+    $("#updateInputState").val("");
 	
 	var login = $("tr:nth-child("+id+") td:nth-child(2)").text();
 	var first_name = $("tr:nth-child("+id+") td:nth-child(3)").text();
@@ -77,7 +80,32 @@ function getDetails(id) {
     $("#update_first_name").val(first_name);
     $("#update_last_name").val(last_name);
     $("#updateInputState").val(permission);
+	
+	$("#updateUserModal").modal("show");
 }
+
+function updateUser() {
+
+	var login = $("#update_login").val();
+	var first_name = $("#update_first_name").val();
+	var last_name = $("#update_last_name").val();
+	var permission = $("#updateInputState").val().toLowerCase();
+	var userID = $("#hidden_user_id").val();
+	
+	var posting = $.post("updateDetailsUser.php", {
+		login: login,
+		firstName: first_name,
+		lastName: last_name,
+		permission: permission,
+		userID: userID
+	});
+	
+	posting.done(function(data) {
+		$("#updateUserModal").modal("hide");
+		$("#cl").empty().append(data);
+	});
+}
+
 
 $(document).ready(function() {
 	
