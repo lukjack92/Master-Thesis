@@ -90,7 +90,7 @@
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
-				<th>#</th>
+				<th>No.</th>
 				<th>FirstName</th>
 				<th>LastName</th>
 				<th>Company</th>
@@ -117,7 +117,9 @@
 						<td><?php echo $row['company_name'] ?></td>
 						<td><?php echo $row['address'] ?></td>
 						<td><?php echo $row['city'] ?></td>
-						<td> <button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button></td>
+						<td>
+							<button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button>
+						</td>
 					</tr>
 			<?php	
 					}

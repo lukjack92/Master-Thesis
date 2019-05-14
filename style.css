@@ -83,6 +83,7 @@ nav > button {
 	background-color: white;	
 	border-radius: 25px;	
 	box-shadow: 15px 15px 20px; 
+	position: left;
 }
 
 .color_white {
@@ -91,6 +92,7 @@ nav > button {
 	margin-top: 40px;
 	padding-top: 20px;
 	padding-bottom: 10px;
+	position: left;
 }
 
 .bg-form-reset {
@@ -98,8 +100,8 @@ nav > button {
 	text-align: left;
 	margin: 60px;
 	padding: 20px;
-	border: solid 1px;
-	box-shadow: 5px 5px 5px #888888;
+	/*border: solid 1px;
+	box-shadow: 5px 5px 5px #888888;*/
 }
 
 .bg-form {

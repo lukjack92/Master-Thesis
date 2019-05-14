@@ -19,6 +19,7 @@ function addRecord() {
 	posting.done(function(data) {
 		$("#add_new_record_modal").modal("hide");
 		$("#cl").empty().append(data);
+		readRecords();
 	});
 	
 	$("#login").val("");
@@ -40,9 +41,9 @@ function deleteUser(id) {
 	
 		posting.done(function(data) {
 			$("#cl").empty().append(data);
+			readRecords();
 		});
 	}
-	//location.reload();
 }
 
 function updateIsActive(id, active) {
@@ -58,6 +59,7 @@ function updateIsActive(id, active) {
 	
 	posting.done(function(data) {
 		$("#cl").empty().append(data);
+		readRecords();
 	});
 }
 
@@ -103,11 +105,27 @@ function updateUser() {
 	posting.done(function(data) {
 		$("#updateUserModal").modal("hide");
 		$("#cl").empty().append(data);
+		readRecords();
 	});
 }
 
+function readRecords() {
+	
+	var getting = $.get("readRecords.php", {
+	});
+	
+	getting.done(function(data) {
+		$("#record_content").empty().append(data);
+		//$("#record_content").innerHTML = data;
+		//location.reload();
+		//console.log(data);
+		//$("#record_content").html(data);
+	});
+}
 
 $(document).ready(function() {
+	
+	readRecords();
 	
 	//Session time; 
 	var time = 10;
@@ -134,11 +152,9 @@ $(document).ready(function() {
 			confirmBox.find(".yes").click(yesFn);
 			confirmBox.find(".no").click(noFn);
 			confirmBox.show();
-			
 	} 
 
-
-	//Display what is time to expired session.
+	//Displays the time after which the session will be expiring.
 	document.getElementById('time').innerHTML = "Time session " + time + "s";
 	
 	//Interval every 1 second (1000 millisecond).

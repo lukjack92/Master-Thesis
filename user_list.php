@@ -213,53 +213,8 @@
 
 	<a href="welcome.php" class="btn btn-primary">Back page</a>
 
-	<table class="table table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th>No.</th>
-				<th>Login</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Is Active</th>
-				<th>Permission</th>
-				<?php if($_SESSION['permission'] == "admin"){ ?>
-					<th>Action</th>
-				<?php } ?>
-			</tr>
-		</thead>
-		<tbody>
-
-			<?php 
-				$sql = 'select * from users';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-		
-				if(mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-					while($row = mysqli_fetch_assoc($result)) {
-			?>
-					<tr>
-						<td><?php echo ++$id ?></td>
-						<td id="login_modal"><?php if($_SESSION["login"] == $row['login']) { ?><b><?php echo $row['login']; ?></b><?php } else { echo $row['login']; }?></td>
-						<td id="fN_modal"><?php echo $row['firstName'] ?></td>
-						<td id="lN_modal"><?php echo $row['lastName'] ?></td>
-						<td> <?php if($_SESSION['permission'] == "admin"){ ?>
-							<input type="checkbox" <?php echo ($row['isActive']=="true" ? 'checked' : '') ?> onchange="updateIsActive(<?php echo $row['id']; ?>, <?php echo $row['isActive']; ?>)" data-toggle="toggle"></td>
-						<?php } else echo $row['isActive'] ?>
-						<td id="perm_modal"><?php echo $row['permission'] ?></td>
-						<?php if($_SESSION['permission'] == "admin"){ ?>
-							<td> <button type="button" class="btn btn-primary" onclick="getDetails(<?php echo $id .",". $row['id']?>)">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser(<?php echo $row['id'] ?>)">Delete</button></td>
-						<?php } ?>
-					</tr>
-			<?php	
-					}
-				} else {		
-					echo "No data.";
-				}
-			?>
-
-		</tbody>
-	</table> 
+	<div id="record_content"></div>
+	
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
