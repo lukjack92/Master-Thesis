@@ -45,6 +45,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!-- Custom styles for this template -->
 
 </head>
@@ -202,6 +204,11 @@
 </div>
 </div>
 </div>
+    <div class="page-header">
+        <h1>List of users</h1>
+		<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
+		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
+    </div>
   
 	<div id="time"></div>
 

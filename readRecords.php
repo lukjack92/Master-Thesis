@@ -65,9 +65,9 @@ $data = '<table class="table table table-bordered table-striped">
 						} else 
 
 							if($row['isActive'] == "true")
-								$isActive = '<td>true</td>';
+								$isActive = '<td><i class="material-icons">done</i>Active</td>';
 							else
-								$isActive = '<td style="color:red";><b> false </b></td>';
+								$isActive = '<td style="color:red";><i class="material-icons">clear</i><b>Inactive</b></td>';
 							
 							$data .= $isActive;
 							$data .= '<td id="perm_modal">'.$row['permission'].'</td>';

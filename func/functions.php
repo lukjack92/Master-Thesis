@@ -15,7 +15,7 @@ function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 			@mysqli_query($link, $query);
 		} else {
 			$authCount = $authCount+1;
-			$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is larger than 3. You can't login. Password is not correct.</div>";
+			$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is larger than 3. The account has been blocked for some time.</div>";
 			$query = 'update users set authCounter = "'.$authCount.'" where login="'.$_POST['login'].'"';
 			@mysqli_query($link, $query);
 		}
