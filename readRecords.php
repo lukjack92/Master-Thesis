@@ -3,9 +3,6 @@
 session_start();
 
 $isActive = "";
-$action_yes = "";
-$action_no = "";
-
 
 require_once "conf_db/config.php";
 
@@ -14,18 +11,18 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 	exit;
 } else {
 
-$data = '<table class="table table table-bordered table-striped">
+$data = '<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th>No.</th>
-				<th>Login</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Is Active</th>
-				<th>Permission</th>';
+				<th scope="col" style="width: 5%">No.</th>
+				<th scope="col" style="width: 10%">Login</th>
+				<th scope="col" style="width: 10%" >First Name</th>
+				<th scope="col" style="width: 10%" >Last Name</th>
+				<th scope="col" style="width: 10%" >Is Active</th>
+				<th scope="col" style="width: 5%" >Permission</th>';
 				
 				if($_SESSION['permission'] == "admin"){ 
-					$data .= '<th>Action</th>';
+					$data .= '<th style="width: 12%">Action</th>';
 				}
 			$data .= '</tr>
 		</thead>
@@ -35,11 +32,11 @@ $data = '<table class="table table table-bordered table-striped">
 				$result = @mysqli_query($link, $sql);
 				$id = 0;
 
-				if(mysqli_num_rows($result) > 0) {
+				if(@mysqli_num_rows($result) > 0) {
 					// Output data of each rows
 					while($row = mysqli_fetch_assoc($result)) {
 						$data .= '<tr>
-						<td>'.++$id.'</td>
+						<th scope="row">'.++$id.'</th>
 						<td id="login_modal">';
 						if($_SESSION["login"] === $row["login"]) { 
 							$data .= '<b>'.$row["login"].'</b>';
@@ -58,10 +55,13 @@ $data = '<table class="table table table-bordered table-striped">
 							$action_no = "";
 							
 							if($row['isActive'] == "true") $action_yes="active"; else $action_no="active";
-							
-							$data .= '<td><div class="btn-group btn-group-toggle" data-toggle="buttons">';
-							$data .= '<label class="btn btn-secondary '.$action_yes.'"><input type="radio" name="options" id="option1" autocomplete="off" onchange="updateIsActive('.$row['id'].",".$row['isActive'].')"> Yes </label>';
-							$data .= '<label class="btn btn-secondary '.$action_no.'"><input type="radio" name="options" id="option2" autocomplete="off" onchange="updateIsActive('.$row['id'].",".$row['isActive'].')"> No </label></td>';
+							if($row['login'] == $_SESSION['login']) {
+								$data .= '<td><i class="material-icons">done</i>Active</td>';
+							} else {
+								$data .= '<td><div class="btn-group btn-group-toggle" data-toggle="buttons">';
+								$data .= '<label class="btn btn-secondary '.$action_yes.'"><input type="radio" name="options" id="option1" autocomplete="off" onchange="updateIsActive('.$row['id'].",".$row['isActive'].')"> Yes </label>';
+								$data .= '<label class="btn btn-secondary '.$action_no.'"><input type="radio" name="options" id="option2" autocomplete="off" onchange="updateIsActive('.$row['id'].",".$row['isActive'].')"> No </label></td>';
+							}
 						} else 
 
 							if($row['isActive'] == "true")
@@ -72,7 +72,15 @@ $data = '<table class="table table table-bordered table-striped">
 							$data .= $isActive;
 							$data .= '<td id="perm_modal">'.$row['permission'].'</td>';
 						if($_SESSION['permission'] == "admin"){
-							$data .= '<td> <button type="button" class="btn btn-primary" onclick="getDetails('.$id .",". $row['id'].')">Update</button> <button type="button" class="btn btn-primary" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+							if($row['login'] == $_SESSION['login']) {
+								$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button></td>';
+							} else {
+								if($row['isActive'] == "false"){
+									$data .= '<td> <button type="button" class="btn btn-primary testbutton" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-primary testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+								} else {
+									$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-primary testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+								}
+							}
 						} 
 						$data .= '</tr>';
 					}

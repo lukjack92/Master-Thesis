@@ -1,7 +1,12 @@
 <?php 
-
+session_start();
 require_once "conf_db/config.php";
+require_once 'func_msg/functions.php';
 
+if($_SESSION["permission"] != "admin"){
+		header("Location: index.php");
+		exit;
+} else {
 if($_POST['login'] != "" && $_POST['first_name'] != "" && $_POST['last_name'] && $_POST['pass'] && $_POST['permission'])
 {
 	//$login = htmlentities($_POST['login'],ENT_QUOTES,"UTF-8");
@@ -13,7 +18,7 @@ if($_POST['login'] != "" && $_POST['first_name'] != "" && $_POST['last_name'] &&
 	
 	//$firstName = htmlentities($_POST['first_name'],ENT_QUOTES,"UTF-8");
 	$firstName = mysqli_real_escape_string($link,$_POST['first_name']);
-	
+	echo $firstName;
 	//$lastName = htmlentities($_POST['last_name'],ENT_QUOTES,"UTF-8");
 	$lastName = mysqli_real_escape_string($link,$_POST['last_name']);
 	
@@ -25,15 +30,18 @@ if($_POST['login'] != "" && $_POST['first_name'] != "" && $_POST['last_name'] &&
 	$numResults = mysqli_num_rows($result);
 
 	if($numResults > 0){
-		echo "Nie dodano użytkownika, bo już istnieje"; 
+		echo '<div class="alert alert-danger" role="alert">No user <b>'.$login.'</b> added because it already exists!</div>'; 
 		//echo "User: " .$login. " ".$firstName." ".$lastName;
+		msg_logs_users($_SESSION['login'], "[Add user] No user '$login' added, because it already exists!");
 	} else {
 		$add_user_sql = "INSERT INTO users (login, password, firstName, lastName, permission) VALUES ('$login', '$password', '$firstName', '$lastName', '$permission')";
 		mysqli_query($link,$add_user_sql);
-		echo "Dodano nowego użytkownika"; 
+		echo '<div class="alert alert-success" role="alert">The user <b>'.$login.'</b> added!</div>';
+		msg_logs_users($_SESSION['login'], "[Add user] The user '$login' added!");
 		unset($_POST);
 	}
 }else {
-	echo "There aren't fill whole form!";
+	echo '<div class="alert alert-danger" role="alert">There aren&#39t fill whole form!</div>'; 
+}
 }
 ?> 

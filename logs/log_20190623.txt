@@ -1,0 +1,14 @@
+Sun 2019-06-23 11:07:34 PM ljack Successfully logged out.
+Sun 2019-06-23 11:08:00 PM ljack Successfully logged. AuthCounter is 0.
+Sun 2019-06-23 11:08:51 PM ljack Successfully logged out.
+Sun 2019-06-23 11:10:04 PM ljack Successfully logged. AuthCounter is 0.
+Sun 2019-06-23 11:17:40 PM ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Sun 2019-06-23 11:17:43 PM ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Sun 2019-06-23 11:17:44 PM ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Sun 2019-06-23 11:17:45 PM ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Sun 2019-06-23 11:17:59 PM ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Sun 2019-06-23 11:18:00 PM ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Sun 2019-06-23 11:18:10 PM ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Sun 2019-06-23 11:18:11 PM ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Sun 2019-06-23 11:18:12 PM ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Sun 2019-06-23 11:18:12 PM ljack [isActive] The user 'kasias01' has been changed to 'false'.

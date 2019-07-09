@@ -1,0 +1,9 @@
+Fri 2019-06-28 02:18:51 PM Addr IP: ::1 jackol1 Successfully logged. AuthCounter is 0.
+Fri 2019-06-28 02:21:04 PM Addr IP: ::1 jackol1 Successfully logged out.
+Fri 2019-06-28 02:21:09 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-06-28 02:25:31 PM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-06-28 02:25:42 PM Addr IP: ::1 jackol01 Password incorrect. AuthCounter increment 1.
+Fri 2019-06-28 02:25:51 PM Addr IP: ::1 jackol1 Successfully logged. AuthCounter is 0.
+Fri 2019-06-28 08:42:21 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-06-28 09:09:16 PM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-06-28 09:09:21 PM Addr IP: ::1 jackol1 Successfully logged. AuthCounter is 0.

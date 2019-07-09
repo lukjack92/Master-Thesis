@@ -5,7 +5,7 @@
 	
 		// Check if the user is logged in, if not then redirect him to login page
 	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
-		header("Location: api.php");
+		header("Location: login.php");
 		exit;
 	}
 	
@@ -29,7 +29,7 @@
 	require_once "conf_db/config.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
@@ -64,6 +64,15 @@
 <div class="container color_white">
 <div id="cl"></div>
 
+	<div id="ok">
+	<?php 
+		if(isset($_SESSION['ok']) != "") {
+			echo $_SESSION['ok'];
+			unset($_SESSION['ok']);
+		} 
+	?>
+	</div>
+
     <div class="page-header">
         <h1>Hi, <b><?php echo $_SESSION["login"]; ?></b>. Welcome to our site.</h1>
 		<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
@@ -82,15 +91,101 @@
 
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
-		
 		<?php 
-			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">Reset Password of User</a>';
+			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">The Reset Password For User</a>';
 		?>
-		<a href="user_list.php" class="btn btn-primary">List of Users</a>
-		<a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+		<a href="user_list.php" class="btn btn-primary">List Of Users</a>
+		<a href="logout.php" class="btn btn-danger">Sign Out Of Your Account</a>
     </p>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Choose a file:
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<input type="submit" value="Upload Image" name="submit">
+</form>
 	
 	<div id="time"></div>
+	
+	<table class="table table-bordered table-striped table-responsive table-hover">
+		<thead>
+			<tr>
+				<th scope="col" style="width: 5%">No.</th>
+				<th scope="col" style="width: 50%">Questions</th>
+				<th scope="col" style="width: 5%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+				$sql = 'select * from questions';
+				$result = @mysqli_query($link, $sql);
+				$id = 0;
+				if(@mysqli_num_rows($result) > 0) {
+					// Output data of each rows
+					while($row = mysqli_fetch_assoc($result)) {
+			?>
+					<tr>
+						<th scope="row"><?php echo ++$id ?></th>
+						<td ><?php echo $row['question'] ?></td>
+						<td>
+							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2">Remove</button>
+						</td>
+					</tr>
+			<?php	
+					}
+				} else {		
+					echo "No data.";
+				}
+			?>
+		</tbody>
+	</table> 
+
+<!--
+<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Question</th>
+				<th>Answer A</th>
+				<th>Answer B</th>
+				<th>Answer C</th>
+				<th>Answer D</th>
+				<th>Correct answer</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+				$sql = 'select * from questions';
+				$result = @mysqli_query($link, $sql);
+				$id = 0;
+
+				if(@mysqli_num_rows($result) > 0) {
+					// Output data of each rows
+					while($row = mysqli_fetch_assoc($result)) {
+			?>
+					<tr>
+						<td><?php echo ++$id ?></td>
+						<td><?php echo $row['question'] ?></td>
+						<td><?php echo $row['ansa'] ?></td>
+						<td><?php echo $row['ansb'] ?></td>
+						<td><?php echo $row['ansc'] ?></td>
+						<td><?php echo $row['ansd'] ?></td>
+						<td><?php echo $row['odp'] ?></td>
+						<td>
+							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2">Remove</button>
+						</td>
+					</tr>
+			<?php	
+					}
+				} else {		
+					echo "No data.";
+				}
+			?>
+		</tbody>
+	</table> 
+
+
+
 
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -105,13 +200,12 @@
 			</tr>
 		</thead>
 		<tbody>
-	
 			<?php 
 				$sql = 'select * from us_users';
 				$result = @mysqli_query($link, $sql);
 				$id = 0;
-		
-				if(mysqli_num_rows($result) > 0) {
+
+				if(@mysqli_num_rows($result) > 0) {
 					// Output data of each rows
 					while($row = mysqli_fetch_assoc($result)) {
 			?>
@@ -123,7 +217,7 @@
 						<td><?php echo $row['address'] ?></td>
 						<td><?php echo $row['city'] ?></td>
 						<td>
-							<button type="button" class="btn btn-primary">View</button> <button type="button" class="btn btn-primary">Remove</button>
+							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2">Remove</button>
 						</td>
 					</tr>
 			<?php	
@@ -132,9 +226,9 @@
 					echo "No data.";
 				}
 			?>
-
 		</tbody>
-	</table> <!--
+	</table> 
+	
 	<nav aria-label="Page navigation">
   <ul class="pagination">
     <li>

@@ -1,6 +1,8 @@
 "use strict";
 
-function addRecord() {
+var timer;
+
+function addUser() {
 	var login = $("#login").val();
 	var first_name = $("#first_name").val();
 	var last_name = $("#last_name").val();
@@ -28,12 +30,15 @@ function addRecord() {
 	$("#password").val("");
 	
 	//location.reload();
+	setTimeout(function() {
+			$("#cl").empty();
+		}, 6000);
 }
 
 function deleteUser(id) {
 	
 	var conf = confirm("Are you sure!!!");
-	
+
 	if(conf == true) {
 		var posting = $.post("delUser.php", {
 			id: id
@@ -44,6 +49,10 @@ function deleteUser(id) {
 			readRecords();
 		});
 	}
+	
+	setTimeout(function() {
+			$("#cl").empty();
+		}, 6000);
 }
 
 function updateIsActive(id, active) {
@@ -107,6 +116,10 @@ function updateUser() {
 		$("#cl").empty().append(data);
 		readRecords();
 	});
+	
+	timer = setTimeout(function() {
+		$("#cl").empty();
+	}, 6000);
 }
 
 function readRecords() {
@@ -123,6 +136,68 @@ function readRecords() {
 	});
 }
 
+function resetPassUser() {
+	clearInterval(timer);
+	var user_to_reset = $("#reset_user").val();
+	var pass = $("#setPassword").val();
+	
+	console.log(pass);
+	
+	var posting = $.post("resetPassword.php", {
+		pass: pass,
+		user: user_to_reset
+	});
+	
+	posting.done(function(data) {
+		$("#set_password").modal("hide");
+		$('#cl').empty().append(data);
+	});
+	
+	$("#reset_user").val("");
+	$("#setPassword").val("");
+	
+	timer = setTimeout(function() {
+		$("#cl").empty();
+	}, 6000);
+}
+
+function confirmPassword(user_confirm) {
+	clearInterval(timer);
+	var user_to_reset = $("#reset_user").val();
+	console.log(user_confirm);
+	console.log(user_to_reset);
+	var pass = $("#password").val();
+	$("#password").val(""); 
+	var posting = $.post("confirmPassword.php", {
+		user_confirm: user_confirm,
+		pass: pass
+	});
+	
+	posting.done(function(data) {
+		$("#authentication_the_operation").modal("hide");
+		
+		var attr = JSON.parse(data);
+		console.log(attr);
+		if(attr.status) {
+			$("#set_password").modal("show");
+			$('#myModalLabelUser').empty().append("The password reset of user "+user_to_reset);			
+		}
+		$('#cl').empty().append(attr.message);
+		
+		timer = setTimeout(function() {
+			$("#cl").empty();
+		}, 6000);
+	});
+}
+
+
+function actionReset(user_reset) { 
+	clearInterval(timer);
+	console.log(user_reset);
+	$("#authentication_the_operation").modal("show");
+	$("#reset_user").val(user_reset);
+}
+
 $(document).ready(function() {
 	
 	readRecords();
@@ -137,7 +212,7 @@ $(document).ready(function() {
 		test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
 		time = 10;
-		
+		//clearInterval(timer);
 	});
 	
 	//Function display, whether extend session or not.

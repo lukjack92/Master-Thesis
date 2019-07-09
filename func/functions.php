@@ -12,11 +12,13 @@ function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 		if($authCount < 3) {
 			$authCount = $authCount+1;
 			$query = 'update users set authCounter = "'.$authCount.'" where login="'.$_POST['login'].'"';
+			msg_logs_users($_POST['login'], "Password incorrect. AuthCounter increment ".$authCount.".");
 			@mysqli_query($link, $query);
 		} else {
 			$authCount = $authCount+1;
-			$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is larger than 3. The account has been blocked for some time.</div>";
+			$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter it's large than 3. The account has been blocked for some time.</div>";
 			$query = 'update users set authCounter = "'.$authCount.'" where login="'.$_POST['login'].'"';
+			msg_logs_users($_POST['login'], "Password incorrect. AuthCounter increment (".$authCount."). AuthCounter it's large than 3. The account has been blocked for some time.");
 			@mysqli_query($link, $query);
 		}
 	} else { 
@@ -26,6 +28,7 @@ function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 		if($authCount < 3) {
 			$query = 'update users set authCounter = 0 where login="'.$_POST['login'].'"';
 			@mysqli_query($link, $query);
+			msg_logs_users($_SESSION['login'], "Successfully logged. AuthCounter is 0.");
 		} else {
 			$timestamp = strtotime($timestamp);
 			//echo "</br>";
@@ -42,12 +45,14 @@ function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 			//echo "</br>";
 			if($current_time < $time_to_blocked) {
 				$_SESSION['loggedIn'] = false;
-				$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is large than 3. You must be wait 5 minut, then you will be able to log in after: <b>".date("H:i:s",$time_to_blocked)."</b></div>"; 
+				$_SESSION['errorCount'] = "<div class='alert alert_pass'>AuthCounter is large than 3. You must be wait, then you will be able to log in after: <b>".date("h:i:s",$time_to_blocked)."</b></div>"; 
+				msg_logs_users($_SESSION['login'], "Password correct. AuthCounter increment (".$authCount."). AuthCounter is large than 3. You must be wait, then you will be able to log in after: ".date("h:i:s",$time_to_blocked)."");
 				//$_SESSION['loggedIn'] = false;
 		
 			} else {
 				$query = 'update users set authCounter = 0 where login="'.$_POST['login'].'"';
 				@mysqli_query($link, $query);
+				msg_logs_users($_SESSION['login'], "Successfully logged. AuthCounter is 0.");
 			}
 		}
 	}
@@ -83,6 +88,7 @@ function addNewUser($login, $password, $firstName, $lastName, $permission, $link
 		$_SESSION['error'] = '<center class="alert alert-danger">Dodano nowego użytkownika</center>'; 
 	}
 }
+
 ?>
 
 

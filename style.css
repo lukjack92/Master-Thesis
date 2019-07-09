@@ -16,6 +16,13 @@ body {
 	color: black;
 }
 
+.testbutton {
+	margin-right: 5px;
+}
+
+.testbutton2 {
+	margin-bottom: 5px;
+}
 
 nav a{
 	color: #eeeeee;
@@ -27,6 +34,16 @@ nav a:hover{
 
 nav > button {
 	background-color: #eeeeee;
+}
+
+table {
+    table-layout:fixed;
+	vertical-align: middle;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
 }
 
 .black { 
@@ -64,6 +81,7 @@ nav > button {
 	height: auto; /* Set the fixed height of the footer here */
 	line-height: 45px; /* Vertically center the text there */
 	color: #eeeeee;
+	z-index: 1;
 }
 
 .fill {
@@ -79,7 +97,6 @@ nav > button {
 	background-color: #474FB1;
 }
 
-
 .color-white {
 	background-color: white;	
 	border-radius: 25px;	
@@ -91,8 +108,9 @@ nav > button {
 	text-align: center;
 	background-color: white;	
 	margin-top: 40px;
+	margin-bottom: 60px;
 	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	position: left;
 }
 
@@ -201,23 +219,6 @@ nav > button {
 .left-addon input  { padding-left:  30px; }
 .right-addon input { padding-right: 30px; }
 
-.test {
-
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -15%;
-    left: -45%;
-    z-index: -1;
-	opacity: 0.5;
-	background-repeat: no-repeat;
-	background-image: url("img/fingerprint6.png");
-	background-size: 55%;
-	background-position: center;
-	-webkit-transform: rotate(-32deg);
-	transform: rotate(-32deg);
-	position: fixed;
-}
 
 .fill h3 {
 	font-family: 'Baloo Thambi', cursive;
@@ -226,9 +227,7 @@ nav > button {
 table,
 thead,
 tr,
-tbody,
-th,
-td {
+tbody {
     text-align: center;
 }
 

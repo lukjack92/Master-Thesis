@@ -11,6 +11,7 @@
 	
 	require_once "conf_db/config.php";
 	require_once "func/functions.php";
+	require_once 'func_msg/functions.php';
 	
 	$login_err = $password_err = $not_exist_err = "";
 	 
@@ -26,13 +27,13 @@
 		if(!empty($_POST["login"]) && !empty($_POST["password"])) {
 			
 			$login = htmlentities($_POST["login"],ENT_QUOTES,"UTF-8");
-			$login = mysqli_real_escape_string($link,$login);
+			$login = @mysqli_real_escape_string($link,$login);
 			
 			$sql = 'select * from users where login="'.$login.'"';
 	
-			$result = mysqli_query($link,$sql);
+			$result = @mysqli_query($link,$sql);
 	
-			if(mysqli_num_rows($result) > 0) {
+			if(@mysqli_num_rows($result) > 0) {
 				// Output data of each rows
 				if($row = mysqli_fetch_assoc($result)) {				
 					
@@ -65,14 +66,18 @@
 							if(!empty($_SESSION['errorCount'])) {
 								$not_exist_err = $_SESSION['errorCount'];
 								unset($_SESSION['errorCount']);
-							} else $not_exist_err = "<div class='alert alert_pass'>That password combination is not correct. Check and try again. </div>";
+							} else {
+								$not_exist_err = "<div class='alert alert_pass'>That password combination is not correct. Check and try again.</div>";
+							}
 						}
 					} else {
 						$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> isn&#39;t active. Please conntact to administrator.</div>";
+						msg_logs_users($_POST['login'], "Account isn't active.");
 					}
 				}
 			} else {	
 				$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> combination is not correct. Check and try again.</div>";
+				msg_logs_users($_POST['login'], "The user doesn't exists.");
 			}
 		}
     }

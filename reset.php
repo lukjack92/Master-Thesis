@@ -5,7 +5,7 @@
 	
 	// Check if the user is logged in, if not then redirect him to login page
 	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
-		header("Location: api.php");
+		header("Location: login.php");
 		exit;
 	}
 	
@@ -17,7 +17,8 @@
 		session_unset();
 		session_destroy();
 		session_start();
-		header("Location: api.php");
+		msg_logs_users($_SESSION['login'], "Successfully logged out.");
+		header("Location: login.php");
 		exit;
 	}
 	
@@ -55,12 +56,14 @@
 							@mysqli_query($link, $query);
 							
 							$success = '<center class="alert alert-success">The password has been reset.</center>';
-							
+							msg_logs_users($_SESSION['login'], "[Reset pwd] The password has been reset.");
 						} else { 
 							$success = '<center class="alert alert-danger">The password is no matched.</center>';
+							msg_logs_users($_SESSION['login'], "[Reset pwd] The password is no matched.");
 						}	
 					} else {
 						$success = '<center class="alert alert-danger">Your old password isn&#39t correct!</center>';
+						msg_logs_users($_SESSION['login'], "[Reset pwd] Your old password isn't correct!");
 					}
 				}
 			}
@@ -131,7 +134,6 @@
 		<a href="welcome.php" class="btn btn-primary">Back page</a>
         <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
-	
 	 <div class="col-md-6 mx-auto bg-form-reset">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 			<div class="form-group has-feedback <?php echo (!empty($old_password_err)) ? 'has-error' : ''; ?>">
@@ -155,7 +157,6 @@
             </div>
         </form>
     </div>    
-	
 </div>	
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">

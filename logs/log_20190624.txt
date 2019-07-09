@@ -1,0 +1,7 @@
+Mon 2019-06-24 12:36:44 AM ljack Successfully logged out.
+Mon 2019-06-24 12:36:50 AM ljack Successfully logged. AuthCounter is 0.
+Mon 2019-06-24 11:10:50 PM ljack Successfully logged out.
+Mon 2019-06-24 11:10:57 PM ljack Successfully logged. AuthCounter is 0.
+Mon 2019-06-24 11:14:46 PM ljack Successfully logged. AuthCounter is 0.
+Mon 2019-06-24 11:15:05 PM ljack Successfully logged out.
+Mon 2019-06-24 11:20:21 PM ljack Successfully logged. AuthCounter is 0.

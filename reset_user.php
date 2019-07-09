@@ -4,8 +4,8 @@
 	session_start();
 	
 		// Check if the user is logged in, if not then redirect him to login page
-	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
-		header("Location: api.php");
+	if($_SESSION["permission"] != "admin"){
+		header("Location: index.php");
 		exit;
 	}
 	
@@ -80,17 +80,113 @@
 		<button class="no">No</button>
 	</div>
 
+
+  
+
+
+	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
 	
-	<a href="welcome.php" class="btn btn-primary">Back page</a>
+	<table class="table table table-bordered table-striped table-hover">
+		<thead>
+			<tr>
+				<th scope="col" style="width: 5%">No.</th>
+				<th scope="col" style="width: 16%">User</th>
+				<th scope="col" style="width: 20%">FirstName</th>
+				<th scope="col" style="width: 15%">LastName</th>
+				<th scope="col" style="width: 15%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+				
+				$sql = 'select * from users';
+				$result = @mysqli_query($link, $sql);
+				$id = 0;
+
+				if(@mysqli_num_rows($result) > 0) {
+					// Output data of each rows
+				while($row = mysqli_fetch_assoc($result)) {
+					
+					if($row['login'] != $_SESSION['login']){
+						++$id;
+						if($row['isActive'] == "false") {
+						?> <tr style="color:red;"><th scope="row"><?php echo $id; ?></th><td><?php echo $row['login']; ?></td><td><?php echo $row['firstName']; ?></td><td><?php echo $row['lastName']; ?></td><td><button type="button" disabled onclick="actionReset('<?php echo $row['login'] ?>')" class="btn btn-primary">The reset password for that <?php echo $row['login'] ?></button></td></tr>
+						<?php	
+						} else { ?> <tr><th scope="row"><?php echo $id; ?></th><td><?php echo $row['login']; ?></td><td><?php echo $row['firstName']; ?></td><td><?php echo $row['lastName']; ?></td><td><button type="button" onclick="actionReset('<?php echo $row['login'] ?>')" class="btn btn-primary">The reset password for that <?php echo $row['login'] ?></button></td></tr>
+				<?php }
+					}
+				}		 
+				}else { echo "Database is down!"; }
+			?>
+		</tbody>
+	</table>
+	<input type="hidden" id="reset_user">
+<!-- Modal authentication_the_operation-->
+<div class="modal fade" id="authentication_the_operation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">The operation authentication the reset</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Your password</label>
+</div>
+<input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+</div>
+ 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary btn-block" onclick="confirmPassword('<?php echo $_SESSION['login']; ?>')">Confirm</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Modal authentication_the_operation-->
+<div class="modal fade" id="set_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabelUser"></h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Set password</label>
+</div>
+<input type="password" class="form-control" name="password" id="setPassword" placeholder="Password" />
+</div>
+ 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary btn-block" onclick="resetPassUser()">Confirm</button>
+</div>
+</div>
+</div>
+</div>
 
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
-			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
+			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
 		</div>
 	</nav>
 	
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 </body>

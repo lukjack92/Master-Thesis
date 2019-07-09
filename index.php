@@ -1,6 +1,9 @@
 <?php 
 
 require_once "conf_db/config.php";
+require_once 'func_msg/functions.php';
+
+$code = "";
 
 if(empty($_GET['code'])) {
 echo '
@@ -46,7 +49,7 @@ echo '
     <main role="main" class=" center color-white">
       <h1 class="black" >API for the PHYSICS application</h1>
 		<img src="img/logo.jpg">
-        <p class="lead">It&#39;s API have been using by mobile application.</p>
+        <p class="lead">It&#39;s API is used by mobile application.</p>
     </main>
 </div>
 	<nav class="navbar-fixed-bottom">
@@ -61,16 +64,19 @@ echo '
 else {
 	$query = "select * from " . TB_CODE;
 	
-	if($result = mysqli_query($link,$query)) {
+	if($result = @mysqli_query($link,$query)) {
 		//Fetch row
 		while($row=mysqli_fetch_assoc($result)) {
 			$code = $row['code'];
 		}
-	} else echo "Baza padla!!";
+	} else {
+		//echo "Database is down!"
+		msg_logs("Request to resource. Database is down!");
+	};
 
 	if($_GET['code'] === $code) {
 
-		header('Content-Type: application/json; charset=utf-8');
+		header('Content-Type: application/json; charset=utf-8;');
 
 		$query_sql="select * from " . TB_USERS;
 		$result = $link->query($query_sql);
@@ -85,6 +91,9 @@ else {
 			array_push($json, $row_array);
 		}
 			echo json_encode($json, JSON_UNESCAPED_UNICODE);
+
+			msg_logs("Request to resource.");
+
 			mysqli_free_result($result);
 			mysqli_close($link);
 	} 

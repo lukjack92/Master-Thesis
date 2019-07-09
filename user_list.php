@@ -89,7 +89,7 @@
   
   <div class="pull-right">
 	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New User</button>
-  </div>
+  </div></br>
   <?php } ?>
 
 <!-- Bootstrap Modal - To Add New Record -->
@@ -146,7 +146,7 @@
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-<button type="button" class="btn btn-primary" onclick="addRecord()">Add User</button>
+<button type="button" class="btn btn-primary" onclick="addUser()">Add User</button>
 </div>
 </div>
 </div>
@@ -184,7 +184,7 @@
 </div>
 <input type="text" id="update_last_name" name="last_name"placeholder="Last Name" class="form-control" />
 </div>
- 
+
 <div class="form-group">
 <div class="pull-left">
 <label for="update_permission">Permission</label>
@@ -205,10 +205,12 @@
 </div>
 </div>
     <div class="page-header">
-        <h1>List of users</h1>
-		<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
-		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
-    </div>
+		<p>
+			<h1>List of users</h1>
+			<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
+			<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
+		</p>
+	</div>
   
 	<div id="time"></div>
 
@@ -218,7 +220,7 @@
 		<button class="no">No</button>
 	</div>
 
-	<a href="welcome.php" class="btn btn-primary">Back page</a>
+	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
 
 	<div id="record_content"></div>
 	
