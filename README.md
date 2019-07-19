@@ -18,3 +18,11 @@ Then restarted the Jenkins jenkins and check the user has changed using a ps com
 /etc/init.d/jenkins restart
 ps -ef | grep jenkins
 ```
+
+You must run the script using sudo:
+
+`sudo /path/to/script`
+
+But before you must allow jenkins to tun the script in /etc/sudoers.
+
+`jenkins    ALL = NOPASSWD: /path/to/script`
