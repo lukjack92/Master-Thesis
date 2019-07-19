@@ -1,0 +1,2 @@
+Fri 2019-07-12 06:01:41 PM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-07-12 06:01:52 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

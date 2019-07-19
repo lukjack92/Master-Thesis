@@ -3,8 +3,8 @@
 require_once 'func_msg/functions.php';
 
 /* Database credentials */
-$URL1 = 'localhost';
-$URL2 = 'db.mikr.u';
+$URL1 = 'localhos';
+$URL2 = 'db.mikr.us';
 
 $DB_SERVER = " ";
 $DB_USERNAME = " ";

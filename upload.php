@@ -11,7 +11,8 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 	$file = $_FILES['fileToUpload']['name'];
 	
 	if($_FILES['fileToUpload']['name'] != "") {
-		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "upload/upload.txt")) {
+		try {
+		if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "upload/upload.txt")) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 		
 		//Operation on the file
@@ -29,6 +30,10 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
+	
+	} catch(Exception $e) {
+		echo $e->getMessage();
+		}
 	} else { $_SESSION['ok'] = "Sorry, there was an error uploading your file."; 
 	header("Location: welcome.php");}
 }
