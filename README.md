@@ -1,7 +1,7 @@
 Web Pages in phase alfa v0.1
 #Master-Thesis
 
-To create user's for jenkins
+#To create user's for jenkins#
 
 After installed jenkins we need to create user as jenkins which is dedicated to Jenkins, then we will change file config (in debian this file is created in) /etc/default/jenkins as NAME=jenkins or $JENKINS_USER="jenkins" it's depends for system version.
 
