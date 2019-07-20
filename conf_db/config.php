@@ -3,7 +3,7 @@
 require_once 'func_msg/functions.php';
 
 /* Database credentials */
-$URL1 = 'localhos';
+$URL1 = 'aruba.ljack.pl';
 $URL2 = 'db.mikr.us';
 
 $DB_SERVER = " ";
@@ -18,20 +18,20 @@ define('TB_DATA', 'us_users');
 
 if(isSiteAvailible($URL1)){
 	$DB_SERVER = $URL1;
-	$DB_USERNAME = 'root';
+	$DB_USERNAME = 'admin';
 	$DB_PASSWORD = 'admin';
 	$DB_NAME = 'test';
-	//echo $DB_SERVER;
+	echo $DB_SERVER;
 
 } elseif(isSiteAvailible($URL2)) {
 	$DB_SERVER = $URL2;
 	$DB_USERNAME = 'uw336';
 	$DB_PASSWORD = '506f7233';
 	$DB_NAME = 'uw336';
-	//echo $DB_SERVER;
+	echo $DB_SERVER;
 	
 } else {
-	//echo "Databases are down!";
+	echo "Databases are down!";
 	msg_logs("Databases are down!");
 }
 

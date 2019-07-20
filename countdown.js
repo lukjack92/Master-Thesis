@@ -198,6 +198,18 @@ function actionReset(user_reset) {
 	$("#reset_user").val(user_reset);
 }
 
+function delQuestion(id_question) {
+
+console.log(id_question);
+var posting = $.post("removeQuestion.php", {
+		id: id_question
+	});	
+	
+	posting.done(function(data) {
+		console.log(data);
+	});
+}
+
 $(document).ready(function() {
 	
 	readRecords();

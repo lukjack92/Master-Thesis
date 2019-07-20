@@ -127,7 +127,7 @@
 						<th scope="row"><?php echo ++$id ?></th>
 						<td ><?php echo $row['question'] ?></td>
 						<td>
-							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2">Remove</button>
+							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2" onclick="delQuestion(<?php echo $row['id'] ?>)">Remove</button>
 						</td>
 					</tr>
 			<?php	
