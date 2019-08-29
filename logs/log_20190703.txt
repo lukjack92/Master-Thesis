@@ -1,5 +1,0 @@
-Wed 2019-07-03 08:28:10 PM Addr IP: ::1 jackol1 Successfully logged out.
-Wed 2019-07-03 08:28:16 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Wed 2019-07-03 09:15:53 PM Addr IP: ::1 jack The user doesn't exists.
-Wed 2019-07-03 09:16:00 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Wed 2019-07-03 09:17:19 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

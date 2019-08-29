@@ -200,14 +200,20 @@ function actionReset(user_reset) {
 
 function delQuestion(id_question) {
 
-console.log(id_question);
-var posting = $.post("removeQuestion.php", {
-		id: id_question
-	});	
+var conf = confirm("Are you sure!!!");
+
+if(conf == true){
 	
-	posting.done(function(data) {
-		console.log(data);
-	});
+	console.log(id_question);
+	var posting = $.post("removeQuestion.php", {
+			id: id_question
+		});	
+	
+		posting.done(function(data) {
+			console.log(data);
+			$("#cl").empty().append(data);
+		});
+}
 }
 
 $(document).ready(function() {
