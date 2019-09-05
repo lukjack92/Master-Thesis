@@ -118,12 +118,32 @@
 <div class="container color_white">
 <div id="cl"></div>
 	<div id="time"></div>
-
+<!--
 	<div id="confirmBox">
 		<div class="message"></div>
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<button class="btn btn-primary yes">Yes</button>
+			<button class="btn btn-primary no">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 	<div class="page-header">
         <h1>Reset password for user: <b><?php echo htmlspecialchars($_SESSION["login"]); ?></b> </h1>
 		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>

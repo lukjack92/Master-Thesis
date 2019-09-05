@@ -82,12 +82,31 @@
 	<?php echo date("Y-m-d H:i:s");?>
 	
 	<div id="time"></div>
-
+<!--
 	<div id="confirmBox">
 		<div class="message"></div>
 		<button class="yes">Yes</button>
 		<button class="no">No</button>
 	</div>
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<button class="btn btn-primary yes">Yes</button>
+			<button class="btn btn-primary no">No</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
@@ -101,43 +120,12 @@
 <form action="upload.php" method="post" enctype="multipart/form-data">
     Choose a file:
 		<input type="file" name="fileToUpload" id="fileToUpload">
-		<input type="submit" value="Upload Image" name="submit">
+		<input type="submit" value="Upload File" name="submit">
 </form>
 	
 	<div id="time"></div>
 	
-	<table class="table table-bordered table-striped table-responsive table-hover">
-		<thead>
-			<tr>
-				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 50%">Questions</th>
-				<th scope="col" style="width: 5%">Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php 
-				$sql = 'select * from questions';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-				if(@mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-					while($row = mysqli_fetch_assoc($result)) {
-			?>
-					<tr>
-						<th scope="row"><?php echo ++$id ?></th>
-						<td ><?php echo $row['question'] ?></td>
-						<td>
-							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2" onclick="delQuestion(<?php echo $row['id'] ?>)">Remove</button>
-						</td>
-					</tr>
-			<?php	
-					}
-				} else {		
-					echo "No data.";
-				}
-			?>
-		</tbody>
-	</table> 
+	<div id="database_content"></div>
 
 <!--
 <table class="table table-bordered table-striped">

@@ -136,6 +136,16 @@ function readRecords() {
 	});
 }
 
+function readDatabase() {
+	var getting = $.get("readDatabase.php", {
+		
+	});
+
+	getting.done(function(data) {
+		$("#database_content").empty().append(data);
+	});
+}
+
 function resetPassUser() {
 	clearInterval(timer);
 	var user_to_reset = $("#reset_user").val();
@@ -212,16 +222,32 @@ if(conf == true){
 		posting.done(function(data) {
 			console.log(data);
 			$("#cl").empty().append(data);
+			readDatabase();
 		});
 }
+}
+
+function viewQuestion(id_question) {
+	
+	var posting = $.post("viewQuestion.php", {
+			id: id_question
+	});	
+	
+	posting.done(function(data) {
+		var attr = JSON.parse(data);
+		console.log(attr.question);
+		console.log(attr.odp);
+		//$("#cl").empty().append(attr.question);
+	});
 }
 
 $(document).ready(function() {
 	
 	readRecords();
+	readDatabase();
 	
 	//Session time; 
-	var time = 10;
+	var time = 5;
 	var test = document.getElementById('cl');
 	var label1 = document.getElementById('label1');
 	let drawIntrernal;
@@ -229,14 +255,14 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
-		time = 10;
+		time = 5;
 		//clearInterval(timer);
 	});
 	
 	//Function display, whether extend session or not.
 	function doConfirm(msg, yesFn, noFn) {
-		var confirmBox = $("#confirmBox");
-			confirmBox.find(".message").text(msg);
+		var confirmBox = $("#exampleModalCenter");
+			confirmBox.find("#exampleModalLongTitle").text(msg);
 			confirmBox.find(".yes,.no").unbind().click(function()
 			{
 				confirmBox.hide();
@@ -244,7 +270,8 @@ $(document).ready(function() {
 		
 			confirmBox.find(".yes").click(yesFn);
 			confirmBox.find(".no").click(noFn);
-			confirmBox.show();
+			//confirmBox.show();
+			$("#exampleModalCenter").modal("show");
 	} 
 
 	//Displays the time after which the session will be expiring.

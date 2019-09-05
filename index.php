@@ -75,7 +75,7 @@ else {
 	};
 
 	if($_GET['code'] === $code) {
-
+		
 		header('Content-Type: application/json; charset=utf-8;');
 
 		$query_sql="select * from " . TB_USERS;

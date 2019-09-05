@@ -1,0 +1,29 @@
+Thu 2019-09-05 12:14:07 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Thu 2019-09-05 12:14:08 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Thu 2019-09-05 12:14:09 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Thu 2019-09-05 12:17:38 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 12:17:47 AM Addr IP: ::1 ljack [isActive] The user '' has been changed to ''.
+Thu 2019-09-05 12:18:04 AM Addr IP: ::1 ljack [isActive] The user '' has been changed to ''.
+Thu 2019-09-05 12:21:06 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Thu 2019-09-05 12:21:10 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Thu 2019-09-05 09:03:08 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 09:04:36 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 10:12:00 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 10:28:20 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 10:30:39 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Thu 2019-09-05 10:34:55 PM Addr IP: ::1 ljack The file pytanie_test.txt has been uploaded.
+Thu 2019-09-05 10:41:00 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-09-05 10:41:11 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 10:49:22 PM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Thu 2019-09-05 10:49:23 PM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Thu 2019-09-05 10:56:05 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Thu 2019-09-05 10:56:12 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 11:10:23 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 11:11:32 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-09-05 11:11:40 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 11:14:28 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-09-05 11:14:34 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 11:21:02 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 11:26:00 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-09-05 11:26:41 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-09-05 11:26:47 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

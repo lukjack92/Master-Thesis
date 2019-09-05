@@ -17,7 +17,7 @@ if($_SESSION["permission"] != "admin"){
 		//$result = @mysqli_query($link,$query);
 		//$row = @mysqli_fetch_assoc($result);
 		//$user = $row['login'];
-		//msg_logs_users($_SESSION['login'], "[isActive] The user '$user' has been changed to '$active'.");
+		msg_logs_users($_SESSION['login'], "[delQuestion] The user has been removed question.");
 		//unset($_POST);
 		echo '<div class="alert alert-success" role="alert">The question has been deleted!</div>';
 	}
