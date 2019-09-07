@@ -12,7 +12,7 @@
 	//Session timeout
 	$time = $_SERVER['REQUEST_TIME'];
 	
-	$timeout_duration = 200;
+	$timeout_duration = 10;
 	if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
 		session_unset();
 		session_destroy();
@@ -23,6 +23,7 @@
 	}
 	
 	require_once "conf_db/config.php";
+	require_once "func_msg/functions.php";
 	
 	$password_err = $no_matched = $confirm_password_err = $success = $old_password_err = "";
 
@@ -183,8 +184,12 @@
 			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
 		</div>
 	</nav>
-	
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 

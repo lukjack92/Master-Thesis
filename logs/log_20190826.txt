@@ -1,7 +1,0 @@
-Mon 2019-08-26 09:46:05 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Mon 2019-08-26 09:49:52 PM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
-Mon 2019-08-26 09:49:58 PM Addr IP: ::1 ljack Successfully logged out.
-Mon 2019-08-26 22:34:12 PM Addr IP: ::1 Databases are down!
-Mon 2019-08-26 22:34:16 PM Addr IP: ::1 Databases are down!
-Mon 2019-08-26 22:34:52 PM Addr IP: ::1 Databases are down!
-Mon 2019-08-26 22:34:57 PM Addr IP: ::1 Databases are down!

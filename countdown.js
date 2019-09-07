@@ -247,7 +247,7 @@ $(document).ready(function() {
 	readDatabase();
 	
 	//Session time; 
-	var time = 5;
+	var time = 15;
 	var test = document.getElementById('cl');
 	var label1 = document.getElementById('label1');
 	let drawIntrernal;
@@ -255,7 +255,7 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
-		time = 5;
+		time = 15;
 		//clearInterval(timer);
 	});
 	
