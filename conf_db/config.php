@@ -3,7 +3,7 @@
 require_once 'func_msg/functions.php';
 
 /* Database credentials */
-$URL1 = 'ljack.pl';
+$URL1 = '77.55.214.222';
 $URL2 = 'db.mikr.us';
 
 $DB_SERVER = " ";
@@ -15,6 +15,7 @@ define('TB_CODE', 'secret_code');
 define('TB_TABLE', 'android');
 define('TB_USERS', 'users');
 define('TB_DATA', 'us_users');
+define('TB_QUESTIONS', 'questions');
 
 if(isSiteAvailible($URL1)){
 	$DB_SERVER = $URL1;

@@ -200,6 +200,20 @@ function confirmPassword(user_confirm) {
 	});
 }
 
+function doConfirm(msg, yesFn, noFn) {
+		var confirmBox = $("#exampleModalCenter");
+			confirmBox.find("#exampleModalLongTitle").text(msg);
+			confirmBox.find(".yes,.no").unbind().click(function()
+			{
+				confirmBox.hide();
+			});
+		
+			confirmBox.find(".yes").click(yesFn);
+			confirmBox.find(".no").click(noFn);
+			//confirmBox.show();
+			$("#exampleModalCenter").modal("show");
+} 
+
 
 function actionReset(user_reset) { 
 	clearInterval(timer);
@@ -208,10 +222,11 @@ function actionReset(user_reset) {
 	$("#reset_user").val(user_reset);
 }
 
-function delQuestion(id_question) {
+function delQuestion(id_question){
+$("#delQuestionModal").modal('show');
+//var conf = confirm("Are you sure!!!");
 
-var conf = confirm("Are you sure!!!");
-
+/*
 if(conf == true){
 	
 	console.log(id_question);
@@ -224,7 +239,37 @@ if(conf == true){
 			$("#cl").empty().append(data);
 			readDatabase();
 		});
-}
+}*/
+
+var modelConfirm = function(callback){
+
+	$("#modal-btn-yes").on("click", function(){
+		callback(true);
+		$("#delQuestionModal").modal('hide');
+	});
+  
+	$("#modal-btn-no").on("click", function(){
+		callback(false);
+		$("#delQuestionModal").modal('hide');
+	});
+};
+
+modelConfirm(function(confirm){
+	
+	if(confirm){
+		console.log(id_question);
+		
+		var posting = $.post("removeQuestion.php", {
+			id: id_question
+		});	
+	
+		posting.done(function(data) {
+			console.log(data);
+			$("#cl").empty().append(data);
+			readDatabase();
+		});
+	};
+});
 }
 
 function viewQuestion(id_question) {
@@ -235,9 +280,10 @@ function viewQuestion(id_question) {
 	
 	posting.done(function(data) {
 		var attr = JSON.parse(data);
-		console.log(attr.question);
-		console.log(attr.odp);
+		//console.log(attr.question);
+		//console.log(attr.odp);
 		//$("#cl").empty().append(attr.question);
+		$("#updateViewModal").modal("show");
 	});
 }
 
@@ -260,20 +306,7 @@ $(document).ready(function() {
 	});
 	
 	//Function display, whether extend session or not.
-	function doConfirm(msg, yesFn, noFn) {
-		var confirmBox = $("#exampleModalCenter");
-			confirmBox.find("#exampleModalLongTitle").text(msg);
-			confirmBox.find(".yes,.no").unbind().click(function()
-			{
-				confirmBox.hide();
-			});
-		
-			confirmBox.find(".yes").click(yesFn);
-			confirmBox.find(".no").click(noFn);
-			//confirmBox.show();
-			$("#exampleModalCenter").modal("show");
-	} 
-
+	
 	//Displays the time after which the session will be expiring.
 	document.getElementById('time').innerHTML = "Time session " + time + "s";
 	

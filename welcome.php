@@ -33,13 +33,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
 
 </head>
@@ -90,7 +90,7 @@
 	</div>
 -->
 
-<!-- Modal -->
+<!-- Modal Expired-->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -107,6 +107,23 @@
     </div>
   </div>
 </div>
+
+<!--Modal to remove question -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="delQuestionModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Do you want to remove this question?</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary" id="modal-btn-yes">Yes</button>
+        <button type="button" class="btn btn-primary" id="modal-btn-no">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
@@ -126,6 +143,52 @@
 	<div id="time"></div>
 	
 	<div id="database_content"></div>
+
+<!--Modal View -->
+<div class="modal fade" id="updateViewModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Review</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">Question</label>
+</div>
+<input type="text" id="update_login" name="login"placeholder="Login" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">Answer 1</label>
+</div>
+<input type="text" id="update_first_name" name="first_name"placeholder="First Name" class="form-control" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="last_name">Answer 2</label>
+</div>
+<input type="text" id="update_last_name" name="last_name"placeholder="Last Name" class="form-control" />
+</div>
+
+ 
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	<button type="button" class="btn btn-primary" onclick="">Update User</button>
+<input type="hidden" id="hidden_user_id">
+</div>
+</div>
+</div>
+</div>
+
+
 
 <!--
 <table class="table table-bordered table-striped">

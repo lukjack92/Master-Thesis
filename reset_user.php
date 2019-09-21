@@ -180,7 +180,7 @@
 
 <div class="form-group">
 <div class="pull-left">
-<label for="permission">Set password</label>
+<label for="permission">New password</label>
 </div>
 <input type="password" class="form-control" name="password" id="setPassword" placeholder="Password" />
 </div>

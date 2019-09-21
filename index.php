@@ -78,15 +78,19 @@ else {
 		
 		header('Content-Type: application/json; charset=utf-8;');
 
-		$query_sql="select * from " . TB_USERS;
+		$query_sql="select * from " . TB_QUESTIONS;
 		$result = $link->query($query_sql);
 
 		$json = Array();
 
 		while ($obj = mysqli_fetch_object($result)) {
-			$row_array['id'] = $obj->id;
-			$row_array['firstName'] = htmlspecialchars($obj->firstName);
-			$row_array['lastName'] = htmlspecialchars($obj->lastName);
+			//$row_array['id'] = $obj->id;
+			$row_array['question'] = htmlspecialchars($obj->question);
+			$row_array['ansa'] = htmlspecialchars($obj->ansa);
+			$row_array['ansb'] = htmlspecialchars($obj->ansb);
+			$row_array['ansc'] = htmlspecialchars($obj->ansc);
+			$row_array['ansd'] = htmlspecialchars($obj->ansd);
+			$row_array['odp'] = htmlspecialchars($obj->odp);
 		
 			array_push($json, $row_array);
 		}
