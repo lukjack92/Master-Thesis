@@ -223,6 +223,7 @@ function actionReset(user_reset) {
 }
 
 function delQuestion(id_question){
+	
 $("#delQuestionModal").modal('show');
 //var conf = confirm("Are you sure!!!");
 
@@ -273,7 +274,7 @@ modelConfirm(function(confirm){
 }
 
 function viewQuestion(id_question) {
-	
+	console.log("Clicked Button");
 	var posting = $.post("viewQuestion.php", {
 			id: id_question
 	});	
@@ -281,7 +282,7 @@ function viewQuestion(id_question) {
 	posting.done(function(data) {
 		var attr = JSON.parse(data);
 		//console.log(attr.question);
-		//console.log(attr.odp);
+		console.log(attr.odp);
 		//$("#cl").empty().append(attr.question);
 		$("#updateViewModal").modal("show");
 	});
