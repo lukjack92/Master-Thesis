@@ -36,7 +36,7 @@ function addUser() {
 }
 
 function deleteUser(id) {
-	
+	/*
 	var conf = confirm("Are you sure!!!");
 
 	if(conf == true) {
@@ -49,6 +49,39 @@ function deleteUser(id) {
 			readRecords();
 		});
 	}
+	*/
+	
+	$("#delUserModal").modal('show');
+	
+	var modelConfirm = function(callback){
+
+	$("#modal-btn-yes").on("click", function(){
+		callback(true);
+		$("#delUserModal").modal('hide');
+	});
+  
+	$("#modal-btn-no").on("click", function(){
+		callback(false);
+		$("#delUserModal").modal('hide');
+	});
+};
+
+modelConfirm(function(confirm){
+	
+	if(confirm){
+		console.log(id);
+		
+		var posting = $.post("delUser.php", {
+			id: id
+		});	
+	
+		posting.done(function(data) {
+			console.log(data);
+			$("#cl").empty().append(data);
+			readRecords();
+		});
+	};
+});
 	
 	setTimeout(function() {
 			$("#cl").empty();
@@ -201,17 +234,17 @@ function confirmPassword(user_confirm) {
 }
 
 function doConfirm(msg, yesFn, noFn) {
-		var confirmBox = $("#exampleModalCenter");
-			confirmBox.find("#exampleModalLongTitle").text(msg);
-			confirmBox.find(".yes,.no").unbind().click(function()
-			{
-				confirmBox.hide();
-			});
-		
-			confirmBox.find(".yes").click(yesFn);
-			confirmBox.find(".no").click(noFn);
-			//confirmBox.show();
-			$("#exampleModalCenter").modal("show");
+	var confirmBox = $("#exampleModalCenter");
+		confirmBox.find("#exampleModalLongTitle").text(msg);
+		confirmBox.find(".yes,.no").unbind().click(function()
+		{
+			confirmBox.hide();
+		});
+	
+		confirmBox.find(".yes").click(yesFn);
+		confirmBox.find(".no").click(noFn);
+		//confirmBox.show();
+		$("#exampleModalCenter").modal("show");
 } 
 
 

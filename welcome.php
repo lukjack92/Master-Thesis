@@ -145,17 +145,48 @@
 	<div id="database_content"></div>
 
 <!--Modal View -->
-<div class="modal fade" id="updateViewModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade bd-example-modal-lg" id="updateViewModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">Review</h4>
+<h4 class="modal-title" id="myModalLabel">Question review</h4>
 <div class="pull-left">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
 </div>
 <div class="modal-body">
+<div class="form-group">
+<div class="pull-left">
+	<span>Question</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+</div>
+</div>
+<div class="form-group">
+<div class="pull-left">
+	<span>Answer 1</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+</div>
+</div>
+<div class="form-group">
+<div class="pull-left">
+	<span>Answer 2</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+</div>
+</div>
+<div class="form-group">
+<div class="pull-left">
+	<span>Answer 3</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+</div>
+</div>
+<div class="form-group">
+<div class="pull-left">
+	<span>Answer 4</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+</div>
+</div>
+<div class="form-group">
+<div class="pull-left">
+	<span>Correct answer</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+</div>
+</div>
 
+<!--
 <div class="form-group">
 <div class="pull-left">
 <label for="first_name">Question</label>
@@ -176,12 +207,12 @@
 </div>
 <input type="text" id="update_last_name" name="last_name"placeholder="Last Name" class="form-control" />
 </div>
-
+*-->
  
 </div>
 <div class="modal-footer">
 	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-	<button type="button" class="btn btn-primary" onclick="">Update User</button>
+	<button type="button" class="btn btn-primary" onclick="">Save</button>
 <input type="hidden" id="hidden_user_id">
 </div>
 </div>

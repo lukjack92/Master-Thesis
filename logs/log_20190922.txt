@@ -5,3 +5,28 @@ Sun 2019-09-22 02:07:49 AM Addr IP: ::1 ljack [delQuestion] The user has been re
 Sun 2019-09-22 02:08:05 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
 Sun 2019-09-22 02:08:05 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
 Sun 2019-09-22 02:17:32 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-09-22 01:52:08 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-09-22 01:54:36 PM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Sun 2019-09-22 01:54:39 PM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Sun 2019-09-22 01:54:41 PM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Sun 2019-09-22 01:54:42 PM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'true'.
+Sun 2019-09-22 01:54:47 PM Addr IP: ::1 ljack [Dalete user] The user 'alicja' has been removed!
+Sun 2019-09-22 01:54:47 PM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Sun 2019-09-22 01:54:50 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Sun 2019-09-22 01:54:53 PM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Sun 2019-09-22 01:54:53 PM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Sun 2019-09-22 01:54:54 PM Addr IP: ::1 ljack [Dalete user] The user 'kasias01' has been removed!
+Sun 2019-09-22 01:54:56 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Sun 2019-09-22 01:54:59 PM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Sun 2019-09-22 01:54:59 PM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Sun 2019-09-22 01:55:00 PM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Sun 2019-09-22 01:55:00 PM Addr IP: ::1 ljack [Dalete user] The user 'kubiag02' has been removed!
+Sun 2019-09-22 01:56:27 PM Addr IP: ::1 ljack Successfully logged out.
+Sun 2019-09-22 01:56:35 PM Addr IP: ::1 jackol01 Successfully logged. AuthCounter is 0.
+Sun 2019-09-22 01:56:49 PM Addr IP: ::1 jackol01 [isActive] The user 'kubiag02' has been changed to 'true'.
+Sun 2019-09-22 01:56:50 PM Addr IP: ::1 jackol01 [isActive] The user 'kasias01' has been changed to 'true'.
+Sun 2019-09-22 02:05:56 PM Addr IP: ::1 jackol01 Successfully logged out.
+Sun 2019-09-22 02:06:02 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-09-22 02:06:35 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-09-22 02:11:07 PM Addr IP: ::1 ljack Successfully logged out.
+Sun 2019-09-22 02:11:12 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
