@@ -17,7 +17,8 @@ if($_SESSION["permission"] != "admin"){
 		$query = "select login from users where id = '$user'";
 		$result = @mysqli_query($link,$query);
 		$row = @mysqli_fetch_assoc($result);
-		$user = $row['login'];
+		$user = $row['login'];	
+		echo '<div class="alert alert-success" role="alert">The user <b>'.$user.'</b> has been changed to active status as: <b>'.$active.'</b>!</div>';
 		msg_logs_users($_SESSION['login'], "[isActive] The user '$user' has been changed to '$active'.");
 		unset($_POST);
 	}

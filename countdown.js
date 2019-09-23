@@ -317,8 +317,32 @@ function viewQuestion(id_question) {
 		//console.log(attr.question);
 		console.log(attr.odp);
 		//$("#cl").empty().append(attr.question);
+		$("#span_test").empty().append(" "+attr.question);
+		$("#span_opd1").empty().append(" "+attr.ansa);
+		$("#span_opd2").empty().append(" "+attr.ansb);
+		$("#span_opd3").empty().append(" "+attr.ansc);
+		$("#span_opd4").empty().append(" "+attr.ansd);
+		$("#span_corr_odp").empty().append(" "+attr.odp);
+		
+		
 		$("#updateViewModal").modal("show");
 	});
+}
+
+function buttonEdit() {
+	console.log("Clicked Button Edit");
+		$("#updateViewModal").modal("hide");
+		$("#updateViewModalUpdate").modal("show");
+
+}
+
+function buttonCancel() {
+	$("#updateViewModal").modal("show");
+}
+
+function buttonSave() {
+	$("#updateViewModalUpdate").modal("hide");
+	$("#updateViewModal").modal("show");
 }
 
 $(document).ready(function() {

@@ -145,7 +145,7 @@
 	<div id="database_content"></div>
 
 <!--Modal View -->
-<div class="modal fade bd-example-modal-lg" id="updateViewModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade bd-example-modal-lg" id="updateViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
@@ -157,32 +157,33 @@
 <div class="modal-body">
 <div class="form-group">
 <div class="pull-left">
-	<span>Question</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+<h5>Question</h5>
+<span id="span_test"></span> <button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
 </div>
 </div>
 <div class="form-group">
 <div class="pull-left">
-	<span>Answer 1</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+	<h5>Answer 1</h5> <span id="span_opd1"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
 </div>
 </div>
 <div class="form-group">
 <div class="pull-left">
-	<span>Answer 2</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+	<h5>Answer 2</h5> <span id="span_opd2"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
 </div>
 </div>
 <div class="form-group">
 <div class="pull-left">
-	<span>Answer 3</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+	<h5>Answer 3</h5> <span id="span_opd3"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
 </div>
 </div>
 <div class="form-group">
 <div class="pull-left">
-	<span>Answer 4</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+	<h5>Answer 4</h5> <span id="span_opd4"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
 </div>
 </div>
 <div class="form-group">
 <div class="pull-left">
-	<span>Correct answer</span> <button type="button" class="btn btn-primary" id="edit">Edit</button>
+	<h5>Correct answer</h5><span id="span_corr_odp"></span><button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit()">Edit</button>
 </div>
 </div>
 
@@ -211,7 +212,7 @@
  
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
 	<button type="button" class="btn btn-primary" onclick="">Save</button>
 <input type="hidden" id="hidden_user_id">
 </div>
@@ -219,6 +220,37 @@
 </div>
 </div>
 
+
+<!--Modal View Update -->
+<div class="modal fade bd-example-modal-lg" id="updateViewModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Update</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<div class="pull-left">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="login">TEST EDIT</label>
+</div>
+<input type="text" id="question" name="login"placeholder="TEST" class="form-control" />
+</div>
+ 
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="buttonCancel()">Cancel</button>
+	<button type="button" class="btn btn-primary" onclick="buttonSave()">Save</button>
+<input type="hidden" id="hidden_user_id">
+</div>
+</div>
+</div>
+</div>
 
 
 <!--

@@ -106,7 +106,7 @@
 
 <div class="form-group">
 <div class="pull-left">
-<label for="first_name">Login</label>
+<label for="login">Login</label>
 </div>
 <input type="text" id="login" name="login"placeholder="Login" class="form-control" />
 </div>

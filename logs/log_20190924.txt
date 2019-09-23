@@ -1,0 +1,103 @@
+Tue 2019-09-24 12:36:33 AM Addr IP: ::1 ljack [Update user] Updated login=kasias01 firstName=Katarzyna lastName=Sokołowska permission=user.
+Tue 2019-09-24 12:36:38 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Tue 2019-09-24 12:36:39 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Tue 2019-09-24 12:36:41 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-09-24 12:36:42 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Tue 2019-09-24 12:36:43 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Tue 2019-09-24 12:36:59 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Tue 2019-09-24 12:36:59 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Tue 2019-09-24 12:37:01 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Tue 2019-09-24 12:37:01 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Tue 2019-09-24 12:37:02 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'true'.
+Tue 2019-09-24 12:37:11 AM Addr IP: ::1 ljack [Update user] Updated login=jackol01 firstName=?ukasz lastName=Jackowski permission=admin.
+Tue 2019-09-24 12:41:23 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Tue 2019-09-24 12:41:27 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-09-24 12:41:29 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Tue 2019-09-24 12:41:31 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Tue 2019-09-24 12:41:32 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Tue 2019-09-24 12:41:33 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Tue 2019-09-24 12:44:37 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Tue 2019-09-24 12:45:43 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-09-24 12:45:46 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Tue 2019-09-24 12:45:48 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Tue 2019-09-24 12:45:49 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Tue 2019-09-24 12:47:26 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Tue 2019-09-24 12:47:34 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Tue 2019-09-24 12:47:36 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Tue 2019-09-24 12:47:51 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Tue 2019-09-24 12:47:54 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-09-24 12:47:55 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Tue 2019-09-24 12:47:57 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'true'.
+Tue 2019-09-24 12:47:58 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Tue 2019-09-24 12:48:00 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Tue 2019-09-24 12:48:05 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Tue 2019-09-24 12:48:05 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-09-24 12:48:09 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Tue 2019-09-24 12:48:10 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Tue 2019-09-24 12:48:14 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Tue 2019-09-24 12:48:36 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:36 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:39 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:39 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:39 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:41 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:42 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:42 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:42 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:44 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:44 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:44 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:44 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:44 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:49 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:50 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:50 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:50 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:50 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:50 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:52 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:52 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:52 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:53 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:53 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:53 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:53 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:55 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:56 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:58 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:58 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:58 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:58 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:58 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:59 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:59 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:59 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:48:59 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Tue 2019-09-24 12:49:04 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Tue 2019-09-24 12:49:05 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Tue 2019-09-24 12:49:05 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Tue 2019-09-24 12:49:06 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Tue 2019-09-24 12:49:07 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'true'.
+Tue 2019-09-24 12:49:10 AM Addr IP: ::1 ljack [Dalete user] The user 'jackol01' has been removed!
+Tue 2019-09-24 12:49:12 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:12 AM Addr IP: ::1 ljack [Dalete user] The user 'jackol1' has been removed!
+Tue 2019-09-24 12:49:14 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:14 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:15 AM Addr IP: ::1 ljack [Dalete user] The user 'kubiag02' has been removed!
+Tue 2019-09-24 12:49:18 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:18 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:18 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:18 AM Addr IP: ::1 ljack [Dalete user] The user 'kasias01' has been removed!
+Tue 2019-09-24 12:49:20 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:21 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:21 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:21 AM Addr IP: ::1 ljack [Dalete user] The user '' has been removed!
+Tue 2019-09-24 12:49:21 AM Addr IP: ::1 ljack [Dalete user] The user 'alicja' has been removed!
+Tue 2019-09-24 12:50:03 AM Addr IP: ::1 ljack [Update user] Updated login=ljack firstName=Łukasz lastName=Jackowski permission=user.
+Tue 2019-09-24 12:50:08 AM Addr IP: ::1 ljack [Update user] Updated login=ljack firstName=?ukasz lastName=Jackowski permission=admin.
