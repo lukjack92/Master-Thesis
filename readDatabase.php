@@ -31,7 +31,7 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 						<th scope="row">'.++$id.'</th>
 						<td>'.$row['question'].'</td>
 						<td>
-							<button type="button" class="btn btn-primary testbutton2" onclick="viewQuestion('.$row['id'].')">View</button> <button type="button" class="btn btn-primary testbutton2" onclick="delQuestion('.$row['id'].')">Remove</button>
+							<button type="button" class="btn btn-primary testbutton2" onclick="viewQuestion('.$row['id'].')">View</button> <button type="button" class="btn btn-primary testbutton2" onclick="delQuestion('.$row['id'].')">Delete</button>
 						</td>
 					</tr>';
 					}
