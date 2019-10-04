@@ -251,6 +251,8 @@
 </div>
 </div>
 </div>
+</div>
+</div>
 
 
 <!--
@@ -367,7 +369,8 @@
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
-			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
+			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 	

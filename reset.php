@@ -8,20 +8,20 @@
 		header("Location: login.php");
 		exit;
 	}
-	
+	/*
 	//Session timeout
 	$time = $_SERVER['REQUEST_TIME'];
 	
 	$timeout_duration = 10;
 	if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
+		msg_logs_users($_SESSION['login'], "Successfully logged out.");
 		session_unset();
 		session_destroy();
 		session_start();
-		msg_logs_users($_SESSION['login'], "Successfully logged out.");
 		header("Location: login.php");
 		exit;
 	}
-	
+	*/
 	require_once "conf_db/config.php";
 	require_once "func_msg/functions.php";
 	
@@ -182,6 +182,7 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 

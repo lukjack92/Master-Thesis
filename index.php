@@ -49,12 +49,13 @@ echo '
     <main role="main" class=" center color-white">
       <h1 class="black" >API for the PHYSICS application</h1>
 		<img src="img/logo.jpg">
-        <p class="lead">It&#39;s API is used by mobile application.</p>
+        <p class="lead">It&#39;s API used by mobile application.</p>
     </main>
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
   </body>
@@ -152,7 +153,7 @@ else {
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
-			<div class="text-right">This version is in development.</div>
+			<h7 class="text-danger">This version is in development</h7>
 		</div>
 	</nav>
   </body>

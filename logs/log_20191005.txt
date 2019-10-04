@@ -1,0 +1,9 @@
+Sat 2019-10-05 12:02:28 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-05 12:06:41 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-05 12:40:09 AM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Sat 2019-10-05 12:40:15 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-05 12:45:34 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-05 12:47:17 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-05 12:52:36 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-05 12:52:48 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-05 12:54:04 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
