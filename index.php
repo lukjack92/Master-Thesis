@@ -149,10 +149,10 @@ else {
       <p class="lead">The code in URL isn&#39t correct.</p> 
     </main>
 </div>
-<h1>This version in development</h1>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
+			<div class="text-right">This version is in development.</div>
 		</div>
 	</nav>
   </body>
