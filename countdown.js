@@ -335,7 +335,6 @@ function buttonEdit(change) {
 		$("#updateViewModal").modal("hide");
 		
 		var valueInput = $("#"+change).text();
-		
 		$("#question").val(valueInput);
 		$("#updateViewModalUpdate").modal("show");
 
