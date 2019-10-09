@@ -87,7 +87,7 @@
 </div>
   
   <div class="pull-right">
-	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New User</button>
+	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Create Account</button>
   </div></br>
   <?php } ?>
 
@@ -97,7 +97,7 @@
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">Add New User</h4>
+<h4 class="modal-title" id="myModalLabel">Create Account</h4>
 <div class="pull-left">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
@@ -145,7 +145,7 @@
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-<button type="button" class="btn btn-primary" onclick="addUser()">Add User</button>
+<button type="button" class="btn btn-primary" onclick="addUser()">Submit</button>
 </div>
 </div>
 </div>
@@ -156,7 +156,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Do you want to remove this account?</h5>
+        <h5 class="modal-title" id="myModalLabel">Are you sure you want to delete this account?</h5>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	  </div>
       <div class="modal-body">
@@ -257,6 +257,7 @@
 	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
 
 	<div id="record_content"></div>
+	
 	
 </div>
 	<nav class="navbar-fixed-bottom">

@@ -21,6 +21,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 		//msg_logs_users($_SESSION['login'], "[isActive] The user '$user' has been changed to '$active'.");
 		unset($_POST);
 		while($row = mysqli_fetch_assoc($result)) {
+				$response['id'] = $row['id'];
 				$response['question'] = $row['question'];
 				$response['ansa'] = $row['ansa'];
 				$response['ansb'] = $row['ansb'];

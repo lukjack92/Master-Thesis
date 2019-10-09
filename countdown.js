@@ -315,23 +315,28 @@ function viewQuestion(id_question) {
 	posting.done(function(data) {
 		var attr = JSON.parse(data);
 		//console.log(attr.question);
-		console.log(attr.odp);
+		console.log(attr.id);
 		//$("#cl").empty().append(attr.question);
-		$("#span_test").empty().append(" "+attr.question);
-		$("#span_opd1").empty().append(" "+attr.ansa);
-		$("#span_opd2").empty().append(" "+attr.ansb);
-		$("#span_opd3").empty().append(" "+attr.ansc);
-		$("#span_opd4").empty().append(" "+attr.ansd);
-		$("#span_corr_odp").empty().append(" "+attr.odp);
-		
+
+		$("#span_test").empty().append(attr.question);
+		$("#span_opd1").empty().append(attr.ansa);
+		$("#span_opd2").empty().append(attr.ansb);
+		$("#span_opd3").empty().append(attr.ansc);
+		$("#span_opd4").empty().append(attr.ansd);
+		$("#span_corr_odp").empty().append(attr.odp);
 		
 		$("#updateViewModal").modal("show");
 	});
 }
 
-function buttonEdit() {
+function buttonEdit(change) {
+	console.log(change);
 	console.log("Clicked Button Edit");
 		$("#updateViewModal").modal("hide");
+		
+		var valueInput = $("#"+change).text();
+		
+		$("#question").val(valueInput);
 		$("#updateViewModalUpdate").modal("show");
 
 }
@@ -341,6 +346,8 @@ function buttonCancel() {
 }
 
 function buttonSave() {
+	var valueInput = $("#question").val();	
+	$("#span_test").text(valueInput);
 	$("#updateViewModalUpdate").modal("hide");
 	$("#updateViewModal").modal("show");
 }
@@ -363,8 +370,6 @@ $(document).ready(function() {
 		//clearInterval(timer);
 	});
 	
-	//Function display, whether extend session or not.
-	
 	//Displays the time after which the session will be expiring.
 	document.getElementById('time').innerHTML = "Time session " + time + "s";
 	
@@ -377,7 +382,7 @@ $(document).ready(function() {
 			clearInterval(time);
 			document.getElementById('time').innerHTML = "SESSION EXPIRED";
 
-			doConfirm("Expired, restore session?", function yes()
+			doConfirm("Expired session, restore?", function yes()
 			{
 				//alert("Restore");
 				//window.location.href = "welcome.php";

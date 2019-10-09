@@ -113,7 +113,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Do you want to remove this question?</h5>
+        <h5 class="modal-title" id="myModalLabel">Are you sure you want to delete this question?</h5>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	  </div>
       <div class="modal-body">
@@ -141,49 +141,101 @@
 </form>
 	
 	<div id="time"></div>
-	
 	<div id="database_content"></div>
 
 <!--Modal View -->
-<div class="modal fade bd-example-modal-lg" id="updateViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
+<div class="modal fade" id="updateViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">Question review</h4>
+<h4 class="modal-title" id="myModalLabel">Question Review</h4>
 <div class="pull-left">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
 </div>
 <div class="modal-body">
+
 <div class="form-group">
-<div class="pull-left">
+<div class="row">
+<div class="col-2">
 <h5>Question</h5>
-<span id="span_test"></span> <button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
+</div>
+<div class="col-8">
+<span id="span_test"></span> 
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_test')">Edit</button>
 </div>
 </div>
+</div>
+
 <div class="form-group">
-<div class="pull-left">
-	<h5>Answer 1</h5> <span id="span_opd1"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
+<div class="row">
+<div class="col-2">
+<h5>Answer 1</h5> 
+</div>
+<div class="col-8">
+	<span id="span_opd1"></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd1')">Edit</button>
 </div>
 </div>
+</div>
+
 <div class="form-group">
-<div class="pull-left">
-	<h5>Answer 2</h5> <span id="span_opd2"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
+<div class="row">
+<div class="col-2">
+<h5>Answer 2</h5>
+</div>
+<div class="col-8">
+<span id="span_opd2"></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd2')">Edit</button>
 </div>
 </div>
+</div>
+
 <div class="form-group">
-<div class="pull-left">
-	<h5>Answer 3</h5> <span id="span_opd3"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
+<div class="row">
+<div class="col-2">
+<h5>Answer 3</h5>	
+</div>
+<div class="col-8">
+<span id="span_opd3"></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd3')">Edit</button>
 </div>
 </div>
+</div>
+
 <div class="form-group">
-<div class="pull-left">
-	<h5>Answer 4</h5> <span id="span_opd4"></span><button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit()">Edit</button>
+<div class="row">
+<div class="col-2">
+<h5>Answer 4</h5>	
+</div>
+<div class="col-8">
+<span id="span_opd4"></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd4')">Edit</button>
 </div>
 </div>
+</div>
+
 <div class="form-group">
-<div class="pull-left">
-	<h5>Correct answer</h5><span id="span_corr_odp"></span><button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit()">Edit</button>
+<div class="row">
+<div class="col-2">
+<h5>Correct answer</h5>
+</div>
+<div class="col-8">
+<span id="span_corr_odp"></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit('span_corr_odp')">Edit</button>
+</div>
 </div>
 </div>
 
@@ -211,6 +263,7 @@
 *-->
  
 </div>
+
 <div class="modal-footer">
 	<button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
 	<button type="button" class="btn btn-primary" onclick="">Save</button>
@@ -220,10 +273,9 @@
 </div>
 </div>
 
-
 <!--Modal View Update -->
-<div class="modal fade bd-example-modal-lg" id="updateViewModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
+<div class="modal fade" id="updateViewModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
 <div class="modal-header">
 <h4 class="modal-title" id="myModalLabel">Update</h4>
@@ -233,16 +285,16 @@
 </div>
 <div class="modal-body">
 <div class="form-group">
-<div class="pull-left">
 
 <div class="form-group">
 <div class="pull-left">
 <label for="login">TEST EDIT</label>
 </div>
-<input type="text" id="question" name="login"placeholder="TEST" class="form-control" />
+<textarea class="form-control" id="question" ></textarea>
+<!--
+<input type="text" id="exampleFormControlTextarea1" name="login"placeholder="TEST" class="form-control" />-->
 </div>
  
-</div>
 <div class="modal-footer">
 	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="buttonCancel()">Cancel</button>
 	<button type="button" class="btn btn-primary" onclick="buttonSave()">Save</button>
@@ -253,7 +305,6 @@
 </div>
 </div>
 </div>
-
 
 <!--
 <table class="table table-bordered table-striped">
@@ -299,9 +350,6 @@
 			?>
 		</tbody>
 	</table> 
-
-
-
 
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -375,6 +423,7 @@
 	</nav>
 	
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>

@@ -45,6 +45,7 @@ $link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
 if($link === false){
     //die("ERROR: Could not connect. " . mysqli_connect_error());
 	echo "<div class='alert alert-danger' role='alert'><center><b>Error, please check it. Check to the log.</b></center></div>";
+	msg_logs(mysqli_connect_error());
 } else {
 	//echo " Connected";
 	mysqli_query($link, "SET CHARSET utf8");

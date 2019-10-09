@@ -1,2 +1,0 @@
-Tue 2019-09-10 23:09:48 PM Addr IP: ::1 Request to resource.
-Tue 2019-09-10 23:11:11 PM Addr IP: ::1 Request to resource.

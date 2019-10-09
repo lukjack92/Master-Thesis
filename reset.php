@@ -71,7 +71,7 @@
 		}
 	}
 	
-	$_SESSION['LAST_ACTIVITY'] = $time;
+	//$_SESSION['LAST_ACTIVITY'] = $time;
 ?>
 
 <!DOCTYPE html>
