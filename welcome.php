@@ -149,6 +149,7 @@
 <div class="modal-content">
 <div class="modal-header">
 <h4 class="modal-title" id="myModalLabel">Question Review</h4>
+<div class="d-none" id="myID"></div>
 <div class="pull-left">
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
@@ -161,10 +162,10 @@
 <h5>Question</h5>
 </div>
 <div class="col-8">
-<span id="span_test"></span> 
+<span id="spanQuestion"></span> 
 </div>
 <div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_test')">Edit</button>
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('spanQuestion')">Edit</button>
 </div>
 </div>
 </div>
@@ -175,10 +176,10 @@
 <h5>Answer 1</h5> 
 </div>
 <div class="col-8">
-	<span id="span_opd1"></span>
+	<span id="spanOdp1"></span>
 </div>
 <div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd1')">Edit</button>
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('spanOdp1')">Edit</button>
 </div>
 </div>
 </div>
@@ -189,10 +190,10 @@
 <h5>Answer 2</h5>
 </div>
 <div class="col-8">
-<span id="span_opd2"></span>
+<span id="spanOdp2"></span>
 </div>
 <div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd2')">Edit</button>
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('spanOdp2')">Edit</button>
 </div>
 </div>
 </div>
@@ -203,10 +204,10 @@
 <h5>Answer 3</h5>	
 </div>
 <div class="col-8">
-<span id="span_opd3"></span>
+<span id="spanOdp3"></span>
 </div>
 <div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd3')">Edit</button>
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('spanOdp3')">Edit</button>
 </div>
 </div>
 </div>
@@ -217,10 +218,10 @@
 <h5>Answer 4</h5>	
 </div>
 <div class="col-8">
-<span id="span_opd4"></span>
+<span id="spanOdp4"></span>
 </div>
 <div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('span_opd4')">Edit</button>
+<button type="button" class="btn btn-primary" id="edit" onclick="buttonEdit('spanOdp4')">Edit</button>
 </div>
 </div>
 </div>
@@ -231,10 +232,10 @@
 <h5>Correct answer</h5>
 </div>
 <div class="col-8">
-<span id="span_corr_odp"></span>
+<span id="spanCorrOdp"></span>
 </div>
 <div class="col-2">
-<button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit('span_corr_odp')">Edit</button>
+<button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit('spanCorrOdp')">Edit</button>
 </div>
 </div>
 </div>
@@ -266,8 +267,8 @@
 
 <div class="modal-footer">
 	<button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
-	<button type="button" class="btn btn-primary" onclick="">Save</button>
-<input type="hidden" id="hidden_user_id">
+	<button type="button" class="btn btn-primary" id="buttonSaveUpdate">Save</button>
+<!--<input type="hidden" id="hidden_user_id">-->
 </div>
 </div>
 </div>
@@ -290,14 +291,14 @@
 <div class="pull-left">
 <label for="login">TEST EDIT</label>
 </div>
-<textarea class="form-control" id="question" ></textarea>
+<textarea class="form-control" id="textToEdit" ></textarea>
 <!--
 <input type="text" id="exampleFormControlTextarea1" name="login"placeholder="TEST" class="form-control" />-->
 </div>
  
 <div class="modal-footer">
 	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="buttonCancel()">Cancel</button>
-	<button type="button" class="btn btn-primary" onclick="buttonSave()">Save</button>
+	<button type="button" id="buttonUpdate" class="btn btn-primary">Update</button>
 <input type="hidden" id="hidden_user_id">
 </div>
 </div>

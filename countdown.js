@@ -308,6 +308,7 @@ modelConfirm(function(confirm){
 
 function viewQuestion(id_question) {
 	console.log("Clicked Button");
+	$("#myID").empty().append(id_question);
 	var posting = $.post("viewQuestion.php", {
 			id: id_question
 	});	
@@ -318,38 +319,48 @@ function viewQuestion(id_question) {
 		console.log(attr.id);
 		//$("#cl").empty().append(attr.question);
 
-		$("#span_test").empty().append(attr.question);
-		$("#span_opd1").empty().append(attr.ansa);
-		$("#span_opd2").empty().append(attr.ansb);
-		$("#span_opd3").empty().append(attr.ansc);
-		$("#span_opd4").empty().append(attr.ansd);
-		$("#span_corr_odp").empty().append(attr.odp);
+		$("#spanQuestion").empty().append(attr.question);
+		$("#spanOdp1").empty().append(attr.ansa);
+		$("#spanOdp2").empty().append(attr.ansb);
+		$("#spanOdp3").empty().append(attr.ansc);
+		$("#spanOdp4").empty().append(attr.ansd);
+		$("#spanCorrOdp").empty().append(attr.odp);
 		
 		$("#updateViewModal").modal("show");
 	});
+	
+	//To save updated element's in updateViewModalUpdate model
+	$("#updateViewModal").find("#buttonSaveUpdate").unbind().click();
+	$("#updateViewModal").find("#buttonSaveUpdate").click(function(){
+		var myID = $("#myID").text();	
+		console.log("SAVE: "+myID);
+		$("#updateViewModal").modal("hide");
+	});	
 }
 
 function buttonEdit(change) {
-	console.log(change);
-	console.log("Clicked Button Edit");
+		//console.log(change);
+		//console.log("Clicked Button Edit");
 		$("#updateViewModal").modal("hide");
 		
 		var valueInput = $("#"+change).text();
-		$("#question").val(valueInput);
+		$("#textToEdit").val(valueInput);
 		$("#updateViewModalUpdate").modal("show");
-
+		
+		//Update model with updateViewModalUpdate
+		$("#updateViewModalUpdate").find("#buttonUpdate").unbind().click();
+		$("#updateViewModalUpdate").find("#buttonUpdate").click(function(){
+			var valueInput = $("#textToEdit").val();	
+			$("#"+change).text(valueInput);			
+			$("#updateViewModalUpdate").modal("hide");
+			$("#updateViewModal").modal("show");
+		});	
 }
 
 function buttonCancel() {
 	$("#updateViewModal").modal("show");
 }
 
-function buttonSave() {
-	var valueInput = $("#question").val();	
-	$("#span_test").text(valueInput);
-	$("#updateViewModalUpdate").modal("hide");
-	$("#updateViewModal").modal("show");
-}
 
 $(document).ready(function() {
 	
