@@ -153,7 +153,7 @@ else {
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
-			<h7 class="text-danger">This version is in development</h7>
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
   </body>

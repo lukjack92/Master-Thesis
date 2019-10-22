@@ -63,8 +63,8 @@
 							msg_logs_users($_SESSION['login'], "[Reset pwd] The password is no matched.");
 						}	
 					} else {
-						$success = '<center class="alert alert-danger">Your old password isn&#39t correct!</center>';
-						msg_logs_users($_SESSION['login'], "[Reset pwd] Your old password isn't correct!");
+						$success = '<center class="alert alert-danger">Your current password isn&#39t correct!</center>';
+						msg_logs_users($_SESSION['login'], "[Reset pwd] Your current password isn't correct!");
 					}
 				}
 			}

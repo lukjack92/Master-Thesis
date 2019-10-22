@@ -3,8 +3,10 @@
 require_once 'func_msg/functions.php';
 
 /* Database credentials */
-$URL1 = '77.55.214.222';
-$URL2 = 'db.mikr.us';
+//$URL1 = '77.55.214.222';
+$URL1 = 'ljack.pl';
+$URL2 = 'front.mikr.us';
+//$URL2 = '51.38.133.125';
 
 $DB_SERVER = " ";
 $DB_USERNAME = " ";
@@ -17,25 +19,24 @@ define('TB_USERS', 'users');
 define('TB_DATA', 'us_users');
 define('TB_QUESTIONS', 'questions');
 
-if(isSiteAvailible($URL1)){
+if(isSiteAvailible($URL1)) {
 	$DB_SERVER = $URL1;
 	$DB_USERNAME = 'admin';
 	$DB_PASSWORD = 'admin12345';
 	$DB_NAME = 'test';
-	//echo $DB_SERVER;
 
 } elseif(isSiteAvailible($URL2)) {
 	$DB_SERVER = $URL2;
-	$DB_USERNAME = 'uw336';
-	$DB_PASSWORD = '506f7233';
-	$DB_NAME = 'uw336';
-	//echo $DB_SERVER;
+	$DB_USERNAME = 'a177';
+	$DB_PASSWORD = 'MjRh_72a7';
+	$DB_NAME = 'db_a177';
 	
 } else {
 	echo "Databases are down!";
 	msg_logs("Databases are down!");
 }
 
+//Uncomment following line in order to check which server's database is using
 //echo $DB_SERVER;
 	
 /* Attempt to connect to MySQL database */

@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 	// Initialize the session
 	session_start();
 	
@@ -63,6 +65,10 @@
 
 <div class="container color_white">
 <div id="cl"></div>
+
+  <div class="pull-right">
+	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModal">Create An Question</button>
+  </div></br></br>
 
 	<div id="ok">
 	<?php 
@@ -139,6 +145,9 @@
 		<input type="file" name="fileToUpload" id="fileToUpload">
 		<input type="submit" value="Upload File" name="submit">
 </form>
+	
+	<button type="button" class="btn btn-primary" id="" onclick="buttonViewCategory()">Category</button>
+	<button type="button" class="btn btn-primary" id="" onclick="buttonAllDatabases()">View All Database</button>
 	
 	<div id="time"></div>
 	<div id="database_content"></div>
@@ -273,6 +282,114 @@
 </div>
 </div>
 </div>
+
+
+<!--Modal View Create An Question-->
+<div class="modal fade" id="createViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Create An Question</h4>
+<div class="d-none" id="myID"></div>
+<div class="pull-left">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Question</h5>
+</div>
+<div class="col-8">
+<span id=""></span> 
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="">Edit</button>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Answer 1</h5> 
+</div>
+<div class="col-8">
+	<span id=""></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit" onclick="">Edit</button>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Answer 2</h5>
+</div>
+<div class="col-8">
+<span id=""></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="" onclick="">Edit</button>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Answer 3</h5>	
+</div>
+<div class="col-8">
+<span id=""></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="" onclick="">Edit</button>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Answer 4</h5>	
+</div>
+<div class="col-8">
+<span id=""></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="" onclick="">Edit</button>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Correct answer</h5>
+</div>
+<div class="col-8">
+<span id=""></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id=""  onclick="">Edit</button>
+</div>
+</div>
+</div>
+
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
+	<button type="button" class="btn btn-primary" id="">Save</button>
+</div>
+</div>
+</div>
+</div>
+
 
 <!--Modal View Update -->
 <div class="modal fade" id="updateViewModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

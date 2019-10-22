@@ -308,13 +308,15 @@ modelConfirm(function(confirm){
 
 function viewQuestion(id_question) {
 	console.log("Clicked Button");
+	var attr;
+	//console.log(id_question);
 	$("#myID").empty().append(id_question);
 	var posting = $.post("viewQuestion.php", {
 			id: id_question
 	});	
 	
 	posting.done(function(data) {
-		var attr = JSON.parse(data);
+		attr = JSON.parse(data);
 		//console.log(attr.question);
 		console.log(attr.id);
 		//$("#cl").empty().append(attr.question);
@@ -334,7 +336,28 @@ function viewQuestion(id_question) {
 	$("#updateViewModal").find("#buttonSaveUpdate").click(function(){
 		var myID = $("#myID").text();	
 		console.log("SAVE: "+myID);
+		//$("#updateViewModal").modal("hide");
+		
+		var posting = $.post("updateQuestion.php", {
+			id: id_question,
+			spanQuestion: $("#spanQuestion").text(),
+			spanOdp1: $("#spanOdp1").text(),
+			spanOdp2: $("#spanOdp2").text(),
+			spanOdp3: $("#spanOdp3").text(),
+			spanOdp4: $("#spanOdp4").text(),
+			spanCorrOdp: $("#spanCorrOdp").text() 
+		});
+		
+		posting.done(function(data) {
+			console.log(data);
+			$("#cl").empty().append(data);
+		});
+		readDatabase();
 		$("#updateViewModal").modal("hide");
+		
+		timer = setTimeout(function() {
+			$("#cl").empty();
+		}, 6000);
 	});	
 }
 
@@ -361,11 +384,48 @@ function buttonCancel() {
 	$("#updateViewModal").modal("show");
 }
 
+function buttonAllDatabases() {
+	$("#database_content").empty();
+	readDatabase();
+}
+
+function buttonViewCategory() {
+	$("#database_content").empty();
+	
+	var getting = $.get("viewCategory.php", {
+	});
+	
+	
+	getting.done(function(data) {
+		var attr = JSON.parse(data);
+		
+		console.log(data);
+		
+		for(var i=0; i<attr.length-1; i++) {
+			console.log(attr[i].category);
+			$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
+		}
+		
+	});
+}
+
+function viewQuestionFromCategory(category) {
+	console.log(category);
+	//console.log("Clicked button of category");
+	var getting = $.get("readQuestionCategory.php", {
+		category: category
+	});
+
+	getting.done(function(data) {
+		$("#database_content").empty().append(data);
+	});
+}
+
 
 $(document).ready(function() {
 	
 	readRecords();
-	readDatabase();
+	//readDatabase();
 	
 	//Session time; 
 	var time = 15;

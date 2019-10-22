@@ -1,0 +1,12 @@
+Mon 2019-10-21 10:30:37 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Mon 2019-10-21 10:55:30 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Mon 2019-10-21 11:20:57 PM Addr IP: ::1 ljack [Reset pwd] Your old password isn't correct!
+Mon 2019-10-21 11:22:17 PM Addr IP: ::1 ljack [Reset pwd] Your old password isn't correct!
+Mon 2019-10-21 11:23:02 PM Addr IP: ::1 ljack [Reset pwd] Your current password isn't correct!
+Mon 2019-10-21 11:23:06 PM Addr IP: ::1 ljack [Reset pwd] Your current password isn't correct!
+Mon 2019-10-21 11:42:27 PM Addr IP: ::1 ljack Successfully logged out.
+Mon 2019-10-21 11:42:32 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Mon 2019-10-21 11:43:49 PM Addr IP: ::1 ljack Successfully logged out.
+Mon 2019-10-21 11:43:55 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Mon 2019-10-21 11:59:30 PM Addr IP: ::1 ljack Successfully logged out.
+Mon 2019-10-21 11:59:43 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

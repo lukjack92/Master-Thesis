@@ -1,0 +1,11 @@
+Sat 2019-10-19 01:26:58 AM Addr IP: ::1 jackol01 Successfully logged out.
+Sat 2019-10-19 01:27:34 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-19 01:29:28 AM Addr IP: ::1 Databases are down!
+Sat 2019-10-19 01:29:28 AM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Sat 2019-10-19 01:29:29 AM Addr IP: ::1 Databases are down!
+Sat 2019-10-19 01:29:29 AM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Sat 2019-10-19 01:29:32 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-19 01:29:32 AM Addr IP: ::1 Databases are down!
+Sat 2019-10-19 01:29:32 AM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Sat 2019-10-19 17:44:10 PM Addr IP: ::1 Request to resource.
+Sat 2019-10-19 05:47:13 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

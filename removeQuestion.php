@@ -4,7 +4,8 @@ session_start();
 require_once "conf_db/config.php";
 require_once 'func_msg/functions.php';
 
-if($_SESSION["permission"] != "admin"){
+//if($_SESSION["permission"] != "admin"){
+if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 		header("Location: index.php");
 		exit;
 } else {

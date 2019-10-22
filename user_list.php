@@ -87,7 +87,7 @@
 </div>
   
   <div class="pull-right">
-	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Create Account</button>
+	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Create An Account</button>
   </div></br>
   <?php } ?>
 
@@ -97,7 +97,7 @@
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">Create Account</h4>
+<h4 class="modal-title" id="myModalLabel">Create An Account</h4>
 <div class="pull-left">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>

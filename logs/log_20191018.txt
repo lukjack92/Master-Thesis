@@ -1,0 +1,20 @@
+Fri 2019-10-18 10:40:32 PM Addr IP: ::1 ljack [Dalete user] The user 'test' has been removed!
+Fri 2019-10-18 10:40:55 PM Addr IP: ::1 ljack [Add user] The user 'test' added!
+Fri 2019-10-18 10:41:15 PM Addr IP: ::1 ljack [Update user] Updated login=jackol01 firstName=Łukasz lastName=Jackowski permission=admin.
+Fri 2019-10-18 10:41:45 PM Addr IP: ::1 ljack [Reset pwd user confirm] The password is incorrect to ljack.
+Fri 2019-10-18 10:41:53 PM Addr IP: ::1 ljack [Reset pwd user confirm] The password is correct to ljack.
+Fri 2019-10-18 10:42:00 PM Addr IP: ::1 ljack [Reset pwd user] The password has been reset to jackol01.
+Fri 2019-10-18 10:42:16 PM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-10-18 10:42:25 PM Addr IP: ::1 jackol01 Successfully logged. AuthCounter is 0.
+Fri 2019-10-18 10:43:43 PM Addr IP: ::1 jackol01 Successfully logged out.
+Fri 2019-10-18 10:43:51 PM Addr IP: ::1 jackol01 Successfully logged. AuthCounter is 0.
+Fri 2019-10-18 10:48:34 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-10-18 11:13:44 PM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-10-18 11:13:51 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-10-18 11:15:07 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Fri 2019-10-18 11:15:52 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Fri 2019-10-18 11:16:03 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Fri 2019-10-18 11:16:03 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Fri 2019-10-18 11:46:31 PM Addr IP: ::1 ljack [Update user] Updated login=jackol01 firstName=Łukasz lastName=Jackowski permission=user.
+Fri 2019-10-18 11:46:36 PM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-10-18 11:46:45 PM Addr IP: ::1 jackol01 Successfully logged. AuthCounter is 0.

@@ -1,0 +1,55 @@
+Thu 2019-10-17 08:03:39 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-10-17 08:06:23 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 08:07:09 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-10-17 08:08:52 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 20:17:24 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 20:17:24 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 20:17:33 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 20:17:33 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 20:17:39 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 20:17:39 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 20:17:58 PM Addr IP: ::1 Access denied for user 'admin'@'176.221.120.122' (using password: YES)
+Thu 2019-10-17 20:18:00 PM Addr IP: ::1 Access denied for user 'admin'@'176.221.120.122' (using password: YES)
+Thu 2019-10-17 08:19:45 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-10-17 08:19:55 PM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 08:20:26 PM Addr IP: ::1 test Successfully logged out.
+Thu 2019-10-17 08:23:37 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 09:14:11 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 23:05:22 PM Addr IP: ::1 Request to resource.
+Thu 2019-10-17 23:43:18 PM Addr IP: ::1 Request to resource.
+Thu 2019-10-17 11:43:56 PM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Thu 2019-10-17 11:43:57 PM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Thu 2019-10-17 11:44:02 PM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Thu 2019-10-17 11:44:03 PM Addr IP: ::1 ljack [isActive] The user 'test' has been changed to 'false'.
+Thu 2019-10-17 23:45:32 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:45:32 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:45:32 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:45:32 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:45:32 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:45:32 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 11:45:37 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-10-17 23:45:37 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:45:37 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:45:49 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:45:49 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 11:45:49 PM Addr IP: ::1 ljack The user doesn't exists.
+Thu 2019-10-17 11:48:00 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 23:48:47 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:48:47 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:48:49 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:48:49 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:48:51 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:48:51 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:50:12 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:50:12 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:50:14 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:50:15 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:50:17 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:50:17 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 11:50:17 PM Addr IP: ::1 ljack Successfully logged out.
+Thu 2019-10-17 23:50:19 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:50:19 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 23:52:01 PM Addr IP: ::1 Databases are down!
+Thu 2019-10-17 23:52:01 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2019-10-17 11:54:50 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-10-17 11:57:51 PM Addr IP: ::1 ljack Successfully logged out.

@@ -1,0 +1,45 @@
+Sat 2019-10-12 12:43:17 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-12 12:43:25 AM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 12:46:11 AM Addr IP: ::1 test Successfully logged out.
+Sat 2019-10-12 12:46:28 AM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 12:48:06 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:10 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:10 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:14 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:14 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:14 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:18 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:18 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:19 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:19 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:21 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:21 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:22 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:22 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:48:22 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 12:54:15 AM Addr IP: ::1 test Successfully logged out.
+Sat 2019-10-12 12:54:28 AM Addr IP: ::1 ljack The user doesn't exists.
+Sat 2019-10-12 12:55:10 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 12:55:20 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-12 12:55:26 AM Addr IP: ::1 test The user doesn't exists.
+Sat 2019-10-12 12:55:36 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 12:55:56 AM Addr IP: ::1 ljack [Add user] The user 'test' added!
+Sat 2019-10-12 01:07:26 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-12 01:07:32 AM Addr IP: ::1 ljack The user doesn't exists.
+Sat 2019-10-12 01:08:17 AM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 01:08:23 AM Addr IP: ::1 test [delQuestion] The user has been removed question.
+Sat 2019-10-12 01:08:29 AM Addr IP: ::1 test Successfully logged out.
+Sat 2019-10-12 01:08:36 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 01:08:47 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-12 01:08:53 AM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 01:09:16 AM Addr IP: ::1 test Successfully logged out.
+Sat 2019-10-12 01:09:23 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 01:14:28 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 01:17:01 AM Addr IP: ::1 ljack [Update user] Updated login=test firstName=test lastName=test permission=admin.
+Sat 2019-10-12 01:17:09 AM Addr IP: ::1 ljack Successfully logged out.
+Sat 2019-10-12 01:17:17 AM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 01:17:29 AM Addr IP: ::1 test [Update user] Updated login=test firstName=test lastName=test permission=user.
+Sat 2019-10-12 01:17:31 AM Addr IP: ::1 test Successfully logged out.
+Sat 2019-10-12 01:17:37 AM Addr IP: ::1 test Successfully logged. AuthCounter is 0.
+Sat 2019-10-12 23:11:26 PM Addr IP: ::1 Request to resource.
+Sat 2019-10-12 23:27:37 PM Addr IP: ::1 Request to resource.
