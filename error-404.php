@@ -1,35 +1,3 @@
-<?php
-
-error_reporting(0);
-
-	// Initialize the session
-	session_start();
-	
-		// Check if the user is logged in, if not then redirect him to login page
-	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
-		header("Location: login.php");
-		exit;
-	}
-	
-	/*
-	//Session timeout
-	$time = $_SERVER['REQUEST_TIME'];
-	
-	$timeout_duration = 200;
-	if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
-		session_unset();
-		session_destroy();
-		session_start();
-		header("Location: index.php");
-		exit;
-	}
-
-	$_SESSION['LAST_ACTIVITY'] = $time;
-	
-	*/
-	
-	require_once "conf_db/config.php";
-?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
