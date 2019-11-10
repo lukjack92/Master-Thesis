@@ -8,7 +8,7 @@ $code = "";
 if(empty($_GET['code'])) {
 echo '
 
-		<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -78,7 +78,7 @@ else {
 	if($_GET['code'] === $code) {
 		
 		header('Content-Type: application/json; charset=utf-8;');
-
+header("Expires: Sun, 25 Jul 1997 06:02:34 GMT"); 
 		$query_sql="select * from " . TB_QUESTIONS;
 		$result = $link->query($query_sql);
 
@@ -92,6 +92,7 @@ else {
 			$row_array['ansc'] = htmlspecialchars($obj->ansc);
 			$row_array['ansd'] = htmlspecialchars($obj->ansd);
 			$row_array['odp'] = htmlspecialchars($obj->odp);
+			$row_array['category'] = htmlspecialchars($obj->category);
 		
 			array_push($json, $row_array);
 		}

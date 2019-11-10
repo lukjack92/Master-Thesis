@@ -18,6 +18,7 @@ $category = $_GET['category'];
 $data = '<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
+				<th scope="col" style="width: 2%"><input type="checkbox" name="vehicle1" value=""></th>
 				<th scope="col" style="width: 5%">No.</th>
 				<th scope="col" style="width: 50%">Questions</th>
 				<th scope="col" style="width: 5%">Action</th>
@@ -32,7 +33,8 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 					// Output data of each rows
 					while($row = mysqli_fetch_assoc($result)) {
 				$data .= '<tr>
-						<th scope="row">'.++$id.'</th>
+						<td><input type="checkbox" name="vehicle1" value=""></td>
+						<td scope="row">'.++$id.'</td>
 						<td>'.$row['question'].'</td>
 						<td>
 							<button type="button" class="btn btn-primary testbutton2" onclick="viewQuestion('.$row['id'].')">View</button> <button type="button" class="btn btn-primary testbutton2" onclick="delQuestion('.$row['id'].')">Delete</button>

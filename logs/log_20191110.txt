@@ -1,0 +1,19 @@
+Sun 2019-11-10 03:12:00 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-11-10 03:23:56 PM Addr IP: ::1 ljack Successfully logged out.
+Sun 2019-11-10 03:59:31 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-11-10 04:03:22 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-11-10 05:47:57 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-11-10 19:15:45 PM Addr IP: ::1 MySQL server has gone away
+Sun 2019-11-10 07:18:00 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-11-10 07:28:49 PM Addr IP: ::1 ljack Successfully logged out.
+Sun 2019-11-10 07:29:32 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Sun 2019-11-10 07:29:38 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Sun 2019-11-10 08:24:42 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Sun 2019-11-10 08:24:44 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Sun 2019-11-10 08:24:44 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Sun 2019-11-10 08:24:55 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Sun 2019-11-10 08:24:55 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Sun 2019-11-10 08:24:55 PM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
+Sun 2019-11-10 20:28:39 PM Addr IP: ::1 MySQL server has gone away
+Sun 2019-11-10 08:55:22 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Sun 2019-11-10 08:55:27 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

@@ -64,10 +64,18 @@ error_reporting(0);
 	  </nav>
 
 <div class="container color_white">
-<div id="cl"></div>
+<div id="cl"><?php 
+		if(isset($_SESSION['ok']) != "") {
+			echo $_SESSION['ok'];
+			unset($_SESSION['ok']);
+		} 
+	?></div>
 
   <div class="pull-right">
-	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModal">Create An Question</button>
+	<button class="btn btn-success" data-toggle="modal" data-target="#createViewCategory">Create A Category</button>
+  </div><br><br>
+  <div class="pull-right">
+	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
   </div></br></br>
 
 	<div id="ok">
@@ -285,111 +293,156 @@ error_reporting(0);
 
 
 <!--Modal View Create An Question-->
-<div class="modal fade" id="createViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--Modal 1 -->
+<div class="modal fade" id="createViewModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog modal-lg" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">Create An Question</h4>
-<div class="d-none" id="myID"></div>
+<h4 class="modal-title" id="myModalLabel">Create A Question</h4>
 <div class="pull-left">
-	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+	<button type="button" class="close" id="close" onclick="closeModal()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
 </div>
 <div class="modal-body">
 
 <div class="form-group">
-<div class="row">
-<div class="col-2">
-<h5>Question</h5>
+<div class="pull-left">
+<label><b>Type question 1/4</b></label>
+</div><!--
+<input type="text" id="question" name="question"placeholder="Question" class="form-control" /> -->
+<textarea class="form-control" id="question" ></textarea>
 </div>
-<div class="col-8">
-<span id=""></span> 
+
 </div>
-<div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="">Edit</button>
+<div class="modal-footer">
+	<!-- <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>-->
+	<button type="button" class="btn btn-primary btn-next" id="" onclick="nextModalTwo()">Next</button>
+</div>
 </div>
 </div>
 </div>
 
-<div class="form-group">
-<div class="row">
-<div class="col-2">
-<h5>Answer 1</h5> 
-</div>
-<div class="col-8">
-	<span id=""></span>
-</div>
-<div class="col-2">
-<button type="button" class="btn btn-primary" id="edit" onclick="">Edit</button>
+<!--Modal 2 -->
+<div class="modal fade" id="createViewModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel2">Create A Question</h4>
+<div class="pull-left">
+	<button type="button" class="close" onclick="closeModal()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
 </div>
-</div>
+<div class="modal-body">
 
 <div class="form-group">
-<div class="row">
-<div class="col-2">
-<h5>Answer 2</h5>
-</div>
-<div class="col-8">
-<span id=""></span>
-</div>
-<div class="col-2">
-<button type="button" class="btn btn-primary" id="" onclick="">Edit</button>
-</div>
-</div>
-</div>
-
+<div class="pull-left">
+<label><b>Type answers to this question 2/4</b></label>
+</div><br><br>
 <div class="form-group">
-<div class="row">
-<div class="col-2">
-<h5>Answer 3</h5>	
+<label>The suggestion of answer A</label>
+<input type="text" id="odp1" name="odp1" placeholder="Answer A" class="form-control" />
 </div>
-<div class="col-8">
-<span id=""></span>
-</div>
-<div class="col-2">
-<button type="button" class="btn btn-primary" id="" onclick="">Edit</button>
-</div>
-</div>
-</div>
-
 <div class="form-group">
-<div class="row">
-<div class="col-2">
-<h5>Answer 4</h5>	
+<label>The suggestion of answer B</label>
+<input type="text" id="odp2" name="odp2" placeholder="Answer B" class="form-control" />
 </div>
-<div class="col-8">
-<span id=""></span>
-</div>
-<div class="col-2">
-<button type="button" class="btn btn-primary" id="" onclick="">Edit</button>
-</div>
-</div>
-</div>
-
 <div class="form-group">
-<div class="row">
-<div class="col-2">
-<h5>Correct answer</h5>
+<label>The suggestion of answer C</label>
+<input type="text" id="odp3" name="odp3" placeholder="Answer C" class="form-control" />
 </div>
-<div class="col-8">
-<span id=""></span>
-</div>
-<div class="col-2">
-<button type="button" class="btn btn-primary" id=""  onclick="">Edit</button>
-</div>
+<div class="form-group">
+<label>The suggestion of answer D</label>
+<input type="text" id="odp4" name="odp4" placeholder="Answer D" class="form-control" />
 </div>
 </div>
 
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
-	<button type="button" class="btn btn-primary" id="">Save</button>
+	<button type="button" class="btn btn-default btn-prev" id="" data-dismiss="modal" onclick="prevModalOne()">Prev</button>
+	<button type="button" class="btn btn-primary btn-next" id="" onclick="nextModalThree()">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!--Modal 3 -->
+<div class="modal fade" id="createViewModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel3">Create A Question</h4>
+<div class="pull-left">
+	<button type="button" class="close" onclick="closeModal()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label><b>Type the answer which is correctly 3/4</b></label>
+</div>
+</div>
+<br>
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Choose the correct answer:</label>
+</div>
+      <select id="chooseAnswer" class="form-control">
+      <option><b>Answer A</b></option>
+      <option><b>Answer B</b></option>
+      <option><b>Answer C</b></option>
+      <option><b>Answer D</b></option>
+      </select>
+</div>
+
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default btn-prev" id="" data-dismiss="modal" onclick="prevModalTwo()">Prev</button>
+	<button type="button" class="btn btn-primary btn-next" id="" onclick="nextModalFour()">Next</button>
 </div>
 </div>
 </div>
 </div>
 
+<!--Modal 4 -->
+<div class="modal fade" id="createViewModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel4">Create A Question</h4>
+<div class="pull-left">
+	<button type="button" class="close" onclick="closeModal()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label><b>Type the category for this question 4/4</b></label>
+</div>
+</div>
+<br>
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Choose the category:</label>
+</div>
+      <select id="chooseCategory" class="form-control">
+      <option><b>Answer A</b></option>
+      <option><b>Answer B</b></option>
+      <option><b>Answer C</b></option>
+      <option><b>Answer D</b></option>
+      </select>
+</div>
+
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default btn-prev" id="" data-dismiss="modal" onclick="prevModalThree()">Prev</button>
+	<button type="button" class="btn btn-primary btn-next" id="" onclick="saveQuestion()">Save</button>
+</div>
+</div>
+</div>
+</div>
+
+<!--End of Modal View Create An Question-->
 
 <!--Modal View Update -->
 <div class="modal fade" id="updateViewModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -398,7 +451,7 @@ error_reporting(0);
 <div class="modal-header">
 <h4 class="modal-title" id="myModalLabel">Update</h4>
 <div class="pull-left">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+<button type="button" class="close" onclick="close()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
 </div>
 <div class="modal-body">
@@ -406,7 +459,7 @@ error_reporting(0);
 
 <div class="form-group">
 <div class="pull-left">
-<label for="login">TEST EDIT</label>
+<label for="login">Edite</label>
 </div>
 <textarea class="form-control" id="textToEdit" ></textarea>
 <!--

@@ -352,6 +352,7 @@ function viewQuestion(id_question) {
 			console.log(data);
 			$("#cl").empty().append(data);
 		});
+		
 		readDatabase();
 		$("#updateViewModal").modal("hide");
 		
@@ -395,7 +396,6 @@ function buttonViewCategory() {
 	var getting = $.get("viewCategory.php", {
 	});
 	
-	
 	getting.done(function(data) {
 		var attr = JSON.parse(data);
 		
@@ -421,6 +421,61 @@ function viewQuestionFromCategory(category) {
 	});
 }
 
+function nextModalTwo() {
+	$("#createViewModal1").modal("hide");
+	$("#createViewModal2").modal("show");
+}
+
+function prevModalOne() {
+	$("#createViewModal1").modal("show");
+	$("#createViewModal2").modal("hide");
+}
+
+function nextModalThree() {
+	$("#createViewModal2").modal("hide");
+	$("#createViewModal3").modal("show");
+}
+
+function prevModalTwo() {
+	$("#createViewModal2").modal("show");
+	$("#createViewModal3").modal("hide");
+}
+
+function nextModalFour() {
+	$("#createViewModal3").modal("hide");
+	$("#createViewModal4").modal("show");
+}
+
+function prevModalThree() {
+	$("#createViewModal3").modal("show");
+	$("#createViewModal4").modal("hide");
+}
+
+function closeModal() {
+	$("#question").val("");
+	$("#chooseAnswer").prop('selectedIndex',0);
+	$("#odp1").val("");
+	$("#odp2").val("");
+	$("#odp3").val("");
+	$("#odp4").val("");
+}
+
+function saveQuestion() {
+	var posting = $.post("addNewQuestion.php", {
+		question: $("#question").val(),
+		odp1: $("#odp1").val(),
+		odp2: $("#odp2").val(),
+		odp3: $("#odp3").val(),
+		odp4: $("#odp4").val(),
+		corrOdp: $("#chooseAnswer").val() 
+	});
+		
+	posting.done(function(data) {
+		console.log(data);
+		$("#cl").empty().append(data);
+		$("#createViewModal3").modal("hide");
+	});
+}
 
 $(document).ready(function() {
 	

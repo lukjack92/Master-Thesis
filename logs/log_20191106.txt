@@ -1,0 +1,2 @@
+Wed 2019-11-06 12:12:11 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Wed 2019-11-06 12:12:25 AM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
