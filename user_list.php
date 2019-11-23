@@ -255,7 +255,7 @@
 
 
 	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
-
+	<center><div id="loader"></div></center>
 	<div id="record_content"></div>
 	
 	
@@ -272,6 +272,7 @@
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
+  	<script type="text/javascript" src="loadReadRecords.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 	
 </body>

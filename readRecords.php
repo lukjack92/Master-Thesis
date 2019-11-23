@@ -76,9 +76,9 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 								$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button></td>';
 							} else {
 								if($row['isActive'] == "false"){
-									$data .= '<td> <button type="button" class="btn btn-primary testbutton" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-primary testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+									$data .= '<td> <button type="button" class="btn btn-primary testbutton" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
 								} else {
-									$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-primary testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+									$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
 								}
 							}
 						} 

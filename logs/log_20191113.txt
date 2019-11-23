@@ -1,0 +1,7 @@
+Wed 2019-11-13 12:08:46 AM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Wed 2019-11-13 12:08:46 AM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Wed 2019-11-13 12:08:52 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Wed 2019-11-13 12:09:01 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'true'.
+Wed 2019-11-13 12:09:50 AM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Wed 2019-11-13 12:09:52 AM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Wed 2019-11-13 00:28:03 AM Addr IP: ::1 MySQL server has gone away

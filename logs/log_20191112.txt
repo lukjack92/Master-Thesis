@@ -1,0 +1,36 @@
+Tue 2019-11-12 09:38:24 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Tue 2019-11-12 09:38:29 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-11-12 09:38:51 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-11-12 09:59:09 PM Addr IP: ::1 ljack [Reset pwd] Your current password isn't correct!
+Tue 2019-11-12 09:59:22 PM Addr IP: ::1 ljack [Reset pwd] The password has been reset.
+Tue 2019-11-12 09:59:29 PM Addr IP: ::1 ljack Successfully logged out.
+Tue 2019-11-12 09:59:38 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Tue 2019-11-12 09:59:43 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 2.
+Tue 2019-11-12 09:59:51 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 3.
+Tue 2019-11-12 09:59:57 PM Addr IP: ::1 ljack Password correct. AuthCounter increment (3). AuthCounter is large than 3. You must be wait, then you will be able to log in after: 10:00:40
+Tue 2019-11-12 10:00:50 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-11-12 10:01:16 PM Addr IP: ::1 ljack [Reset pwd] The password is no matched.
+Tue 2019-11-12 10:01:31 PM Addr IP: ::1 ljack [Reset pwd] The password is no matched.
+Tue 2019-11-12 10:01:47 PM Addr IP: ::1 ljack [Reset pwd] The password has been reset.
+Tue 2019-11-12 10:01:49 PM Addr IP: ::1 ljack Successfully logged out.
+Tue 2019-11-12 10:01:55 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-11-12 10:43:03 PM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-11-12 10:43:24 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Tue 2019-11-12 10:43:48 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Tue 2019-11-12 10:44:21 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Tue 2019-11-12 10:44:30 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Tue 2019-11-12 10:45:42 PM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'true'.
+Tue 2019-11-12 10:57:47 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'true'.
+Tue 2019-11-12 10:57:49 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'true'.
+Tue 2019-11-12 10:57:50 PM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'true'.
+Tue 2019-11-12 10:57:55 PM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'true'.
+Tue 2019-11-12 10:57:55 PM Addr IP: ::1 ljack [isActive] The user 'test' has been changed to 'true'.
+Tue 2019-11-12 10:57:58 PM Addr IP: ::1 ljack [isActive] The user 'test' has been changed to 'false'.
+Tue 2019-11-12 10:57:59 PM Addr IP: ::1 ljack [isActive] The user 'alicja' has been changed to 'false'.
+Tue 2019-11-12 10:58:00 PM Addr IP: ::1 ljack [isActive] The user 'kasias01' has been changed to 'false'.
+Tue 2019-11-12 10:58:03 PM Addr IP: ::1 ljack [isActive] The user 'kubiag02' has been changed to 'false'.
+Tue 2019-11-12 10:58:04 PM Addr IP: ::1 ljack [isActive] The user 'jackol1' has been changed to 'false'.
+Tue 2019-11-12 11:24:56 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-11-12 11:26:09 PM Addr IP: ::1 ljack [isActive] The user 'jackol01' has been changed to 'false'.
+Tue 2019-11-12 11:45:50 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-11-12 11:51:33 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

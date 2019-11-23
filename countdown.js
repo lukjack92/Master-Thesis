@@ -157,26 +157,31 @@ function updateUser() {
 
 function readRecords() {
 	
-	var getting = $.get("readRecords.php", {
-	});
-	
+	var getting = $.get("readRecords.php", {});
+	console.log("Start");
+	$("#record_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
 	getting.done(function(data) {
-		$("#record_content").empty().append(data);
-		//$("#record_content").innerHTML = data;
-		//location.reload();
-		//console.log(data);
-		//$("#record_content").html(data);
-	});
+		if(document.readyState == 'complete'){ 
+			console.log("Koniec"); 
+			$("#record_content").empty().append(data);
+			document.getElementById("loader").style.display = "none";};
+	}); 
 }
 
 function readDatabase() {
-	var getting = $.get("readDatabase.php", {
-		
-	});
-
+	var getting = $.get("readDatabase.php", {});
+	console.log("Start");
+	
+	$("#database_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
 	getting.done(function(data) {
-		$("#database_content").empty().append(data);
-	});
+		if(document.readyState == 'complete'){ 
+			console.log("Koniec"); 
+			$("#database_content").empty().append(data);
+			document.getElementById("loader").style.display = "none";
+		};	
+	}); 
 }
 
 function resetPassUser() {
@@ -309,6 +314,7 @@ modelConfirm(function(confirm){
 function viewQuestion(id_question) {
 	console.log("Clicked Button");
 	var attr;
+	var cate;
 	//console.log(id_question);
 	$("#myID").empty().append(id_question);
 	var posting = $.post("viewQuestion.php", {
@@ -319,6 +325,7 @@ function viewQuestion(id_question) {
 		attr = JSON.parse(data);
 		//console.log(attr.question);
 		console.log(attr.id);
+		console.log(attr);
 		//$("#cl").empty().append(attr.question);
 
 		$("#spanQuestion").empty().append(attr.question);
@@ -326,7 +333,52 @@ function viewQuestion(id_question) {
 		$("#spanOdp2").empty().append(attr.ansb);
 		$("#spanOdp3").empty().append(attr.ansc);
 		$("#spanOdp4").empty().append(attr.ansd);
-		$("#spanCorrOdp").empty().append(attr.odp);
+		
+		cate = attr.category;
+		
+		//Setting the answer for the Modal updateViewModal 
+		//$("#spanCorrOdp").empty().append(attr.odp);
+		var myArray = {ansa: "Answer A", ansb: "Answer B", ansc: "Answer C", ansd: "Answer D"};
+		for(var key in myArray) {
+			console.log("Przyszło: "+key);
+				console.log(attr.odp);
+			if(attr.odp === key) {
+				console.log("Ustawić: "+myArray[key]);
+				//document.getElementById("spanCorrOdp").value=myArray[key];
+				$("#spanCorrOdp").val(myArray[key]);
+				break;
+			}
+		}
+		
+		//View all category
+		var getting = $.get("viewCategory.php", {
+		});
+
+		//This a remove all options from drop down list
+		$("#chooseCategory option").remove();
+
+		getting.done(function(data) {
+			var category = JSON.parse(data);
+		 		
+				//console.log("Data: ");
+				if(document.readyState == 'complete'){
+					for(var i=0; i<category.length-1; i++) {
+						console.log(category[i].category);
+						//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
+						var sel = document.getElementById("chooseCategory");
+						var opts = document.createElement('option');
+			
+						opts.appendChild(document.createTextNode(category[i].category));
+						sel.appendChild(opts);
+					}
+				
+				$("#chooseCategory").val(cate);
+				}		
+		});
+		
+		//Setting the category for the Modal updateViewModal 
+		//$("#chooseCategory").empty().append(attr.category);
+
 		
 		$("#updateViewModal").modal("show");
 	});
@@ -345,7 +397,8 @@ function viewQuestion(id_question) {
 			spanOdp2: $("#spanOdp2").text(),
 			spanOdp3: $("#spanOdp3").text(),
 			spanOdp4: $("#spanOdp4").text(),
-			spanCorrOdp: $("#spanCorrOdp").text() 
+			spanCorrOdp: $("#spanCorrOdp").val(),
+			chooseCategory: $("#chooseCategory").val()
 		});
 		
 		posting.done(function(data) {
@@ -391,22 +444,37 @@ function buttonAllDatabases() {
 }
 
 function buttonViewCategory() {
-	$("#database_content").empty();
+	//$("#database_content").empty();
 	
 	var getting = $.get("viewCategory.php", {
 	});
-	
+	//Start Loading...
+	$("#database_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
+
+	$("#listCategories li").remove();
+
 	getting.done(function(data) {
 		var attr = JSON.parse(data);
-		
-		console.log(data);
-		
-		for(var i=0; i<attr.length-1; i++) {
-			console.log(attr[i].category);
-			$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
+		//console.log(attr);
+
+		$("#database_content").empty();
+			//console.log(data);
+			if(document.readyState == 'complete'){
+			for(var i=0; i<attr.length-1; i++) {
+				console.log(attr[i].category);
+				//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
+				//$("#list_category").append('<li class="list-group-item">Cras justo odio <button class="btn btn-primary pull-right" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">Select</button></li>');
+			
+				var sel = document.getElementById('listCategories');
+				var opts = document.createElement('li');
+				opts.className = "list-group-item";
+				opts.appendChild(document.createTextNode(attr[i].category));
+				sel.appendChild(opts);
+			}
+			document.getElementById("loader").style.display = "none";
 		}
-		
-	});
+	});	
 }
 
 function viewQuestionFromCategory(category) {
@@ -416,8 +484,14 @@ function viewQuestionFromCategory(category) {
 		category: category
 	});
 
+	$("#database_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
+	
 	getting.done(function(data) {
-		$("#database_content").empty().append(data);
+		if(document.readyState == 'complete'){
+			$("#database_content").empty().append(data);	
+			document.getElementById("loader").style.display = "none";
+		}
 	});
 }
 
@@ -442,6 +516,31 @@ function prevModalTwo() {
 }
 
 function nextModalFour() {
+	
+	//View all category
+	var getting = $.get("viewCategory.php", {
+	});
+
+	//This a remove all options from drop down list
+	$("#chooseCategoryNewQuestion option").remove();
+
+	getting.done(function(data) {
+		var category = JSON.parse(data);
+	 		
+			//console.log("Data: ");
+			if(document.readyState == 'complete'){
+				for(var i=0; i<category.length-1; i++) {
+					console.log(category[i].category);
+					//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
+					var sel = document.getElementById("chooseCategoryNewQuestion");
+					var opts = document.createElement('option');
+			
+					opts.appendChild(document.createTextNode(category[i].category));
+					sel.appendChild(opts);
+				}
+			}		
+	});
+	
 	$("#createViewModal3").modal("hide");
 	$("#createViewModal4").modal("show");
 }
@@ -458,7 +557,10 @@ function closeModal() {
 	$("#odp2").val("");
 	$("#odp3").val("");
 	$("#odp4").val("");
+	$("#chooseAnswer").val("");
+	$("#chooseCategoryNewQuestion");
 }
+
 
 function saveQuestion() {
 	var posting = $.post("addNewQuestion.php", {
@@ -467,19 +569,70 @@ function saveQuestion() {
 		odp2: $("#odp2").val(),
 		odp3: $("#odp3").val(),
 		odp4: $("#odp4").val(),
-		corrOdp: $("#chooseAnswer").val() 
+		corrOdp: $("#chooseAnswer").val(),
+		category: $("#chooseCategoryNewQuestion").val()
 	});
 		
 	posting.done(function(data) {
-		console.log(data);
+		//console.log(data);
+		closeModal();
 		$("#cl").empty().append(data);
-		$("#createViewModal3").modal("hide");
+		$("#createViewModal4").modal("hide");
+	});
+}
+
+function sellectAllCheckBox() {
+	$('#allCheckBoxes').click(function(){
+		if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
+			document.getElementById("removeBox").style.display = "block";
+		}
+	else { $('input:checkbox').prop('checked', false); 
+		document.getElementById("removeBox").style.display = "none"; }
+	});
+	
+	$("input[type='checkbox']").change(function(){
+    var a = $("input[type='checkbox']");
+    if(a.length == a.filter(":checked").length){
+        $('#allCheckBoxes').prop('checked', true);
+    }
+    else {
+        $('#allCheckBoxes').prop('checked', false);
+    }
+});
+}
+
+function checkSelectedCheckBoxes() {
+	console.log("Selected checkBox:");
+	
+	var arraySelectedCheckBoxes = [];
+	
+	$("#removeBox").click(function() {
+		$.each($("input[name='allCheckBox']:checked"), function() {
+			arraySelectedCheckBoxes.push($(this).val());
+		});
+	});
+	
+	console.log(arraySelectedCheckBoxes);
+}
+
+function saveNewCategory() {
+	
+	var cate = $("#category").val();
+	console.log(cate);
+	var posting = $.post("addNewCategory.php", {
+		category: $("#category").val()
+	});
+		
+	posting.done(function(data) {
+		//console.log(data);
+		$("#cl").empty().append(data);
+		$("#createViewModalNewCategory").modal("hide");
 	});
 }
 
 $(document).ready(function() {
 	
-	readRecords();
+	//readRecords();
 	//readDatabase();
 	
 	//Session time; 
@@ -494,6 +647,13 @@ $(document).ready(function() {
 		time = 15;
 		//clearInterval(timer);
 	});
+	
+	
+	//$('body').hide();
+	//$(window).on("load", function() {
+	//	$('body').show();
+	//});
+	
 	
 	//Displays the time after which the session will be expiring.
 	document.getElementById('time').innerHTML = "Time session " + time + "s";
@@ -531,7 +691,6 @@ $(document).ready(function() {
 			label.innerHTML = "admin permissions"
 		}
 	}); 
-*/
 
 	$('#checkBoxPer').change(function() {
 		if($(this).prop("checked") == true) {
@@ -542,4 +701,6 @@ $(document).ready(function() {
 			label.innerHTML = "user permissions";
 		}
 	});
+	
+*/
 }); 

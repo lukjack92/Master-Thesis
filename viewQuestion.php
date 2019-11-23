@@ -28,9 +28,9 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 				$response['ansc'] = $row['ansc'];
 				$response['ansd'] = $row['ansd'];
 				$response['odp'] = $row['odp'];
+				$response['category'] = $row['category'];
 		}
 	}
-	
 	echo json_encode($response);
 }
 ?>

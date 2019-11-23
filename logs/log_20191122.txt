@@ -1,0 +1,11 @@
+Fri 2019-11-22 01:31:53 AM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Fri 2019-11-22 01:31:59 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-11-22 01:39:03 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-11-22 01:41:18 AM Addr IP: ::1 ljack A new category has been added!
+Fri 2019-11-22 04:57:42 PM Addr IP: ::1 ljack A new category has been added!
+Fri 2019-11-22 05:00:30 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-11-22 05:18:57 PM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Fri 2019-11-22 05:19:02 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-11-22 05:22:20 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-11-22 22:59:01 PM Addr IP: ::1 Databases are down!
+Fri 2019-11-22 22:59:01 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 

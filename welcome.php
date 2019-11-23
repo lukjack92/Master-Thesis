@@ -72,9 +72,6 @@ error_reporting(0);
 	?></div>
 
   <div class="pull-right">
-	<button class="btn btn-success" data-toggle="modal" data-target="#createViewCategory">Create A Category</button>
-  </div><br><br>
-  <div class="pull-right">
 	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
   </div></br></br>
 
@@ -145,6 +142,7 @@ error_reporting(0);
 			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">The Reset Password For User</a>';
 		?>
 		<a href="user_list.php" class="btn btn-primary">List Of Users</a>
+		<a href="category.php" class="btn btn-primary">List Of Category</a>
 		<a href="logout.php" class="btn btn-danger">Sign Out Of Your Account</a>
     </p>
 
@@ -157,8 +155,17 @@ error_reporting(0);
 	<button type="button" class="btn btn-primary" id="" onclick="buttonViewCategory()">Category</button>
 	<button type="button" class="btn btn-primary" id="" onclick="buttonAllDatabases()">View All Database</button>
 	
-	<div id="time"></div>
-	<div id="database_content"></div>
+	<div class="form-group">
+		<div class="pull-right">
+			<button type="button" class="btn btn-danger" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>
+		</div>
+	</div>
+	<center><div id="loader"></div></center>
+		<ul class="list-group" id="listCategories">
+		</ul>
+	<div id="database_content">
+
+	</div>
 
 <!--Modal View -->
 <div class="modal fade" id="updateViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -172,7 +179,6 @@ error_reporting(0);
 </div>
 </div>
 <div class="modal-body">
-
 <div class="form-group">
 <div class="row">
 <div class="col-2">
@@ -190,7 +196,7 @@ error_reporting(0);
 <div class="form-group">
 <div class="row">
 <div class="col-2">
-<h5>Answer 1</h5> 
+<h5>Answer A</h5> 
 </div>
 <div class="col-8">
 	<span id="spanOdp1"></span>
@@ -204,7 +210,7 @@ error_reporting(0);
 <div class="form-group">
 <div class="row">
 <div class="col-2">
-<h5>Answer 2</h5>
+<h5>Answer B</h5>
 </div>
 <div class="col-8">
 <span id="spanOdp2"></span>
@@ -218,7 +224,7 @@ error_reporting(0);
 <div class="form-group">
 <div class="row">
 <div class="col-2">
-<h5>Answer 3</h5>	
+<h5>Answer C</h5>	
 </div>
 <div class="col-8">
 <span id="spanOdp3"></span>
@@ -232,7 +238,7 @@ error_reporting(0);
 <div class="form-group">
 <div class="row">
 <div class="col-2">
-<h5>Answer 4</h5>	
+<h5>Answer D</h5>	
 </div>
 <div class="col-8">
 <span id="spanOdp4"></span>
@@ -248,15 +254,43 @@ error_reporting(0);
 <div class="col-2">
 <h5>Correct answer</h5>
 </div>
+<!--
 <div class="col-8">
 <span id="spanCorrOdp"></span>
 </div>
 <div class="col-2">
 <button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit('spanCorrOdp')">Edit</button>
+</div>-->
+<div class="col-10">
+      <select id="spanCorrOdp" class="form-control">
+      <option value="Answer A"><b>Answer A</b></option>
+      <option value="Answer B"><b>Answer B</b></option>
+      <option value="Answer C"><b>Answer C</b></option>
+      <option value="Answer D"><b>Answer D</b></option>
+      </select>
 </div>
 </div>
 </div>
 
+
+<div class="form-group">
+<div class="row">
+<div class="col-2">
+<h5>Choose category</h5>
+</div>
+<!--
+<div class="col-8">
+<span id="spanCategory"></span>
+</div>
+<div class="col-2">
+<button type="button" class="btn btn-primary" id="edit"  onclick="buttonEdit('spanCategory')">Edit</button>
+</div>-->
+<div class="col-10">
+      <select id="chooseCategory" class="form-control">
+      </select>
+</div>
+</div>
+</div>
 <!--
 <div class="form-group">
 <div class="pull-left">
@@ -425,11 +459,7 @@ error_reporting(0);
 <div class="pull-left">
 <label for="permission">Choose the category:</label>
 </div>
-      <select id="chooseCategory" class="form-control">
-      <option><b>Answer A</b></option>
-      <option><b>Answer B</b></option>
-      <option><b>Answer C</b></option>
-      <option><b>Answer D</b></option>
+      <select id="chooseCategoryNewQuestion" class="form-control">
       </select>
 </div>
 
@@ -594,6 +624,7 @@ error_reporting(0);
 	</nav>
 	
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

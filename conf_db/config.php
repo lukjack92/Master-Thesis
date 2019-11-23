@@ -4,7 +4,7 @@ require_once 'func_msg/functions.php';
 
 /* Database credentials */
 //$URL1 = '77.55.214.222';
-$URL1 = 'ljack.pl';
+$URL1 = 'ljack.com.pl';
 $URL2 = 'front.mikr.us';
 //$URL2 = '51.38.133.125';
 
