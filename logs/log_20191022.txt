@@ -1,4 +1,0 @@
-Tue 2019-10-22 10:00:25 PM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Tue 2019-10-22 10:49:02 PM Addr IP: ::1 ljack [Add user] No user 'test' added, because it already exists!
-Tue 2019-10-22 10:49:17 PM Addr IP: ::1 ljack Successfully logged out.
-Tue 2019-10-22 10:49:23 PM Addr IP: ::1 test Successfully logged. AuthCounter is 0.

@@ -2,7 +2,7 @@
 
 require_once 'func_msg/functions.php';
 
-/* Database credentials */
+/*Database credentials */
 //$URL1 = '77.55.214.222';
 $URL1 = 'ljack.com.pl';
 $URL2 = 'front.mikr.us';
@@ -37,7 +37,7 @@ if(isSiteAvailible($URL1)) {
 }
 
 //Uncomment following line in order to check which server's database is using
-//echo $DB_SERVER;
+//$infoDATABASE = "MySQL form domain: ".$DB_SERVER;
 	
 /* Attempt to connect to MySQL database */
 $link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);

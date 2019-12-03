@@ -253,12 +253,10 @@
   </div>
 </div>
 
-
 	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
 	<center><div id="loader"></div></center>
 	<div id="record_content"></div>
-	
-	
+		
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">

@@ -311,6 +311,42 @@ modelConfirm(function(confirm){
 });
 }
 
+function delCategory(id){
+	
+$("#delQuestionModal").modal('show');
+
+var modelConfirm = function(callback){
+
+	$("#modal-btn-yes").on("click", function(){
+		callback(true);
+		$("#delQuestionModal").modal('hide');
+	});
+  
+	$("#modal-btn-no").on("click", function(){
+		callback(false);
+		$("#delQuestionModal").modal('hide');
+	});
+};
+
+
+modelConfirm(function(confirm){
+	
+	if(confirm){
+		console.log(id);
+		
+		var posting = $.post("removeCategory.php", {
+			id: id
+		});	
+	
+		posting.done(function(data) {
+			console.log(data);
+			$("#cl").empty().append(data);
+			buttonViewCategory();
+		});
+	};
+});
+}
+
 function viewQuestion(id_question) {
 	console.log("Clicked Button");
 	var attr;
@@ -443,8 +479,23 @@ function buttonAllDatabases() {
 	readDatabase();
 }
 
+
 function buttonViewCategory() {
-	//$("#database_content").empty();
+	var getting = $.get("readCategoryMainPage.php", {});
+	console.log("Start");
+	
+	$("#database_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
+	
+	getting.done(function(data) {
+		if(document.readyState == 'complete'){
+			console.log("Koniec"); 
+			$("#database_content").empty().append(data);	
+			document.getElementById("loader").style.display = "none";
+		}
+	});
+	
+/*	//$("#database_content").empty();
 	
 	var getting = $.get("viewCategory.php", {
 	});
@@ -452,32 +503,52 @@ function buttonViewCategory() {
 	$("#database_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 
+
 	$("#listCategories li").remove();
 
 	getting.done(function(data) {
 		var attr = JSON.parse(data);
 		//console.log(attr);
 
-		$("#database_content").empty();
+			$("#database_content").empty();
+			
+			var data = document.getElementById('database_content');
+			var lista = document.createElement('ul');
+			
+			lista.className = "list-group";
+			lista.id = "listCategories";
+			data.appendChild(lista);
+			
 			//console.log(data);
 			if(document.readyState == 'complete'){
-			for(var i=0; i<attr.length-1; i++) {
-				console.log(attr[i].category);
-				//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
-				//$("#list_category").append('<li class="list-group-item">Cras justo odio <button class="btn btn-primary pull-right" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">Select</button></li>');
-			
-				var sel = document.getElementById('listCategories');
-				var opts = document.createElement('li');
-				opts.className = "list-group-item";
-				opts.appendChild(document.createTextNode(attr[i].category));
-				sel.appendChild(opts);
-			}
-			document.getElementById("loader").style.display = "none";
+				for(var i=0; i<attr.length-1; i++) {
+					console.log(attr[i].category);
+					//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
+					//$("#list_category").append('<li class="list-group-item">Cras justo odio <button class="btn btn-primary pull-right" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">Select</button></li>');
+					
+					var sel = document.getElementById('listCategories');
+					var opts = document.createElement('li');
+					opts.className = "list-group-item";
+					
+					var butt = document.createElement("button");
+					butt.className = "btn btn-primary pull-right";
+					butt.innerHTML = "Select";
+					
+					opts.appendChild(document.createTextNode(attr[i].category));
+					opts.appendChild(butt);
+					sel.appendChild(opts);
+				}
+				document.getElementById("loader").style.display = "none";
 		}
+		//var test = document.getElementsByTagName('li');
+		//console.log(test);
+		//for(var i=0; i<attr.length-1; i++) test[i].click = viewQuestionFromCategory(attr[i].category);
 	});	
+	*/
 }
 
 function viewQuestionFromCategory(category) {
+	console.log("Wywolano funkcje view");
 	console.log(category);
 	//console.log("Clicked button of category");
 	var getting = $.get("readQuestionCategory.php", {
@@ -611,7 +682,6 @@ function checkSelectedCheckBoxes() {
 			arraySelectedCheckBoxes.push($(this).val());
 		});
 	});
-	
 	console.log(arraySelectedCheckBoxes);
 }
 

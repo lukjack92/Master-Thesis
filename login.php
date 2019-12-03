@@ -71,12 +71,12 @@
 							}
 						}
 					} else {
-						$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> isn&#39;t active. Please conntact to administrator.</div>";
-						msg_logs_users($_POST['login'], "Account isn't active.");
+						$not_exist_err = "<div class='alert alert_pass'>This username <b>" . $_POST['login'] . "</b> is inactive. Please conntact to administrator.</div>";
+						msg_logs_users($_POST['login'], "Account is inactive.");
 					}
 				}
 			} else {	
-				$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> combination is not correct. Check and try again.</div>";
+				$not_exist_err = "<div class='alert alert_pass'>This username <b>" . $_POST['login'] . "</b> combination is not correct. Check and try again.</div>";
 				msg_logs_users($_POST['login'], "The user doesn't exists.");
 			}
 		}

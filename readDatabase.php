@@ -14,10 +14,10 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 $data = '<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th scope="col" style="width: 2%"><input type="checkbox" id="allCheckBoxes" onclick="sellectAllCheckBox()" name="vehicle1" ></th>
-				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 50%">Questions</th>
-				<th scope="col" style="width: 5%">Action</th>
+				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="sellectAllCheckBox()" name="vehicle1" ></th>
+				<th scope="col" style="width: 6%">No.</th>
+				<th scope="col" style="width: 74%">Questions</th>
+				<th scope="col" style="width: 16%">Action</th>
 			</tr>
 		</thead>
 		<tbody>';

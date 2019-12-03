@@ -1,4 +1,0 @@
-Sat 2019-11-23 12:35:07 AM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
-Sat 2019-11-23 12:35:13 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Sat 2019-11-23 12:39:08 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Sat 2019-11-23 01:25:14 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

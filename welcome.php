@@ -124,7 +124,7 @@ error_reporting(0);
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Are you sure you want to delete this question?</h5>
+        <h5 class="modal-title" id="myModalLabel">Are you sure you want to delete that?</h5>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	  </div>
       <div class="modal-body">
@@ -142,7 +142,7 @@ error_reporting(0);
 			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">The Reset Password For User</a>';
 		?>
 		<a href="user_list.php" class="btn btn-primary">List Of Users</a>
-		<a href="category.php" class="btn btn-primary">List Of Category</a>
+		<!--<a href="category.php" class="btn btn-primary">List Of Category</a>-->
 		<a href="logout.php" class="btn btn-danger">Sign Out Of Your Account</a>
     </p>
 
@@ -152,8 +152,8 @@ error_reporting(0);
 		<input type="submit" value="Upload File" name="submit">
 </form>
 	
-	<button type="button" class="btn btn-primary" id="" onclick="buttonViewCategory()">Category</button>
 	<button type="button" class="btn btn-primary" id="" onclick="buttonAllDatabases()">View All Database</button>
+	<button type="button" class="btn btn-primary" id="" onclick="buttonViewCategory()">Categories</button>
 	
 	<div class="form-group">
 		<div class="pull-right">
@@ -161,11 +161,12 @@ error_reporting(0);
 		</div>
 	</div>
 	<center><div id="loader"></div></center>
-		<ul class="list-group" id="listCategories">
+	
+	<!--	<ul class="list-group" id="listCategories">
 		</ul>
-	<div id="database_content">
-
-	</div>
+	-->
+	
+	<div id="database_content"></div>
 
 <!--Modal View -->
 <div class="modal fade" id="updateViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -620,6 +621,7 @@ error_reporting(0);
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
 			<h6 class="text-danger">This version is in development</h6>
+			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
 		</div>
 	</nav>
 	

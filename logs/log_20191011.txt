@@ -1,3 +1,0 @@
-Fri 2019-10-11 01:30:59 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
-Fri 2019-10-11 01:31:05 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.
-Fri 2019-10-11 01:31:05 AM Addr IP: ::1 ljack [delQuestion] The user has been removed question.

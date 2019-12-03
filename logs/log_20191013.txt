@@ -1,6 +1,0 @@
-Sun 2019-10-13 00:18:28 AM Addr IP: ::1 Request to resource.
-Sun 2019-10-13 00:19:49 AM Addr IP: ::1 Request to resource.
-Sun 2019-10-13 00:24:50 AM Addr IP: ::1 Databases are down!
-Sun 2019-10-13 00:24:50 AM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
-Sun 2019-10-13 00:24:50 AM Addr IP: ::1 Request to resource. Database is down!
-Sun 2019-10-13 18:48:39 PM Addr IP: ::1 Request to resource.

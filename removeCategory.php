@@ -11,16 +11,16 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 } else {
 	if($_POST['id'] != "")
 	{	
-		$question = $_POST['id'];
-		echo $question;
-		$query = "delete from questions where id = '$question'";
+		$category = $_POST['id'];
+		echo $category;
+		$query = "delete from category where id = '$category'";
 		@mysqli_query($link,$query);
 		//$result = @mysqli_query($link,$query);
 		//$row = @mysqli_fetch_assoc($result);
 		//$user = $row['login'];
-		msg_logs_users($_SESSION['login'], "[delQuestion] The user has been removed question.");
+		msg_logs_users($_SESSION['login'], "[delQuestion] The category has been removed.");
 		//unset($_POST);
-		echo '<div class="alert alert-success" role="alert">The question has been removed!</div>';
+		echo '<div class="alert alert-success" role="alert">The category has been removed!</div>';
 	}
 }
 ?> 

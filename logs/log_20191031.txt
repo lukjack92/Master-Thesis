@@ -1,1 +1,0 @@
-Thu 2019-10-31 12:33:10 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

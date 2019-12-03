@@ -1,1 +1,2 @@
-Pytaniejest testow na dodanie nowej kategori.;aaa;bbb b;c cc;d dd;ansc;nowa_kategoria;
+Pytanie jest testow na dodanie nowej kategorii.;aaa;bbb b;c cc;d dd;ansc;categoryKasia;
+Pytanie jest testow na dodanie nowej kategorii ktora nie istnieje w bazie Dziekuje.;dddd d;ccc c;bb b;d d;ansc;categoryKasia2;

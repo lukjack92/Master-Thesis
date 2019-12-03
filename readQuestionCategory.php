@@ -25,7 +25,6 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 			</tr>
 		</thead>
 		<tbody>';
-		
 				$sql = 'select * from questions where category="'.$category.'"';
 				$result = @mysqli_query($link, $sql);
 				$id = 0;
@@ -41,11 +40,14 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 						</td>
 					</tr>';
 					}
+					
+					$data .= '</tbody></table>';
+					
 				} else {		
-					$data .= 'No data.';
+					//$data .= 'No data.';
+					$data = '<div class="alert alert-danger" role="alert">There is an empty, lack assigned questions in this category</div>';
 				} 
-				$data .= '</tbody></table>';
-	
+				
 				echo $data;
 }
 else {
