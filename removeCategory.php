@@ -9,11 +9,16 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 		header("Location: index.php");
 		exit;
 } else {
-	if($_POST['id'] != "")
+	if($_POST['id'] != "" && $_POST['name'] != "")
 	{	
-		$category = $_POST['id'];
-		echo $category;
-		$query = "delete from category where id = '$category'";
+		$categoryID = $_POST['id'];
+		//echo $category;
+		$categoryName = $_POST['name'];
+		$query = "delete from category where id = '$categoryID'";
+		@mysqli_query($link,$query);
+		
+		//Removing category where has been assigned.
+		$query = "update questions set category = '' where category  = '$categoryName'";
 		@mysqli_query($link,$query);
 		//$result = @mysqli_query($link,$query);
 		//$row = @mysqli_fetch_assoc($result);

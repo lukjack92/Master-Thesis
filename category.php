@@ -71,7 +71,7 @@
 <div id="cl"></div>
 <div class="pull-right">
 	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModalNewCategory">Create A Category</button>
-  </div><br>
+</div><br>
     <div class="page-header">
 		<p>
 			<h1>List of category</h1>

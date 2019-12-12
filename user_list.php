@@ -47,7 +47,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
-
 </head>
 <body>
 

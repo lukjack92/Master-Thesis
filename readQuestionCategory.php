@@ -18,10 +18,11 @@ $category = $_GET['category'];
 $data = '<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th scope="col" style="width: 2%"><input type="checkbox" id="allCheckBoxes" onclick="sellectAllCheckBox()" name="vehicle1" ></th>
-				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 50%">Questions</th>
-				<th scope="col" style="width: 5%">Action</th>
+				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="sellectAllCheckBox()" name="vehicle1" ></th>
+				<th scope="col" style="width: 6%">No.</th>
+				<th scope="col" style="width: 72%">Questions</th>
+				<th scope="col" style="width: 2%">Category</th>
+				<th scope="col" style="width: 16%">Action</th>
 			</tr>
 		</thead>
 		<tbody>';
@@ -34,7 +35,12 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 				$data .= '<tr>
 						<td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
 						<td scope="row">'.++$id.'</td>
-						<td>'.$row['question'].'</td>
+						<td>'.$row['question'].'</td>';
+						if ($row['category'] != "")
+								$row['category'] = '<p style="color:green;"><b>Yes</b></p>';
+						else	
+								$row['category'] = '<p style="color:red;"><b>No</b></p>';
+						$data .= '<td>'.$row['category'].'</td>
 						<td>
 							<button type="button" class="btn btn-primary testbutton2" onclick="viewQuestion('.$row['id'].')">View</button> <button type="button" class="btn btn-danger testbutton2" onclick="delQuestion('.$row['id'].')">Delete</button>
 						</td>

@@ -169,13 +169,15 @@ function readRecords() {
 	}); 
 }
 
-function readDatabase() {
-	var getting = $.get("readDatabase.php", {});
+function readDatabase(number_page) {
+	var posting = $.post("readDatabase.php", {
+		page: number_page
+	});
 	console.log("Start");
 	
 	$("#database_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
-	getting.done(function(data) {
+	posting.done(function(data) {
 		if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#database_content").empty().append(data);
@@ -260,6 +262,7 @@ function actionReset(user_reset) {
 	$("#reset_user").val(user_reset);
 }
 
+
 function delQuestion(id_question){
 	
 $("#delQuestionModal").modal('show');
@@ -311,7 +314,7 @@ modelConfirm(function(confirm){
 });
 }
 
-function delCategory(id){
+function delCategory(id, name){
 	
 $("#delQuestionModal").modal('show');
 
@@ -333,9 +336,10 @@ modelConfirm(function(confirm){
 	
 	if(confirm){
 		console.log(id);
-		
+		console.log(name);
 		var posting = $.post("removeCategory.php", {
-			id: id
+			id: id,
+			name: name
 		});	
 	
 		posting.done(function(data) {
@@ -480,14 +484,16 @@ function buttonAllDatabases() {
 }
 
 
-function buttonViewCategory() {
-	var getting = $.get("readCategoryMainPage.php", {});
+function buttonViewCategory(number_page) {
+	var posting = $.post("readCategoryMainPage.php", {
+		page: number_page
+	});
 	console.log("Start");
 	
 	$("#database_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	
-	getting.done(function(data) {
+	posting.done(function(data) {
 		if(document.readyState == 'complete'){
 			console.log("Koniec"); 
 			$("#database_content").empty().append(data);	
@@ -654,10 +660,9 @@ function saveQuestion() {
 
 function sellectAllCheckBox() {
 	$('#allCheckBoxes').click(function(){
-		if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
-			document.getElementById("removeBox").style.display = "block";
-		}
-	else { $('input:checkbox').prop('checked', false); 
+	if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
+		document.getElementById("removeBox").style.display = "block";
+	} else { $('input:checkbox').prop('checked', false); 
 		document.getElementById("removeBox").style.display = "none"; }
 	});
 	
@@ -677,12 +682,30 @@ function checkSelectedCheckBoxes() {
 	
 	var arraySelectedCheckBoxes = [];
 	
-	$("#removeBox").click(function() {
-		$.each($("input[name='allCheckBox']:checked"), function() {
-			arraySelectedCheckBoxes.push($(this).val());
-		});
+	$.each($("input[name='allCheckBox']:checked"), function() {
+		arraySelectedCheckBoxes.push($(this).val());
 	});
-	console.log(arraySelectedCheckBoxes);
+
+	removeSelectedQuestion(arraySelectedCheckBoxes);
+	arraySelectedCheckBoxes = [];
+
+	function removeSelectedQuestion(test) {
+		var posting = $.post("removeSelectedCheckBoxes.php", {
+			arrayCheckBoxes: test
+		});
+		posting.done(function (data) {
+			console.log(data);
+		});
+	}
+}
+
+function actionCheckBox() {
+	$('#allCheckBox').click(function(){
+		if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
+			document.getElementById("removeBox").style.display = "block";
+		} else { $('input:checkbox').prop('checked', false); 
+			document.getElementById("removeBox").style.display = "none"; }
+		});
 }
 
 function saveNewCategory() {
@@ -714,6 +737,7 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
+		time = 15;
 		time = 15;
 		//clearInterval(timer);
 	});

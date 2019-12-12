@@ -27,7 +27,20 @@ error_reporting(0);
 	$_SESSION['LAST_ACTIVITY'] = $time;
 	
 	*/
-	
+
+	if(isset($_POST['submit'])){
+		$selected_val = $_POST['inputState'];  // Storing Selected Value In Variable
+		echo "You have selected :" .$selected_val;  // Displaying Selected Value
+	}
+
+	if(isset($_POST['inputState']))
+		$_SESSION['limit'] = $_POST['inputState'];
+		
+	if(isset($_POST['inputStateCategory']))
+		$_SESSION['limit2'] = $_POST['inputStateCategory'];
+//else  
+	//$_SESSION['limit'] = 5;
+
 	require_once "conf_db/config.php";
 ?>
 <!DOCTYPE html>
@@ -53,13 +66,13 @@ error_reporting(0);
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<!--
+	
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
-		-->
+	
 		</div>
 	  </nav>
 
@@ -73,6 +86,7 @@ error_reporting(0);
 
   <div class="pull-right">
 	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
+	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModalNewCategory">Create A Category</button>
   </div></br></br>
 
 	<div id="ok">
@@ -119,6 +133,33 @@ error_reporting(0);
   </div>
 </div>
 
+<!--Modal Create a new category -->
+<div class="modal fade" id="createViewModalNewCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Create A Category</h4>
+<div class="pull-left">
+	<button type="button" class="close" id="close" onclick="" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label><b>Type a new category in order to add</b></label>
+</div>
+<input type="text" id="category" name="category" placeholder="A new category" class="form-control" />
+</div>
+</div>
+<div class="modal-footer">
+	<!-- <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>-->
+	<button type="button" class="btn btn-primary btn-next" id="" onclick="saveNewCategory()">Save</button>
+</div>
+</div>
+</div>
+</div>
+
 <!--Modal to remove question -->
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="delQuestionModal">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -134,7 +175,6 @@ error_reporting(0);
     </div>
   </div>
 </div>
-
 
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
@@ -152,8 +192,8 @@ error_reporting(0);
 		<input type="submit" value="Upload File" name="submit">
 </form>
 	
-	<button type="button" class="btn btn-primary" id="" onclick="buttonAllDatabases()">View All Database</button>
-	<button type="button" class="btn btn-primary" id="" onclick="buttonViewCategory()">Categories</button>
+	<button type="button" class="btn btn-primary" onclick="buttonAllDatabases()">View All Database</button>
+	<button type="button" class="btn btn-primary" onclick="buttonViewCategory()">Categories</button>
 	
 	<div class="form-group">
 		<div class="pull-right">
@@ -633,6 +673,7 @@ error_reporting(0);
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
+  	<script type="text/javascript" src="loadReadDatabase.js"></script>
 	<script type="text/javascript" src="test.js"></script>
 
 </body>

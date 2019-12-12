@@ -77,8 +77,8 @@ else {
 
 	if($_GET['code'] === $code) {
 		
-		header('Content-Type: application/json; charset=utf-8;');
-header("Expires: Sun, 25 Jul 1997 06:02:34 GMT"); 
+		//header('Content-Type: application/json; charset=utf-8;');
+		//header("Expires: Sun, 25 Jul 1997 06:02:34 GMT"); 
 		$query_sql="select * from " . TB_QUESTIONS;
 		$result = $link->query($query_sql);
 

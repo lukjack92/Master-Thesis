@@ -108,10 +108,10 @@
 		<thead>
 			<tr>
 				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 16%">User</th>
-				<th scope="col" style="width: 20%">FirstName</th>
-				<th scope="col" style="width: 15%">LastName</th>
-				<th scope="col" style="width: 15%">Action</th>
+				<th scope="col" style="width: 20%">User</th>
+				<th scope="col" style="width: 25%">FirstName</th>
+				<th scope="col" style="width: 25%">LastName</th>
+				<th scope="col" style="width: 25%">Action</th>
 			</tr>
 		</thead>
 		<tbody>

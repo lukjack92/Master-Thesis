@@ -22,7 +22,7 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 				<th scope="col" style="width: 6%" >Permission</th>';
 				
 				if($_SESSION['permission'] == "admin"){ 
-					$data .= '<th style="width: 18%">Action</th>';
+					$data .= '<th style="width: 17%">Action</th>';
 				}
 			$data .= '</tr>
 		</thead>
