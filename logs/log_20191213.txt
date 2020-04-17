@@ -8,3 +8,4 @@ Fri 2019-12-13 12:21:27 AM Addr IP: ::1 jackol01 Successfully logged. AuthCounte
 Fri 2019-12-13 12:22:30 AM Addr IP: ::1 jackol01 A new category has been added!
 Fri 2019-12-13 12:23:49 AM Addr IP: ::1 jackol01 Successfully logged out.
 Fri 2019-12-13 12:23:58 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-12-13 00:36:53 AM Addr IP: ::1 Request to resource.

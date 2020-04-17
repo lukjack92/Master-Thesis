@@ -1,2 +1,5 @@
-Pytanie jest testow na dodanie nowej kategorii.;aaa;bbb b;c cc;d dd;ansc;categoryKasia;
-Pytanie jest testow na dodanie nowej kategorii ktora nie istnieje w bazie Dziekuje.;dddd d;ccc c;bb b;d d;ansc;categoryKasia2;
+Pytanie do testowania usuwania1.;aaa;bbb b;c cc;d dd;ansc;delete2;
+Pytanie do testowania usuwania2;dddd d;ccc c;bb b;d d;ansc;delete2;
+Pytanie do testowania usuwania3;dddd d;ccc c;bb b;d d;ansc;delete2;
+Pytanie do testowania usuwania4;dddd d;ccc c;bb b;d d;ansc;delete2;
+Pytanie do testowania usuwania5;dddd d;ccc c;bb b;d d;ansc;delete2;

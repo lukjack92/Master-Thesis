@@ -18,7 +18,7 @@ $category = $_GET['category'];
 $data = '<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="sellectAllCheckBox()" name="vehicle1" ></th>
+				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th>
 				<th scope="col" style="width: 6%">No.</th>
 				<th scope="col" style="width: 72%">Questions</th>
 				<th scope="col" style="width: 2%">Category</th>

@@ -37,8 +37,8 @@ $data = '<!--The form determine the number a records occurred in table.-->
 		<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="sellectAllCheckBox()" name="vehicle1" ></th>
-				<th scope="col" style="width: 6%">No.</th>
+			    <th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th> 
+				<th scope="col" style="width: 6%">No11.</th>
 				<th scope="col" style="width: 72%">Category</th>
 				<th scope="col" style="width: 2%">Number</th>
 				<th scope="col" style="width: 16%">Action</th>
@@ -50,9 +50,11 @@ $data = '<!--The form determine the number a records occurred in table.-->
 				$id = 0;
 				if(@mysqli_num_rows($result) > 0) {
 					// Output data of each rows
+					//<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th> 
+					//<td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
 					while($row = mysqli_fetch_assoc($result)) {
 					$data .= '<tr>
-						<td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
+					    <td><input type="checkbox" id="singleCheckBox" name="singleCheckBox" onclick="selectSingleCheckBox()" value="'.$row['id'].'"></td>
 						<td scope="row">'.++$start_from.'</td>
 						<td>'.$row['name'].'</td>';
 							

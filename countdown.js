@@ -658,7 +658,28 @@ function saveQuestion() {
 	});
 }
 
-function sellectAllCheckBox() {
+function selectSingleCheckBox() {
+	//$('#singleCheckBox').click(function(){
+	//if($(this).is(':checked')) { 
+	//	document.getElementById("removeBox").style.display = "block";
+	//	console.log("Active button");
+	//} else { 
+	//	document.getElementById("removeBox").style.display = "none"; }
+	//});
+	
+	$("#singleCheckBox").click(function () {
+		if ($(this).is(":checked")) {
+			$("#removeBox").show();
+		} else {
+			$("#removeBox").hide();
+		}
+	});
+
+	console.log("It's works")
+}
+
+
+function selectAllCheckBox() {
 	$('#allCheckBoxes').click(function(){
 	if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
 		document.getElementById("removeBox").style.display = "block";
@@ -694,7 +715,9 @@ function checkSelectedCheckBoxes() {
 			arrayCheckBoxes: test
 		});
 		posting.done(function (data) {
-			console.log(data);
+			//console.log(data);
+			$("#cl").empty().append(data);
+			buttonViewCategory();
 		});
 	}
 }

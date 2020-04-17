@@ -6,7 +6,7 @@ error_reporting(0);
 	session_start();
 	
 		// Check if the user is logged in, if not then redirect him to login page
-	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
+	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true) {
 		header("Location: login.php");
 		exit;
 	}
@@ -28,18 +28,22 @@ error_reporting(0);
 	
 	*/
 
+	$loadScripts = 'loadReadDatabase.js';
+
 	if(isset($_POST['submit'])){
 		$selected_val = $_POST['inputState'];  // Storing Selected Value In Variable
 		echo "You have selected :" .$selected_val;  // Displaying Selected Value
 	}
 
-	if(isset($_POST['inputState']))
+	if(isset($_POST['inputState'])) {
 		$_SESSION['limit'] = $_POST['inputState'];
-		
-	if(isset($_POST['inputStateCategory']))
+		$loadScripts = 'loadReadDatabase.js';
+	}
+
+	if(isset($_POST['inputStateCategory'])) {
 		$_SESSION['limit2'] = $_POST['inputStateCategory'];
-//else  
-	//$_SESSION['limit'] = 5;
+		$loadScripts = 'loadReadCategory.js';
+	}
 
 	require_once "conf_db/config.php";
 ?>
@@ -673,7 +677,7 @@ error_reporting(0);
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
-  	<script type="text/javascript" src="loadReadDatabase.js"></script>
+  	<script type="text/javascript" src="<?php echo $loadScripts ?>"></script>
 	<script type="text/javascript" src="test.js"></script>
 
 </body>
