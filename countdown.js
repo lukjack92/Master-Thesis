@@ -186,6 +186,27 @@ function readDatabase(number_page) {
 	}); 
 }
 
+function signUpToApp() {
+
+	var type = $("#type").val();
+	var username = $("#username").val();
+	var email = $("#email").val();
+	var password = $("#password").val();
+
+	console.log("Start!");
+	var posting = $.post("api/api.php", {
+		type,
+		username,
+		email,
+		password
+	});
+	
+	posting.done(function(data) {
+		console.log("Done");
+		document.getElementById("feedbackFromApi").append = data;
+	}); 
+}
+
 function resetPassUser() {
 	clearInterval(timer);
 	var user_to_reset = $("#reset_user").val();
