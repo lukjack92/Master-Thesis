@@ -10,6 +10,13 @@ body {
 	text-align: center;
 }
 
+.alert_succ {
+	background-color:green;
+	border-radius: 0px;
+	color: white;
+	text-align: center;
+}
+
 .alert_reset {
 	background-color: green;
 	border-radius: 0px;

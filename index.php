@@ -38,6 +38,9 @@ echo '
 			<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
 				<a class="nav-link" href="signUpToApp.php">SignUp to App <span class="sr-only">(current)</span></a>
+			</li>	
+			<li class="nav-item">
+				<a class="nav-link" href="loginProfileApp.php">Login to App</a>
 			</li>			
 			<li class="nav-item">
 				<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
@@ -145,18 +148,21 @@ else {
 		</button>
 		<div class="collapse navbar-collapse" id="navbarColor02">
 			<ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="signUpToApp.php">SignUp to App</a>
-			</li>			
-			<li class="nav-item">
-				<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="info.php">About</a>
-			</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="signUpToApp.php">SignUp to App</a>
+				</li>	
+				<li class="nav-item">
+					<a class="nav-link" href="loginProfileApp.php">Login to App</a>
+				</li>		
+				<li class="nav-item">
+					<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="info.php">About</a>
+				</li>
 			</ul>
 		</div>
 	</nav>

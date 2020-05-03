@@ -120,7 +120,7 @@
 	
 <div class="container">
 	<div class="col-md-6 mx-auto bg-form">
-		<h3>Login to API</h3>
+		<h3>Login to Administration System</h3>
 		<form method="post">
 			<label>Login</label>
 			<div class="form-group has-feedback <?php echo (!empty($login_err)) ? 'has-error' : ''; ?>">

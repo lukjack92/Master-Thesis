@@ -110,7 +110,7 @@ error_reporting(0);
 		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
     </div>
 	
-	<?php echo date("Y-m-d H:i:s");?>
+	<?php echo date("Y-m-d H:i");?>
 	
 	<div id="time"></div>
 <!--
@@ -680,7 +680,5 @@ error_reporting(0);
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
   	<script type="text/javascript" src="<?php echo $loadScripts ?>"></script>
-	<script type="text/javascript" src="test.js"></script>
-
 </body>
 </html>

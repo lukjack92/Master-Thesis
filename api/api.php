@@ -1,7 +1,13 @@
 <?php 
     
+	// Initialize the session
+	session_start();
+
     $response = array();
-    header('Content-Type: application/json');
+    //header('Content-Type: application/json');
+
+    // Logs handle
+    require_once ("../func_msg/functions.php");
 
     $URL = 'ljack.com.pl';
     $DB_SERVER = $URL;
@@ -16,6 +22,7 @@
         if(mysqli_connect_error()) {
             $response["error"] = TRUE;
             $response["message"] = "Failed to connect to database";
+            msg_logs_users_for_api($_POST["email"], "Failed to connect to database in API");
             echo json_encode($response);
             exit;
         }
@@ -28,7 +35,7 @@
         $response["message"] = "It is AppPhone";
             echo json_encode($response);
             exit;
-    }
+    } 
 
     if(isset($_POST["type"]) && ($_POST["type"]=="signup") && isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"])) {
         $username = $_POST['username'];
@@ -41,6 +48,7 @@
         if($result->num_rows>0){
             $response["error"] = TRUE;
             $response["message"] ="Sorry email already found.";
+            msg_logs_users_for_api($_POST["email"], "Sorry email already found in API");
             echo json_encode($response);
             exit;
         } else {
@@ -58,18 +66,19 @@
                 $response["error"] = FALSE;
                 $response["message"] = "Successfully signed up.";
                 $response["user"] = $user;
+                msg_logs_users_for_api($_POST["email"], "Successfully signed up in API");
                 echo json_encode($response);
                 exit;
             } else {
                 $response["error"] = TRUE;
                 $response["message"] ="Unable to signup try again later.";
+                msg_logs_users_for_api($_POST["email"], "Unable to signup try again later in API");
                 echo json_encode($response);
                 exit;
             }  
         }
     }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])){
-        //login user
-     
+        // login user
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
      
@@ -78,7 +87,8 @@
         // print_r($result); exit;
         if($result->num_rows==0){
             $response["error"] = TRUE;
-            $response["message"] ="user not found or Invalid login details.";
+            $response["message"] ="User not found or Invalid login details.";
+            msg_logs_users_for_api($_POST["email"], "User not found or Invalid login details in API");
             echo json_encode($response);
             exit;
         }else{
@@ -86,6 +96,8 @@
             $response["error"] = FALSE;
             $response["message"] = "Successfully logged in.";
             $response["user"] = $user;
+            msg_logs_users_for_api($_POST["email"], "Successfully logged in API");
+            $_SESSION['loggedInApp'] = true;
             echo json_encode($response);
             exit;
         }
@@ -95,6 +107,7 @@
         $response["error"] = TRUE;
         $response["message"] ="Invalid parameters";
         echo json_encode($response);
+        msg_logs_users_for_api($_POST["email"], "Invalid parameters in API");
         exit;
     }
 ?>
