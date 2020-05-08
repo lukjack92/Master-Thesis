@@ -50,3 +50,7 @@ function loginToApp() {
         }
     } 
 }
+
+function backPage() {
+    window.location.href = "loginProfileApp.php"
+ }

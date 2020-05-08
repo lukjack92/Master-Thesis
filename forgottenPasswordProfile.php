@@ -56,14 +56,13 @@
 		<form method="post">
 			<label>Enter the username or email address you use to log in.</label>
 			<div class="form-group has-feedback">
-                <label><b>Username or email</b></label>
 				<input class="form-control" type="text" id="email" autofocus required>
 			</div>
 			<div class="form-group">
                 <button class="btn btn-lg btn-primary btn-block" onclick="">Next</button>
-            
             </div>
         </form>
+		<button class="btn btn-lg btn-primary btn-block" onclick="backPage()">Back</button>
 		<!-- Feedback from api.php -->
         <div id="feedbackFromApi" role="alert"></div>
 
