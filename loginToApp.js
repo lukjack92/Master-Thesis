@@ -34,15 +34,12 @@ function loginToApp() {
                     console.log(json.error);
                     // Email is existing
                     alertLoginToApp("alert alert_pass",json.message)
-
+                    
                 } else if((json.error == false)) {
                     // Succesfully login user
                     //alertLoginToApp("alert alert_succ",json.message);
                     // The clearing all fields in form
                     location.reload();
-                    $("#email").val("");
-                    $("#password").val("");
-    
                 } else {
                     // Any errors
                     alertLoginToApp("alert alert_pass","ERROR 500");

@@ -243,8 +243,7 @@ function confirmPassword(user_confirm) {
 function doConfirm(msg, yesFn, noFn) {
 	var confirmBox = $("#exampleModalCenter");
 		confirmBox.find("#exampleModalLongTitle").text(msg);
-		confirmBox.find(".yes,.no").unbind().click(function()
-		{
+		confirmBox.find(".yes,.no").unbind().click(function() {
 			confirmBox.hide();
 		});
 	
@@ -758,10 +757,10 @@ $(document).ready(function() {
 	let drawIntrernal;
 	
 	$("html").mouseup(function() {
-		test.append(" Clicked");
+		//test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
 		time = 15;
-		time = 15;
+		//time = 15;
 		//clearInterval(timer);
 	});
 	

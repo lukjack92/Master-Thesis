@@ -11,6 +11,7 @@
     }
 
     require_once "conf_db/config.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -49,8 +50,8 @@
 
 <div class="container color_white">
     <div class="page-header">
-        <h1>Hi <?php echo $_SESSION['usersInfo']['username']; ?>. Welcome in your profile.</h1>
-		<h2> <?php echo $_SESSION['usersInfo']['email'] ?> </h2>
+        <h1>Manage settings</h1>
+		<h5> Account for <?php echo $_SESSION['usersInfo']['email'] ?> </h5>
     </div>
     
     <!--Current time-->
@@ -77,14 +78,24 @@
     </div>
     </div>
 
-
-    <p>
-        <a href="resetPasswordProfile.php" class="btn btn-primary">Change Password</a>
-        <a href="logoutApp.php" class="btn btn-danger">Delete account</a>
-		<a href="logoutApp.php" class="btn btn-secondary">Sign Out Of Your Account</a>
-    </p>
-
-	<div id="database_content"></div>
+	<div id="database_content">
+        <form>
+            <div>
+                <label>Old passwoerd</label>
+                <input type="password" id="old_password">
+            </div>
+            <div>
+                <label>New passwoerd</label>
+                <input type="password" id="new_password">
+            </div>
+            <div>
+                <label>Re-enter passwoerd</label>
+                <input type="password" id="re_enter_password">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit">
+            <a href="profileApp.php" class="btn btn-danger">Back</a>
+        </form>
+    </div>
 
 
 </div>

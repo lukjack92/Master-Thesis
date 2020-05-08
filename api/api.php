@@ -98,6 +98,7 @@
             $response["user"] = $user;
             msg_logs_users_for_api($_POST["email"], "Successfully logged in API");
             $_SESSION['loggedInApp'] = true;
+            $_SESSION['usersInfo'] = $user;
             echo json_encode($response);
             exit;
         }

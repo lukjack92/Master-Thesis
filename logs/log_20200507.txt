@@ -1,0 +1,4 @@
+Thu 2020-05-07 11:51:40 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Thu 2020-05-07 11:51:57 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-07 11:59:35 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Thu 2020-05-07 11:59:55 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
