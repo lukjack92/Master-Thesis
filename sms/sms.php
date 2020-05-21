@@ -1,8 +1,7 @@
 <?php
 
-require_once "../conf_db/config.php";
 require_once "../func/functions.php";
-require_once '../func_msg/functions.php';
+require_once "../func_msg/functions.php";
 
 if(isset($_POST["phoneNumber"]) && isset($_POST["message"])) {
 
