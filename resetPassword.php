@@ -10,7 +10,6 @@ if($_SESSION["permission"] != "admin"){
 		exit;
 } else {
 	if(isset($_POST['pass']) && $_POST['pass'] != "") {
-		
 		$password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 		$reset_pass = 'update users set password = "'.$password.'" where login="'.$_POST['user'].'"';
 		if(mysqli_query($link,$reset_pass)) {

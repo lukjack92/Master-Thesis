@@ -40,7 +40,7 @@ echo '
 				<a class="nav-link" href="signUpToApp.php">SignUp to App <span class="sr-only">(current)</span></a>
 			</li>	
 			<li class="nav-item">
-				<a class="nav-link" href="loginProfileApp.php">Login to App</a>
+				<a class="nav-link" href="loginProfileApp.php">LogIn to App</a>
 			</li>			
 			<li class="nav-item">
 				<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
@@ -73,8 +73,7 @@ echo '
   </body>
 </html>
 ';
-}
-else {
+} elseif(isset($_GET['code'])) {
 	$query = "select * from " . TB_CODE;
 	
 	if($result = @mysqli_query($link,$query)) {
@@ -155,7 +154,7 @@ else {
 					<a class="nav-link" href="signUpToApp.php">SignUp to App</a>
 				</li>	
 				<li class="nav-item">
-					<a class="nav-link" href="loginProfileApp.php">Login to App</a>
+					<a class="nav-link" href="loginProfileApp.php">LogIn to App</a>
 				</li>		
 				<li class="nav-item">
 					<a class="nav-link" href="app/app-debug.apk">Download .apk</a>

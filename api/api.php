@@ -103,12 +103,71 @@
             exit;
         }
      
-    }else {
+    } elseif(isset($_POST["type"]) && ($_POST["type"]=="resetPwdProfile") && isset($_POST["email"]) && isset($_POST["password"])) {
+        echo "Reset Password from UI";
+    } elseif(isset($_POST["type"]) && ($_POST["type"]=="forgotPwdProfile") && isset($_POST["email"])) {
+        $email = $_POST["email"];
+        $userQuery = "select id,email from users_api where email = '$email'";
+        $result = mysqli_query($link,$userQuery);
+        if($result->num_rows==0){
+            $response["error"] = TRUE;
+            $response["message"] ="User not found";
+            msg_logs_users_for_api($_POST["email"], "User not found for forgottenPassword");
+            echo json_encode($response);
+            exit;
+        }else{
+            $user = mysqli_fetch_assoc($result);
+            $response["error"] = FALSE;
+            $response["message"] = "Reset Password";
+            $response["user"] = $user;
+            $_SESSION['usersInfo'] = $user;
+            $response['password'] = generateRandomPassword();
+            echo json_encode($response);
+            exit;
+        }
+    }    
+    else {
         // Invalid parameters
         $response["error"] = TRUE;
         $response["message"] ="Invalid parameters";
         echo json_encode($response);
-        msg_logs_users_for_api($_POST["email"], "Invalid parameters in API");
         exit;
     }
+
+    function generateRandomPassword() {
+        return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(8/strlen($x)) )),1,8);
+    }
+?>
+
+<?php
+
+if(isset($_POST["phoneNumber"]) && isset($_POST["message"])) {
+
+require 'vendor/autoload.php';
+
+$sdk = new Aws\Sns\SnsClient([
+                'region'  => 'eu-west-1',
+                'version' => 'latest',
+                'credentials' => ['key' => 'AKIA2O4NZ7JIT4ZH6ZU4', 'secret' => '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']
+        ]);
+
+        //$msg='Test';
+        //$number='+48790602938';
+
+        $msg=$_POST["message"];
+        $number=$_POST["phoneNumber"];
+
+        $result = $sdk->publish([
+                'Message' => $msg,
+                'SMSType' => 'Promotional',
+                'PhoneNumber' => $number,
+                'MessageAttributes' => ['AWS.SNS.SMS.SenderID' => [
+                'DataType' => 'String',
+                'StringValue' => 'Authentication SMS']
+        ]]);
+
+        print_r( $result );
+} else {
+        echo "Method GET is not allowed";
+}
 ?>

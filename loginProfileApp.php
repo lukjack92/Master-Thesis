@@ -53,7 +53,7 @@
 <div class="container">
 	<div class="col-md-6 mx-auto bg-form">
 		<h3>Login to Profile App</h3>
-		<form method="post">
+		<form>
 			<label>Email</label>
 			<div class="form-group has-feedback">
 				<input class="form-control" type="text" id="email" autofocus required>

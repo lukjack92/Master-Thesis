@@ -62,42 +62,42 @@
 
     <!-- Modal Expired-->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-                <button class="btn btn-primary yes">Yes</button>
-                <button class="btn btn-primary no">No</button>
-        </div>
-        </div>
-    </div>
-    </div>
-
-	<div id="database_content">
-        <form>
-            <div>
-                <label>Old passwoerd</label>
-                <input type="password" id="old_password">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-primary yes">Yes</button>
+                    <button class="btn btn-primary no">No</button>
+                </div>
             </div>
-            <div>
-                <label>New passwoerd</label>
-                <input type="password" id="new_password">
-            </div>
-            <div>
-                <label>Re-enter passwoerd</label>
-                <input type="password" id="re_enter_password">
-            </div>
-            <input type="submit" class="btn btn-primary" value="Submit">
-            <a href="profileApp.php" class="btn btn-danger">Back</a>
-        </form>
+        </div>
+
     </div>
-
-
+        <div class="col-md-6 mx-auto form">
+            <form method="post">
+                <div class="form-group has-feedback">
+                    <label class="pull-left"><b>Current Password</b></label>
+                    <input type="password" id="current_password" placehol class="form-control" autofocus required> 
+                </div>
+                <div class="form-group has-feedback <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label class="pull-left"><b>New Password</b></label>
+                    <input type="password" id="new_password" class="form-control" required> 
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="pull-left"><b>Confirm Password</b></label>
+                    <input type="password" id="re_enter_password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Submit">
+                    <a href="profileApp.php" class="btn btn-danger btn-block">Back</a>
+                </div>
+            </form>
+        </div>
 </div>
 
 	<nav class="navbar-fixed-bottom">
