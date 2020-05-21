@@ -10,7 +10,7 @@ require 'vendor/autoload.php';
 $sdk = new Aws\Sns\SnsClient([
                 'region'  => 'eu-west-1',
                 'version' => 'latest',
-                'credentials' => ['key' => 'AKIA2O4NZ7JIT4ZH6ZU4', 'secret' => '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']
+                'credentials' => ['key' => 'xxxxxxxxxxxxxxxxxxxxxxxxx', 'secret' => 'xxxxxxxxxxxxxxxxxxxxxxxx']
         ]);
 
         $msg=$_POST["message"];
