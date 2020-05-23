@@ -10,11 +10,7 @@ if(isset($_POST["phoneNumber"])) {
 $sdk = new Aws\Sns\SnsClient([
                 'region'  => 'eu-west-1',
                 'version' => 'latest',
-<<<<<<< HEAD
                 'credentials' => ['key' => $key, 'secret' => $secretKey]
-=======
-                'credentials' => ['key' => 'xxxxxxxxxxxxxxxxxxxxxxxxx', 'secret' => 'xxxxxxxxxxxxxxxxxxxxxxxx']
->>>>>>> e14ea5e46207ef29fbef2ba2b7315145ac65fc2f
         ]);
 
         $six_digit_number = mt_rand(100000, 999999);
