@@ -2,18 +2,20 @@
 
 require_once "../func/functions.php";
 require_once "../func_msg/functions.php";
+require "vendor/autoload.php";
+require "secret_key_sns.php";
 
-if(isset($_POST["phoneNumber"]) && isset($_POST["message"])) {
-
-require 'vendor/autoload.php';
+if(isset($_POST["phoneNumber"])) {
 
 $sdk = new Aws\Sns\SnsClient([
                 'region'  => 'eu-west-1',
                 'version' => 'latest',
-                'credentials' => ['key' => 'AKIA2O4NZ7JIT4ZH6ZU4', 'secret' => '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']
+                'credentials' => ['key' => $key, 'secret' => $secretKey]
         ]);
 
-        $msg=$_POST["message"];
+        $six_digit_number = mt_rand(100000, 999999);
+
+        $msg="One Time Password: ".$six_digit_number;
         $number=$_POST["phoneNumber"];
 
         $result = $sdk->publish([
@@ -24,7 +26,7 @@ $sdk = new Aws\Sns\SnsClient([
                 'DataType' => 'String',
                 'StringValue' => 'Physics']
         ]]);
-        msg_logs_users_for_api("SMS","SMS was send to ".$_POST["phoneNumber"]);
+        msg_logs_users_for_api("SMS","SMS was send to ".$_POST["phoneNumber"]." and six-digit code: ".$six_digit_number);
         print_r( $result );
 } else {
         echo "Method GET is not allowed";
