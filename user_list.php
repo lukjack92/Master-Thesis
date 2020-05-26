@@ -270,7 +270,7 @@
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
   	<script type="text/javascript" src="loadReadRecords.js"></script>
-	<script type="text/javascript" src="test.js"></script>
+	<!-- <script type="text/javascript" src="test.js"></script> -->
 	
 </body>
 </html>

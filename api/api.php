@@ -15,7 +15,7 @@
 	$DB_PASSWORD = 'admin12345';
 	$DB_NAME = 'test';
 
-    $link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
+    $link = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
 
     // Check connection
     if($link === false){
@@ -37,10 +37,11 @@
             exit;
     } 
 
-    if(isset($_POST["type"]) && ($_POST["type"]=="signup") && isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"])) {
+    if(isset($_POST["type"]) && ($_POST["type"]=="signup") && isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["phoneNumber"])) {
         $username = $_POST['username'];
         $password = md5($_POST['password']);
         $email = $_POST['email'];
+        $phoneNumber = "+".$_POST['phoneNumber'];
 
         //Check user email whether its already regsitered
         $checkEmailQuery = "select * from users_api where email = '$email'";
@@ -52,13 +53,13 @@
             echo json_encode($response);
             exit;
         } else {
-            $signupQuery = "INSERT INTO users_api(username,email,password) values('$username','$email','$password')";
-            $signupResult = mysqli_query($link,$signupQuery);
+            $signupQuery = "INSERT INTO users_api(username,email,password,phoneNumber) values('$username','$email','$password','$phoneNumber')";
+            $signupResult = @mysqli_query($link,$signupQuery);
             if($signupResult){
                 // Get Last Inserted ID
                 $id = mysqli_insert_id($link);
                 // Get User By ID
-                $userQuery = "SELECT id,username,email FROM users_api WHERE id = ".$id;
+                $userQuery = "SELECT id,username,email,phoneNumber FROM users_api WHERE id = ".$id;
                 $userResult = mysqli_query($link,$userQuery);
                  
                 $user = mysqli_fetch_assoc($userResult);
@@ -103,9 +104,12 @@
             exit;
         }
      
-    } elseif(isset($_POST["type"]) && ($_POST["type"]=="resetPwdProfile") && isset($_POST["email"]) && isset($_POST["password"])) {
+    } else if(isset($_POST["type"]) && ($_POST["type"]=="resetPwdProfile") && isset($_POST["email"]) && isset($_POST["password"])) {
         echo "Reset Password from UI";
-    } elseif(isset($_POST["type"]) && ($_POST["type"]=="forgotPwdProfile") && isset($_POST["email"])) {
+    } else if(isset($_POST["type"]) && ($_POST["type"]=="forgotPwdProfile") && isset($_POST["email"])) {
+
+        //To do change
+
         $email = $_POST["email"];
         $userQuery = "select id,email from users_api where email = '$email'";
         $result = mysqli_query($link,$userQuery);
@@ -137,37 +141,4 @@
     function generateRandomPassword() {
         return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(8/strlen($x)) )),1,8);
     }
-?>
-
-<?php
-
-if(isset($_POST["phoneNumber"]) && isset($_POST["message"])) {
-
-require 'vendor/autoload.php';
-
-$sdk = new Aws\Sns\SnsClient([
-                'region'  => 'eu-west-1',
-                'version' => 'latest',
-                'credentials' => ['key' => 'AKIA2O4NZ7JIT4ZH6ZU4', 'secret' => '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']
-        ]);
-
-        //$msg='Test';
-        //$number='+48790602938';
-
-        $msg=$_POST["message"];
-        $number=$_POST["phoneNumber"];
-
-        $result = $sdk->publish([
-                'Message' => $msg,
-                'SMSType' => 'Promotional',
-                'PhoneNumber' => $number,
-                'MessageAttributes' => ['AWS.SNS.SMS.SenderID' => [
-                'DataType' => 'String',
-                'StringValue' => 'Authentication SMS']
-        ]]);
-
-        print_r( $result );
-} else {
-        echo "Method GET is not allowed";
-}
 ?>
