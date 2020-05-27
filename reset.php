@@ -1,5 +1,7 @@
 <?php
 
+	//Page to the reset password self
+	
 	// Initialize the session
 	session_start();
 	

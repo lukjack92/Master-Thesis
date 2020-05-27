@@ -1,4 +1,5 @@
 <?php
+	//Page for the reset password users via admin
 
 	// Initialize the session
 	session_start();
@@ -81,7 +82,6 @@
 	</div>
 -->
 
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -123,7 +123,6 @@
 				if(@mysqli_num_rows($result) > 0) {
 					// Output data of each rows
 				while($row = mysqli_fetch_assoc($result)) {
-					
 					if($row['login'] != $_SESSION['login']){
 						++$id;
 						if($row['isActive'] == "false") {

@@ -731,9 +731,7 @@ function actionCheckBox() {
 }
 
 function saveNewCategory() {
-	
-	var cate = $("#category").val();
-	console.log(cate);
+
 	var posting = $.post("addNewCategory.php", {
 		category: $("#category").val()
 	});
@@ -742,6 +740,23 @@ function saveNewCategory() {
 		//console.log(data);
 		$("#cl").empty().append(data);
 		$("#createViewModalNewCategory").modal("hide");
+	});
+}
+
+function yesDeleteAccount(email) {
+	var posting = $.post("removeUserFromApp.php", {
+		email: email
+	});
+
+	posting.done(function (data) {
+		var json = JSON.parse(data); 
+		if(!json.error) {
+			$("#modalRemoveAccount").modal('hide');
+			location.href = "loginProfileApp.php";
+		} else {
+			$("#modalRemoveAccount").modal('hide');
+			$("#database_content").empty().append(json.message);
+		}
 	});
 }
 

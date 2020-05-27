@@ -70,10 +70,15 @@
         </form>
         <button class="btn btn-lg btn-primary btn-block" onclick="forgottenPassword()" >I've forgotten password</button>
 		<!-- Feedback from api.php -->
-        <div id="feedbackFromApi" role="alert"></div>
-
+        <div id="feedbackFromApi" role="alert"> 
+		<?php 
+			if(isset($_SESSION['removeUser'])) {
+				echo $_SESSION['removeUser'];
+				unset($_SESSION['removeUser']);
+			}
+		?>
+		</div>
 	</div>
-
 </div>
 	<nav class="navbar-fixed-bottom ">
 		<div class="footer text-center bg-dark">

@@ -48,9 +48,14 @@
 	  </nav>
 
 <div class="container color_white">
+	<?php 
+		if(isset($_SESSION['changePassword']) && $_SESSION['changePassword'] != "") {
+			
+		}
+	?> 
     <div class="page-header">
         <h1>Hi <?php echo $_SESSION['usersInfo']['username']; ?>. Welcome in your profile.</h1>
-		<h2> <?php echo $_SESSION['usersInfo']['email'] ?> </h2>
+		<h2> <?php echo $_SESSION['usersInfo']['email']; ?> </h2>
     </div>
     
     <!--Current time-->
@@ -58,6 +63,25 @@
     
     <!--Session time displaying-->
 	<div id="time"></div>
+
+	<!-- Modal (Confirm if you want remove account)-->
+	<div class="modal fade" id="modalRemoveAccount" tabindex="-1" role="dialog" aria-labelledby="modalRemoveAccount" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">Are you sure to delete this account?</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+				<button class="btn btn-primary yes"  onclick="yesDeleteAccount('<?php echo $_SESSION['usersInfo']['email']; ?>')" >Yes</button>
+				<button class="btn btn-primary no" data-dismiss="modal">No</button>
+		</div>
+		</div>
+	</div>
+	</div>
+
 
     <!-- Modal Expired-->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -80,13 +104,11 @@
 
     <p>
         <a href="resetPasswordProfile.php" class="btn btn-primary">Change Password</a>
-        <a href="logoutApp.php" class="btn btn-danger">Delete account</a>
+		<button class="btn btn-danger" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
 		<a href="logoutApp.php" class="btn btn-secondary">Sign Out Of Your Account</a>
     </p>
 
 	<div id="database_content"></div>
-
-
 </div>
 
 	<nav class="navbar-fixed-bottom">
