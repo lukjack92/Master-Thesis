@@ -46,7 +46,7 @@
         //Check user email whether its already regsitered
         $checkEmailQuery = "select * from users_api where email = '$email'";
         $result = mysqli_query($link,$checkEmailQuery);
-        if($result->num_rows>0){
+        if(mysqli_num_rows($result)>0){
             $response["error"] = TRUE;
             $response["message"] ="Sorry email already found.";
             msg_logs_users_for_api($_POST["email"], "Sorry email already found in API");
@@ -79,7 +79,7 @@
             }  
         }
     }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])){
-        // login user
+        // Login user
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
      

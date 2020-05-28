@@ -65,7 +65,7 @@ error_reporting(0);
 <body>
 
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -189,7 +189,7 @@ error_reporting(0);
 		?>
 		<a href="user_list.php" class="btn btn-primary">List Of Users</a>
 		<!--<a href="category.php" class="btn btn-primary">List Of Category</a>-->
-		<a href="logout.php" class="btn btn-danger">Sign Out Of Your Account</a>
+		<a href="logoutAdmin.php" class="btn btn-danger">Sign Out Of Your Account</a>
     </p>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">

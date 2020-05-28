@@ -1,0 +1,52 @@
+Thu 2020-05-28 09:43:37 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 09:52:19 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 09:54:34 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:32:46 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 10:35:17 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:35:37 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 10:35:59 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:36:36 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:36:44 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 10:37:07 PM Addr IP: ::1 lukjack92@gmail.com The user doesn't exists.
+Thu 2020-05-28 10:37:20 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:37:57 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 10:39:55 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:41:32 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:41:34 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:42:18 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:45:57 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:46:00 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-05-28 10:46:10 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Thu 2020-05-28 10:46:13 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:46:25 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 10:46:37 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:46:41 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:46:50 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:47:23 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:47:39 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:47:40 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:48:01 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:48:29 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:48:39 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Thu 2020-05-28 10:48:42 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 10:49:03 PM Addr IP: ::1  Successfully logged out.
+Thu 2020-05-28 10:50:48 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:54:36 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:54:45 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:54:47 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:54:52 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:54:55 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 10:55:00 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-05-28 10:55:10 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-05-28 11:00:53 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 11:42:21 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-05-28 11:42:40 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 11:50:05 PM Addr IP: ::1 lukjack92@gmail.com Incorect password!
+Thu 2020-05-28 11:52:41 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 11:53:01 PM Addr IP: ::1 lukjack92@gmail.com Incorect password!
+Thu 2020-05-28 11:54:52 PM Addr IP: ::1 lukjack92@gmail.com Incorect password!
+Thu 2020-05-28 11:55:35 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 11:55:45 PM Addr IP: ::1 lukjack92@gmail.com Incorect password!
+Thu 2020-05-28 11:58:17 PM Addr IP: ::1 lukjack92@gmail.com Incorect password!
+Thu 2020-05-28 11:58:37 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Thu 2020-05-28 11:58:46 PM Addr IP: ::1 lukjack92@gmail.com Incorect password!

@@ -86,17 +86,18 @@
                 </div>
                 <div class="form-group has-feedback <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                     <label class="pull-left"><b>New Password</b></label>
-                    <input type="password" id="new_password" class="form-control" required> 
+                    <input type="password" id="new_password" class="form-control" pattern="(?=.*\d)(?=.*[a-z]).{6,}" title="Must contain at least 6 or more characters" required> 
                 </div>
                 <div class="form-group has-feedback">
                     <label class="pull-left"><b>Confirm Password</b></label>
                     <input type="password" id="re_enter_password" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-block" value="Submit">
+                    <input type="submit" class="btn btn-primary btn-block" onclick="resetPasswordToAppProfile('<?php echo $_SESSION['usersInfo']['email']?>')" value="Submit">
                     <a href="profileApp.php" class="btn btn-danger btn-block">Back</a>
                 </div>
             </form>
+            <div id="feedbackFromApi" role="alert"></div>
         </div>
 </div>
 

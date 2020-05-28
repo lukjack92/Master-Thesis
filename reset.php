@@ -1,7 +1,7 @@
 <?php
 
 	//Page to the reset password self
-	
+
 	// Initialize the session
 	session_start();
 	
@@ -103,7 +103,7 @@
 <body>
 
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -155,7 +155,7 @@
 	
 	<p>
 		<a href="welcome.php" class="btn btn-primary">Back page</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+        <a href="logoutAdmin.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
 	 <div class="col-md-6 mx-auto bg-form-reset">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -194,7 +194,5 @@
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
-	<script type="text/javascript" src="test.js"></script>
-
 </body>
 </html>

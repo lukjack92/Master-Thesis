@@ -95,7 +95,7 @@
         </div>
         <div class="modal-body">
                 <button class="btn btn-primary yes">Yes</button>
-                <button class="btn btn-primary no">No</button>
+                <button class="btn btn-primary no">No</button> 
         </div>
         </div>
     </div>

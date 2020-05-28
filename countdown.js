@@ -760,6 +760,57 @@ function yesDeleteAccount(email) {
 	});
 }
 
+// To the function resetPasswordToAppProfile
+function alertResetPwd(alert, msg) {
+    $("#feedbackFromApi").removeClass();
+    $("#feedbackFromApi").addClass(alert);
+    $("#feedbackFromApi").empty().append(msg);
+}
+
+// To the function resetPasswordToAppProfile
+function clearInput() {
+	$("#current_password").val("");
+	$("#new_password").val("");
+	$("#re_enter_password").val("");
+}
+
+function resetPasswordToAppProfile(email) {
+	event.preventDefault();
+
+	var currentPwd = $("#current_password").val();
+	var newPwd = $("#new_password").val();
+	var reNewPwd = $("#re_enter_password").val();
+
+	if(currentPwd != "" && newPwd != "" && reNewPwd != "") {
+		if(newPwd.length >= 6) {
+			//Remove messages in feedbackFromApi
+			$("#feedbackFromApi").removeClass();
+			$("#feedbackFromApi").empty();
+
+			if(newPwd === reNewPwd){
+				//If all is OK
+				var posting = $.post("resetPasswordProfileApp.php", {
+					currentPwd: currentPwd,
+					email: email,
+					password: newPwd
+				});
+			
+				posting.done(function (data) {
+					var json = JSON.parse(data); 
+					if(!json.error) {
+						clearInput();
+						console.log(json.message);
+						alertResetPwd("alert alert_succ", json.message);
+					} else alertResetPwd("alert alert_pass", json.message);
+				});
+
+			} else alertResetPwd("alert alert_pass", "The passwords are not the same!");
+		} else alertResetPwd("alert alert_pass", "A new password should be contain at least 6 characters!");
+	}else {
+		alertResetPwd("alert alert_pass", " The above fields are not completed yet!");
+	}
+}
+
 $(document).ready(function() {
 	
 	//readRecords();
