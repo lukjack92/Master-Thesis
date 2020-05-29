@@ -305,6 +305,10 @@
 			<div class="form-group has-feedback">
 				<input class="form-control" type="text" id="phoneNumber" required>
 			</div>
+            <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" onclick="resetPasswordToAppProfile('<?php echo $_SESSION['usersInfo']['email']?>')" value="Submit">
+                    <a href="profileApp.php" class="btn btn-danger btn-block">Back</a>
+                </div>
             </form>
             <div id="feedbackFromApi" role="alert"></div>
         </div>
