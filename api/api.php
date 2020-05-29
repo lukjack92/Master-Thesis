@@ -104,8 +104,6 @@
             exit;
         }
      
-    } else if(isset($_POST["type"]) && ($_POST["type"]=="resetPwdProfile") && isset($_POST["email"]) && isset($_POST["password"])) {
-        echo "Reset Password from UI";
     } else if(isset($_POST["type"]) && ($_POST["type"]=="forgotPwdProfile") && isset($_POST["email"])) {
 
         //To do change

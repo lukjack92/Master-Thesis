@@ -100,10 +100,9 @@
         </div>
     </div>
     </div>
-
-
     <p>
         <a href="resetPasswordProfile.php" class="btn btn-primary">Change Password</a>
+		<a href="changePhoneNumberProfile.php" class="btn btn-primary">Change PhoneNumber</a>
 		<button class="btn btn-danger" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
 		<a href="logoutApp.php" class="btn btn-secondary">Sign Out Of Your Account</a>
     </p>
