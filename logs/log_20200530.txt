@@ -1,0 +1,17 @@
+Sat 2020-05-30 12:28:19 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sat 2020-05-30 12:58:50 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sat 2020-05-30 01:06:49 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sat 2020-05-30 01:22:18 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sat 2020-05-30 01:24:03 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sat 2020-05-30 01:34:18 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sat 2020-05-30 01:36:48 AM Addr IP: ::1 lukjack92@gmail.com Incorect password!
+Sat 2020-05-30 01:43:31 AM Addr IP: ::1 Error Lack all required attributes in method POST!
+Sat 2020-05-30 01:44:08 AM Addr IP: ::1 Error Lack all required attributes in method POST!
+Sat 2020-05-30 01:44:35 AM Addr IP: ::1 Error Lack all required attributes in method POST!
+Sat 2020-05-30 01:45:22 AM Addr IP: ::1 Error Lack all required attributes in method POST!
+Sat 2020-05-30 01:45:28 AM Addr IP: ::1 Error Lack all required attributes in method POST!
+Sat 2020-05-30 01:53:06 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Sat 2020-05-30 01:56:35 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Sat 2020-05-30 01:57:00 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Sat 2020-05-30 01:57:18 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Sat 2020-05-30 01:58:00 AM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App

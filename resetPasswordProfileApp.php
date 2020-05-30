@@ -14,9 +14,6 @@ if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true){
         $email = $link->real_escape_string($_POST['email']);
         $password = $link->real_escape_string(md5($_POST['password']));
 
-        //$response["error"] = TRUE;
-        //$response["message"] = $currentPwd." ".$email." ".$password;
-
         $userQuery = "select username from users_api where email = '$email' and password = '$currentPwd'";
         $result = mysqli_query($link,$userQuery);
 
@@ -33,7 +30,6 @@ if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true){
                 //echo '<center class="alert alert-danger">Something went wrong.</center>';
                 msg_logs_users($_POST['email'], "Something went wrong during the password reset!".mysqli_error($link));
             }
-
         } else {
             $response["error"] = TRUE;
             $response["message"] = 'Incorect passowrd!';

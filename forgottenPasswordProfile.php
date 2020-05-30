@@ -64,8 +64,7 @@
         </form>
 		<button class="btn btn-lg btn-primary btn-block" onclick="backPage()">Back</button>
 		<!-- Feedback from api.php -->
-        <div id="feedbackFromApi" role="alert"></div>
-
+        
 	</div>
 
 </div>

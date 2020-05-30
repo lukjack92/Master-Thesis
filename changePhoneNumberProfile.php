@@ -80,7 +80,7 @@
     </div>
         <div class="col-md-6 mx-auto form">
             <form method="post">
-			<label>Prefix PhoneNumber</label>
+			<label class="float-left"><b>Prefix PhoneNumber</b></label>
 			<div class="form-group has-feedback">
 				<select class="form-control" name="countryCode" id="countryCode">
 					<option data-countryCode="PL" value="48">Poland (+48)</option>
@@ -301,12 +301,12 @@
 						</optgroup>
 				</select>
 			</div>
-			<label>A new Phone Number</label>
+			<label class="float-left"><b>A new PhoneNumber</b></label>
 			<div class="form-group has-feedback">
 				<input class="form-control" type="text" id="phoneNumber" required>
 			</div>
             <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-block" onclick="resetPasswordToAppProfile('<?php echo $_SESSION['usersInfo']['email']?>')" value="Submit">
+                    <input type="submit" class="btn btn-primary btn-block" onclick="changePhoneNumberProfile('<?php echo $_SESSION['usersInfo']['email']; ?>')" value="Submit">
                     <a href="profileApp.php" class="btn btn-danger btn-block">Back</a>
                 </div>
             </form>

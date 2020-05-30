@@ -33,8 +33,8 @@
 
     if($_SERVER["REQUEST_METHOD"] == "GET") {
         $response["message"] = "It is AppPhone";
-            echo json_encode($response);
-            exit;
+        echo json_encode($response);
+        exit;
     } 
 
     if(isset($_POST["type"]) && ($_POST["type"]=="signup") && isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["phoneNumber"])) {

@@ -760,7 +760,7 @@ function yesDeleteAccount(email) {
 	});
 }
 
-// To the function resetPasswordToAppProfile
+// To the function resetPasswordToAppProfile and changePhoneNumberProfile
 function alertResetPwd(alert, msg) {
     $("#feedbackFromApi").removeClass();
     $("#feedbackFromApi").addClass(alert);
@@ -768,7 +768,7 @@ function alertResetPwd(alert, msg) {
 }
 
 // To the function resetPasswordToAppProfile
-function clearInput() {
+function clearInputResetPwd() {
 	$("#current_password").val("");
 	$("#new_password").val("");
 	$("#re_enter_password").val("");
@@ -798,7 +798,7 @@ function resetPasswordToAppProfile(email) {
 				posting.done(function (data) {
 					var json = JSON.parse(data); 
 					if(!json.error) {
-						clearInput();
+						clearInputResetPwd();
 						console.log(json.message);
 						alertResetPwd("alert alert_succ", json.message);
 					} else alertResetPwd("alert alert_pass", json.message);
@@ -809,6 +809,48 @@ function resetPasswordToAppProfile(email) {
 	}else {
 		alertResetPwd("alert alert_pass", " The above fields are not completed yet!");
 	}
+}
+
+function changePhoneNumberProfile(email) {
+	event.preventDefault();
+
+	var prefix = $("#countryCode").val();
+	var number = $("#phoneNumber").val();
+
+	number = number.replace(/\s/g, '');
+
+	if(number != "") {
+		if(number.match(/^\d+$/)) {
+			console.log(number);
+			if(number.length >= 9) {	
+
+				//Remove messages in feedbackFromApi
+				$("#feedbackFromApi").removeClass();
+				$("#feedbackFromApi").empty();
+
+				//If all is OK
+				var posting = $.post("changePhoneNumberProfileApp.php", {
+					prefix: prefix,
+					phoneNumber: number,
+					email: email
+				});
+			
+				posting.done(function (data) {
+					var json = JSON.parse(data); 
+					if(!json.error) {
+						$("#phoneNumber").val("");
+						console.log(json.message);
+						alertResetPwd("alert alert_succ", json.message);
+					} else alertResetPwd("alert alert_pass", json.message);
+				});
+			} else {
+				alertResetPwd("alert alert_pass", "Probably the phone number is too short!");
+			}
+		} else alertResetPwd("alert alert_pass", "The PhoneNumber contains not only digits themselves that it's should only digits!");
+	}else {
+		alertResetPwd("alert alert_pass", " The above field is not completed yet!");
+	}
+
 }
 
 $(document).ready(function() {
