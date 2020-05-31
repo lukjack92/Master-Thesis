@@ -34,17 +34,17 @@ function forgotPwdToApp() {
                     var number = json.user.phoneNumber;
 
                     console.log(email+" "+number);
-/*
+
                     var posting = $.post("sms/sms.php", {
                         phoneNumber: number,
                     });
                     posting.done(function(data) {
                         console.log(data);
                         //window.location.href = "checkCodeSMS.php";
-                    }); */
+                    }); 
                     // Email is exist 
                     //alertLoginToApp("alert alert_succ",json.message);
-                    window.location.href = "checkCodeSMS.php";
+                    //window.location.href = "checkCodeSMS.php";
                 } else {
                     // Any errors
                     alertLoginToApp("alert alert_pass","ERROR");

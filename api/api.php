@@ -126,13 +126,13 @@
             $response["user"] = $user;
 
             $codeSMS  = mt_rand(100000, 999999);
-            $_SESSION['codeSms'] = $codeSMS;
 
             $query = "update users_api set oneTimePassword = '$codeSMS' where email = '$email'";
             if (mysqli_query($link,$query)) {
                 msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$codeSMS);
                 //Session if user is exist in DB for page checkCodeSMS.php
-                $_SESSION['usersInfo'] = $user;
+                //$_SESSION['usersInfo'] = $user;
+                $_SESSION['codeSms'] = $codeSMS;
                 echo json_encode($response);
                 exit;
             } else {
