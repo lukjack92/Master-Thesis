@@ -12,25 +12,47 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
         $file = $_FILES['fileToUpload']['name'];
 
         if($_FILES['fileToUpload']['name'] != "") {
-                if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "upload/upload.txt")) {
+            if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "upload/upload.txt")) {
 
-                //Operation on the file
-                $file = fopen("upload/upload.txt", "r");
-                while(!feof($file)) {
-                        $content = fgets($file);
-                        $carray = explode(";",$content);
-                        list($question,$ansa,$ansb,$ansc,$ansd,$odp) = $carray;
-                        $sql = "INSERT INTO `questions` (`question`, `ansa`, `ansb`, `ansc`, `ansd`, `odp`) VALUES ('$question', '$ansa', '$ansb', '$ansc', '$ansd', '$odp')";
-                        @mysqli_query($link,$sql);
-                }
-                fclose($file);
-        $_SESSION['ok'] = "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+            //Operation on the file
+            $file = fopen("upload/upload.txt", "r");
+            while(!feof($file)) {
+                $content = fgets($file);
+                $carray = explode(";",$content);
+                list($question,$ansa,$ansb,$ansc,$ansd,$odp,$category) = $carray;
+                $sql = "INSERT INTO `questions` (`question`, `ansa`, `ansb`, `ansc`, `ansd`, `odp`, `category`) VALUES ('$question', '$ansa', '$ansb', '$ansc', '$ansd', '$odp', '$category')";
+                @mysqli_query($link,$sql);
+            }
+            
+			fclose($file);
+				
+			//Adding category which has been added via upload the file 
+			$query = "SELECT DISTINCT questions.category FROM questions LEFT JOIN category ON (questions.category = category.name) WHERE category.name IS NULL;";
+		
+			$result = @mysqli_query($link,$query);
+			$json = Array();
+			while($row = @mysqli_fetch_object($result)) {
+				$row_array['category'] = $row->category;
+				array_push($json, $row_array);
+			}
+			
+			if(!empty($json)) { 		
+				foreach($json as $value) {
+					$val = $value['category'];
+					//echo $val." ";
+					$sql = "INSERT INTO `category` (`name`) VALUES ('$val')";
+					@mysqli_query($link,$sql);
+					echo "DODANO";
+				}
+		}
+		
+        $_SESSION['ok'] = "<div class='alert alert-success' role='alert'><b>The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.</b></div>";
         msg_logs_users($_SESSION['login'],"The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.");
         header("Location: welcome.php");
         } else {
-        echo "Sorry, there was an error uploading your file.";
+        echo "Sorry, there was error uploading your file.";
     }
-        } else { $_SESSION['ok'] = "Sorry, there was an error uploading your file.";
+        } else { $_SESSION['ok'] = "<div class='alert alert-danger' role='alert'><b>There hasn't been typed file to upload.</b></div>";
         header("Location: welcome.php");}
 }
 ?>

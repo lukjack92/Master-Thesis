@@ -71,12 +71,12 @@
 							}
 						}
 					} else {
-						$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> isn&#39;t active. Please conntact to administrator.</div>";
-						msg_logs_users($_POST['login'], "Account isn't active.");
+						$not_exist_err = "<div class='alert alert_pass'>This username <b>" . $_POST['login'] . "</b> is inactive. Please conntact to administrator.</div>";
+						msg_logs_users($_POST['login'], "Account is inactive.");
 					}
 				}
 			} else {	
-				$not_exist_err = "<div class='alert alert_pass'>That username <b>" . $_POST['login'] . "</b> combination is not correct. Check and try again.</div>";
+				$not_exist_err = "<div class='alert alert_pass'>This username <b>" . $_POST['login'] . "</b> combination is not correct. Check and try again.</div>";
 				msg_logs_users($_POST['login'], "The user doesn't exists.");
 			}
 		}
@@ -120,7 +120,7 @@
 	
 <div class="container">
 	<div class="col-md-6 mx-auto bg-form">
-		<h3>Login to API</h3>
+		<h3>Login to Administration System</h3>
 		<form method="post">
 			<label>Login</label>
 			<div class="form-group has-feedback <?php echo (!empty($login_err)) ? 'has-error' : ''; ?>">
@@ -144,6 +144,7 @@
 	<nav class="navbar-fixed-bottom ">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 	

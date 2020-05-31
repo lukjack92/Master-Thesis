@@ -1,2 +1,0 @@
-Thu 2019-09-26 12:50:08 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Thu 2019-09-26 12:50:25 AM Addr IP: ::1 ljack The file pytanie_test.txt has been uploaded.

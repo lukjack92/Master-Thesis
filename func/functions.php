@@ -24,7 +24,12 @@ function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 	} else { 
 	
 		$_SESSION['loggedIn'] = true;
-	
+
+		#The limit displaying the records in tables question and categories
+		$_SESSION['limit'] = 10;
+		$_SESSION['limit2'] = 10;
+		$_SESSION['limit3'] = 10;
+
 		if($authCount < 3) {
 			$query = 'update users set authCounter = 0 where login="'.$_POST['login'].'"';
 			@mysqli_query($link, $query);

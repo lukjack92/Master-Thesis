@@ -1,5 +1,7 @@
 <?php
 
+	//Page to the reset password self
+
 	// Initialize the session
 	session_start();
 	
@@ -8,20 +10,20 @@
 		header("Location: login.php");
 		exit;
 	}
-	
+	/*
 	//Session timeout
 	$time = $_SERVER['REQUEST_TIME'];
 	
 	$timeout_duration = 10;
 	if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
+		msg_logs_users($_SESSION['login'], "Successfully logged out.");
 		session_unset();
 		session_destroy();
 		session_start();
-		msg_logs_users($_SESSION['login'], "Successfully logged out.");
 		header("Location: login.php");
 		exit;
 	}
-	
+	*/
 	require_once "conf_db/config.php";
 	require_once "func_msg/functions.php";
 	
@@ -63,15 +65,15 @@
 							msg_logs_users($_SESSION['login'], "[Reset pwd] The password is no matched.");
 						}	
 					} else {
-						$success = '<center class="alert alert-danger">Your old password isn&#39t correct!</center>';
-						msg_logs_users($_SESSION['login'], "[Reset pwd] Your old password isn't correct!");
+						$success = '<center class="alert alert-danger">Your current password isn&#39t correct!</center>';
+						msg_logs_users($_SESSION['login'], "[Reset pwd] Your current password isn't correct!");
 					}
 				}
 			}
 		}
 	}
 	
-	$_SESSION['LAST_ACTIVITY'] = $time;
+	//$_SESSION['LAST_ACTIVITY'] = $time;
 ?>
 
 <!DOCTYPE html>
@@ -101,7 +103,7 @@
 <body>
 
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -118,7 +120,6 @@
 
 <div class="container color_white">
 <div id="cl"></div>
-	<div id="time"></div>
 <!--
 	<div id="confirmBox">
 		<div class="message"></div>
@@ -149,13 +150,18 @@
         <h1>Reset password for user: <b><?php echo htmlspecialchars($_SESSION["login"]); ?></b> </h1>
 		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>
 		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
-    </div>
+	</div>
 	
+	<div id="time"></div>
+	<?php echo date("Y-m-d H:i:s");?>
+
+	<!--
 	<p>
 		<a href="welcome.php" class="btn btn-primary">Back page</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
-	 <div class="col-md-6 mx-auto bg-form-reset">
+        <a href="logoutAdmin.php" class="btn btn-danger">Sign Out of Your Account</a>
+	</p>
+  	-->
+	 <div class="col-md-6 mx-auto bg-form-reset2">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 			<div class="form-group has-feedback <?php echo (!empty($old_password_err)) ? 'has-error' : ''; ?>">
                 <label>Current Password</label>
@@ -174,7 +180,8 @@
             </div>
 				<span class="help-block"><?php echo $success; ?></span>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary btn-block" value="Submit">
+				<input type="submit" class="btn btn-primary btn-block" value="Submit">
+				<a href="welcome.php" class="btn btn-danger btn-block">Back page</a>
             </div>
         </form>
     </div>    
@@ -182,6 +189,7 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 
@@ -191,7 +199,5 @@
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
-	<script type="text/javascript" src="test.js"></script>
-
 </body>
 </html>

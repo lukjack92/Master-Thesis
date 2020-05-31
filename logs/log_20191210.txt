@@ -1,0 +1,6 @@
+Tue 2019-12-10 12:00:09 AM Addr IP: ::1 ljack A new question has been added!
+Tue 2019-12-10 12:01:01 AM Addr IP: ::1 ljack A new question has been added!
+Tue 2019-12-10 12:07:43 AM Addr IP: ::1 ljack A new question has been added!
+Tue 2019-12-10 12:27:31 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Tue 2019-12-10 12:42:00 AM Addr IP: ::1 ljack Password incorrect. AuthCounter increment 1.
+Tue 2019-12-10 12:42:08 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

@@ -1,0 +1,11 @@
+Fri 2019-12-13 12:08:12 AM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-12-13 12:08:25 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-12-13 12:16:08 AM Addr IP: ::1 ljack [delQuestion] The category has been removed.
+Fri 2019-12-13 12:20:35 AM Addr IP: ::1 ljack [Reset pwd user confirm] The password is correct to ljack.
+Fri 2019-12-13 12:20:48 AM Addr IP: ::1 ljack [Reset pwd user] The password has been reset to jackol01.
+Fri 2019-12-13 12:21:19 AM Addr IP: ::1 ljack Successfully logged out.
+Fri 2019-12-13 12:21:27 AM Addr IP: ::1 jackol01 Successfully logged. AuthCounter is 0.
+Fri 2019-12-13 12:22:30 AM Addr IP: ::1 jackol01 A new category has been added!
+Fri 2019-12-13 12:23:49 AM Addr IP: ::1 jackol01 Successfully logged out.
+Fri 2019-12-13 12:23:58 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Fri 2019-12-13 00:36:53 AM Addr IP: ::1 Request to resource.

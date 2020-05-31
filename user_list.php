@@ -47,12 +47,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
-
 </head>
 <body>
 
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -87,7 +86,7 @@
 </div>
   
   <div class="pull-right">
-	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New User</button>
+	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Create An Account</button>
   </div></br>
   <?php } ?>
 
@@ -97,7 +96,7 @@
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">Add New User</h4>
+<h4 class="modal-title" id="myModalLabel">Create An Account</h4>
 <div class="pull-left">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 </div>
@@ -145,7 +144,7 @@
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-<button type="button" class="btn btn-primary" onclick="addUser()">Add User</button>
+<button type="button" class="btn btn-primary" onclick="addUser()">Submit</button>
 </div>
 </div>
 </div>
@@ -156,7 +155,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="myModalLabel">Do you want to remove this account?</h5>
+        <h5 class="modal-title" id="myModalLabel">Are you sure you want to delete this account?</h5>
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	  </div>
       <div class="modal-body">
@@ -225,7 +224,8 @@
 			<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
 		</p>
 	</div>
-  
+	
+	<?php echo date("Y-m-d H:i:s");?>
 	<div id="time"></div>
 <!--
 	<div id="confirmBox">
@@ -253,15 +253,15 @@
   </div>
 </div>
 
-
-	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
-
+	<a href="welcome.php" class="btn btn-danger testbutton2">Back page</a>
+	<center><div id="loader"></div></center>
 	<div id="record_content"></div>
-	
+		
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
@@ -270,7 +270,8 @@
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
-	<script type="text/javascript" src="test.js"></script>
+  	<script type="text/javascript" src="loadReadRecords.js"></script>
+	<!-- <script type="text/javascript" src="test.js"></script> -->
 	
 </body>
 </html>

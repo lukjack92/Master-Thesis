@@ -1,0 +1,5 @@
+Fri 2020-05-01 12:15:36 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Fri 2020-05-01 12:16:24 AM Addr IP: ::1 admin Successfully logged out.
+Fri 2020-05-01 01:59:46 AM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
+Fri 2020-05-01 01:59:57 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Fri 2020-05-01 02:00:46 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.

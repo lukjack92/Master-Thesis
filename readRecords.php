@@ -15,14 +15,14 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 		<thead>
 			<tr>
 				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 10%">Login</th>
-				<th scope="col" style="width: 10%" >First Name</th>
-				<th scope="col" style="width: 10%" >Last Name</th>
-				<th scope="col" style="width: 10%" >Is Active</th>
-				<th scope="col" style="width: 5%" >Permission</th>';
+				<th scope="col" style="width: 13%">Login</th>
+				<th scope="col" style="width: 19%" >First Name</th>
+				<th scope="col" style="width: 19%" >Last Name</th>
+				<th scope="col" style="width: 15%" >Is Active</th>
+				<th scope="col" style="width: 6%" >Permission</th>';
 				
 				if($_SESSION['permission'] == "admin"){ 
-					$data .= '<th style="width: 12%">Action</th>';
+					$data .= '<th style="width: 17%">Action</th>';
 				}
 			$data .= '</tr>
 		</thead>
@@ -76,9 +76,9 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 								$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button></td>';
 							} else {
 								if($row['isActive'] == "false"){
-									$data .= '<td> <button type="button" class="btn btn-primary testbutton" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-primary testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+									$data .= '<td> <button type="button" class="btn btn-primary testbutton" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
 								} else {
-									$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-primary testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+									$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
 								}
 							}
 						} 

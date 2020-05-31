@@ -1,0 +1,12 @@
+Thu 2019-12-05 12:14:49 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
+Thu 2019-12-05 12:15:15 AM Addr IP: ::1 ljack [delQuestion] The category has been removed.
+Thu 2019-12-05 12:15:51 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 12:16:39 AM Addr IP: ::1 ljack [delQuestion] The category has been removed.
+Thu 2019-12-05 12:17:04 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 01:09:55 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 01:10:24 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 01:12:29 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 01:12:44 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 01:14:05 AM Addr IP: ::1 ljack A new category hasn't been added, because its exists in database!
+Thu 2019-12-05 01:14:35 AM Addr IP: ::1 ljack A new category has been added!
+Thu 2019-12-05 01:14:49 AM Addr IP: ::1 ljack A new category has been added!

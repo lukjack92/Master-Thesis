@@ -1,0 +1,45 @@
+Mon 2020-05-04 12:09:06 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 12:09:17 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Mon 2020-05-04 12:09:20 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 12:09:59 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 12:10:07 AM Addr IP: ::1 test1@gmail.com User not found or Invalid login details in API
+Mon 2020-05-04 12:10:09 AM Addr IP: ::1 test1@gmail.com Successfully logged in API
+Mon 2020-05-04 12:11:57 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Mon 2020-05-04 12:12:04 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 12:15:10 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 12:30:02 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 12:41:57 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 12:42:06 AM Addr IP: ::1 test1@gmail.com Successfully logged in API
+Mon 2020-05-04 12:44:30 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 12:45:05 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 12:45:12 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 01:02:17 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 01:02:17 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 01:02:19 AM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 10:40:44 PM Addr IP: ::1 test1@gmail.com Successfully logged in API
+Mon 2020-05-04 10:45:52 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 10:46:02 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found or Invalid login details in API
+Mon 2020-05-04 10:46:14 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 10:47:58 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 10:53:44 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 10:53:52 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 10:54:12 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 10:54:28 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 10:54:38 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 10:54:45 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 10:59:35 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 10:59:44 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 11:00:07 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 11:00:16 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 11:01:35 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 11:02:07 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 11:05:20 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 11:05:33 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 11:07:34 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 11:08:39 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 11:15:25 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Mon 2020-05-04 11:26:07 PM Addr IP: ::1 User from AppMobile  Successfully logged out from Profile App
+Mon 2020-05-04 11:26:16 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-05-04 11:27:34 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-05-04 11:27:55 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-05-04 11:28:09 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API

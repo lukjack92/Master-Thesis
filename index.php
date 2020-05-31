@@ -8,7 +8,7 @@ $code = "";
 if(empty($_GET['code'])) {
 echo '
 
-		<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -29,39 +29,51 @@ echo '
 	<link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="login.php"> <i class="fas fa-home"></i> Login</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<img src="img/hamb.png" height="15" width="20">
-			</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<!--
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="login.php"> <i class="fas fa-home"></i> Login</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarColor02">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
-				</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="signUpToApp.php">SignUp to App <span class="sr-only">(current)</span></a>
+			</li>	
+			<li class="nav-item">
+				<a class="nav-link" href="loginProfileApp.php">LogIn to App</a>
+			</li>			
+			<li class="nav-item">
+				<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="info.php">About</a>
+			</li>
 			</ul>
-		-->
 		</div>
-	  </nav>
+	</nav>
     <!-- Begin page content -->	
 <div class="container">
     <main role="main" class=" center color-white">
       <h1 class="black" >API for the PHYSICS application</h1>
 		<img src="img/logo.jpg">
-        <p class="lead">It&#39;s API is used by mobile application.</p>
+        <p class="lead">It&#39;s API used by mobile application.</p>
     </main>
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
 ';
-}
-else {
+} elseif(isset($_GET['code'])) {
 	$query = "select * from " . TB_CODE;
 	
 	if($result = @mysqli_query($link,$query)) {
@@ -76,8 +88,8 @@ else {
 
 	if($_GET['code'] === $code) {
 		
-		header('Content-Type: application/json; charset=utf-8;');
-
+		//header('Content-Type: application/json; charset=utf-8;');
+		//header("Expires: Sun, 25 Jul 1997 06:02:34 GMT"); 
 		$query_sql="select * from " . TB_QUESTIONS;
 		$result = $link->query($query_sql);
 
@@ -91,6 +103,7 @@ else {
 			$row_array['ansc'] = htmlspecialchars($obj->ansc);
 			$row_array['ansd'] = htmlspecialchars($obj->ansd);
 			$row_array['odp'] = htmlspecialchars($obj->odp);
+			$row_array['category'] = htmlspecialchars($obj->category);
 		
 			array_push($json, $row_array);
 		}
@@ -127,19 +140,29 @@ else {
 	<link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="login.php"> <i class="fas fa-home"></i> Login</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<img src="img/hamb.png" height="15" width="20">
-			</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<!--
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="login.php"> <i class="fas fa-home"></i> Login</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarColor02">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="signUpToApp.php">SignUp to App</a>
+				</li>	
+				<li class="nav-item">
+					<a class="nav-link" href="loginProfileApp.php">LogIn to App</a>
+				</li>		
+				<li class="nav-item">
+					<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="info.php">About</a>
 				</li>
 			</ul>
-		-->
 		</div>
 	</nav>
     <!-- Begin page content -->
@@ -152,8 +175,14 @@ else {
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
 		';

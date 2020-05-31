@@ -1,4 +1,5 @@
 <?php
+	//Page for the reset password users via admin
 
 	// Initialize the session
 	session_start();
@@ -44,9 +45,8 @@
 
 </head>
 <body>
-
       <nav class="navbar navbar-expand-lg bg-dark">
-		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -82,7 +82,6 @@
 	</div>
 -->
 
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -102,16 +101,16 @@
 </div>
 
 
-	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
+	<a href="welcome.php" class="btn btn-danger testbutton2">Back page</a>
 	
 	<table class="table table table-bordered table-striped table-hover">
 		<thead>
 			<tr>
 				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 16%">User</th>
-				<th scope="col" style="width: 20%">FirstName</th>
-				<th scope="col" style="width: 15%">LastName</th>
-				<th scope="col" style="width: 15%">Action</th>
+				<th scope="col" style="width: 20%">User</th>
+				<th scope="col" style="width: 25%">FirstName</th>
+				<th scope="col" style="width: 25%">LastName</th>
+				<th scope="col" style="width: 25%">Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -124,7 +123,6 @@
 				if(@mysqli_num_rows($result) > 0) {
 					// Output data of each rows
 				while($row = mysqli_fetch_assoc($result)) {
-					
 					if($row['login'] != $_SESSION['login']){
 						++$id;
 						if($row['isActive'] == "false") {
@@ -197,6 +195,7 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
+			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 	
