@@ -8,17 +8,15 @@ function validIsEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
-function forgoPwdToApp() {
+function forgotPwdToApp() {
     event.preventDefault();
 
 	var type = "forgotPwdProfile";
-	var email = $("#email").val();
-    console.log(email);
-    if((email == "")) {
-      console.log("Please, fill in all fields");
-      alertLoginToApp("alert alert_pass","Please, fill in all fields");
+    var email = $("#email").val();
+    
+    if((email === "")) {
+      alertLoginToApp("alert alert_pass","Please fill in the email field");
     } else {
-
         if(validIsEmail(email)) {
             var posting = $.post("api/api.php", {
                 type: type,
@@ -26,21 +24,20 @@ function forgoPwdToApp() {
             });
             
             posting.done(function(data) {
-                console.log(data);
+                console.log("Received:" + data);
                 var json = JSON.parse(data);
                 if(json.error) {
-                    console.log(json.error);
-                    // Email is existing
+                    // Email is not exist in the DB
                     alertLoginToApp("alert alert_pass",json.message)
-                    
                 } else if((json.error == false)) {
-                    // Succesfully login user
-                    alertLoginToApp("alert alert_succ",json.message);
-                    // The clearing all fields in form
-                    //location.reload();
+                    var email = json.user.email;
+                    console.log(email);
+                    // Email is exist 
+                    //alertLoginToApp("alert alert_succ",json.message);
+                    window.location.href = "checkCodeSMS.php";
                 } else {
                     // Any errors
-                    alertLoginToApp("alert alert_pass","ERROR 500");
+                    alertLoginToApp("alert alert_pass","ERROR");
                 }
             }); 
         } else {

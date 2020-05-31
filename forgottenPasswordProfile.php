@@ -2,17 +2,13 @@
 
 	// Initialize the session
 	session_start();
-	
+
 	// Checking if the user is already logged in, if yes then redirect him to welcome page
 	if(isset($_SESSION['loggedInApp']) && $_SESSION['loggedInApp'] === true) {
 		header("Location: profileApp.php");
 		exit;
 	}
-	
-	require_once "conf_db/config.php";
-	require_once "func/functions.php";
-	require_once 'func_msg/functions.php';
-	 
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -59,11 +55,12 @@
 				<input class="form-control" type="text" id="email" autofocus required>
 			</div>
 			<div class="form-group">
-                <button class="btn btn-lg btn-primary btn-block" onclick="forgoPwdToApp()">Next</button>
+                <button class="btn btn-lg btn-primary btn-block" onclick="forgotPwdToApp()">Next</button>
             </div>
         </form>
 		<button class="btn btn-lg btn-primary btn-block" onclick="backPage()">Back</button>
 		<!-- Feedback from api.php -->
+        <div id="feedbackFromApi" role="alert"> </div>
         
 	</div>
 

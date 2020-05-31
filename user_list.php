@@ -224,7 +224,8 @@
 			<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
 		</p>
 	</div>
-  
+	
+	<?php echo date("Y-m-d H:i:s");?>
 	<div id="time"></div>
 <!--
 	<div id="confirmBox">
@@ -252,7 +253,7 @@
   </div>
 </div>
 
-	<a href="welcome.php" class="btn btn-primary testbutton2">Back page</a>
+	<a href="welcome.php" class="btn btn-danger testbutton2">Back page</a>
 	<center><div id="loader"></div></center>
 	<div id="record_content"></div>
 		

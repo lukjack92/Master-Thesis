@@ -38,7 +38,7 @@ $data = '<!--The form determine the number a records occurred in table.-->
 		<thead>
 			<tr>
 			    <th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th> 
-				<th scope="col" style="width: 6%">No11.</th>
+				<th scope="col" style="width: 6%">No.</th>
 				<th scope="col" style="width: 72%">Category</th>
 				<th scope="col" style="width: 2%">Number</th>
 				<th scope="col" style="width: 16%">Action</th>

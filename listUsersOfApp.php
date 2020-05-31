@@ -102,7 +102,7 @@
 
 
 	<a href="welcome.php" class="btn btn-danger testbutton2">Back page</a>
-	
+<!--
 	<table class="table table table-bordered table-striped table-hover">
 		<thead>
 			<tr>
@@ -137,6 +137,8 @@
 		</tbody>
 	</table>
 	<input type="hidden" id="reset_user">
+			-->
+
 <!-- Modal authentication_the_operation-->
 <div class="modal fade" id="authentication_the_operation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
@@ -205,6 +207,5 @@
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
-	<script type="text/javascript" src="test.js"></script>
 </body>
 </html>

@@ -3,8 +3,11 @@
 
 	// Initialize the session
 	session_start();
-	
-		// Check if the user is logged in, if not then redirect him to login page
+	if($_SESSION["usersInfo"]["requiresReset"] == 'true') {
+		header("Location: resetPasswordProfile.php");
+		exit;
+    }
+	// Check if the user is logged in, if not then redirect him to login page
 	if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true) {
 		header("Location: loginProfileApp.php");
 		exit;
@@ -49,8 +52,9 @@
 
 <div class="container color_white">
 	<?php 
+		// If the user was reset password via button I've forgotten password
 		if(isset($_SESSION['changePassword']) && $_SESSION['changePassword'] != "") {
-			
+
 		}
 	?> 
     <div class="page-header">

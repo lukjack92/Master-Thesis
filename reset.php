@@ -120,7 +120,6 @@
 
 <div class="container color_white">
 <div id="cl"></div>
-	<div id="time"></div>
 <!--
 	<div id="confirmBox">
 		<div class="message"></div>
@@ -151,13 +150,18 @@
         <h1>Reset password for user: <b><?php echo htmlspecialchars($_SESSION["login"]); ?></b> </h1>
 		<h2> FirstName: <?php echo htmlspecialchars($_SESSION['firstName']) ?> </h2>
 		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
-    </div>
+	</div>
 	
+	<div id="time"></div>
+	<?php echo date("Y-m-d H:i:s");?>
+
+	<!--
 	<p>
 		<a href="welcome.php" class="btn btn-primary">Back page</a>
         <a href="logoutAdmin.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
-	 <div class="col-md-6 mx-auto bg-form-reset">
+	</p>
+  	-->
+	 <div class="col-md-6 mx-auto bg-form-reset2">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 			<div class="form-group has-feedback <?php echo (!empty($old_password_err)) ? 'has-error' : ''; ?>">
                 <label>Current Password</label>
@@ -176,7 +180,8 @@
             </div>
 				<span class="help-block"><?php echo $success; ?></span>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary btn-block" value="Submit">
+				<input type="submit" class="btn btn-primary btn-block" value="Submit">
+				<a href="welcome.php" class="btn btn-danger btn-block">Back page</a>
             </div>
         </form>
     </div>    

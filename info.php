@@ -44,7 +44,7 @@
     <!-- Begin page content -->
 <div class="container">
 	<main role="main" class=" center color-white">
-		<p>Hello there. If you are not an administrator at the system, you should use the bookmark <b>"Singup to App"</b> and then <b>"Download .apk"</b> to download the application for your Android mobile phone, and be happy using the application which has been created to learn vi Quiz. When you want to managet your profil to App mobile reset password or delete account please go to bookmark <b>"Login to App"</b> </p>
+		<p>Hello there. If you are not an administrator at the system, you should use the bookmark <b>"Singup to App"</b> and then <b>"Download .apk"</b> to download the application for your Android mobile phone, and be happy using the application which has been created to learn vi Quiz. When you want to manage your profil to App mobile reset password or delete account please go to bookmark <b>"Login to App"</b> </p>
 		<p>Instraction how to <b>install</b> .apk for your <b>Android</b> phone mobile.</p>	
 	</main>
 </div>

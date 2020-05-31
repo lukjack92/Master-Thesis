@@ -83,7 +83,7 @@
         $email = $_POST["email"];
         $password = md5($_POST["password"]);
      
-        $userQuery = "select id,username,email from users_api where email = '$email' and password = '$password'";
+        $userQuery = "select id,username,email,requiresReset from users_api where email = '$email' and password = '$password'";
         $result = mysqli_query($link,$userQuery);
         // print_r($result); exit;
         if($result->num_rows==0){
@@ -98,6 +98,8 @@
             $response["message"] = "Successfully logged in.";
             $response["user"] = $user;
             msg_logs_users_for_api($_POST["email"], "Successfully logged in API");
+
+            //Value require to login App
             $_SESSION['loggedInApp'] = true;
             $_SESSION['usersInfo'] = $user;
             echo json_encode($response);
@@ -107,7 +109,6 @@
     } else if(isset($_POST["type"]) && ($_POST["type"]=="forgotPwdProfile") && isset($_POST["email"])) {
 
         //To do change
-
         $email = $_POST["email"];
         $userQuery = "select id,email from users_api where email = '$email'";
         $result = mysqli_query($link,$userQuery);
@@ -123,7 +124,7 @@
             $response["message"] = "Reset Password";
             $response["user"] = $user;
             $_SESSION['usersInfo'] = $user;
-            $response['password'] = generateRandomPassword();
+            //$response['password'] = generateRandomPassword();
             echo json_encode($response);
             exit;
         }

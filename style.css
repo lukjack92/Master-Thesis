@@ -163,10 +163,24 @@ td {
 	box-shadow: 5px 5px 5px #888888;*/
 }
 
+.bg-form-reset2 {
+	font-weight: bold;
+	text-align: left;
+	padding: 20px;
+	/*border: solid 1px;
+	box-shadow: 5px 5px 5px #888888;*/
+}
+
 .bg-form {
 	margin: 80px;
 	padding: 40px;
 	background-color: white;
+}
+
+.bg-form-upload {
+	margin: 20px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 
 .bg-form h3 {

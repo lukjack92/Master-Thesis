@@ -182,22 +182,44 @@ error_reporting(0);
   </div>
 </div>
 
+<!-- Modal to information what the file uploading should to be -->
+<div class="modal fade" id="informationToUploadFile" tabindex="-1" role="dialog" aria-labelledby="informationToUploadFile" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<p>If you want to upload a file of the questions, it's should be in the right form. The semicolon is as separator.</p>
+		<p>Look at <a href="infoUpload.txt">here</></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END -->
+
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
 		<?php 
 			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">The Reset Password For User</a>';
 		?>
-		<a href="user_list.php" class="btn btn-primary">List Of Users</a>
-		<!--<a href="category.php" class="btn btn-primary">List Of Category</a>-->
+		<a href="user_list.php" class="btn btn-primary">List of Users</a>
+		<a href="listUsersOfApp.php" class="btn btn-primary">List of users App</a>
 		<a href="logoutAdmin.php" class="btn btn-danger">Sign Out Of Your Account</a>
     </p>
-
+<div class="bg-form-upload border rounded">
+<label><b>UPLOAD THE QUESTIONS FROM THE FILE TO DATABASE (SEE <a href="" data-toggle="modal" data-target="#informationToUploadFile">HERE</a>)</b></label>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    Choose a file:
 		<input type="file" name="fileToUpload" id="fileToUpload">
 		<input type="submit" value="Upload File" name="submit">
 </form>
-	
+</div>
 	<button type="button" class="btn btn-primary" onclick="buttonAllDatabases()">View All Database</button>
 	<button type="button" class="btn btn-primary" onclick="buttonViewCategory()">Categories</button>
 	
