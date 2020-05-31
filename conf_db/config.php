@@ -1,6 +1,6 @@
 <?php
 
-require_once 'func_msg/functions.php';
+require_once ('func_msg/functions.php');
 
 /*Database credentials */
 //$URL1 = '77.55.214.222';
@@ -52,5 +52,4 @@ if($link === false){
 	mysqli_query($link, "SET CHARSET utf8");
 	mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
 }
-
 ?>

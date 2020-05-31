@@ -8,7 +8,8 @@
 
     // Logs handle
     require_once ("../func_msg/functions.php");
-
+    //require_once ("../../conf_db/config.php");
+    
     $URL = 'ljack.com.pl';
     $DB_SERVER = $URL;
 	$DB_USERNAME = 'admin';
@@ -90,7 +91,7 @@
         // print_r($result); exit;
         if($result->num_rows==0){
             $response["error"] = TRUE;
-            $response["message"] ="User not found or Invalid login details.";
+            $response["message"] = "User not found or Invalid login details.";
             msg_logs_users_for_api($_POST["email"], "User not found or Invalid login details in API");
             echo json_encode($response);
             exit;

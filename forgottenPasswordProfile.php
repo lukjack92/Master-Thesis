@@ -8,7 +8,6 @@
 		header("Location: profileApp.php");
 		exit;
 	}
-
 ?>
 <!doctype html>
 <html lang="en">

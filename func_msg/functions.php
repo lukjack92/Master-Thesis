@@ -46,14 +46,14 @@ function msg_logs_users_for_api($user, $msg) {
 	$logFileName = "../logs/log_".date('Ymd').".txt";
 
 	if(file_exists($logFileName)) {
-		$fHandler = fopen($logFileName,'a+');
-		fwrite($fHandler, $error_msg);
-		fclose($fHandler);
+		$fHandler = @fopen($logFileName,'a+');
+		@fwrite($fHandler, $error_msg);
+		@fclose($fHandler);
 	}
 	else {
-		$fHandler = fopen($logFileName,'w');
-		fwrite($fHandler, $error_msg);
-		fclose($fHandler);
+		$fHandler = @fopen($logFileName,'w');
+		@fwrite($fHandler, $error_msg);
+		@fclose($fHandler);
 	}
 }
 

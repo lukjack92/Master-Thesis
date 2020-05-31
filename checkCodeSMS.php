@@ -56,7 +56,7 @@ if(isset($_SESSION['usersInfo']['email'])) {
     <div class="form-group has-feedback">
         <h3><b><p>'.$_SESSION["usersInfo"]["email"].'</p></b><h3>
     </div>
-    <label><b>Entry code</b></label>
+    <label><b>Entry Code SMS which will get for a moment!</b></label>
     <div class="form-group has-feedback">
         <input class="form-control" type="text" id="codeSms"  required>
     </div>
@@ -85,7 +85,6 @@ if(isset($_SESSION['usersInfo']['email'])) {
 </body>
 </html>
     ';
- unset($_SESSION['usersInfo']['email']);
 } else {
     echo '
     <!DOCTYPE HTML>

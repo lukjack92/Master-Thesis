@@ -31,7 +31,7 @@ function loginToApp() {
                 console.log(data);
                 var json = JSON.parse(data);
                 if(json.error) {
-                    console.log(json.error);
+                    //console.log(json.error);
                     // Email is existing
                     alertLoginToApp("alert alert_pass",json.message)
                     

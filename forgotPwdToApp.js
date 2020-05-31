@@ -24,7 +24,7 @@ function forgotPwdToApp() {
             });
             
             posting.done(function(data) {
-                console.log("Received:" + data);
+                console.log(data);
                 var json = JSON.parse(data);
                 if(json.error) {
                     // Email is not exist in the DB
@@ -34,17 +34,24 @@ function forgotPwdToApp() {
                     var number = json.user.phoneNumber;
 
                     console.log(email+" "+number);
-
+/*
                     var posting = $.post("sms/sms.php", {
                         phoneNumber: number,
                     });
                     posting.done(function(data) {
-                        console.log(data);
-                        //window.location.href = "checkCodeSMS.php";
-                    }); 
+                        var json = JSON.parse(data);
+
+                        if(json.message === "success") {
+                            window.location.href = "checkCodeSMS.php";
+                        } else {
+                            alertLoginToApp("alert alert_pass","SMS probably was not sent");
+                        }
+ 
+                    }); */
+
                     // Email is exist 
                     //alertLoginToApp("alert alert_succ",json.message);
-                    //window.location.href = "checkCodeSMS.php";
+                    window.location.href = "checkCodeSMS.php";
                 } else {
                     // Any errors
                     alertLoginToApp("alert alert_pass","ERROR");

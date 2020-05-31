@@ -30,7 +30,10 @@ $sdk = new Aws\Sns\SnsClient([
                 'StringValue' => 'Physics']
         ]]);
         msg_logs_users_for_api("SMS","SMS was send to ".$_POST["phoneNumber"]." with the code: ".$_SESSION['codeSms']);
-        echo json_encode($result);
+
+        $response["error"] = TRUE;
+        $response["message"] = "success";
+        echo json_encode($response);
         exit;       
         //print_r( $result );
 } else {

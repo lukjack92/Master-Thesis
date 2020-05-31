@@ -14,14 +14,19 @@ function checkCodeSmsApp() {
     } else {
         $("#feedbackFromApi").removeClass();
         $("#feedbackFromApi").empty().append("");
-        
-        var posting = $.post("scriptsPhp/checkCodeSmsApp.php", {
+
+        var posting = $.post("checkCodeSmsApp.php", {
             code: code
         });
         posting.done(function(data) {
             var json = JSON.parse(data);
-            console.log(json);
-            alertLoginToApp("alert alert_succ",json.message);
+            if(json.error) {
+                console.log(json.message);
+                alertLoginToApp("alert alert_pass",json.message)
+            } else if((json.error == false)) {
+                console.log(json.message);
+                alertLoginToApp("alert alert_succ",json.message);
+            }
         }); 
     }
 }
