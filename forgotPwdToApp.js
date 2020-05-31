@@ -40,7 +40,7 @@ function forgotPwdToApp() {
                     });
                     posting.done(function(data) {
                         console.log(data);
-                        //window.location.href = "checkCodeSMS.php";
+                        window.location.href = "checkCodeSMS.php";
                     }); 
                     // Email is exist 
                     //alertLoginToApp("alert alert_succ",json.message);
