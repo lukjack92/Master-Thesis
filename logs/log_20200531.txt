@@ -260,3 +260,71 @@ Sun 2020-05-31 05:09:24 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 2584
 Sun 2020-05-31 05:10:14 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 601854
 Sun 2020-05-31 05:14:08 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 702972
 Sun 2020-05-31 05:14:22 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 846777
+Sun 2020-05-31 05:39:56 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 647017
+Sun 2020-05-31 05:42:19 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 05:42:30 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 610610
+Sun 2020-05-31 05:44:19 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 906014
+Sun 2020-05-31 05:48:43 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 285283
+Sun 2020-05-31 05:48:59 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 05:49:00 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 05:58:55 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 879572
+Sun 2020-05-31 06:00:49 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 782015
+Sun 2020-05-31 06:01:22 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 121120
+Sun 2020-05-31 06:02:24 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 343492
+Sun 2020-05-31 06:03:55 PM Addr IP: ::1 lukasz.jackowski92@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 06:04:00 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 198886
+Sun 2020-05-31 06:04:20 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 308777
+Sun 2020-05-31 06:05:24 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 757887
+Sun 2020-05-31 06:05:56 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 565012
+Sun 2020-05-31 06:06:20 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 642921
+Sun 2020-05-31 06:14:43 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 941645
+Sun 2020-05-31 06:15:33 PM Addr IP: ::1 lukjack92@gmail.come User not found for forgottenPassword
+Sun 2020-05-31 06:15:37 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 805722
+Sun 2020-05-31 06:16:18 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 126769
+Sun 2020-05-31 06:18:21 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 531386
+Sun 2020-05-31 06:18:53 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 875254
+Sun 2020-05-31 06:19:23 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 483385
+Sun 2020-05-31 06:20:04 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 603655
+Sun 2020-05-31 06:30:41 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Sun 2020-05-31 06:33:03 PM Addr IP: ::1 admin Successfully logged out.
+Sun 2020-05-31 06:33:13 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 06:33:47 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 441775
+Sun 2020-05-31 06:34:23 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 677171
+Sun 2020-05-31 06:45:30 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 06:45:32 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:01:16 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 07:01:18 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:03:08 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 07:03:21 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Sun 2020-05-31 07:03:25 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:03:33 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 349749
+Sun 2020-05-31 07:05:39 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Sun 2020-05-31 07:05:41 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:05:51 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 07:05:58 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 461037
+Sun 2020-05-31 07:09:46 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 550212
+Sun 2020-05-31 19:11:08 PM Addr IP: ::1 Databases are down!
+Sun 2020-05-31 19:11:08 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Sun 2020-05-31 19:11:25 PM Addr IP: ::1 Databases are down!
+Sun 2020-05-31 19:11:25 PM Addr IP: ::1 Databases are down!
+Sun 2020-05-31 19:11:25 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Sun 2020-05-31 19:11:25 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Sun 2020-05-31 07:11:57 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Sun 2020-05-31 07:11:59 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:12:09 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 179178
+Sun 2020-05-31 07:12:43 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 560038
+Sun 2020-05-31 07:13:22 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 289048
+Sun 2020-05-31 07:23:59 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 421774
+Sun 2020-05-31 07:29:20 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 499691
+Sun 2020-05-31 07:32:36 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Sun 2020-05-31 07:32:40 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:33:02 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Sun 2020-05-31 07:33:06 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:33:17 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Sun 2020-05-31 07:33:23 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 07:33:28 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 461841
+Sun 2020-05-31 07:34:33 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 782828
+Sun 2020-05-31 07:34:35 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 482885
+Sun 2020-05-31 07:34:55 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 401773
+Sun 2020-05-31 07:35:02 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 420961
+Sun 2020-05-31 07:35:20 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App

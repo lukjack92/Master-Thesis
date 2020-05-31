@@ -207,10 +207,10 @@ error_reporting(0);
     <p>
         <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
 		<?php 
-			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">The Reset Password For User</a>';
+			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">Reset Password For User System</a>';
 		?>
-		<a href="user_list.php" class="btn btn-primary">List of Users</a>
-		<a href="listUsersOfApp.php" class="btn btn-primary">List of users App</a>
+		<a href="user_list.php" class="btn btn-primary">List of Users System</a>
+		<a href="listUsersOfApp.php" class="btn btn-primary">List of Users App</a>
 		<a href="logoutAdmin.php" class="btn btn-danger">Sign Out Of Your Account</a>
     </p>
 <div class="bg-form-upload border rounded">

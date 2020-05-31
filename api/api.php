@@ -99,7 +99,7 @@
             $response["error"] = FALSE;
             $response["message"] = "Successfully logged in.";
             $response["user"] = $user;
-            msg_logs_users_for_api($_POST["email"], "Successfully logged in API");
+            msg_logs_users_for_api($_POST["email"], "Successfully logged in App");
 
             //Value require to login App
             $_SESSION['loggedInApp'] = true;
@@ -131,7 +131,8 @@
             if (mysqli_query($link,$query)) {
                 msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$codeSMS);
                 //Session if user is exist in DB for page checkCodeSMS.php
-                //$_SESSION['usersInfo'] = $user;
+                $_SESSION['usersInfo'] = $user;
+                //Session fot sms.php
                 $_SESSION['codeSms'] = $codeSMS;
                 echo json_encode($response);
                 exit;
@@ -142,31 +143,6 @@
                 echo json_encode($response);
                 exit;
             }
-
-/*
-            //Session if user is exist in DB
-            $_SESSION['usersInfo'] = $user;
-            $password = generateRandomCodeSMSAndPassword();
-            $code = generateRandomCodeSMSAndPassword();
-
-            $_SESSION['codeSms'] = $code;
-            $_SESSION['password'] = $password;
-            $password = md5($password);
-            
-            $query = "update users_api set password = '$password', oneTimePassword = '$code', requiresReset = 'true' where email = '$email'";
-
-            if (mysqli_query($link,$query)) {
-                msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$code." password set up: ".$_SESSION['password']);
-                echo json_encode($response);
-                exit;
-            } else {
-                $response["error"] = TRUE;
-                $response["message"] = "Something went wrong!";
-                msg_logs_users_for_api($_POST["email"], "Password and code has been not set up!");
-                echo json_encode($response);
-                exit;
-            }
-  */
         }
     }    
     else {
