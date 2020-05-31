@@ -7,7 +7,7 @@ require "secret_key_sns.php";
 
 $credentials = new Aws\Credentials\Credentials($key, $secretKey);
 
-if(isset($_SESSION['usersInfo']['email']) && isset($_POST["phoneNumber"])) {
+if(isset($_SESSION['usersInfo']['email']) && isset($_SESSION['codeSms']) && isset($_POST["phoneNumber"])) {
 
 $sdk = new Aws\Sns\SnsClient([
                 'region'  => 'eu-west-1',
@@ -15,9 +15,9 @@ $sdk = new Aws\Sns\SnsClient([
                 'credentials' => $credentials
         ]);
 
-        $six_digit_number = mt_rand(100000, 999999);
+        //$six_digit_number = mt_rand(100000, 999999);
+        //$msg="One Time Password is: ".$six_digit_number;
 
-        $msg="One Time Password is: ".$six_digit_number;
         $number=$_POST["phoneNumber"];
 
         $result = $sdk->publish([
@@ -28,8 +28,10 @@ $sdk = new Aws\Sns\SnsClient([
                 'DataType' => 'String',
                 'StringValue' => 'Physics']
         ]]);
-        msg_logs_users_for_api("SMS","SMS was send to ".$_POST["phoneNumber"]." and six-digit code: ".$six_digit_number);
-        print_r( $result );
+        msg_logs_users_for_api("SMS","SMS was send to ".$_POST["phoneNumber"]." with the code: ".$_SESSION['codeSms']);
+        echo json_encode($result);
+        exit;       
+        //print_r( $result );
 } else {
         echo "Method GET is not allowed";
 }

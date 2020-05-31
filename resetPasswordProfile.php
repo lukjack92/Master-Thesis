@@ -2,9 +2,9 @@
     error_reporting(0);
 
 	// Initialize the session
-	session_start();
-	
-		// Check if the user is logged in, if not then redirect him to login page
+    session_start();
+    
+	// Check if the user is logged in, if not then redirect him to login page
 	if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true) {
 		header("Location: loginProfileApp.php");
 		exit;

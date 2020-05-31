@@ -38,10 +38,12 @@
     } 
 
     if(isset($_POST["type"]) && ($_POST["type"]=="signup") && isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["phoneNumber"])) {
-        $username = $_POST['username'];
-        $password = md5($_POST['password']);
-        $email = $_POST['email'];
-        $phoneNumber = "+".$_POST['phoneNumber'];
+        $username = $link->real_escape_string($_POST['username']);
+        $email = $link->real_escape_string($_POST["email"]);
+        $password = $link->real_escape_string(md5($_POST["password"]));
+        $phoneNumber = $link->real_escape_string($_POST["phoneNumber"]);
+
+        $phoneNumber = "+".$phoneNumber;
 
         //Check user email whether its already regsitered
         $checkEmailQuery = "select * from users_api where email = '$email'";
@@ -80,9 +82,9 @@
         }
     }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])){
         // Login user
-        $email = $_POST["email"];
-        $password = md5($_POST["password"]);
-     
+        $email = $link->real_escape_string($_POST['email']);
+        $password = $link->real_escape_string(md5($_POST["password"]));
+
         $userQuery = "select id,username,email,requiresReset from users_api where email = '$email' and password = '$password'";
         $result = mysqli_query($link,$userQuery);
         // print_r($result); exit;
@@ -108,9 +110,8 @@
      
     } else if(isset($_POST["type"]) && ($_POST["type"]=="forgotPwdProfile") && isset($_POST["email"])) {
 
-        //To do change
-        $email = $_POST["email"];
-        $userQuery = "select id,email from users_api where email = '$email'";
+        $email = $link->real_escape_string($_POST['email']);
+        $userQuery = "select id,email,phoneNumber from users_api where email = '$email'";
         $result = mysqli_query($link,$userQuery);
         if($result->num_rows==0){
             $response["error"] = TRUE;
@@ -121,12 +122,31 @@
         }else{
             $user = mysqli_fetch_assoc($result);
             $response["error"] = FALSE;
-            $response["message"] = "Reset Password";
+            $response["message"] = "One Time Password has been set up!";
             $response["user"] = $user;
+
+            //Session if user is exist in DB
             $_SESSION['usersInfo'] = $user;
-            //$response['password'] = generateRandomPassword();
-            echo json_encode($response);
-            exit;
+            $password = generateRandomCodeSMSAndPassword();
+            $code = generateRandomCodeSMSAndPassword();
+
+            $_SESSION['codeSms'] = $code;
+            $_SESSION['password'] = $password;
+            $password = md5($password);
+            
+            $query = "update users_api set password = '$password', oneTimePassword = '$code', requiresReset = 'true' where email = '$email'";
+
+            if (mysqli_query($link,$query)) {
+                msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$code." password set up: ".$_SESSION['password']);
+                echo json_encode($response);
+                exit;
+            } else {
+                $response["error"] = TRUE;
+                $response["message"] = "Something went wrong!";
+                msg_logs_users_for_api($_POST["email"], "Password and code has been not set up!");
+                echo json_encode($response);
+                exit;
+            }
         }
     }    
     else {
@@ -137,7 +157,7 @@
         exit;
     }
 
-    function generateRandomPassword() {
+    function generateRandomCodeSMSAndPassword() {
         return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(8/strlen($x)) )),1,8);
     }
 ?>

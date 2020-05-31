@@ -105,3 +105,137 @@ Sun 2020-05-31 01:03:58 PM Addr IP: ::1 User from AppMobileProfile  Successfully
 Sun 2020-05-31 01:04:09 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
 Sun 2020-05-31 01:04:14 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
 Sun 2020-05-31 01:04:19 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 01:18:47 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 01:21:20 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 01:21:27 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 01:24:17 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 01:24:35 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 01:24:59 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 01:26:22 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 01:26:33 PM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Sun 2020-05-31 01:26:50 PM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Sun 2020-05-31 01:27:21 PM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Sun 2020-05-31 01:27:38 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 01:27:44 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 01:27:53 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 01:40:14 PM Addr IP: ::1 lukasz.jackowski@atos.net Successfully signed up in API
+Sun 2020-05-31 01:40:39 PM Addr IP: ::1 lukasz.jackowski@atos.net Successfully logged in API
+Sun 2020-05-31 01:40:50 PM Addr IP: ::1 lukasz.jackowski@atos.net [Success, the password has been reset!]
+Sun 2020-05-31 01:40:53 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 01:40:59 PM Addr IP: ::1 lukasz.jackowski@atos.net Successfully logged in API
+Sun 2020-05-31 01:41:04 PM Addr IP: ::1 lukasz.jackowski@atos.net [My account has been deleted]
+Sun 2020-05-31 01:57:11 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set: Mq3SoxgTpassword set: 17d777df04f310e25db1b207352403af
+Sun 2020-05-31 01:57:11 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 01:57:37 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set: 2xM6rH8Jpassword set: cf6a6bf383882fb9f336ce3f39abe94f
+Sun 2020-05-31 01:57:37 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 01:58:03 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set: djKlz5mXpassword set: 3e54cd22185eff09092cf4cafd5f5485
+Sun 2020-05-31 01:58:03 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:00:06 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 6Q9gjIhW password set up: be1e44ce95d499f8ab90bb586aaf9b58
+Sun 2020-05-31 02:00:06 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:02:17 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: TKae7oby password set up: 5fd20768f084a094ba0aa86955379d21
+Sun 2020-05-31 02:02:17 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:04:05 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:04:06 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:04:11 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: dKlki3Es password set up: e0c0c2d61cfdf4717ed301c3a3f71b89
+Sun 2020-05-31 02:04:11 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:06:09 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: MCTskS7I password set up: 50d299db3940850d37896f475953e34f
+Sun 2020-05-31 02:06:09 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:06:44 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 02:06:45 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 02:06:50 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: rPivedCG password set up: 8bef663f46d1aedab705579e281f55af
+Sun 2020-05-31 02:06:50 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:08:55 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: zy6wYZ5h password set up: 1d37e15bb488c54310a71b80c53faf54
+Sun 2020-05-31 02:08:55 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:13:16 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:13:24 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: N1Hx8f4r password set up: TPXiWySn
+Sun 2020-05-31 02:13:24 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:13:50 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: jcFGKDeZ password set up: BkSKbe9a
+Sun 2020-05-31 02:13:50 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:13:52 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: tyArmiHl password set up: BsZYLep3
+Sun 2020-05-31 02:13:52 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:14:25 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: ZOp4kxjB password set up: sMh5Ewpt
+Sun 2020-05-31 02:14:25 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:14:29 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:14:30 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:15:49 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:19:28 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: FYw3biXT password set up: xod9DyzL
+Sun 2020-05-31 02:19:28 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:20:57 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: VARul48e password set up: 1jkIfuOr
+Sun 2020-05-31 02:20:57 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:21:21 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: SaFn56yq password set up: 8wZJpWQM
+Sun 2020-05-31 02:21:21 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:21:29 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: FMlQqz9I password set up: GDQliy6Z
+Sun 2020-05-31 02:21:29 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:23:54 PM Addr IP: ::1 test1@gmail.c User not found for forgottenPassword
+Sun 2020-05-31 02:24:00 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: ePuQa47q password set up: zCyXPeiS
+Sun 2020-05-31 02:24:00 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:25:05 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: qDIdLMhK password set up: XBHaJjuN
+Sun 2020-05-31 02:25:05 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:26:40 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: b8FtH0SE password set up: w6o7Zn3R
+Sun 2020-05-31 02:26:40 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS has not been set in DB
+Sun 2020-05-31 02:28:34 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: SCG7yQEe password set up: x3qnvuWO
+Sun 2020-05-31 02:28:40 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 7N1f9GZn password set up: SVwbcC3t
+Sun 2020-05-31 02:30:07 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:30:10 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:43:59 PM Addr IP: ::1 lukasz.jackowski92@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:44:11 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: eGzwZ15L password set up: 498WdcXF
+Sun 2020-05-31 02:44:39 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: f9tskDGX password set up: LPaysSMq
+Sun 2020-05-31 02:45:01 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: Brwo4j37 password set up: cwFU7Lk0
+Sun 2020-05-31 02:50:02 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: bPGlKUix password set up: B8MZay0D
+Sun 2020-05-31 02:50:04 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: noXkg3YZ password set up: 8Huk0J7V
+Sun 2020-05-31 02:50:22 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 02:50:27 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: rRAEdTuZ password set up: HEQAowgh
+Sun 2020-05-31 02:53:07 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:57:03 PM Addr IP: ::1 lukasz.jackowski92@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 02:59:21 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 02:59:27 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:00:42 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:00:44 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:01:29 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:01:34 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:01:36 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:02:15 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: VAzitpQj password set up: W7gpGmQu
+Sun 2020-05-31 03:02:52 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 03:02:56 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 03:03:04 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:03:14 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:03:21 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 73AUk9hD password set up: yMmqnzvp
+Sun 2020-05-31 03:03:35 PM Addr IP: ::1 test1@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 03:03:42 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:04:26 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:04:31 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:09:30 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 03:09:35 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:09:55 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:12:00 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
+Sun 2020-05-31 03:12:13 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:13:59 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:14:19 PM Addr IP: ::1 lukjack92@gmail.com Password and code has been not set up!
+Sun 2020-05-31 03:15:14 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: LdmJVcjo password set up: 9xqoIK6t
+Sun 2020-05-31 03:18:43 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: OoIh57DY password set up: A4fClr3M
+Sun 2020-05-31 03:19:23 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:19:49 PM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Sun 2020-05-31 03:19:56 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:20:09 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:21:55 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:25:20 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: DOczfZWT password set up: i3xrSER2
+Sun 2020-05-31 03:26:41 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:26:54 PM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Sun 2020-05-31 03:27:17 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:27:32 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:27:38 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:27:44 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: z8AYN5oW password set up: xUjktXIJ
+Sun 2020-05-31 03:28:00 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:28:44 PM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Sun 2020-05-31 03:32:35 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:32:41 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 6JUl0uSR password set up: xYJZCkt3
+Sun 2020-05-31 03:33:30 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 03:33:34 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 03:34:11 PM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Sun 2020-05-31 03:35:08 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 03:35:18 PM Addr IP: ::1 test1@gmail.com User not found for forgottenPassword
+Sun 2020-05-31 03:35:38 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: HZkjKFJg password set up: jKBiVrxd
+Sun 2020-05-31 03:36:48 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: mB0eNqbR password set up: HS4yPZTp
+Sun 2020-05-31 03:37:41 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 03:37:49 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: W7fRrLkB password set up: Q12CqvGg
+Sun 2020-05-31 03:53:37 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: u8V5DdRS password set up: KTMDgs9U

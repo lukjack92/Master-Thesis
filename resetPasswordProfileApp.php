@@ -18,8 +18,9 @@ if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true){
         $result = mysqli_query($link,$userQuery);
 
         if(mysqli_num_rows($result)>0){
-            $query = "update users_api set password = '$password' where email = '$email' and password = '$currentPwd'";
+            $query = "update users_api set password = '$password', requiresReset = 'false', oneTimePassword = '' where email = '$email' and password = '$currentPwd'";
             if (mysqli_query($link,$query)) {
+                unset($_SESSION["usersInfo"]["requiresReset"]);
                 $response["error"] = FALSE;
                 //$response["message"] = '<center class="alert alert-success">Success the account has been removed.</center>';
                 $response["message"] = 'Success, the password has been reset';

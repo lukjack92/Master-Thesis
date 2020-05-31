@@ -3,6 +3,7 @@
 
 	// Initialize the session
 	session_start();
+
 	if($_SESSION["usersInfo"]["requiresReset"] == 'true') {
 		header("Location: resetPasswordProfile.php");
 		exit;
