@@ -1,5 +1,8 @@
 <?php
 
+// Initialize the session
+session_start();
+
 require_once "../func/functions.php";
 require_once "../func_msg/functions.php";
 require "vendor/autoload.php";
