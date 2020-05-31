@@ -7,7 +7,7 @@ require "secret_key_sns.php";
 
 $credentials = new Aws\Credentials\Credentials($key, $secretKey);
 
-if(isset($_SESSION['usersInfo']['email']) && isset($_SESSION['codeSms']) && isset($_POST["phoneNumber"])) {
+if(isset($_SESSION['codeSms']) && isset($_POST["phoneNumber"])) {
 
 $sdk = new Aws\Sns\SnsClient([
                 'region'  => 'eu-west-1',
