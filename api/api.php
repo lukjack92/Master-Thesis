@@ -125,6 +125,25 @@
             $response["message"] = "One Time Password has been set up!";
             $response["user"] = $user;
 
+            $codeSMS  = mt_rand(100000, 999999);
+            $_SESSION['codeSms'] = $codeSMS;
+
+            $query = "update users_api set oneTimePassword = '$codeSMS' where email = '$email'";
+            if (mysqli_query($link,$query)) {
+                msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$codeSMS);
+                //Session if user is exist in DB for page checkCodeSMS.php
+                $_SESSION['usersInfo'] = $user;
+                echo json_encode($response);
+                exit;
+            } else {
+                $response["error"] = TRUE;
+                $response["message"] = "Something went wrong!";
+                msg_logs_users_for_api($_POST["email"], "CodeSMS has been not set up!");
+                echo json_encode($response);
+                exit;
+            }
+
+/*
             //Session if user is exist in DB
             $_SESSION['usersInfo'] = $user;
             $password = generateRandomCodeSMSAndPassword();
@@ -147,6 +166,7 @@
                 echo json_encode($response);
                 exit;
             }
+  */
         }
     }    
     else {

@@ -15,9 +15,7 @@ $sdk = new Aws\Sns\SnsClient([
                 'credentials' => $credentials
         ]);
 
-        //$six_digit_number = mt_rand(100000, 999999);
-        //$msg="One Time Password is: ".$six_digit_number;
-
+        $msg="One Time Password is: ".$_SESSION['codeSms'];
         $number=$_POST["phoneNumber"];
 
         $result = $sdk->publish([

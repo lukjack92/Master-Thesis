@@ -240,3 +240,23 @@ Sun 2020-05-31 03:37:41 PM Addr IP: ::1 lukjack92@gmail.com User not found or In
 Sun 2020-05-31 03:37:49 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: W7fRrLkB password set up: Q12CqvGg
 Sun 2020-05-31 03:53:37 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: u8V5DdRS password set up: KTMDgs9U
 Sun 2020-05-31 04:01:15 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: OUZWAXbm password set up: ykzpTZSB
+Sun 2020-05-31 04:56:52 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:57:00 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:57:12 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:57:15 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:57:25 PM Addr IP: ::1 lukasz.jackowski@atos.net User not found or Invalid login details in API
+Sun 2020-05-31 04:57:33 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:57:55 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:58:02 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:59:02 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 04:59:15 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 05:00:40 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Sun 2020-05-31 05:00:47 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
+Sun 2020-05-31 05:00:48 PM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
+Sun 2020-05-31 05:01:27 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 115632
+Sun 2020-05-31 05:06:30 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 989040
+Sun 2020-05-31 05:08:22 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 410269
+Sun 2020-05-31 05:09:24 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 258481
+Sun 2020-05-31 05:10:14 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 601854
+Sun 2020-05-31 05:14:08 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 702972
+Sun 2020-05-31 05:14:22 PM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 846777
