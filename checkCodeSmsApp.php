@@ -3,8 +3,11 @@
 // Initialize the session
 session_start();
 
-require_once ("conf_db/config.php");
-require_once ("func_msg/functions.php");
+//require_once (dirname(__FILE__) . '/conf_db/config.php');
+//require_once ("func_msg/functions.php");
+
+require_once (dirname(__FILE__) . '/conf_db/config.php');
+require_once (dirname(__FILE__) . '/func_msg/functions.php');
 
 function generateRandomCodeSMSAndPassword() {
     return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(8/strlen($x)) )),1,8);
@@ -60,7 +63,7 @@ if(isset($_SESSION['usersInfo']['email']) && isset($_POST['code'])) {
     }
 } else {
     $response["error"] = FALSE;
-    $response["message"] = "Password was set up!";
+    $response["message"] = "Something went wrong!";
     echo json_encode($response);
     exit;
 }

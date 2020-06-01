@@ -43,7 +43,8 @@ function msg_logs_users($user, $msg) {
 // Collecting logs from users
 function msg_logs_users_for_api($user, $msg) {
 	$error_msg = date('D Y-m-d h:i:s A')." Addr IP: ".$_SERVER['REMOTE_ADDR']." ".$user." ".$msg."\n";	
-	$logFileName = "../logs/log_".date('Ymd').".txt";
+	//$logFileName = "../logs/log_".date('Ymd').".txt";
+	$logFileName = dirname(__FILE__,2)."\logs\log_".date('Ymd').".txt";
 
 	if(file_exists($logFileName)) {
 		$fHandler = @fopen($logFileName,'a+');

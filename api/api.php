@@ -9,7 +9,7 @@
     // Logs handle
     require_once ("../func_msg/functions.php");
     //include('./conf_db/config.php');
-    require_once (dirname(__FILE__, 2) . '\conf_db\config.php');
+    require_once (dirname(__FILE__, 2) . '/conf_db/config.php');
 
  /*   
     $URL = 'ljack.com.pl';

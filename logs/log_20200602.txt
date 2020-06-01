@@ -6,3 +6,10 @@ Tue 2020-06-02 12:18:24 AM Addr IP: ::1 admin [isActive] The user 'alicja' has b
 Tue 2020-06-02 12:18:38 AM Addr IP: ::1 admin [isActive] The user 'alicja' has been changed to 'false'.
 Tue 2020-06-02 12:18:40 AM Addr IP: ::1 admin [isActive] The user 'kasias01' has been changed to 'false'.
 Tue 2020-06-02 12:19:11 AM Addr IP: ::1 admin Successfully logged out.
+Tue 2020-06-02 12:21:07 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 571174
+Tue 2020-06-02 12:33:22 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Tue 2020-06-02 12:33:25 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Tue 2020-06-02 12:33:38 AM Addr IP: ::1 lukasz.jackowski92@gmail.com User not found or Invalid login details in API
+Tue 2020-06-02 12:33:44 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Tue 2020-06-02 12:33:50 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Tue 2020-06-02 12:33:52 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
