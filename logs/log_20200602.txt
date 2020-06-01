@@ -13,3 +13,6 @@ Tue 2020-06-02 12:33:38 AM Addr IP: ::1 lukasz.jackowski92@gmail.com User not fo
 Tue 2020-06-02 12:33:44 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
 Tue 2020-06-02 12:33:50 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
 Tue 2020-06-02 12:33:52 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Tue 2020-06-02 01:14:52 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Tue 2020-06-02 01:15:07 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Tue 2020-06-02 01:15:31 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
