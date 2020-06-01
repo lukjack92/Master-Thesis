@@ -1,11 +1,10 @@
 <?php
-	//Page for the reset password users via admin
 
 	// Initialize the session
 	session_start();
 	
-		// Check if the user is logged in, if not then redirect him to login page
-	if($_SESSION["permission"] != "admin"){
+	// Check if the user is logged in, if not then redirect him to login page
+	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 		header("Location: index.php");
 		exit;
 	}
@@ -22,7 +21,13 @@
 		header("Location: index.php");
 		exit;
 	}
-
+		
+	// Check if the user is logged in, if not then redirect him to login page
+	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
+		header("Location: index.php");
+		exit;
+	}
+	
 	$_SESSION['LAST_ACTIVITY'] = $time;
 	
 	*/
@@ -34,17 +39,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom styles for this template -->
-
 </head>
 <body>
+
       <nav class="navbar navbar-expand-lg bg-dark">
 		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,17 +68,165 @@
 
 <div class="container color_white">
 <div id="cl"></div>
+  
+  <?php if($_SESSION['permission'] == "admin"){ ?>
+  
+  <div class="alert alert-danger alert-dismissible fade show" id="danger" style="display:none" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 
-    <div class="page-header">
-        <h1>Reset password of user</h1>
-		<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
-		<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
+  <div class="alert alert-success alert-dismissible fade show" id="success" style="display:none" role="alert">
+  <strong>Holy guacamole!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  
+  <div class="pull-right">
+	<button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Create An Account</button>
+  </div></br>
+  <?php } ?>
+
+<!-- Bootstrap Modal - To Add New Record -->
+<!-- Modal -->
+<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Create An Account</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="login">Login</label>
+</div>
+<input type="text" id="login" name="login"placeholder="Login" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">First Name</label>
+</div>
+<input type="text" id="first_name" name="first_name"placeholder="First Name" class="form-control" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="last_name">Last Name</label>
+</div>
+<input type="text" id="last_name" name="last_name"placeholder="Last Name" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Password</label>
+</div>
+<input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="permission">Permission</label>
+</div>
+      <select id="inputState" class="form-control">
+      <option selected>User</option>
+      <option>Admin</option>
+      </select>
+</div>
+ 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-primary" onclick="addUser()">Submit</button>
+</div>
+</div>
+</div>
+</div>
+
+<!--Modal to remove question -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="delUserModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Are you sure you want to delete this account?</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary" id="modal-btn-yes">Yes</button>
+        <button type="button" class="btn btn-primary" id="modal-btn-no">No</button>
+      </div>
     </div>
+  </div>
+</div>
+  
+<div class="modal fade" id="updateUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Update User</h4>
+<div class="pull-left">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">Login</label>
+</div>
+<input type="text" id="update_login" name="login"placeholder="Login" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="first_name">First Name</label>
+</div>
+<input type="text" id="update_first_name" name="first_name"placeholder="First Name" class="form-control" />
+</div>
+ 
+<div class="form-group">
+<div class="pull-left">
+<label for="last_name">Last Name</label>
+</div>
+<input type="text" id="update_last_name" name="last_name"placeholder="Last Name" class="form-control" />
+</div>
+
+<div class="form-group">
+<div class="pull-left">
+<label for="update_permission">Permission</label>
+</div>
+      <select id="updateInputState" class="form-control">
+      <option selected>User</option>
+      <option>Admin</option>
+      </select>
+</div>
+ 
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-primary" onclick="updateUser()">Update User</button>
+<input type="hidden" id="hidden_user_id">
+</div>
+</div>
+</div>
+</div>
+    <div class="page-header">
+		<p>
+			<h1>List users of App</h1>
+			<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
+			<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
+		</p>
+	</div>
 	
 	<?php echo date("Y-m-d H:i:s");?>
-	
 	<div id="time"></div>
-
 <!--
 	<div id="confirmBox">
 		<div class="message"></div>
@@ -100,112 +253,25 @@
   </div>
 </div>
 
-
 	<a href="welcome.php" class="btn btn-danger testbutton2">Back page</a>
-<!--
-	<table class="table table table-bordered table-striped table-hover">
-		<thead>
-			<tr>
-				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 20%">User</th>
-				<th scope="col" style="width: 25%">FirstName</th>
-				<th scope="col" style="width: 25%">LastName</th>
-				<th scope="col" style="width: 25%">Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php 
-				
-				$sql = 'select * from users';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-
-				if(@mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-				while($row = mysqli_fetch_assoc($result)) {
-					if($row['login'] != $_SESSION['login']){
-						++$id;
-						if($row['isActive'] == "false") {
-						?> <tr style="color:red;"><th scope="row"><?php echo $id; ?></th><td><?php echo $row['login']; ?></td><td><?php echo $row['firstName']; ?></td><td><?php echo $row['lastName']; ?></td><td><button type="button" disabled onclick="actionReset('<?php echo $row['login'] ?>')" class="btn btn-primary">The reset password for that <?php echo $row['login'] ?></button></td></tr>
-						<?php	
-						} else { ?> <tr><th scope="row"><?php echo $id; ?></th><td><?php echo $row['login']; ?></td><td><?php echo $row['firstName']; ?></td><td><?php echo $row['lastName']; ?></td><td><button type="button" onclick="actionReset('<?php echo $row['login'] ?>')" class="btn btn-primary">The reset password for that <?php echo $row['login'] ?></button></td></tr>
-				<?php }
-					}
-				}		 
-				}else { echo "Database is down!"; }
-			?>
-		</tbody>
-	</table>
-	<input type="hidden" id="reset_user">
-			-->
-
-<!-- Modal authentication_the_operation-->
-<div class="modal fade" id="authentication_the_operation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h4 class="modal-title" id="myModalLabel">The operation authentication the reset</h4>
-<div class="pull-left">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-</div>
-</div>
-<div class="modal-body">
-
-<div class="form-group">
-<div class="pull-left">
-<label for="permission">Your password</label>
-</div>
-<input type="password" class="form-control" name="password" id="password" placeholder="Password" />
-</div>
- 
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-primary btn-block" onclick="confirmPassword('<?php echo $_SESSION['login']; ?>')">Confirm</button>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Modal authentication_the_operation-->
-<div class="modal fade" id="set_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h4 class="modal-title" id="myModalLabelUser"></h4>
-<div class="pull-left">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-</div>
-</div>
-<div class="modal-body">
-
-<div class="form-group">
-<div class="pull-left">
-<label for="permission">New password</label>
-</div>
-<input type="password" class="form-control" name="password" id="setPassword" placeholder="Password" />
-</div>
- 
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-primary btn-block" onclick="resetPassUser()">Confirm</button>
-</div>
-</div>
-</div>
-</div>
-
+	<center><div id="loader"></div></center>
+	<div id="record_content"></div>
+		
 </div>
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
-			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
+			Copyright &copy; <?php echo date("o") ?> Designed by Łukasz Jackowski
 			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
-	
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
+  	<script type="text/javascript" src="loadReadUsersApp.js"></script>
+	<!-- <script type="text/javascript" src="test.js"></script> -->
+	
 </body>
 </html>

@@ -32,8 +32,11 @@
 			$sql = 'select * from users where login="'.$login.'"';
 	
 			$result = @mysqli_query($link,$sql);
-	
-			if(@mysqli_num_rows($result) > 0) {
+
+			if($link === false){
+				$not_exist_err = "<div class='alert alert_pass'>Failed to connect to database</div>";
+				msg_logs_users($_POST['login'], "Database is not working!");
+			} elseif (@mysqli_num_rows($result) > 0) {
 				// Output data of each rows
 				if($row = mysqli_fetch_assoc($result)) {				
 					
@@ -125,12 +128,12 @@
 			<label>Login</label>
 			<div class="form-group has-feedback <?php echo (!empty($login_err)) ? 'has-error' : ''; ?>">
 				<input class="form-control" type="text" name="login" autofocus required>
-				<span class="help-block"> <?php echo $login_err; ?> </span>
+		
 			</div>
 			<label>Password</label>
 			<div class="form-group has-feedback <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
 				<input class="form-control" type="password" name="password"  required>
-				<span class="help-block"> <?php echo $password_err; ?> </span>
+			
 			</div>
 			
 			<div class="form-group">

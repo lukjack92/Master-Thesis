@@ -1,3 +1,0 @@
-Thu 2020-04-30 11:43:45 PM Addr IP: ::1 admin Successfully logged out.
-Thu 2020-04-30 11:44:24 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
-Thu 2020-04-30 11:44:27 PM Addr IP: ::1 admin Successfully logged out.

@@ -3,35 +3,38 @@
 	// Initialize the session
 	session_start();
 
-    $response = array();
+    //$response = array();
     //header('Content-Type: application/json');
 
     // Logs handle
     require_once ("../func_msg/functions.php");
-    //require_once ("../../conf_db/config.php");
-    
+    //include('./conf_db/config.php');
+    require_once (dirname(__FILE__, 2) . '\conf_db\config.php');
+
+ /*   
     $URL = 'ljack.com.pl';
     $DB_SERVER = $URL;
 	$DB_USERNAME = 'admin';
 	$DB_PASSWORD = 'admin12345';
 	$DB_NAME = 'test';
-
-    $link = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
+*/
+    //$link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME, $PORT);
 
     // Check connection
     if($link === false){
         if(mysqli_connect_error()) {
             $response["error"] = TRUE;
             $response["message"] = "Failed to connect to database";
-            msg_logs_users_for_api($_POST["email"], "Failed to connect to database in API");
+            msg_logs_users_for_api("API -", "Failed to connect to database in API");
             echo json_encode($response);
             exit;
         }
-    } else {
+    } 
+    /* else {
         mysqli_query($link, "SET CHARSET utf8");
         mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
     }
-
+*/
     if($_SERVER["REQUEST_METHOD"] == "GET") {
         $response["message"] = "It is AppPhone";
         echo json_encode($response);
@@ -152,9 +155,5 @@
         $response["message"] ="Invalid parameters";
         echo json_encode($response);
         exit;
-    }
-
-    function generateRandomCodeSMSAndPassword() {
-        return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(8/strlen($x)) )),1,8);
     }
 ?>

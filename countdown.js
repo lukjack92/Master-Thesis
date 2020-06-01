@@ -156,8 +156,20 @@ function updateUser() {
 }
 
 function readRecords() {
-	
 	var getting = $.get("readRecords.php", {});
+	console.log("Start");
+	$("#record_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
+	getting.done(function(data) {
+		if(document.readyState == 'complete'){ 
+			console.log("Koniec"); 
+			$("#record_content").empty().append(data);
+			document.getElementById("loader").style.display = "none";};
+	}); 
+}
+
+function readUsersApp() {
+	var getting = $.get("readUsersApp.php", {});
 	console.log("Start");
 	$("#record_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";

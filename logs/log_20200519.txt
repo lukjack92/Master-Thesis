@@ -1,8 +1,0 @@
-Tue 2020-05-19 12:05:09 AM Addr IP: ::1 test1@gmail.com User not found or Invalid login details in API
-Tue 2020-05-19 12:06:01 AM Addr IP: ::1 kasiasokolowska92@wp.pl User not found or Invalid login details in API
-Tue 2020-05-19 12:06:40 AM Addr IP: ::1 lukasz.jackowski@atos.net User not found for forgottenPassword
-Tue 2020-05-19 12:10:13 AM Addr IP: ::1 SAASDFASD User not found for forgottenPassword
-Tue 2020-05-19 12:16:40 AM Addr IP: ::1 test1@gmail.com Successfully logged in API
-Tue 2020-05-19 12:38:04 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Tue 2020-05-19 12:39:09 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API
-Tue 2020-05-19 12:39:11 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in API

@@ -1,32 +1,228 @@
-Mon 2020-06-01 12:06:52 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:07:02 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 507279
-Mon 2020-06-01 12:11:27 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 361354
-Mon 2020-06-01 12:13:29 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 442809
-Mon 2020-06-01 12:13:42 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:13:52 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:13:54 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:13:54 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:14:02 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 325509
-Mon 2020-06-01 12:14:46 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
-Mon 2020-06-01 12:15:10 AM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
-Mon 2020-06-01 12:15:17 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
-Mon 2020-06-01 12:15:25 AM Addr IP: ::1 User from AppMobileProfile  Successfully logged out from Profile App
-Mon 2020-06-01 12:18:56 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 892016
-Mon 2020-06-01 12:20:08 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 609857
-Mon 2020-06-01 12:20:51 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 708934
-Mon 2020-06-01 12:23:53 AM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
-Mon 2020-06-01 12:23:56 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
-Mon 2020-06-01 12:23:59 AM Addr IP: ::1 admin Successfully logged out.
-Mon 2020-06-01 12:25:29 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:25:31 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:25:56 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:26:27 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:26:29 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:26:34 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:27:37 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:27:38 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:29:06 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:29:50 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
-Mon 2020-06-01 12:30:02 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 653711
-Mon 2020-06-01 12:30:57 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
-Mon 2020-06-01 12:31:24 AM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Mon 2020-06-01 22:33:26 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:33:26 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:34:27 PM Addr IP: ::1 admin@qwe.com User not found or Invalid login details in API
+Mon 2020-06-01 10:34:49 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Mon 2020-06-01 10:35:37 PM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Mon 2020-06-01 10:37:19 PM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Mon 2020-06-01 10:37:27 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Mon 2020-06-01 10:37:37 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 10:37:43 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 10:37:49 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
+Mon 2020-06-01 10:40:13 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 2.
+Mon 2020-06-01 10:40:43 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 3.
+Mon 2020-06-01 10:40:44 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment (4). AuthCounter it's large than 3. The account has been blocked for some time.
+Mon 2020-06-01 10:40:52 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment (5). AuthCounter it's large than 3. The account has been blocked for some time.
+Mon 2020-06-01 10:41:31 PM Addr IP: ::1 admin Password correct. AuthCounter increment (5). AuthCounter is large than 3. You must be wait, then you will be able to log in after: 10:41:53
+Mon 2020-06-01 10:43:35 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 10:43:39 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 10:43:43 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
+Mon 2020-06-01 10:44:15 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 2.
+Mon 2020-06-01 10:44:16 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 3.
+Mon 2020-06-01 10:44:21 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment (4). AuthCounter it's large than 3. The account has been blocked for some time.
+Mon 2020-06-01 10:44:32 PM Addr IP: ::1 admin Password correct. AuthCounter increment (4). AuthCounter is large than 3. You must be wait, then you will be able to log in after: 10:45:21
+Mon 2020-06-01 10:45:16 PM Addr IP: ::1 admin Password correct. AuthCounter increment (4). AuthCounter is large than 3. You must be wait, then you will be able to log in after: 10:45:21
+Mon 2020-06-01 10:45:34 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 10:45:37 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 10:45:42 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
+Mon 2020-06-01 10:46:17 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 22:46:23 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:23 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:23 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:23 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:29 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:29 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:31 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:31 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:31 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:31 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:34 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:34 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:36 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:36 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:36 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:36 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:37 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:37 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:38 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:38 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:38 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:38 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:39 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:39 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:39 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:39 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:41 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:41 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:41 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:41 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:42 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:42 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:48 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:48 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:48 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:48 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:46:52 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 22:46:53 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:53 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:46:59 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:46:59 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:46:59 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:47:09 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:47:09 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:47:34 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:47:34 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:47:42 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:47:42 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:47:42 PM Addr IP: ::1 API - Failed to connect to database in API
+Mon 2020-06-01 22:47:44 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:47:44 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:47:46 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:47:46 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:48:31 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:48:31 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:48:32 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:48:32 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:48:32 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:48:32 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:48:37 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:48:37 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:48:37 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:09 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:09 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:49:11 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:11 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:49:14 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:14 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:14 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:16 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:16 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:16 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:17 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:17 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:17 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:17 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:17 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:17 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:18 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:18 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:18 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:24 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:24 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:24 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:24 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:24 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:24 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:25 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:25 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:25 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:49:29 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:49:29 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:49:29 PM Addr IP: ::1 lukjack92@gmail.com The user doesn't exists.
+Mon 2020-06-01 22:50:00 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:00 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:00 PM Addr IP: ::1 lukjack92@gmail.com The user doesn't exists.
+Mon 2020-06-01 22:50:04 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:04 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:04 PM Addr IP: ::1 admin The user doesn't exists.
+Mon 2020-06-01 22:50:40 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:40 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:40 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 22:50:42 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:42 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:42 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 22:50:42 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:42 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:42 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 22:50:43 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:43 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:50:44 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:44 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:50:47 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:47 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:47 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 22:50:50 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:50:50 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:50:50 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 10:51:11 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 10:51:17 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 10:51:21 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 10:51:23 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 10:51:26 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
+Mon 2020-06-01 10:51:34 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 22:51:46 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:51:46 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:51:47 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:51:47 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:51:49 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:51:49 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:51:51 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 22:51:51 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:51:51 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 22:51:57 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:51:57 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:51:57 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 22:52:01 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 22:52:01 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Mon 2020-06-01 10:52:01 PM Addr IP: ::1 admin Database is not working!
+Mon 2020-06-01 10:52:16 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 10:52:18 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 23:03:24 PM Addr IP: ::1 Databases are down!
+Mon 2020-06-01 23:03:28 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 11:04:12 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 23:06:42 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:06:45 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:06:49 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:06:53 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:06:57 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:07:01 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:07:05 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 11:07:05 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 23:07:09 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 11:07:09 PM Addr IP: ::1  Successfully logged out.
+Mon 2020-06-01 11:07:09 PM Addr IP: ::1  Successfully logged out.
+Mon 2020-06-01 23:07:13 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:07:16 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 23:07:23 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Mon 2020-06-01 11:08:31 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Mon 2020-06-01 11:08:51 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Mon 2020-06-01 11:11:44 PM Addr IP: ::1 kasiasokolowska92@wp.pl User not found or Invalid login details in API
+Mon 2020-06-01 11:11:49 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully logged in App
+Mon 2020-06-01 11:14:46 PM Addr IP: ::1 kasiasokolowska92@wp.pl [My account has been deleted]
+Mon 2020-06-01 11:17:29 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Mon 2020-06-01 11:17:32 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Mon 2020-06-01 11:17:47 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 11:17:49 PM Addr IP: ::1 admin Successfully logged out.
+Mon 2020-06-01 11:22:07 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully signed up in API
+Mon 2020-06-01 11:22:23 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully logged in App
+Mon 2020-06-01 11:23:13 PM Addr IP: ::1 kasiasokolowska92@wp.pl [My account has been deleted]
+Mon 2020-06-01 11:23:53 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully signed up in API
+Mon 2020-06-01 11:24:18 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully logged in App
+Mon 2020-06-01 11:24:35 PM Addr IP: ::1 kasiasokolowska92@wp.pl [My account has been deleted]
+Mon 2020-06-01 11:25:15 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Mon 2020-06-01 11:25:46 PM Addr IP: ::1  Successfully logged out.
+Mon 2020-06-01 11:26:17 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully signed up in API
+Mon 2020-06-01 11:26:36 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Mon 2020-06-01 11:26:41 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Mon 2020-06-01 11:27:00 PM Addr IP: ::1 lukjack92@gmail.com [My account has been deleted]
+Mon 2020-06-01 11:28:22 PM Addr IP: ::1 kasiasokolowska92@wp.pl User not found or Invalid login details in API
+Mon 2020-06-01 11:28:45 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully signed up in API
+Mon 2020-06-01 11:29:15 PM Addr IP: ::1 kasiasokolowska92@wp.pl Successfully logged in App
+Mon 2020-06-01 11:30:44 PM Addr IP: ::1 kasiasokolowska92@wp.pl [My account has been deleted]
+Mon 2020-06-01 11:31:19 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Mon 2020-06-01 11:36:53 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'true'.
+Mon 2020-06-01 11:36:55 PM Addr IP: ::1 admin [isActive] The user 'jackol01' has been changed to 'true'.
+Mon 2020-06-01 11:36:56 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'false'.
+Mon 2020-06-01 11:36:57 PM Addr IP: ::1 admin [isActive] The user 'jackol01' has been changed to 'false'.
+Mon 2020-06-01 11:58:42 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.

@@ -219,7 +219,7 @@
 </div>
     <div class="page-header">
 		<p>
-			<h1>List of users</h1>
+			<h1>List users of system</h1>
 			<h2> FirstName: <?php echo $_SESSION['firstName'] ?> </h2>
 			<h2> LastName: <?php echo $_SESSION['lastName'] ?> </h2>
 		</p>
