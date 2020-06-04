@@ -35,8 +35,10 @@
         mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
     }
 */
+    $messageFromDB = "No data.";
+
     if($_SERVER["REQUEST_METHOD"] == "GET") {
-        $response["message"] = "It is AppPhone";
+        $response["message"] = "It is API";
         echo json_encode($response);
         exit;
     } 
@@ -84,7 +86,7 @@
                 exit;
             }  
         }
-    }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])){
+    }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])) {
         // Login user
         $email = $link->real_escape_string($_POST['email']);
         $password = $link->real_escape_string(md5($_POST["password"]));
@@ -148,8 +150,47 @@
                 exit;
             }
         }
-    }    
-    else {
+    } elseif(isset($_POST["type"]) && $_POST["type"]=="category") {
+        $userQuery = "select * from category where isActive = 'true'";
+        $result = mysqli_query($link,$userQuery);
+        $data = array();
+        if(@mysqli_num_rows($result) > 0) {
+            // Output data of each rows
+            while($row = mysqli_fetch_assoc($result)) {
+                array_push($data, $row);
+            }
+            $response["error"] = FALSE;
+            $response["message"] = $data;
+            echo json_encode($response);
+            exit;
+
+        } else {
+            $response["error"] = TRUE;
+            $response["message"] = $messageFromDB;
+            echo json_encode($response);
+            exit;
+        }
+    } elseif(isset($_POST["type"]) && $_POST["type"] == "questionsFromCategory" && $_POST["category"] != "") {
+        $category = $link->real_escape_string($_POST['category']);
+        $userQuery = "select id,question,ansa,ansb,ansc,ansd from questions where category = '$category'";
+        $result = mysqli_query($link,$userQuery);
+        $data = array();
+        if(@mysqli_num_rows($result) > 0) {
+            // Output data of each rows
+            while($row = mysqli_fetch_assoc($result)) {
+                array_push($data, $row);
+            }
+            $response["error"] = FALSE;
+            $response["message"] = $data;
+            echo json_encode($response);
+            exit;
+
+        } else {
+            $response["error"] = TRUE;
+            $response["message"] = $messageFromDB;
+            echo json_encode($response);
+        }
+    } else {
         // Invalid parameters
         $response["error"] = TRUE;
         $response["message"] ="Invalid parameters";

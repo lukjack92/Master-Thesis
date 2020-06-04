@@ -20,24 +20,25 @@ $start_from = ($page-1)*$_SESSION['limit'];
 
 $data = '
 	<!--The form determine the number a records occurred in table.-->
-	<form action="#" method="post" id="rangeRecords">
-    	<div class="form-group col-md-4">
-      		<label for="inputState">The range of record occurrences in this table</label>
-      		<select name="inputState" class="form-control">
+	<form action="#" method="post" id="rangeRecords" class="border rounded mx-auto paddingTable">
+    	<div class="form-group">
+			<label for="inputStateCategory"><b>THE RANGE OF RECORDS OCCURRENCES IN THIS TABLE</b></label>
+      		<select name="inputState" class="form-control col-4 mx-auto">
         		<option>5</option>
 				<option>10</option>
 				<option>15</option>
 				<option>20</option>
+				<option>40</option>
      		 </select>
     	</div>
-		<div class="form-group col-md-4">
+		<div class="form-group mx-auto">
 			<button type="submit" class="btn btn-primary">Save</button>
 		</div>
 	</form>
 		<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th>
+			<!-- <th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th> -->
 				<th scope="col" style="width: 6%">No.</th>
 				<th scope="col" style="width: 72%">Questions</th>
 				<th scope="col" style="width: 2%">Category</th>
@@ -53,7 +54,7 @@ $data = '
 					// Output data of each rows
 					while($row = mysqli_fetch_assoc($result)) {
 				$data .= '<tr>
-						<td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
+						<!-- <td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td> -->
 						<td scope="row">'.++$start_from.'</td>
 						<td>'.$row['question'].'</td>';
 						

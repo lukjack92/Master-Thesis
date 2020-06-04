@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 		header("Location: index.php");
 		exit;
 } else {
-	if($_POST["id"] != "" && $_POST['spanQuestion'] != "" && $_POST['spanOdp1'] != "" && $_POST['spanOdp2'] != "" && $_POST['spanOdp3'] != "" && $_POST['spanOdp4'] != "" && $_POST['spanCorrOdp'] != "" && $_POST['chooseCategory'] != "") {
+	if($_POST["id"] != "" && $_POST['spanQuestion'] != "" && $_POST['spanOdp1'] != "" && $_POST['spanOdp2'] != "" && $_POST['spanOdp3'] != "" && $_POST['spanOdp4'] != "" && $_POST['spanCorrOdp'] != "" && ($_POST['chooseCategory'] != "" || $_POST['chooseCategory'] == "")) {
 	
 	//echo "Your ID: ".$_POST['id'];
 	$array = array("Answer A" => 'ansa', "Answer B" => 'ansb', "Answer C" => 'ansc', "Answer D" => 'ansd');

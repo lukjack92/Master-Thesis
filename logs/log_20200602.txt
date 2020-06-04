@@ -16,3 +16,5 @@ Tue 2020-06-02 12:33:52 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobil
 Tue 2020-06-02 01:14:52 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
 Tue 2020-06-02 01:15:07 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
 Tue 2020-06-02 01:15:31 AM Addr IP: ::1 lukjack92@gmail.com [Success, the PhoneNumber has been updated]
+Tue 2020-06-02 01:52:27 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Tue 2020-06-02 02:08:38 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App

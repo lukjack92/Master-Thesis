@@ -25,7 +25,7 @@ if($_POST['login'] != "" && $_POST['first_name'] != "" && $_POST['last_name'] &&
 	$numResults = mysqli_num_rows($result);
 
 	if($numResults > 0){
-		echo "Nie dodano użytkownika, bo już istnieje!!!"; 
+		echo "The user is already exist!"; 
 		//echo "User: " .$login. " ".$firstName." ".$lastName;
 	} else {
 		$add_user_sql = "INSERT INTO users (login, password, firstName, lastName, permission) VALUES ('$login', '$password', '$firstName', '$lastName', '$permission')";

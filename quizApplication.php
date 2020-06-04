@@ -10,8 +10,6 @@
 		exit;
     }
 
-    require_once "conf_db/config.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -50,7 +48,7 @@
 
 <div class="container color_white">
     <div class="page-header">
-        <h1>Manage settings</h1>
+        <h1>Welcome to Quiz</h1>
 		<h5> Account for <?php echo $_SESSION['usersInfo']['email'] ?> </h5>
     </div>
     
@@ -76,29 +74,21 @@
                 </div>
             </div>
         </div>
+	</div>
 
-    </div>
-        <div class="col-md-6 mx-auto form">
-            <form method="post">
-                <div class="form-group has-feedback">
-                    <label class="pull-left"><b>Current Password</b></label>
-                    <input type="password" id="current_password" placehol class="form-control" autofocus required> 
-                </div>
-                <div class="form-group has-feedback <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                    <label class="pull-left"><b>New Password</b></label>
-                    <input type="password" id="new_password" class="form-control" pattern="(?=.*\d)(?=.*[a-z]).{6,}" title="Must contain at least 6 or more characters" required> 
-                </div>
-                <div class="form-group has-feedback">
-                    <label class="pull-left"><b>Confirm Password</b></label>
-                    <input type="password" id="re_enter_password" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-block" onclick="resetPasswordToAppProfile('<?php echo $_SESSION['usersInfo']['email']?>')" value="Submit">
-                    <a href="profileApp.php" class="btn btn-danger btn-block">Back</a>
-                </div>
-            </form>
-            <div id="feedbackFromApi" role="alert"></div>
-        </div>
+	<div class="quiz col-md-6 mx-auto">
+			<laben><b>Select a category:</b></label>
+			<div class="padding">
+				<select id="chooseCategoryQuiz" class="form-control mx-auto"></select>
+			</div>
+			<div class="btn btn-primary btn-block padding" id="start" onclick="readQuostionsFromCategory()" >Start Quiz</div>
+			<a href="profileApp.php" class="btn btn-danger btn-block padding">Back</a>
+		<!--	<div class="btn btn-primary float-right" id="next"></div>
+			<div class="btn btn-primary float-left" id="prev"></div> -->
+	</div>
+
+	<div id="database_content"></div>
+
 </div>
 
 	<nav class="navbar-fixed-bottom">
@@ -107,13 +97,14 @@
 			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
 		</div>
 	</nav>
-	
+
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="countdown.js"></script>
+    <script type="text/javascript" src="loadCategoriesToQuiz.js"></script>
     <!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->  
 </body>

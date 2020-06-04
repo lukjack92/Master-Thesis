@@ -195,7 +195,6 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
-			<h6 class="text-danger">This version is in development</h6>
 		</div>
 	</nav>
 	
@@ -205,6 +204,5 @@
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
   	<script type="text/javascript" src="countdown.js"></script>
-	<script type="text/javascript" src="test.js"></script>
 </body>
 </html>

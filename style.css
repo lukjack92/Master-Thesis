@@ -3,6 +3,20 @@ body {
 	z-index: 1;
 }
 
+.quiz {
+	padding: 0px;
+	margin: 10px;
+}
+
+.padding {
+	margin-top: 10px;
+}
+
+.paddingTable {
+	padding: 10px;
+	margin: 5px;
+}
+
 .alert_pass {
 	background-color: red;
 	border-radius: 0px;

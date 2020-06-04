@@ -55,9 +55,8 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 					} 
 					
 					echo $data;
-}
-else {
-		echo "Brak GET";
+} else {
+		echo "Lack GET";
 	}
 }
 ?>

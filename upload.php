@@ -42,7 +42,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 					//echo $val." ";
 					$sql = "INSERT INTO `category` (`name`) VALUES ('$val')";
 					@mysqli_query($link,$sql);
-					echo "DODANO";
+					//echo "DODANO";
 				}
 		}
 		

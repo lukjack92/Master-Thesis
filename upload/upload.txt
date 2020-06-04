@@ -1,5 +1,3 @@
-Pytanie do testowania usuwania1.;aaa;bbb b;c cc;d dd;ansc;delete2;
-Pytanie do testowania usuwania2;dddd d;ccc c;bb b;d d;ansc;delete2;
-Pytanie do testowania usuwania3;dddd d;ccc c;bb b;d d;ansc;delete2;
-Pytanie do testowania usuwania4;dddd d;ccc c;bb b;d d;ansc;delete2;
-Pytanie do testowania usuwania5;dddd d;ccc c;bb b;d d;ansc;delete2;
+Czy prawid³owe jest sformu³owanie dotycz¹ce lasera, i¿ posiada on temperaturê ujemn¹ w skali Kelwina? Na przyk³ad druga zasada termodynamiki mówi, ¿e ze wzrostem energii nieuporz¹dkowanie uk³adu roœnie, a w przypadku lasera jest na odwrót.;aaa;bb b;c cc;d dd;odp3;test5;
+Czy rozwi¹zania Diraca z energi¹ ujemn¹ wynika³y z tego, ¿e energia cz¹stek (np. pozytonu) by³a tak naprawdê dodatnia, tyle tylko ¿e ³adunek by³ przeciwny? Jeœli nie to o co w tym chodzi³o?;aa;bb;rr;sss;aa;test5;
+Dlaczego ryby nie zdychaj¹ w wyniku uderzenia pioruna w powierzchniê wody? Ryby które s¹ przy powierzchni wody zdychaj¹, a co z reszt¹? Czy przez ryby (które s¹ zanurzone w wodzie) przep³ywa pr¹d? A co z wêdkowaniem „na pr¹d”?;nn;ff;eas;asd;eas;test5;

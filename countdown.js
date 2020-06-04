@@ -391,10 +391,10 @@ function viewQuestion(id_question) {
 		//$("#spanCorrOdp").empty().append(attr.odp);
 		var myArray = {ansa: "Answer A", ansb: "Answer B", ansc: "Answer C", ansd: "Answer D"};
 		for(var key in myArray) {
-			console.log("Przyszło: "+key);
+			//console.log("Przyszło: "+key);
 				console.log(attr.odp);
 			if(attr.odp === key) {
-				console.log("Ustawić: "+myArray[key]);
+				//console.log("Ustawić: "+myArray[key]);
 				//document.getElementById("spanCorrOdp").value=myArray[key];
 				$("#spanCorrOdp").val(myArray[key]);
 				break;
@@ -414,7 +414,7 @@ function viewQuestion(id_question) {
 				//console.log("Data: ");
 				if(document.readyState == 'complete'){
 					for(var i=0; i<category.length-1; i++) {
-						console.log(category[i].category);
+						//console.log(category[i].category);
 						//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
 						var sel = document.getElementById("chooseCategory");
 						var opts = document.createElement('option');
@@ -422,8 +422,16 @@ function viewQuestion(id_question) {
 						opts.appendChild(document.createTextNode(category[i].category));
 						sel.appendChild(opts);
 					}
-				
-				$("#chooseCategory").val(cate);
+
+					var sel = document.getElementById("chooseCategory");
+					var opts = document.createElement('option');
+		
+					opts.appendChild(document.createTextNode("No category"));
+					sel.appendChild(opts);
+
+					if(cate == "") {
+						$("#chooseCategory").val("No category") 
+					} else $("#chooseCategory").val(cate);
 				}		
 		});
 		
@@ -440,6 +448,10 @@ function viewQuestion(id_question) {
 		var myID = $("#myID").text();	
 		console.log("SAVE: "+myID);
 		//$("#updateViewModal").modal("hide");
+
+		var category = $("#chooseCategory").val();
+
+		if(category == "No category") category = "";
 		
 		var posting = $.post("updateQuestion.php", {
 			id: id_question,
@@ -449,7 +461,7 @@ function viewQuestion(id_question) {
 			spanOdp3: $("#spanOdp3").text(),
 			spanOdp4: $("#spanOdp4").text(),
 			spanCorrOdp: $("#spanCorrOdp").val(),
-			chooseCategory: $("#chooseCategory").val()
+			chooseCategory: category
 		});
 		
 		posting.done(function(data) {
@@ -565,8 +577,8 @@ function buttonViewCategory(number_page) {
 }
 
 function viewQuestionFromCategory(category) {
-	console.log("Wywolano funkcje view");
-	console.log(category);
+	//console.log("Wywolano funkcje view");
+	//console.log(category);
 	//console.log("Clicked button of category");
 	var getting = $.get("readQuestionCategory.php", {
 		category: category

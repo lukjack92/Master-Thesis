@@ -72,7 +72,6 @@ if(isset($_SESSION['usersInfo']['email'])) {
 <nav class="navbar-fixed-bottom">
     <div class="footer text-center bg-dark">
         Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
-        <h6 class="text-danger">This version is in development</h6>
     </div>
 </nav>
 <!-- Optional JavaScript -->
@@ -139,7 +138,6 @@ if(isset($_SESSION['usersInfo']['email'])) {
 <nav class="navbar-fixed-bottom">
     <div class="footer text-center bg-dark">
         Copyright &copy; '. date("o") . ' Designed by Łukasz Jackowski
-        <h6 class="text-danger">This version is in development</h6>
     </div>
 </nav>
 <!-- Optional JavaScript -->
