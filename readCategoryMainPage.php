@@ -40,13 +40,14 @@ $data = '<!--The form determine the number a records occurred in table.-->
 			<tr>
 			    <!-- <th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th> -->
 				<th scope="col" style="width: 6%">No.</th>
-				<th scope="col" style="width: 72%">Category</th>
-				<th scope="col" style="width: 2%">Number</th>
-				<th scope="col" style="width: 16%">Action</th>
+				<th scope="col" style="width: 56%">Category</th>
+				<th scope="col" style="width: 14%">IsActive</th>
+				<th scope="col" style="width: 2%">Amount</th>
+				<th scope="col" style="width: 20%">Action</th>
 			</tr>
 		</thead>
 		<tbody>';
-				$sql = "SELECT COUNT(a.category) counter, b.id, b.name FROM category b LEFT Join questions a ON b.name = a.category GROUP BY b.NAME, b.id limit $start_from,$_SESSION[limit2]";
+				$sql = "SELECT COUNT(a.category) counter, b.id, b.name, b.isActive FROM category b LEFT Join questions a ON b.name = a.category GROUP BY b.NAME, b.id limit $start_from,$_SESSION[limit2]";
 				$result = @mysqli_query($link, $sql);
 				$id = 0;
 				if(@mysqli_num_rows($result) > 0) {
@@ -58,10 +59,19 @@ $data = '<!--The form determine the number a records occurred in table.-->
 					    <!-- <td><input type="checkbox" id="singleCheckBox" name="singleCheckBox" onclick="selectSingleCheckBox()" value="'.$row['id'].'"></td> -->
 						<td scope="row">'.++$start_from.'</td>
 						<td>'.$row['name'].'</td>';
-							
-							if ($row['counter'] == 0) {
-								$row['counter'] = '<p style="color:red;"><b>Empty</b></p>';
-							} 
+
+						$action_yes = "";
+						$action_no = "";
+						
+						if($row['isActive'] == "true") $action_yes="active"; else $action_no="active";
+						
+						$data .= '<td><div class="btn-group btn-group-toggle" data-toggle="buttons">';
+						$data .= '<label class="btn btn-secondary '.$action_yes.'"><input type="radio" name="options" id="option1" autocomplete="off" onchange="updateIsActiveCategory('.$row['id'].",".$row['isActive'].')"> Yes </label>';
+						$data .= '<label class="btn btn-secondary '.$action_no.'"><input type="radio" name="options" id="option2" autocomplete="off" onchange="updateIsActiveCategory('.$row['id'].",".$row['isActive'].')"> No </label></td>';
+					
+						if ($row['counter'] == 0) {
+							$row['counter'] = '<p style="color:red;"><b>Empty</b></p>';
+						} 
 							
 					$data .= '<td>'.$row['counter'].'</td>
 						<td>

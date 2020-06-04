@@ -35,7 +35,7 @@
         mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
     }
 */
-    $messageFromDB = "No data.";
+    $messageFromDB = "No data";
 
     if($_SERVER["REQUEST_METHOD"] == "GET") {
         $response["message"] = "It is API";

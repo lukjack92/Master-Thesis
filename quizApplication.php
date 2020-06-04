@@ -76,18 +76,23 @@
         </div>
 	</div>
 
-	<div class="quiz col-md-6 mx-auto">
+	<div id="quiz" class="quiz col-md-6 mx-auto">
 			<laben><b>Select a category:</b></label>
 			<div class="padding">
 				<select id="chooseCategoryQuiz" class="form-control mx-auto"></select>
 			</div>
-			<div class="btn btn-primary btn-block padding" id="start" onclick="readQuostionsFromCategory()" >Start Quiz</div>
+			<div class="btn btn-primary btn-block padding" id="start">Start Quiz</div>
 			<a href="profileApp.php" class="btn btn-danger btn-block padding">Back</a>
-		<!--	<div class="btn btn-primary float-right" id="next"></div>
-			<div class="btn btn-primary float-left" id="prev"></div> -->
 	</div>
 
-	<div id="database_content"></div>
+	<center><div id="loader"></div></center>
+	<center><div id="textToLoader"></div></center>
+
+	<div id="database_content" class="col-md-6 mx-auto">
+
+		<div class="hide btn btn-primary float-right col-md-3 padding" id="next">Next</div>
+		<div class="hide btn btn-primary float-left col-md-3 padding disabled" id="prev">Prev</div>
+	</div>
 
 </div>
 
@@ -105,6 +110,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="countdown.js"></script>
     <script type="text/javascript" src="loadCategoriesToQuiz.js"></script>
+    <script type="text/javascript" src="logicQuiz.js"></script>
     <!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->  
 </body>

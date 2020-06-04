@@ -18,16 +18,26 @@ $(document).ready(function() {
 });
 
 function readQuostionsFromCategory() {
+    event.preventDefault();
     var type = "questionsFromCategory";
     var category = $("#chooseCategoryQuiz").val();
-
+    
     var posting = $.post("api/api.php", {
         type: type,
         category: category
-    });	
-
-    posting.done(function(data) {
+	});
+	console.log("Start");
+	
+	$("#database_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
+	
+	posting.done(function(data) {
         var json = JSON.parse(data);
         console.log(json.message);
-    });
+		if(document.readyState == 'complete'){
+			console.log("Koniec"); 
+			$("#database_content").empty().append();	
+			document.getElementById("loader").style.display = "none";
+		}
+	});
 }

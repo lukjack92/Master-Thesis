@@ -15,6 +15,7 @@
 		exit;
 	}
 	
+	require_once "conf_db/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -113,7 +114,7 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
-			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
+			</br><?php if(isset($infoDATABASE) !== '') echo $infoDATABASE; ?>
 		</div>
 	</nav>
 	

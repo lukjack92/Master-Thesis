@@ -39,7 +39,7 @@ if(isSiteAvailible($URL1,$DB_PORT)) {
 }
 
 //Uncomment following line in order to check which server's database is using
-//$infoDATABASE = "MySQL form domain: ".$DB_SERVER;
+//$infoDATABASE = "Database conected from: ".$DB_SERVER;
 	
 /* Attempt to connect to MySQL database */
 $link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME, $DB_PORT);

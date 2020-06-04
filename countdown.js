@@ -91,9 +91,8 @@ modelConfirm(function(confirm){
 function updateIsActive(id, active) {
 	
 	active ? active=false : active=true;  
-	
 	console.log(active);
-	
+
 	var posting = $.post("updateIsActive.php", {
 		id: id,
 		active: active
@@ -102,6 +101,22 @@ function updateIsActive(id, active) {
 	posting.done(function(data) {
 		$("#cl").empty().append(data);
 		readRecords();
+	});
+}
+
+function updateIsActiveCategory(id, active) {
+	
+	active ? active=false : active=true;  
+	console.log(active);
+	
+	var posting = $.post("updateIsActiveCategory.php", {
+		id: id,
+		active: active
+	});
+	
+	posting.done(function(data) {
+		$("#cl").empty().append(data);
+		buttonViewCategory();
 	});
 }
 

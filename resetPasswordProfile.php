@@ -50,7 +50,7 @@
 
 <div class="container color_white">
     <div class="page-header">
-        <h1>Manage settings</h1>
+        <h1>Reset password</h1>
 		<h5> Account for <?php echo $_SESSION['usersInfo']['email'] ?> </h5>
     </div>
     

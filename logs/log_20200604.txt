@@ -55,3 +55,49 @@ Thu 2020-06-04 06:58:36 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged 
 Thu 2020-06-04 06:58:39 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
 Thu 2020-06-04 06:59:16 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
 Thu 2020-06-04 07:07:36 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-04 07:19:14 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 07:20:33 PM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Thu 2020-06-04 07:27:05 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-04 07:27:13 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 07:27:57 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 07:48:06 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-04 07:51:39 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 07:52:54 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-04 07:57:26 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 07:57:54 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-04 07:58:04 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 08:01:23 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-04 08:01:40 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 08:58:18 PM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Thu 2020-06-04 08:58:22 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 09:17:47 PM Addr IP: ::1 lukjack92@gmail.com The user doesn't exists.
+Thu 2020-06-04 09:17:59 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 09:34:31 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 09:57:53 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'true'.
+Thu 2020-06-04 09:57:55 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'false'.
+Thu 2020-06-04 09:57:58 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'true'.
+Thu 2020-06-04 09:57:59 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'false'.
+Thu 2020-06-04 09:58:01 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'true'.
+Thu 2020-06-04 09:58:02 PM Addr IP: ::1 admin [isActive] The user 'ljack' has been changed to 'false'.
+Thu 2020-06-04 10:03:26 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 10:03:30 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'false'.
+Thu 2020-06-04 10:03:36 PM Addr IP: ::1 admin [isActive] The category 'test2' has been changed to 'true'.
+Thu 2020-06-04 10:03:40 PM Addr IP: ::1 admin [isActive] The category 'test3' has been changed to 'true'.
+Thu 2020-06-04 10:03:44 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'true'.
+Thu 2020-06-04 10:03:51 PM Addr IP: ::1 admin [isActive] The category 'nowa_kategoria' has been changed to 'true'.
+Thu 2020-06-04 10:03:53 PM Addr IP: ::1 admin [isActive] The category 'test1' has been changed to 'true'.
+Thu 2020-06-04 10:03:55 PM Addr IP: ::1 admin [isActive] The category 'test100' has been changed to 'true'.
+Thu 2020-06-04 10:04:11 PM Addr IP: ::1 admin [isActive] The category 'utddd' has been changed to 'false'.
+Thu 2020-06-04 10:04:24 PM Addr IP: ::1 admin [isActive] The category 'utddd' has been changed to 'true'.
+Thu 2020-06-04 10:04:26 PM Addr IP: ::1 admin [isActive] The category 'categoryKasia' has been changed to 'false'.
+Thu 2020-06-04 10:04:28 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'false'.
+Thu 2020-06-04 10:04:33 PM Addr IP: ::1 admin [isActive] The category 'utddd' has been changed to 'false'.
+Thu 2020-06-04 10:05:28 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-04 10:05:37 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 10:14:25 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 10:14:27 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-04 10:14:41 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 10:55:24 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-04 10:55:34 PM Addr IP: ::1 admin [isActive] The category 'categoryKasia' has been changed to 'true'.
+Thu 2020-06-04 11:10:26 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-04 11:16:33 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App

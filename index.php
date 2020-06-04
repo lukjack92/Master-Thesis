@@ -73,7 +73,7 @@ echo '
 </html>
 ';
 } elseif(isset($_GET['code'])) {
-	$query = "select * from " . TB_CODE;
+	$query = "select * from" . TB_CODE;
 	
 	if($result = @mysqli_query($link,$query)) {
 		//Fetch row
