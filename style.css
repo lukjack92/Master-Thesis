@@ -19,10 +19,15 @@ body {
 
 #prev, #next {
 	display: none;
+
 }
 
 ul {
     list-style-type: none;
+}
+
+#database_content {
+
 }
 
 .alert_pass {

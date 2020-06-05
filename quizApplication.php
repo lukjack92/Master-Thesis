@@ -87,11 +87,13 @@
 
 	<center><div id="loader"></div></center>
 	<center><div id="textToLoader"></div></center>
+ 
+	<div id="database_content" class="col-md-6 mx-auto ">
 
-	<div id="database_content" class="col-md-6 mx-auto">
+		<div class="hide btn btn-primary col-6" id="next">Next</div>
+		<div class="hide btn btn-primary col-6" id="prev">Prev</div>
 
-		<div class="hide btn btn-primary float-right col-md-3 padding" id="next">Next</div>
-		<div class="hide btn btn-primary float-left col-md-3 padding disabled" id="prev">Prev</div>
+		
 	</div>
 
 </div>

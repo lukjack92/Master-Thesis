@@ -38,7 +38,8 @@ $(document).ready(function() {
                 $('#prev').show();
 
                 var nextQuestion = createquestioData(questionCounter);
-                $('#database_content').html(nextQuestion);
+                $('#next').before(nextQuestion);
+                //$('#database_content').html(nextQuestion);
             }
         });
     });
@@ -47,8 +48,11 @@ $(document).ready(function() {
         console.log(arrayQuestions.message.length);
         //choose();
         questionCounter++;
+
+        $('ul').remove();
         var nextQuestion = createquestioData(questionCounter);
-        $('#database_content').html(nextQuestion);
+        $('#next').before(nextQuestion);
+        //$('#database_content').html(nextQuestion);
         //progressBar(questionCounter);
         //audioNextPrev.play();
         //displayNext();
@@ -58,8 +62,10 @@ $(document).ready(function() {
       $('#prev').on('click', function() {
         //choose();
         questionCounter--;
+        $('ul').remove();
         var nextQuestion = createquestioData(questionCounter);
-        $('#database_content').html(nextQuestion);
+        $('#next').before(nextQuestion);
+        //$('#database_content').html(nextQuestion);
         //progressBar(questionCounter);
         //audioNextPrev.play();
         //displayNext();

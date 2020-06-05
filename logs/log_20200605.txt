@@ -5,3 +5,11 @@ Fri 2020-06-05 12:05:32 AM Addr IP: ::1 admin Successfully logged. AuthCounter i
 Fri 2020-06-05 12:05:39 AM Addr IP: ::1 admin [isActive] The category 'categoryKasia' has been changed to 'false'.
 Fri 2020-06-05 12:05:49 AM Addr IP: ::1 admin Successfully logged out.
 Fri 2020-06-05 12:05:58 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Fri 2020-06-05 01:16:47 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Fri 2020-06-05 01:18:15 AM Addr IP: ::1 admin Successfully logged out.
+Fri 2020-06-05 01:18:31 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Fri 2020-06-05 01:18:34 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Fri 2020-06-05 01:35:51 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Fri 2020-06-05 01:36:06 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Fri 2020-06-05 01:47:01 AM Addr IP: ::1  Successfully logged out.
+Fri 2020-06-05 01:47:08 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
