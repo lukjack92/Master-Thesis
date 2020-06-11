@@ -2,7 +2,7 @@
 
 session_start();
 require_once "conf_db/config.php";
-require_once 'func_msg/functions.php';
+require_once "func_msg/functions.php";
 
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){

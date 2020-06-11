@@ -101,11 +101,11 @@
     </div>
     </div>
     <p class="padding">
-		<a href="quizApplication.php" class="btn btn-primary">Go to Quiz</a>
-        <a href="resetPasswordProfile.php" class="btn btn-primary">Change Password</a>
-		<a href="changePhoneNumberProfile.php" class="btn btn-primary">Change PhoneNumber</a>
-		<button class="btn btn-danger" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
-		<a href="logoutApp.php" class="btn btn-secondary">Sign Out Of Your Account</a>
+		<a href="quizApplication.php" class="btn btn-primary testbutton2">Go to Quiz</a>
+        <a href="resetPasswordProfile.php" class="btn btn-primary testbutton2">Change Password</a>
+		<a href="changePhoneNumberProfile.php" class="btn btn-primary testbutton2">Change PhoneNumber</a>
+		<button class="btn btn-danger testbutton2" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
+		<a href="logoutApp.php" class="btn btn-secondary testbutton2">Sign Out Of Your Account</a>
 	</p>
 
 	<div id="database_content"></div>

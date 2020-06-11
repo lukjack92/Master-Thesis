@@ -3,7 +3,8 @@
 // Initialize the session
 session_start();
 
-if(isset($_SESSION['usersInfo']['email'])) {
+//if(isset($_SESSION['usersInfo']['email'])) {
+if(isset($_SESSION['resetPassword2FA']) && $_SESSION['resetPassword2FA'] == "reset") {
     echo '
     <!DOCTYPE HTML>
 <html lang="en">

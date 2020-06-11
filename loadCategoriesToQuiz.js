@@ -6,13 +6,21 @@ $(document).ready(function() {
 
     posting.done(function(data) {
         var json = JSON.parse(data);
-
-        $("#chooseCategoryQuiz option").remove();
-        for(var i=0; i<json.message.length; i++) {
-            var select = document.getElementById("chooseCategoryQuiz");
-            var option = document.createElement('option');
-            option.appendChild(document.createTextNode(json.message[i].name));
-            select.appendChild(option);
+        console.log(data);
+        console.log(json);
+        console.log(json.message.length);
+        if(!json.error) {
+            $("#chooseCategoryQuiz option").remove();
+            for(var i=0; i<json.message.length; i++) {
+                var select = document.getElementById("chooseCategoryQuiz");
+                var option = document.createElement('option');
+                option.appendChild(document.createTextNode(json.message[i].name));
+                select.appendChild(option);
+            }
+        } else {
+            $("b").empty().append("No active categories!");
+            document.getElementById("chooseCategoryQuiz").remove();
+            document.getElementById("start").remove();
         }
     });
 });

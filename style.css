@@ -17,17 +17,25 @@ body {
 	margin: 5px;
 }
 
-#prev, #next {
-	display: none;
+.zom
+{
+    animation:anime11 3s linear infinite;
+    -webkit-animation:anime11 3s linear infinite;
+}
 
+#prev, #next, #submit {
+	display: none;
+	margin-bottom: 2px;
 }
 
 ul {
     list-style-type: none;
 }
 
-#database_content {
-
+#database_content_quiz {
+	padding-top: 5px;
+	padding-bottom: 65px;
+	display: none;
 }
 
 .alert_pass {
@@ -58,6 +66,9 @@ ul {
 	margin-bottom: 5px;
 }
 
+.testbuttonLeft {
+	margin-left: 5px;
+}
 nav a{
 	color: #eeeeee;
 }

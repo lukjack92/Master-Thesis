@@ -91,8 +91,8 @@ error_reporting(0);
 	?></div>
 
   <div class="pull-right">
-	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
-	<button class="btn btn-success" data-toggle="modal" data-target="#createViewModalNewCategory">Create A Category</button>
+	<button class="btn btn-success testbutton2" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
+	<button class="btn btn-success testbutton2" data-toggle="modal" data-target="#createViewModalNewCategory">Create A Category</button>
   </div></br></br>
 
 	<div id="ok">
@@ -205,13 +205,13 @@ error_reporting(0);
 <!-- END -->
 
     <p>
-        <a href="reset.php" class="btn btn-warning">Reset Your Password</a>
+        <a href="reset.php" class="btn btn-warning testbutton2">Reset Your Password</a>
 		<?php 
-			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary">Reset Password For User System</a>';
+			if($_SESSION['permission'] == "admin") echo '<a href="reset_user.php" class="btn btn-primary testbutton2">Reset Password For User System</a>';
 		?>
-		<a href="user_list.php" class="btn btn-primary">List of Users System</a>
-		<a href="listUsersOfApp.php" class="btn btn-primary">List of Users App</a>
-		<a href="logoutAdmin.php" class="btn btn-danger">Sign Out Of Your Account</a>
+		<a href="user_list.php" class="btn btn-primary testbutton2">List of Users System</a>
+		<a href="listUsersOfApp.php" class="btn btn-primary testbutton2">List of Users App</a>
+		<a href="logoutAdmin.php" class="btn btn-danger testbutton2">Sign Out Of Your Account</a>
     </p>
 <div class="bg-form-upload border rounded">
 <label><b>UPLOAD THE QUESTIONS FROM THE FILE TO DATABASE (SEE <a href="" data-toggle="modal" data-target="#informationToUploadFile">HERE</a>)</b></label>
@@ -220,8 +220,8 @@ error_reporting(0);
 		<input type="submit" value="Upload File" name="submit">
 </form>
 </div>
-	<button type="button" class="btn btn-primary" onclick="buttonAllDatabases()">View All Database</button>
-	<button type="button" class="btn btn-primary" onclick="buttonViewCategory()">Categories</button>
+	<button type="button" class="btn btn-primary testbutton2" onclick="buttonAllDatabases()">View All Database</button>
+	<button type="button" class="btn btn-primary testbutton2" onclick="buttonViewCategory()">Categories</button>
 	
 	<div class="form-group">
 		<div class="pull-right">
@@ -688,8 +688,7 @@ error_reporting(0);
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
-			<!-- <h6 class="text-danger">This version is in development</h6> -->
-			</br><?php if(isset($infoDATABASE) !== '') echo $infoDATABASE; ?>
+			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
 		</div>
 	</nav>
 	

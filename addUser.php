@@ -32,7 +32,7 @@ if($_POST['login'] != "" && $_POST['first_name'] != "" && $_POST['last_name'] &&
 	if($numResults > 0){
 		echo '<div class="alert alert-danger" role="alert">No user <b>'.$login.'</b> added because it already exists!</div>'; 
 		//echo "User: " .$login. " ".$firstName." ".$lastName;
-		msg_logs_users($_SESSION['login'], "[Add user] No user '$login' added, because it already exists!");
+		msg_logs_users($_SESSION['login'], "[Add user] No user '$login' added, because it is already exists!");
 	} else {
 		$add_user_sql = "INSERT INTO users (login, password, firstName, lastName, permission) VALUES ('$login', '$password', '$firstName', '$lastName', '$permission')";
 		mysqli_query($link,$add_user_sql);

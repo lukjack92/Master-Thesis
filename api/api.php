@@ -35,8 +35,6 @@
         mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
     }
 */
-    $messageFromDB = "No data";
-
     if($_SERVER["REQUEST_METHOD"] == "GET") {
         $response["message"] = "It is API";
         echo json_encode($response);
@@ -138,7 +136,8 @@
                 msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$codeSMS);
                 //Session if user is exist in DB for page checkCodeSMS.php
                 $_SESSION['usersInfo'] = $user;
-                //Session fot sms.php
+                $_SESSION['resetPassword2FA'] = "reset";
+                //Session for sms.php
                 $_SESSION['codeSms'] = $codeSMS;
                 echo json_encode($response);
                 exit;
@@ -151,10 +150,10 @@
             }
         }
     } elseif(isset($_POST["type"]) && $_POST["type"]=="category") {
-        $userQuery = "select * from category where isActive = 'true'";
+        $userQuery = "select name from category where isActive = 'true'";
         $result = mysqli_query($link,$userQuery);
-        $data = array();
         if(@mysqli_num_rows($result) > 0) {
+            $data = array();
             // Output data of each rows
             while($row = mysqli_fetch_assoc($result)) {
                 array_push($data, $row);
@@ -166,56 +165,57 @@
 
         } else {
             $response["error"] = TRUE;
-            $response["message"] = $messageFromDB;
+            $response["message"] = "No data";
             echo json_encode($response);
             exit;
         }
     } elseif(isset($_POST["type"]) && $_POST["type"] == "questionsFromCategory" && $_POST["category"] != "") {
         $category = $link->real_escape_string($_POST['category']);
-        $userQuery = "select id,question,ansa,ansb,ansc,ansd from questions where category = '$category'";
+        
+        $userQuery = "select * from category where name = '$category' and isActive = 'true'";
         $result = mysqli_query($link,$userQuery);
-        $data = array();
-        if(@mysqli_num_rows($result) > 0) {
-            // Output data of each rows
-            while($row = mysqli_fetch_assoc($result)) {
-                array_push($data, $row);
+        if(mysqli_num_rows($result) > 0) { 
+            $userQuery = "select id,question,ansa,ansb,ansc,ansd,odp from questions where category = '$category'";
+            $result = mysqli_query($link,$userQuery);
+            $data = array();
+            if(mysqli_num_rows($result) > 0) {
+                // Output data of each rows
+                while($row = mysqli_fetch_assoc($result)) {
+                    array_push($data, $row);
+                }
+                $response["error"] = FALSE;
+                $response["message"] = $data;
+                echo json_encode($response);
+                exit;
+    
+            } else {  
+                $response["error"] = TRUE;
+                $response["message"] = "No data";
+                echo json_encode($response); 
             }
-            $response["error"] = FALSE;
-            $response["message"] = $data;
-            echo json_encode($response);
-            exit;
-
         } else {
             $response["error"] = TRUE;
-            $response["message"] = $messageFromDB;
+            $response["message"] = "No date or category is inactive!";
             echo json_encode($response);
         }
-    } elseif(isset($_POST["type"]) && $_POST["type"] == "json" && $_POST["json"] != "") {
- 
-        //Make sure that it is a POST request.
-        if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') != 0){
-            throw new Exception('Request method must be POST!');
+    } elseif(isset($_POST["type"]) && $_POST["type"] == "updateResultQuizForUser" && $_POST["email"] != "" && $_POST["result"] != "" && $_POST["category"] != "") {
+        $category = $link->real_escape_string($_POST['category']);
+        $result = $link->real_escape_string($_POST['result']);
+        $email = $link->real_escape_string($_POST['email']);
+
+        $userQuery = "UPDATE `users_api` SET `infoQuiz` = JSON_OBJECT(\"result\", '$result', \"category\", '$category') WHERE `email` = '$email'";
+        mysqli_query($link,$userQuery);
+        if(mysqli_affected_rows($link) > 0) { 
+            $response["error"] = FALSE;
+            $response["message"] = "Update successfully!";
+            msg_logs_users_for_api($_POST["email"], "Result from Quiz: ".$result.". Category: ".$category);
+
+            echo json_encode($response);
+        } else {
+            $response["error"] = TRUE;
+            $response["message"] = "Something went wrong!";
+            echo json_encode($response);
         }
-        
-        //Make sure that the content type of the POST request has been set to application/json
-        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
-        if(strcasecmp($contentType, 'application/json') != 0){
-            throw new Exception('Content type must be: application/json');
-        }
-        
-        //Receive the RAW post data.
-        $content = trim(file_get_contents("php://input"));
-        
-        //Attempt to decode the incoming RAW post data from JSON.
-        $decoded = json_decode($content, true);
-        
-        //If json_decode failed, the JSON is invalid.
-        if(!is_array($decoded)){
-            throw new Exception('Received content contained invalid JSON!');
-        }
-        
-        //Process the JSON.
-            
     } else {
         // Invalid parameters
         $response["error"] = TRUE;

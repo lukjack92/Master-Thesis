@@ -47,6 +47,7 @@
 	  </nav>
 
 <div class="container color_white">
+	<input type="hidden" id="email" value="<?php echo $_SESSION['usersInfo']['email'] ?>" />
     <div class="page-header">
         <h1>Welcome to Quiz</h1>
 		<h5> Account for <?php echo $_SESSION['usersInfo']['email'] ?> </h5>
@@ -88,14 +89,13 @@
 	<center><div id="loader"></div></center>
 	<center><div id="textToLoader"></div></center>
  
-	<div id="database_content" class="col-md-6 mx-auto ">
-
-		<div class="hide btn btn-primary col-6" id="next">Next</div>
-		<div class="hide btn btn-primary col-6" id="prev">Prev</div>
-
-		
+	<div id="database_content_quiz" class="col-xl-10 mx-auto">
+</br>
+		<div class="btn btn-primary col-md-5 float-right" id="next">Next</div>
+		<div class="btn btn-primary col-md-5 float-left" id="prev">Prev</div>
+		<div class="btn btn-danger col-md-5 float-right" id="submit">Submit</div>
 	</div>
-
+	<div id="rodzic" class="zom col-xl-10 mx-auto"></div>
 </div>
 
 	<nav class="navbar-fixed-bottom">

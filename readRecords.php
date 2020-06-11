@@ -73,12 +73,12 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 							$data .= '<td id="perm_modal">'.$row['permission'].'</td>';
 						if($_SESSION['permission'] == "admin"){
 							if($row['login'] == $_SESSION['login']) {
-								$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button></td>';
+								$data .= '<td> <button type="button" class="btn btn-primary testbuttonLeft" onclick="getDetails('.$id .",". $row['id'].')">Update</button></td>';
 							} else {
 								if($row['isActive'] == "false"){
-									$data .= '<td> <button type="button" class="btn btn-primary testbutton" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+									$data .= '<td> <button type="button" class="btn btn-primary testbuttonLeft" disabled onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" disabled onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
 								} else {
-									$data .= '<td> <button type="button" class="btn btn-primary testbutton" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
+									$data .= '<td> <button type="button" class="btn btn-primary testbuttonLeft" onclick="getDetails('.$id .",". $row['id'].')">Update</button><button type="button" class="btn btn-danger testbutton" onclick="deleteUser('. $row['id'] .')">Delete</button></td>';
 								}
 							}
 						} 

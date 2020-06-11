@@ -14,12 +14,13 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 $data = '<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-				<th scope="col" style="width: 5%">No.</th>
-				<th scope="col" style="width: 13%">UserName</th>
-				<th scope="col" style="width: 19%" >Email</th>
-				<th scope="col" style="width: 19%" >LastModification</th>
-				<th scope="col" style="width: 6%" >Requires Reset Password</th>
-				<th scope="col" style="width: 15%" >Phone Number</th></tr>
+				<th scope="col" style="width: 2%">No.</th>
+				<th scope="col" style="width: 8%">UserName</th>
+				<th scope="col" style="width: 18%">Email</th>
+				<th scope="col" style="width: 18%">LastModification</th>
+				<!-- <th scope="col" style="width: 6%">Requires Reset Password</th> -->
+				<th scope="col" style="width: 15%">Phone Number</th>
+				<th scope="col" style="width: 16%">Last score in the Quiz</th></tr>
 		</thead>
 		<tbody>';
 
@@ -35,8 +36,10 @@ $data = '<table class="table table-bordered table-striped table-responsive table
 						<td>'.$row['username'].'</td>
 						<td>'.$row['email'].'</td>
                         <td>'.$row['timestamp'].'</td>
-                        <td>'.$row['requiresReset'].'</td>
-                        <td>'.$row['phoneNumber'].'</td>';
+                        <!-- <td>'.$row['requiresReset'].'</td> -->
+						<td>'.$row['phoneNumber'].'</td>';
+						$row = json_decode($row['infoQuiz'], JSON_PRETTY_PRINT);
+						$data .= '<td>'.$row['category']."</br>".$row['result'].'</td>';
                     }
 
 				} else {		

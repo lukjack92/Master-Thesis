@@ -79,11 +79,11 @@ $data = '
 				//echo $total_record;
 				$total_page = ceil($total_record/$_SESSION['limit']);
 				
-				if($page>1) $data .= '<button type="button" class="btn btn-primary" onclick="readDatabase('.($page-1).')">Prev</button>';
+				if($page>1) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="readDatabase('.($page-1).')">Prev</button>';
 				
-				for($i=1;$i<=$total_page;$i++) $data .= '<button type="button" class="btn btn-primary" onclick="readDatabase('.$i.')">'.$i.'</button>';
+				for($i=1;$i<=$total_page;$i++) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="readDatabase('.$i.')">'.$i.'</button>';
 
-				if($page<$total_page) $data .= '<button type="button" class="btn btn-primary" onclick="readDatabase('.($page+1).')">Next</button>';
+				if($page<$total_page) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="readDatabase('.($page+1).')">Next</button>';
 				
 				
 				echo $data;

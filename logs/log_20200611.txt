@@ -1,0 +1,95 @@
+Thu 2020-06-11 12:22:01 AM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-11 12:22:12 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 12:22:21 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 12:24:56 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 12:32:28 AM Addr IP: ::1 lukjack92@gmail.com User not found or Invalid login details in API
+Thu 2020-06-11 12:32:33 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 12:33:43 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 12:37:03 AM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 12:42:28 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 12:42:35 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 939926
+Thu 2020-06-11 12:42:39 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 360295
+Thu 2020-06-11 12:55:48 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! sdfgsdfgsdf
+Thu 2020-06-11 12:56:07 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 1234567
+Thu 2020-06-11 12:56:08 AM Addr IP: ::1 lukjack92@gmail.com Password was set up: Fuk4mGQU
+Thu 2020-06-11 12:56:47 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 12:56:55 AM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Thu 2020-06-11 12:58:32 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 12345
+Thu 2020-06-11 12:58:33 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 123456
+Thu 2020-06-11 12:58:34 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 123456
+Thu 2020-06-11 12:58:34 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 123456
+Thu 2020-06-11 01:00:49 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 01:01:20 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 503179
+Thu 2020-06-11 01:01:41 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! asdfasdfasdf
+Thu 2020-06-11 01:01:51 AM Addr IP: ::1 lukjack92@gmail.com Password was set up: 2fGOV6JE
+Thu 2020-06-11 01:03:40 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 103633
+Thu 2020-06-11 01:04:07 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 123123132
+Thu 2020-06-11 01:04:11 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! asdfasdfasdf
+Thu 2020-06-11 01:04:27 AM Addr IP: ::1 lukjack92@gmail.com Password was set up: ZdG0to23
+Thu 2020-06-11 01:06:56 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 215717
+Thu 2020-06-11 01:07:22 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! sdfasdfasdf
+Thu 2020-06-11 01:07:25 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! sdfasdfasdf
+Thu 2020-06-11 01:07:29 AM Addr IP: ::1 lukjack92@gmail.com Password was set up: m23xtbo0
+Thu 2020-06-11 01:07:49 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 01:08:00 AM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Thu 2020-06-11 01:08:04 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 01:08:13 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 01:11:07 AM Addr IP: ::1 lukjack92@gmail.com Rresult from Quiz: 0 of 1. Category: categoryKasia2
+Thu 2020-06-11 01:12:26 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! aasdasd
+Thu 2020-06-11 01:12:29 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! aasdasd
+Thu 2020-06-11 01:12:32 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 34563456
+Thu 2020-06-11 01:12:33 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 34563456
+Thu 2020-06-11 01:12:33 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 34563456
+Thu 2020-06-11 01:12:33 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! 34563456
+Thu 2020-06-11 01:12:57 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! asdfasdf
+Thu 2020-06-11 01:16:30 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 01:16:58 AM Addr IP: ::1 lukasasdf|@gmail.com User not found for forgottenPassword
+Thu 2020-06-11 01:17:07 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 318439
+Thu 2020-06-11 01:27:10 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS was incorrect! dasdfasdf
+Thu 2020-06-11 01:27:26 AM Addr IP: ::1 lukjack92@gmail.com Password was set up: CPAE17bh
+Thu 2020-06-11 01:27:47 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 01:28:00 AM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Thu 2020-06-11 01:28:15 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 7 of 7. Category: delete2
+Thu 2020-06-11 01:28:27 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 0 of 1. Category: categoryKasia2
+Thu 2020-06-11 01:28:34 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 1 of 1. Category: categoryKasia2
+Thu 2020-06-11 01:29:11 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 01:43:35 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 01:43:54 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 3 of 7. Category: delete2
+Thu 2020-06-11 01:45:02 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 0 of 1. Category: categoryKasia2
+Thu 2020-06-11 01:46:06 AM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 01:46:12 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 850202
+Thu 2020-06-11 01:47:00 AM Addr IP: ::1 lukjack92@gmail.com CodeSMS set up: 734106
+Thu 2020-06-11 01:47:52 AM Addr IP: ::1 lukjack92@gmail.com Password was set up: SVEQYdzr
+Thu 2020-06-11 01:48:27 AM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 01:48:36 AM Addr IP: ::1 lukjack92@gmail.com [Success, the password has been reset!]
+Thu 2020-06-11 01:50:15 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 7 of 7. Category: delete2
+Thu 2020-06-11 01:55:18 AM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 31 of 32. Category: undefined
+Thu 2020-06-11 02:32:32 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 02:38:44 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 02:41:53 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 02:46:19 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 02:50:56 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 02:51:06 PM Addr IP: ::1 admin Password incorrect. AuthCounter increment 1.
+Thu 2020-06-11 02:51:16 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 02:51:33 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'true'.
+Thu 2020-06-11 02:51:46 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 02:52:11 PM Addr IP: ::1 admin [isActive] The category 'categoryKasia2' has been changed to 'true'.
+Thu 2020-06-11 02:54:31 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 02:55:00 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 02:55:52 PM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 0 of 1. Category: categoryKasia2
+Thu 2020-06-11 02:56:00 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'false'.
+Thu 2020-06-11 02:56:02 PM Addr IP: ::1 admin [isActive] The category 'categoryKasia2' has been changed to 'false'.
+Thu 2020-06-11 02:59:05 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'true'.
+Thu 2020-06-11 02:59:08 PM Addr IP: ::1 admin [isActive] The category 'delete' has been changed to 'true'.
+Thu 2020-06-11 02:59:20 PM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 0 of 2. Category: delete
+Thu 2020-06-11 02:59:32 PM Addr IP: ::1 admin [isActive] The category 'categoryActive' has been changed to 'false'.
+Thu 2020-06-11 03:05:51 PM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 1 of 2. Category: delete
+Thu 2020-06-11 03:06:06 PM Addr IP: ::1 admin [isActive] The category 'delete' has been changed to 'false'.
+Thu 2020-06-11 03:12:07 PM Addr IP: ::1 admin [isActive] The category 'delete2' has been changed to 'true'.
+Thu 2020-06-11 03:12:31 PM Addr IP: ::1 lukjack92@gmail.com Result from Quiz: 0 of 7. Category: delete2
+Thu 2020-06-11 03:12:57 PM Addr IP: ::1 admin [isActive] The category 'delete2' has been changed to 'false'.
+Thu 2020-06-11 15:39:08 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 15:39:08 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 15:39:08 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 15:39:08 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 03:39:08 PM Addr IP: ::1 API - Failed to connect to database in API
