@@ -7,6 +7,8 @@ if(!file_exists($file)){
 	exit;
 }
 
+$DB_SERVER = " ";
+
 require_once (dirname(__FILE__) . '/secret_key_to_databases.php');
 require_once (dirname(__FILE__, 2) . '/func_msg/functions.php');
 

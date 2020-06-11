@@ -2,3 +2,52 @@ Thu 2020-06-11 06:50:48 PM Addr IP: ::1 admin Successfully logged. AuthCounter i
 Thu 2020-06-11 06:50:57 PM Addr IP: ::1 admin Successfully logged out.
 Thu 2020-06-11 07:03:41 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
 Thu 2020-06-11 07:03:47 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
+Thu 2020-06-11 07:29:51 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 07:30:05 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 07:30:10 PM Addr IP: ::1 admin [isActive] The category 'categoryKasia2' has been changed to 'true'.
+Thu 2020-06-11 19:31:03 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:31:07 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Thu 2020-06-11 07:31:07 PM Addr IP: ::1 API - Failed to connect to database in API
+Thu 2020-06-11 19:31:07 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:31:11 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Thu 2020-06-11 07:31:11 PM Addr IP: ::1 API - Failed to connect to database in API
+Thu 2020-06-11 19:31:15 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:31:19 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Thu 2020-06-11 19:31:19 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:31:23 PM Addr IP: ::1 No connection could be made because the target machine actively refused it.
+
+Thu 2020-06-11 19:32:18 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:18 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:21 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:21 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:21 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:21 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:22 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:22 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:22 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:22 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:22 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:22 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:45 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:45 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:45 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:45 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:47 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:47 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:47 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:47 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:49 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:49 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:32:53 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:53 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 07:32:59 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-11 19:32:59 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:32:59 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 19:33:07 PM Addr IP: ::1 Databases are down!
+Thu 2020-06-11 19:33:07 PM Addr IP: ::1 php_network_getaddresses: getaddrinfo failed: No such host is known. 
+Thu 2020-06-11 07:33:07 PM Addr IP: ::1 admin Database is not working!
+Thu 2020-06-11 07:33:43 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 07:34:20 PM Addr IP: ::1 admin Successfully logged out.
