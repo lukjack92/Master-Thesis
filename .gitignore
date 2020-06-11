@@ -1,1 +1,2 @@
-git rm -r --cached conf_db/secret_key_to_databases.php
+conf_db/secret_key_to_databases.php
+logs/
