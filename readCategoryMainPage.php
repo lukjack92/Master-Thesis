@@ -90,11 +90,11 @@ $data = '<!--The form determine the number a records occurred in table.-->
 				//echo $total_record;
 				$total_page = ceil($total_record/$_SESSION['limit2']);
 				
-				if($page>1) $data .= '<button type="button" class="btn btn-primary" onclick="buttonViewCategory('.($page-1).')">Prev</button>';
+				if($page>1) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="buttonViewCategory('.($page-1).')">Prev</button>';
 				
-				for($i=1;$i<=$total_page;$i++) $data .= '<button type="button" class="btn btn-primary" onclick="buttonViewCategory('.$i.')">'.$i.'</button>';
+				for($i=1;$i<=$total_page;$i++) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="buttonViewCategory('.$i.')">'.$i.'</button>';
 
-				if($page<$total_page) $data .= '<button type="button" class="btn btn-primary" onclick="buttonViewCategory('.($page+1).')">Next</button>';
+				if($page<$total_page) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="buttonViewCategory('.($page+1).')">Next</button>';
 				
 				echo $data;
 }

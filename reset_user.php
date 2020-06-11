@@ -132,7 +132,7 @@
 				<?php }
 					}
 				}		 
-				}else { echo "Database is down!"; }
+				}else { echo "No data"; }
 			?>
 		</tbody>
 	</table>

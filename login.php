@@ -35,7 +35,7 @@
 
 			if($link === false){
 				$not_exist_err = "<div class='alert alert_pass'>Failed to connect to database</div>";
-				msg_logs_users($_POST['login'], "Database is not working!");
+				msg_logs_users($_POST['login'], "".$DB_SERVER." Database is not working!");
 			} elseif (@mysqli_num_rows($result) > 0) {
 				// Output data of each rows
 				if($row = mysqli_fetch_assoc($result)) {				
