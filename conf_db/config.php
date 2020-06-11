@@ -1,5 +1,12 @@
 <?php
 
+$file = dirname(__FILE__) . '/secret_key_to_databases.php';
+
+if(!file_exists($file)){
+	echo sprintf('The file %s does not exist',$file);
+	exit;
+}
+
 require_once (dirname(__FILE__) . '/secret_key_to_databases.php');
 require_once (dirname(__FILE__, 2) . '/func_msg/functions.php');
 
@@ -24,7 +31,7 @@ if(isSiteAvailible($URL1,$DB_PORT_1)) {
 }
 
 //Uncomment following line in order to check which server's database is using
-$infoDATABASE = "Database conected from: ".$DB_SERVER;
+//$infoDATABASE = "Database conected from: ".$DB_SERVER;
 	
 /* Attempt to connect to MySQL database */
 $link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME, $DB_PORT);
