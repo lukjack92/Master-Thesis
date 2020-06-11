@@ -1,0 +1,2 @@
+Thu 2020-06-11 06:50:48 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
+Thu 2020-06-11 06:50:57 PM Addr IP: ::1 admin Successfully logged out.
