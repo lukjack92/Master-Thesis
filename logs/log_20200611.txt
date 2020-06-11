@@ -1,2 +1,4 @@
 Thu 2020-06-11 06:50:48 PM Addr IP: ::1 admin Successfully logged. AuthCounter is 0.
 Thu 2020-06-11 06:50:57 PM Addr IP: ::1 admin Successfully logged out.
+Thu 2020-06-11 07:03:41 PM Addr IP: ::1 lukjack92@gmail.com Successfully logged in App
+Thu 2020-06-11 07:03:47 PM Addr IP: ::1 lukjack92@gmail.com - User from AppMobileProfile  Successfully logged out from Profile App
