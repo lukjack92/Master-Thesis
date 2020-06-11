@@ -1,2 +1,2 @@
 conf_db/secret_key_to_databases.php
-logs/
+logs/*
