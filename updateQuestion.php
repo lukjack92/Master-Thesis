@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 	
 	$query = "update questions set question = '$_POST[spanQuestion]', ansa = '$_POST[spanOdp1]', ansb = '$_POST[spanOdp2]', ansc = '$_POST[spanOdp3]', ansd = '$_POST[spanOdp4]', odp = '$odp', category = '$_POST[chooseCategory]' where id = '$_POST[id]'";
 	@mysqli_query($link,$query);
-	echo '<div class="alert alert-success" role="alert">The question has been updated! '. $_POST['id'].'</div>';
+	echo '<div class="alert alert-success" role="alert">The question has been updated!</div>';
 	//msg_logs_users($_SESSION['login'], "[Update user] Updated login=".$_POST["login"]." firstName=".$_POST["firstName"]." lastName=".$_POST["lastName"]." permission=".$_POST["permission"].".");
 	unset($_POST);
 	

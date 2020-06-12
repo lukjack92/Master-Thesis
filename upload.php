@@ -1,9 +1,8 @@
-
 <?php
 
 session_start();
 require_once "conf_db/config.php";
-require_once 'func_msg/functions.php';
+require_once "func_msg/functions.php";
 
 if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
         header("Location: login.php");
@@ -33,17 +32,18 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 			$json = Array();
 			while($row = @mysqli_fetch_object($result)) {
 				$row_array['category'] = $row->category;
-				array_push($json, $row_array);
+                if($row_array['category'] != "")
+                    array_push($json, $row_array);
 			}
 			
 			if(!empty($json)) { 		
 				foreach($json as $value) {
 					$val = $value['category'];
-					//echo $val." ";
+					echo $val." ";
 					$sql = "INSERT INTO `category` (`name`) VALUES ('$val')";
 					@mysqli_query($link,$sql);
-					//echo "DODANO";
-				}
+					echo "DODANO";
+                }
 		}
 		
         $_SESSION['ok'] = "<div class='alert alert-success' role='alert'><b>The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.</b></div>";

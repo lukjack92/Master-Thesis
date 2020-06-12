@@ -1,3 +1,8 @@
-Czy prawid�owe jest sformu�owanie dotycz�ce lasera, i� posiada on temperatur� ujemn� w skali Kelwina? Na przyk�ad druga zasada termodynamiki m�wi, �e ze wzrostem energii nieuporz�dkowanie uk�adu ro�nie, a w przypadku lasera jest na odwr�t.;aaa;bb b;c cc;d dd;odp3;test5;
-Czy rozwi�zania Diraca z energi� ujemn� wynika�y z tego, �e energia cz�stek (np. pozytonu) by�a tak naprawd� dodatnia, tyle tylko �e �adunek by� przeciwny? Je�li nie to o co w tym chodzi�o?;aa;bb;rr;sss;aa;test5;
-Dlaczego ryby nie zdychaj� w wyniku uderzenia pioruna w powierzchni� wody? Ryby kt�re s� przy powierzchni wody zdychaj�, a co z reszt�? Czy przez ryby (kt�re s� zanurzone w wodzie) przep�ywa pr�d? A co z w�dkowaniem �na pr�d�?;nn;ff;eas;asd;eas;test5;
+Astronauci poruszali się po Księżycu skokami, ponieważ:;Grawitacja Słońca jest tam silniejsza niż na Ziemi;Panuje tam próżnia;Wymuszała to konstrukcja skafandrów;Księżyc ma mniejszą masę niż Ziemia;ansd;Test2;
+Pakujesz do identycznych pudełek 2 kg pierza i 10 kg ołowiu. W tym samym momencie upuszczasz oba pudełka z tej samej wysokości. Pierwsze uderzy w ziemię:;Pudełko z piórami;Pudełko z ołowiem;Oba uderzą równocześnie;To zależy od upakowania pierza;ansc;Test2;
+Promieniotwórczość na Ziemi:;Jest w całości efektem działania człowieka;Jest w większości wywołana przez promieniowanie kosmiczne;Wywołało uderzenie asteroidy 60 mln lat temu;Pochodzi w większości ze źródeł naturalnych;ansd;Test2;
+Amper to jednostka:;Natężenia prądu elektrycznego;Przyspieszenia prądu elektrycznego;Pojemności opornika;Równa masie elektronów w 1 m przewodu;ansa;Test2;
+Wybierz najwłaściwszą odpowiedź. Jeżeli na ciało nie działają żadne siły to:;Pozostaje ono w spoczynku;Pozostaje ono w spoczynku lub porusza się ruchem jednostajnie przyśpieszonym;Pozostaje ono w spoczynku lub porusza się ruchem jednostajnym prostoliniowym;Spada;ansc;Test2;
+Co jest najmniejsze:;Proton;Atom;Neutron;Elektron;ansd;Test2;
+W słynnym wzorze E=mc2 "c" oznacza:;Masę jądra atomu;Stałą upływu czasu;Średnicę pola grawitacyjnego;Prędkość światła;ansd;Test2;
+Zero absolutne to:;Najniższa z osiągniętych dotąd temperatur;Najniższa z możliwych temperatur;Najniższa temperatura zanotowana w kosmosie;Umowna temperatura ciała w próżni;ansb;Test2;

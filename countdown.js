@@ -332,7 +332,7 @@ modelConfirm(function(confirm){
 		});	
 	
 		posting.done(function(data) {
-			console.log(data);
+			//console.log(data);
 			$("#cl").empty().append(data);
 			readDatabase();
 		});
@@ -407,7 +407,7 @@ function viewQuestion(id_question) {
 		var myArray = {ansa: "Answer A", ansb: "Answer B", ansc: "Answer C", ansd: "Answer D"};
 		for(var key in myArray) {
 			//console.log("Przyszło: "+key);
-				console.log(attr.odp);
+			//console.log(attr.odp);
 			if(attr.odp === key) {
 				//console.log("Ustawić: "+myArray[key]);
 				//document.getElementById("spanCorrOdp").value=myArray[key];
@@ -452,7 +452,6 @@ function viewQuestion(id_question) {
 		
 		//Setting the category for the Modal updateViewModal 
 		//$("#chooseCategory").empty().append(attr.category);
-
 		
 		$("#updateViewModal").modal("show");
 	});
@@ -517,12 +516,14 @@ function buttonCancel() {
 }
 
 function buttonAllDatabases() {
+	document.getElementById("removeBox").style.display = "none";
 	$("#database_content").empty();
 	readDatabase();
 }
 
 
 function buttonViewCategory(number_page) {
+	document.getElementById("removeBox").style.display = "none";
 	var posting = $.post("readCategoryMainPage.php", {
 		page: number_page
 	});
@@ -653,6 +654,11 @@ function nextModalFour() {
 					opts.appendChild(document.createTextNode(category[i].category));
 					sel.appendChild(opts);
 				}
+					var sel = document.getElementById("chooseCategoryNewQuestion");
+					var opts = document.createElement('option');
+		
+					opts.appendChild(document.createTextNode("No category"));
+					sel.appendChild(opts);
 			}		
 	});
 	
@@ -697,6 +703,7 @@ function saveQuestion() {
 }
 
 function selectSingleCheckBox() {
+
 	//$('#singleCheckBox').click(function(){
 	//if($(this).is(':checked')) { 
 	//	document.getElementById("removeBox").style.display = "block";
@@ -705,15 +712,13 @@ function selectSingleCheckBox() {
 	//	document.getElementById("removeBox").style.display = "none"; }
 	//});
 	
-	$("#singleCheckBox").click(function () {
-		if ($(this).is(":checked")) {
-			$("#removeBox").show();
-		} else {
-			$("#removeBox").hide();
-		}
-	});
 
-	console.log("It's works")
+		$('#singleCheckBox').click(function(){
+			if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
+				document.getElementById("removeBox").style.display = "block";
+			} else { $('input:checkbox').prop('checked', false); 
+				document.getElementById("removeBox").style.display = "none"; }
+		});
 }
 
 
@@ -726,18 +731,18 @@ function selectAllCheckBox() {
 	});
 	
 	$("input[type='checkbox']").change(function(){
-    var a = $("input[type='checkbox']");
-    if(a.length == a.filter(":checked").length){
-        $('#allCheckBoxes').prop('checked', true);
-    }
-    else {
-        $('#allCheckBoxes').prop('checked', false);
-    }
-});
+		var a = $("input[type='checkbox']");
+		if(a.length == a.filter(":checked").length){
+			$('#allCheckBoxes').prop('checked', true);
+		}
+		else {
+			$('#allCheckBoxes').prop('checked', false);
+		}
+	});
 }
 
 function checkSelectedCheckBoxes() {
-	console.log("Selected checkBox:");
+	//console.log("Selected checkBox:");
 	
 	var arraySelectedCheckBoxes = [];
 	
@@ -761,12 +766,17 @@ function checkSelectedCheckBoxes() {
 }
 
 function actionCheckBox() {
+	$('#singleCheckBox').click(function() {
+        $(':checkbox').each(function() { this.checked = true; });
+    });
+	/*
 	$('#allCheckBox').click(function(){
 		if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
 			document.getElementById("removeBox").style.display = "block";
 		} else { $('input:checkbox').prop('checked', false); 
 			document.getElementById("removeBox").style.display = "none"; }
 		});
+		*/
 }
 
 function saveNewCategory() {
@@ -779,6 +789,7 @@ function saveNewCategory() {
 		//console.log(data);
 		$("#cl").empty().append(data);
 		$("#createViewModalNewCategory").modal("hide");
+		buttonViewCategory();
 	});
 }
 
@@ -894,9 +905,6 @@ function changePhoneNumberProfile(email) {
 
 $(document).ready(function() {
 	
-	//readRecords();
-	//readDatabase();
-	
 	//Session time; 
 	var time = 15;
 	var test = document.getElementById('cl');
@@ -966,4 +974,5 @@ $(document).ready(function() {
 	});
 	
 */
+
 }); 

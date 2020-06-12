@@ -40,8 +40,9 @@ $link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME, $DB_PO
 if($link === false){
 	msg_logs(mysqli_connect_error());
 } else {
-	//echo " Connected12";
-	mysqli_query($link, "SET CHARSET utf8");
-	mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
+	//echo " Connected";
+	//mysqli_query($link, "SET CHARSET utf8");
+	mysqli_query($link, "SET NAMES utf8");
+	//mysqli_query($link, "SET CHARACTER_SET utf8_polish_ci");
 }
 ?>

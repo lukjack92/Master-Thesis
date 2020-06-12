@@ -12,7 +12,6 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 	if($_POST['id'] != "")
 	{	
 		$question = $_POST['id'];
-		echo $question;
 		$query = "delete from questions where id = '$question'";
 		@mysqli_query($link,$query);
 		//$result = @mysqli_query($link,$query);

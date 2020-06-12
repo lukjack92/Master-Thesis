@@ -33,7 +33,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 						// Output data of each rows
 						while($row = mysqli_fetch_assoc($result)) {
 					$data .= '<tr>
-							<td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
+							<td><input type="checkbox" name="allCheckBox" id="singleCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
 							<td scope="row">'.++$id.'</td>
 							<td>'.$row['question'].'</td>';
 							if ($row['category'] != "")

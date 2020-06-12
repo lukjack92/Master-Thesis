@@ -63,7 +63,6 @@ error_reporting(0);
 
 </head>
 <body>
-
       <nav class="navbar navbar-expand-lg bg-dark">
 		<a class="navbar-brand" href="logoutAdmin.php"> <i class="fas fa-home"></i> Logout</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -194,7 +193,7 @@ error_reporting(0);
       </div>
       <div class="modal-body">
 		<p>If you want to upload a file of the questions, it's should be in the right form. The semicolon is as separator.</p>
-		<p>Look at <a href="infoUpload.txt">here</></p>
+		<p>Look at <a href="infoUpload.php">here</></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -225,7 +224,7 @@ error_reporting(0);
 	
 	<div class="form-group">
 		<div class="pull-right">
-			<button type="button" class="btn btn-danger" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>
+			<button type="button" class="btn btn-danger testbutton2" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>
 		</div>
 	</div>
 	<center><div id="loader"></div></center>
@@ -575,114 +574,6 @@ error_reporting(0);
 </div>
 </div>
 </div>
-
-<!--
-<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th>No.</th>
-				<th>Question</th>
-				<th>Answer A</th>
-				<th>Answer B</th>
-				<th>Answer C</th>
-				<th>Answer D</th>
-				<th>Correct answer</th>
-				<th>Actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php 
-				$sql = 'select * from questions';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-
-				if(@mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-					while($row = mysqli_fetch_assoc($result)) {
-			?>
-					<tr>
-						<td><?php echo ++$id ?></td>
-						<td><?php echo $row['question'] ?></td>
-						<td><?php echo $row['ansa'] ?></td>
-						<td><?php echo $row['ansb'] ?></td>
-						<td><?php echo $row['ansc'] ?></td>
-						<td><?php echo $row['ansd'] ?></td>
-						<td><?php echo $row['odp'] ?></td>
-						<td>
-							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2">Remove</button>
-						</td>
-					</tr>
-			<?php	
-					}
-				} else {		
-					echo "No data.";
-				}
-			?>
-		</tbody>
-	</table> 
-
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th>No.</th>
-				<th>FirstName</th>
-				<th>LastName</th>
-				<th>Company</th>
-				<th>Address</th>
-				<th>City</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php 
-				$sql = 'select * from us_users';
-				$result = @mysqli_query($link, $sql);
-				$id = 0;
-
-				if(@mysqli_num_rows($result) > 0) {
-					// Output data of each rows
-					while($row = mysqli_fetch_assoc($result)) {
-			?>
-					<tr>
-						<td><?php echo ++$id ?></td>
-						<td><?php echo $row['first_name'] ?></td>
-						<td><?php echo $row['last_name'] ?></td>
-						<td><?php echo $row['company_name'] ?></td>
-						<td><?php echo $row['address'] ?></td>
-						<td><?php echo $row['city'] ?></td>
-						<td>
-							<button type="button" class="btn btn-primary testbutton2">View</button> <button type="button" class="btn btn-primary testbutton2">Remove</button>
-						</td>
-					</tr>
-			<?php	
-					}
-				} else {		
-					echo "No data.";
-				}
-			?>
-		</tbody>
-	</table> 
-	
-	<nav aria-label="Page navigation">
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
--->
 
 </div>
 	<nav class="navbar-fixed-bottom">
