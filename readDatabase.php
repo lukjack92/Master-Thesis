@@ -38,7 +38,7 @@ $data = '
 		<table class="table table-bordered table-striped table-responsive table-hover">
 		<thead>
 			<tr>
-			<!-- <th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th> -->
+				<th scope="col" style="width: 4%"><input type="checkbox" id="allCheckBoxes" onclick="selectAllCheckBox()" name="vehicle1" ></th>
 				<th scope="col" style="width: 6%">No.</th>
 				<th scope="col" style="width: 72%">Questions</th>
 				<th scope="col" style="width: 2%">Category</th>
@@ -54,7 +54,7 @@ $data = '
 					// Output data of each rows
 					while($row = mysqli_fetch_assoc($result)) {
 				$data .= '<tr>
-						<!-- <td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td> -->
+						<td><input type="checkbox" name="allCheckBox" onclick="actionCheckBox()" value="'.$row['id'].'"></td>
 						<td scope="row">'.++$start_from.'</td>
 						<td>'.$row['question'].'</td>';
 						

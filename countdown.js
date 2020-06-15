@@ -703,16 +703,6 @@ function saveQuestion() {
 }
 
 function selectSingleCheckBox() {
-
-	//$('#singleCheckBox').click(function(){
-	//if($(this).is(':checked')) { 
-	//	document.getElementById("removeBox").style.display = "block";
-	//	console.log("Active button");
-	//} else { 
-	//	document.getElementById("removeBox").style.display = "none"; }
-	//});
-	
-
 		$('#singleCheckBox').click(function(){
 			if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
 				document.getElementById("removeBox").style.display = "block";
@@ -742,8 +732,6 @@ function selectAllCheckBox() {
 }
 
 function checkSelectedCheckBoxes() {
-	//console.log("Selected checkBox:");
-	
 	var arraySelectedCheckBoxes = [];
 	
 	$.each($("input[name='allCheckBox']:checked"), function() {
@@ -763,20 +751,24 @@ function checkSelectedCheckBoxes() {
 			buttonViewCategory();
 		});
 	}
+	//console.log(arraySelectedCheckBoxes);
 }
 
 function actionCheckBox() {
-	$('#singleCheckBox').click(function() {
-        $(':checkbox').each(function() { this.checked = true; });
-    });
-	/*
-	$('#allCheckBox').click(function(){
-		if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
-			document.getElementById("removeBox").style.display = "block";
-		} else { $('input:checkbox').prop('checked', false); 
-			document.getElementById("removeBox").style.display = "none"; }
-		});
-		*/
+	console.log("Clicked");
+
+	var arraySelectedCheckBoxes = [];
+	
+	$.each($("input[name='allCheckBox']:checked"), function() {
+		arraySelectedCheckBoxes.push($(this).val());
+	});
+
+	if(arraySelectedCheckBoxes.length == 0)
+		document.getElementById("removeBox").style.display = "none";
+	else
+		document.getElementById("removeBox").style.display = "block";
+
+	//console.log(arraySelectedCheckBoxes);
 }
 
 function saveNewCategory() {
@@ -906,7 +898,7 @@ function changePhoneNumberProfile(email) {
 $(document).ready(function() {
 	
 	//Session time; 
-	var time = 15;
+	var time = 25;
 	var test = document.getElementById('cl');
 	var label1 = document.getElementById('label1');
 	let drawIntrernal;
@@ -914,7 +906,7 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		//test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
-		time = 15;
+		time = 25;
 		//time = 15;
 		//clearInterval(timer);
 	});

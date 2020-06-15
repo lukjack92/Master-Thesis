@@ -223,9 +223,7 @@ error_reporting(0);
 	<button type="button" class="btn btn-primary testbutton2" onclick="buttonViewCategory()">Categories</button>
 	
 	<div class="form-group">
-		<div class="pull-right">
-			<button type="button" class="btn btn-danger testbutton2" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>
-		</div>
+		<button type="button" class="btn btn-danger testbutton2" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>
 	</div>
 	<center><div id="loader"></div></center>
 	
