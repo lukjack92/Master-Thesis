@@ -15,12 +15,7 @@
 </head>
 <body>
 
-      <nav class="navbar navbar-expand-lg bg-dark"> <?php
-		if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true || (!isset($_SESSION["loggedInApp"])) || $_SESSION["loggedInApp"] !== true) {
-			header("Location: index.php");
-			exit;
-
-		 ?>
+      <nav class="navbar navbar-expand-lg bg-dark">
 		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
 
 		<?php } ?>
