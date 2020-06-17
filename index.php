@@ -56,7 +56,7 @@ echo '
     <main role="main" class=" center color-white">
       <h1 class="black" >PHYSICS Application</h1>
 		<img src="img/logo.jpg">
-        <p class="lead">It&#39;s API used by application.</p> 
+        <p class="lead">It&#39;s API used by application mobile.</p> 
     </main>
 </div>
 	<nav class="navbar-fixed-bottom">
