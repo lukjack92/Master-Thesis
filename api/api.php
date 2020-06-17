@@ -149,7 +149,7 @@
                 exit;
             }
         }
-    } elseif(isset($_POST["type"]) && $_POST["type"]=="category") {
+    } elseif(isset($_POST["type"]) && ($_POST["type"]=="category")) {
         $userQuery = "select name from category where isActive = 'true'";
         $result = mysqli_query($link,$userQuery);
         if(@mysqli_num_rows($result) > 0) {

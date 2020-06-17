@@ -1,3 +1,14 @@
+<?php
+
+	// Initialize the session
+	session_start();
+	
+	// Check if the user is logged in, if not then redirect him to login page
+	if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true || (!isset($_SESSION["loggedInApp"])) || $_SESSION["loggedInApp"] !== true){
+		header("Location: index.php");
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -15,8 +26,15 @@
 </head>
 <body>
 
-      <nav class="navbar navbar-expand-lg bg-dark">
+      <nav class="navbar navbar-expand-lg bg-dark"> <?php
+		if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true || (!isset($_SESSION["loggedInApp"])) || $_SESSION["loggedInApp"] !== true) {
+			header("Location: index.php");
+			exit;
+
+		 ?>
 		<a class="navbar-brand" href="logout.php"> <i class="fas fa-home"></i> Logout</a>
+
+		<?php } ?>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/hamb.png" height="15" width="20">
 			</button>
@@ -33,7 +51,7 @@
 
 <div class="container color_white">
 
-<h1>404 - Page Not Found</h1>
+<h1>Page Not Found</h1>
 
 </div>
 	<nav class="navbar-fixed-bottom">
