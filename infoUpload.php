@@ -63,7 +63,8 @@
 		<p>Important is keep in mind to add a semicolon ; at the end each lines after CategoryOfQuestions;</p>
 		<p><b>For example: </b></br>
 		W słynnym wzorze E=mc2 "c" oznacza;Masę jądra atomu;Stałą upływu czasu;Średnicę pola grawitacyjnego;Prędkość światła;ansd;PytanieTestowe;
-		</p>
+		</p></br>
+		<p>Please remember do not add a new line after last question.</p>
 
 	</main>
 </div>

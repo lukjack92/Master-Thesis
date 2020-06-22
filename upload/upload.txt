@@ -1,8 +1,5 @@
-Astronauci poruszali się po Księżycu skokami, ponieważ:;Grawitacja Słońca jest tam silniejsza niż na Ziemi;Panuje tam próżnia;Wymuszała to konstrukcja skafandrów;Księżyc ma mniejszą masę niż Ziemia;ansd;Test2;
-Pakujesz do identycznych pudełek 2 kg pierza i 10 kg ołowiu. W tym samym momencie upuszczasz oba pudełka z tej samej wysokości. Pierwsze uderzy w ziemię:;Pudełko z piórami;Pudełko z ołowiem;Oba uderzą równocześnie;To zależy od upakowania pierza;ansc;Test2;
-Promieniotwórczość na Ziemi:;Jest w całości efektem działania człowieka;Jest w większości wywołana przez promieniowanie kosmiczne;Wywołało uderzenie asteroidy 60 mln lat temu;Pochodzi w większości ze źródeł naturalnych;ansd;Test2;
-Amper to jednostka:;Natężenia prądu elektrycznego;Przyspieszenia prądu elektrycznego;Pojemności opornika;Równa masie elektronów w 1 m przewodu;ansa;Test2;
-Wybierz najwłaściwszą odpowiedź. Jeżeli na ciało nie działają żadne siły to:;Pozostaje ono w spoczynku;Pozostaje ono w spoczynku lub porusza się ruchem jednostajnie przyśpieszonym;Pozostaje ono w spoczynku lub porusza się ruchem jednostajnym prostoliniowym;Spada;ansc;Test2;
-Co jest najmniejsze:;Proton;Atom;Neutron;Elektron;ansd;Test2;
-W słynnym wzorze E=mc2 "c" oznacza:;Masę jądra atomu;Stałą upływu czasu;Średnicę pola grawitacyjnego;Prędkość światła;ansd;Test2;
-Zero absolutne to:;Najniższa z osiągniętych dotąd temperatur;Najniższa z możliwych temperatur;Najniższa temperatura zanotowana w kosmosie;Umowna temperatura ciała w próżni;ansb;Test2;
+Pytanie testowe 1;aaa;bbbb;ccccc;dddddd;ansa;Test1;
+Pytanie testowe 2;aaa;bbbb;ccccc;dddddd;ansb;Test1;
+Pytanie testowe 3;aaa;bbbb;ccccc;dddddd;ansc;Test1;
+Pytanie testowe 4;aaa;bbbb;ccccc;dddddd;ansd;Test2;
+Pytanie testowe 5;aaa;bbbb;ccccc;dddddd;ansa;Test2;
