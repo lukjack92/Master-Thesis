@@ -898,7 +898,7 @@ function changePhoneNumberProfile(email) {
 $(document).ready(function() {
 	
 	//Session time; 
-	var time = 25;
+	var time = 120;
 	var test = document.getElementById('cl');
 	var label1 = document.getElementById('label1');
 	let drawIntrernal;
@@ -906,7 +906,7 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		//test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
-		time = 25;
+		time = 120;
 		//time = 15;
 		//clearInterval(timer);
 	});
