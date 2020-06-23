@@ -1,4 +1,0 @@
-Wed 2019-12-25 01:41:36 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Wed 2019-12-25 01:49:02 AM Addr IP: ::1 ljack Successfully logged out.
-Wed 2019-12-25 01:50:30 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.
-Wed 2019-12-25 10:48:00 AM Addr IP: ::1 ljack Successfully logged. AuthCounter is 0.

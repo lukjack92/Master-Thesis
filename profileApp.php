@@ -4,7 +4,8 @@
 	// Initialize the session
 	session_start();
 
-	if($_SESSION["usersInfo"]["requiresReset"] == 'true') {
+	//Forcing to go through resetPasswordProfile.php
+ 	if($_SESSION["usersInfo"]["requiresReset"] == 'true') {
 		header("Location: resetPasswordProfile.php");
 		exit;
     }
@@ -12,9 +13,9 @@
 	if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true) {
 		header("Location: loginProfileApp.php");
 		exit;
-    }
-
-    require_once "conf_db/config.php";
+	}
+	
+	require_once "conf_db/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -52,12 +53,6 @@
 	  </nav>
 
 <div class="container color_white">
-	<?php 
-		// If the user was reset password via button I've forgotten password
-		if(isset($_SESSION['changePassword']) && $_SESSION['changePassword'] != "") {
-
-		}
-	?> 
     <div class="page-header">
         <h1>Hi <?php echo $_SESSION['usersInfo']['username']; ?>. Welcome in your profile.</h1>
 		<h2> <?php echo $_SESSION['usersInfo']['email']; ?> </h2>
@@ -105,12 +100,13 @@
         </div>
     </div>
     </div>
-    <p>
-        <a href="resetPasswordProfile.php" class="btn btn-primary">Change Password</a>
-		<a href="changePhoneNumberProfile.php" class="btn btn-primary">Change PhoneNumber</a>
-		<button class="btn btn-danger" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
-		<a href="logoutApp.php" class="btn btn-secondary">Sign Out Of Your Account</a>
-    </p>
+    <p class="padding">
+		<a href="quizApplication.php" class="btn btn-primary testbutton2">Go to Quiz</a>
+        <a href="resetPasswordProfile.php" class="btn btn-primary testbutton2">Change Password</a>
+		<a href="changePhoneNumberProfile.php" class="btn btn-primary testbutton2">Change PhoneNumber</a>
+		<button class="btn btn-danger testbutton2" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
+		<a href="logoutApp.php" class="btn btn-secondary testbutton2">Sign Out Of Your Account</a>
+	</p>
 
 	<div id="database_content"></div>
 </div>
@@ -118,8 +114,7 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
-			<h6 class="text-danger">This version is in development</h6>
-			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
+			</br><?php if(isset($infoDATABASE) !== '') echo $infoDATABASE; ?>
 		</div>
 	</nav>
 	

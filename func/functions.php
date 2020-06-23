@@ -2,6 +2,7 @@
 
 function updateAuthCounter_CheckTime($bool,$authCount,$link,$timestamp) {
 	
+	//Wating time to unlock account
 	$blocked_seconds = 45;
 	$current_time = time();
 	
@@ -86,11 +87,11 @@ function addNewUser($login, $password, $firstName, $lastName, $permission, $link
 	$numResults = mysqli_num_rows($result);
 
 	if($numResults > 0){
-		$_SESSION['error'] = '<center class="alert alert-danger">Nie dodano użytkownika, bo już istnieje</center>'; 
+		$_SESSION['error'] = '<center class="alert alert-danger">The user is exists!</center>'; 
 	} else {
 		$add_user_sql = "INSERT INTO users (login, password, firstName, lastName, permission) VALUES ('$login', '$password', '$firstName', '$lastName', '$permission')";
 		mysqli_query($link,$add_user_sql);
-		$_SESSION['error'] = '<center class="alert alert-danger">Dodano nowego użytkownika</center>'; 
+		$_SESSION['error'] = '<center class="alert alert-danger">A new user has been added</center>'; 
 	}
 }
 

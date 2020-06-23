@@ -3,6 +3,41 @@ body {
 	z-index: 1;
 }
 
+.quiz {
+	padding: 0px;
+	margin: 10px;
+}
+
+.padding {
+	margin-top: 10px;
+}
+
+.paddingTable {
+	padding: 10px;
+	margin: 5px;
+}
+
+.zom
+{
+    animation:anime11 3s linear infinite;
+    -webkit-animation:anime11 3s linear infinite;
+}
+
+#prev, #next, #submit {
+	display: none;
+	margin-bottom: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#database_content_quiz {
+	padding-top: 5px;
+	padding-bottom: 65px;
+	display: none;
+}
+
 .alert_pass {
 	background-color: red;
 	border-radius: 0px;
@@ -31,6 +66,9 @@ body {
 	margin-bottom: 5px;
 }
 
+.testbuttonLeft {
+	margin-left: 5px;
+}
 nav a{
 	color: #eeeeee;
 }
@@ -284,6 +322,17 @@ tr,
 tbody {
     text-align: center;
 }
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* IE/Edge */
+	user-select: none;           /* non-prefixed version, currently*/
+	display: inline;             /*not supported by any browser */
+  }
+
 /*
 #confirmBox
 {

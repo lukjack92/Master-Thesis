@@ -3,37 +3,40 @@
 	// Initialize the session
 	session_start();
 
-    $response = array();
+    //$response = array();
     //header('Content-Type: application/json');
 
     // Logs handle
     require_once ("../func_msg/functions.php");
-    //require_once ("../../conf_db/config.php");
-    
+    //include('./conf_db/config.php');
+    require_once (dirname(__FILE__, 2) . '/conf_db/config.php');
+
+ /*   
     $URL = 'ljack.com.pl';
     $DB_SERVER = $URL;
 	$DB_USERNAME = 'admin';
 	$DB_PASSWORD = 'admin12345';
 	$DB_NAME = 'test';
-
-    $link = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
+*/
+    //$link = @mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME, $PORT);
 
     // Check connection
     if($link === false){
         if(mysqli_connect_error()) {
             $response["error"] = TRUE;
             $response["message"] = "Failed to connect to database";
-            msg_logs_users_for_api($_POST["email"], "Failed to connect to database in API");
+            msg_logs_users_for_api("API -", "Failed to connect to database in API");
             echo json_encode($response);
             exit;
         }
-    } else {
+    } 
+    /* else {
         mysqli_query($link, "SET CHARSET utf8");
         mysqli_query($link, "SET CHARACTER_SET utf8_unicode_ci");
     }
-
+*/
     if($_SERVER["REQUEST_METHOD"] == "GET") {
-        $response["message"] = "It is AppPhone";
+        $response["message"] = "It is API";
         echo json_encode($response);
         exit;
     } 
@@ -81,7 +84,7 @@
                 exit;
             }  
         }
-    }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])){
+    }else if(isset($_POST["type"]) && ($_POST["type"]=="login") && isset($_POST["email"]) && isset($_POST["password"])) {
         // Login user
         $email = $link->real_escape_string($_POST['email']);
         $password = $link->real_escape_string(md5($_POST["password"]));
@@ -133,7 +136,8 @@
                 msg_logs_users_for_api($_POST["email"], "CodeSMS set up: ".$codeSMS);
                 //Session if user is exist in DB for page checkCodeSMS.php
                 $_SESSION['usersInfo'] = $user;
-                //Session fot sms.php
+                $_SESSION['resetPassword2FA'] = "reset";
+                //Session for sms.php
                 $_SESSION['codeSms'] = $codeSMS;
                 echo json_encode($response);
                 exit;
@@ -145,16 +149,78 @@
                 exit;
             }
         }
-    }    
-    else {
+    } elseif(isset($_POST["type"]) && ($_POST["type"]=="category")) {
+        $userQuery = "select name from category where isActive = 'true'";
+        $result = mysqli_query($link,$userQuery);
+        if(@mysqli_num_rows($result) > 0) {
+            $data = array();
+            // Output data of each rows
+            while($row = mysqli_fetch_assoc($result)) {
+                array_push($data, $row);
+            }
+            $response["error"] = FALSE;
+            $response["message"] = $data;
+            echo json_encode($response);
+            exit;
+
+        } else {
+            $response["error"] = TRUE;
+            $response["message"] = "No data";
+            echo json_encode($response);
+            exit;
+        }
+    } elseif(isset($_POST["type"]) && $_POST["type"] == "questionsFromCategory" && $_POST["category"] != "") {
+        $category = $link->real_escape_string($_POST['category']);
+        
+        $userQuery = "select * from category where name = '$category' and isActive = 'true'";
+        $result = mysqli_query($link,$userQuery);
+        if(mysqli_num_rows($result) > 0) { 
+            $userQuery = "select id,question,ansa,ansb,ansc,ansd,odp from questions where category = '$category'";
+            $result = mysqli_query($link,$userQuery);
+            $data = array();
+            if(mysqli_num_rows($result) > 0) {
+                // Output data of each rows
+                while($row = mysqli_fetch_assoc($result)) {
+                    array_push($data, $row);
+                }
+                $response["error"] = FALSE;
+                $response["message"] = $data;
+                echo json_encode($response);
+                exit;
+    
+            } else {  
+                $response["error"] = TRUE;
+                $response["message"] = "No data";
+                echo json_encode($response); 
+            }
+        } else {
+            $response["error"] = TRUE;
+            $response["message"] = "No date or category is inactive!";
+            echo json_encode($response);
+        }
+    } elseif(isset($_POST["type"]) && $_POST["type"] == "updateResultQuizForUser" && $_POST["email"] != "" && $_POST["result"] != "" && $_POST["category"] != "") {
+        $category = $link->real_escape_string($_POST['category']);
+        $result = $link->real_escape_string($_POST['result']);
+        $email = $link->real_escape_string($_POST['email']);
+
+        $userQuery = "UPDATE `users_api` SET `infoQuiz` = JSON_OBJECT(\"result\", '$result', \"category\", '$category') WHERE `email` = '$email'";
+        mysqli_query($link,$userQuery);
+        if(mysqli_affected_rows($link) > 0) { 
+            $response["error"] = FALSE;
+            $response["message"] = "Update successfully!";
+            msg_logs_users_for_api($_POST["email"], "Result from Quiz: ".$result.". Category: ".$category);
+
+            echo json_encode($response);
+        } else {
+            $response["error"] = TRUE;
+            $response["message"] = "Something went wrong!";
+            echo json_encode($response);
+        }
+    } else {
         // Invalid parameters
         $response["error"] = TRUE;
         $response["message"] ="Invalid parameters";
         echo json_encode($response);
         exit;
-    }
-
-    function generateRandomCodeSMSAndPassword() {
-        return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(8/strlen($x)) )),1,8);
     }
 ?>

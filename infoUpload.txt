@@ -1,5 +1,0 @@
-Syntax the file which want to add.
-Pytanie;Odpowiedz1;Odpowiedz2;Odpowiedz3;Odpowiedz4;PrawidlowaOdpowiedz;KategoriaPytania;
-
-For example:
-Czy prawidlowe jest sformulowanie dotyczace lasera, iz posiada on temperature ujemna w skali Kelwina? Na przyklad druga zasada termodynamiki mowi, ze wzrostem energii nieuporzadkowanie ukladu rosnie, a w przypadku lasera jest na odwrot.;Odpowiedz1;Odpowiedz2;Odpowiedz3;Odpowiedz4;PrawidlowaOdpowiedz;KategoriaPytania;

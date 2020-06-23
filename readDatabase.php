@@ -20,17 +20,18 @@ $start_from = ($page-1)*$_SESSION['limit'];
 
 $data = '
 	<!--The form determine the number a records occurred in table.-->
-	<form action="#" method="post" id="rangeRecords">
-    	<div class="form-group col-md-4">
-      		<label for="inputState">The range of record occurrences in this table</label>
-      		<select name="inputState" class="form-control">
+	<form action="#" method="post" id="rangeRecords" class="border rounded mx-auto paddingTable">
+    	<div class="form-group">
+			<label for="inputStateCategory"><b>THE RANGE OF RECORDS OCCURRENCES IN THIS TABLE</b></label>
+      		<select name="inputState" class="form-control col-4 mx-auto">
         		<option>5</option>
 				<option>10</option>
 				<option>15</option>
 				<option>20</option>
+				<option>40</option>
      		 </select>
     	</div>
-		<div class="form-group col-md-4">
+		<div class="form-group mx-auto">
 			<button type="submit" class="btn btn-primary">Save</button>
 		</div>
 	</form>
@@ -78,11 +79,11 @@ $data = '
 				//echo $total_record;
 				$total_page = ceil($total_record/$_SESSION['limit']);
 				
-				if($page>1) $data .= '<button type="button" class="btn btn-primary" onclick="readDatabase('.($page-1).')">Prev</button>';
+				if($page>1) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="readDatabase('.($page-1).')">Prev</button>';
 				
-				for($i=1;$i<=$total_page;$i++) $data .= '<button type="button" class="btn btn-primary" onclick="readDatabase('.$i.')">'.$i.'</button>';
+				for($i=1;$i<=$total_page;$i++) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="readDatabase('.$i.')">'.$i.'</button>';
 
-				if($page<$total_page) $data .= '<button type="button" class="btn btn-primary" onclick="readDatabase('.($page+1).')">Next</button>';
+				if($page<$total_page) $data .= '<button type="button" class="btn btn-primary testbuttonLeft" onclick="readDatabase('.($page+1).')">Next</button>';
 				
 				
 				echo $data;

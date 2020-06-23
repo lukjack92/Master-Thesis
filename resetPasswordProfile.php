@@ -50,7 +50,7 @@
 
 <div class="container color_white">
     <div class="page-header">
-        <h1>Manage settings</h1>
+        <h1>Reset password</h1>
 		<h5> Account for <?php echo $_SESSION['usersInfo']['email'] ?> </h5>
     </div>
     
@@ -104,7 +104,6 @@
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
-			<h6 class="text-danger">This version is in development</h6>
 			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
 		</div>
 	</nav>

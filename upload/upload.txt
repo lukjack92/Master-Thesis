@@ -1,5 +1,5 @@
-Pytanie do testowania usuwania1.;aaa;bbb b;c cc;d dd;ansc;delete2;
-Pytanie do testowania usuwania2;dddd d;ccc c;bb b;d d;ansc;delete2;
-Pytanie do testowania usuwania3;dddd d;ccc c;bb b;d d;ansc;delete2;
-Pytanie do testowania usuwania4;dddd d;ccc c;bb b;d d;ansc;delete2;
-Pytanie do testowania usuwania5;dddd d;ccc c;bb b;d d;ansc;delete2;
+Pytanie testowe 1;aaa;bbbb;ccccc;dddddd;ansa;Test1;
+Pytanie testowe 2;aaa;bbbb;ccccc;dddddd;ansb;Test1;
+Pytanie testowe 3;aaa;bbbb;ccccc;dddddd;ansc;Test1;
+Pytanie testowe 4;aaa;bbbb;ccccc;dddddd;ansd;Test2;
+Pytanie testowe 5;aaa;bbbb;ccccc;dddddd;ansa;Test2;

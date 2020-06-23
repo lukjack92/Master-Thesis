@@ -33,7 +33,7 @@ function forgotPwdToApp() {
                     var email = json.user.email;
                     var number = json.user.phoneNumber;
 
-                    console.log(email+" "+number);
+                    //console.log(email+" "+number);
 
                     var posting = $.post("sms/sms.php", {
                         phoneNumber: number,

@@ -10,6 +10,11 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true) {
 } else {
 	if($_POST['question'] != "" && $_POST['odp1'] != "" && $_POST['odp2'] && $_POST['odp3'] && $_POST['odp4'] && $_POST['corrOdp'] && $_POST['category'])
 	{
+
+		if($_POST['category'] == "No category") {
+			$_POST['category'] = "";
+		}
+
 		$array = array("Answer A" => 'ansa', "Answer B" => 'ansb', "Answer C" => 'ansc', "Answer D" => 'ansd');
 		$odp;
 		foreach ($array as $key => $value) {

@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 		    //echo '<div class="alert alert-success" role="alert">The question has been removed!</div>';
         }
         unset($_POST);
-        echo '<div class="alert alert-success" role="alert">The question has been removed!</div>';
+        echo '<div class="alert alert-success" role="alert">The questions has been removed!</div>';
 	}
 }
 ?>

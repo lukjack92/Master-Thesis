@@ -91,9 +91,8 @@ modelConfirm(function(confirm){
 function updateIsActive(id, active) {
 	
 	active ? active=false : active=true;  
-	
 	console.log(active);
-	
+
 	var posting = $.post("updateIsActive.php", {
 		id: id,
 		active: active
@@ -102,6 +101,22 @@ function updateIsActive(id, active) {
 	posting.done(function(data) {
 		$("#cl").empty().append(data);
 		readRecords();
+	});
+}
+
+function updateIsActiveCategory(id, active) {
+	
+	active ? active=false : active=true;  
+	console.log(active);
+	
+	var posting = $.post("updateIsActiveCategory.php", {
+		id: id,
+		active: active
+	});
+	
+	posting.done(function(data) {
+		$("#cl").empty().append(data);
+		buttonViewCategory();
 	});
 }
 
@@ -156,8 +171,20 @@ function updateUser() {
 }
 
 function readRecords() {
-	
 	var getting = $.get("readRecords.php", {});
+	console.log("Start");
+	$("#record_content").text("Loading...");
+	document.getElementById("loader").style.display = "block";
+	getting.done(function(data) {
+		if(document.readyState == 'complete'){ 
+			console.log("Koniec"); 
+			$("#record_content").empty().append(data);
+			document.getElementById("loader").style.display = "none";};
+	}); 
+}
+
+function readUsersApp() {
+	var getting = $.get("readUsersApp.php", {});
 	console.log("Start");
 	$("#record_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
@@ -305,7 +332,7 @@ modelConfirm(function(confirm){
 		});	
 	
 		posting.done(function(data) {
-			console.log(data);
+			//console.log(data);
 			$("#cl").empty().append(data);
 			readDatabase();
 		});
@@ -379,10 +406,10 @@ function viewQuestion(id_question) {
 		//$("#spanCorrOdp").empty().append(attr.odp);
 		var myArray = {ansa: "Answer A", ansb: "Answer B", ansc: "Answer C", ansd: "Answer D"};
 		for(var key in myArray) {
-			console.log("Przyszło: "+key);
-				console.log(attr.odp);
+			//console.log("Przyszło: "+key);
+			//console.log(attr.odp);
 			if(attr.odp === key) {
-				console.log("Ustawić: "+myArray[key]);
+				//console.log("Ustawić: "+myArray[key]);
 				//document.getElementById("spanCorrOdp").value=myArray[key];
 				$("#spanCorrOdp").val(myArray[key]);
 				break;
@@ -402,7 +429,7 @@ function viewQuestion(id_question) {
 				//console.log("Data: ");
 				if(document.readyState == 'complete'){
 					for(var i=0; i<category.length-1; i++) {
-						console.log(category[i].category);
+						//console.log(category[i].category);
 						//$("#database_content").append('<button type="button" class="btn btn-primary" onclick="viewQuestionFromCategory(\''+attr[i].category+'\')">'+attr[i].category+'</button>');
 						var sel = document.getElementById("chooseCategory");
 						var opts = document.createElement('option');
@@ -410,14 +437,21 @@ function viewQuestion(id_question) {
 						opts.appendChild(document.createTextNode(category[i].category));
 						sel.appendChild(opts);
 					}
-				
-				$("#chooseCategory").val(cate);
+
+					var sel = document.getElementById("chooseCategory");
+					var opts = document.createElement('option');
+		
+					opts.appendChild(document.createTextNode("No category"));
+					sel.appendChild(opts);
+
+					if(cate == "") {
+						$("#chooseCategory").val("No category") 
+					} else $("#chooseCategory").val(cate);
 				}		
 		});
 		
 		//Setting the category for the Modal updateViewModal 
 		//$("#chooseCategory").empty().append(attr.category);
-
 		
 		$("#updateViewModal").modal("show");
 	});
@@ -428,6 +462,10 @@ function viewQuestion(id_question) {
 		var myID = $("#myID").text();	
 		console.log("SAVE: "+myID);
 		//$("#updateViewModal").modal("hide");
+
+		var category = $("#chooseCategory").val();
+
+		if(category == "No category") category = "";
 		
 		var posting = $.post("updateQuestion.php", {
 			id: id_question,
@@ -437,7 +475,7 @@ function viewQuestion(id_question) {
 			spanOdp3: $("#spanOdp3").text(),
 			spanOdp4: $("#spanOdp4").text(),
 			spanCorrOdp: $("#spanCorrOdp").val(),
-			chooseCategory: $("#chooseCategory").val()
+			chooseCategory: category
 		});
 		
 		posting.done(function(data) {
@@ -478,12 +516,14 @@ function buttonCancel() {
 }
 
 function buttonAllDatabases() {
+	document.getElementById("removeBox").style.display = "none";
 	$("#database_content").empty();
 	readDatabase();
 }
 
 
 function buttonViewCategory(number_page) {
+	document.getElementById("removeBox").style.display = "none";
 	var posting = $.post("readCategoryMainPage.php", {
 		page: number_page
 	});
@@ -553,8 +593,8 @@ function buttonViewCategory(number_page) {
 }
 
 function viewQuestionFromCategory(category) {
-	console.log("Wywolano funkcje view");
-	console.log(category);
+	//console.log("Wywolano funkcje view");
+	//console.log(category);
 	//console.log("Clicked button of category");
 	var getting = $.get("readQuestionCategory.php", {
 		category: category
@@ -614,6 +654,11 @@ function nextModalFour() {
 					opts.appendChild(document.createTextNode(category[i].category));
 					sel.appendChild(opts);
 				}
+					var sel = document.getElementById("chooseCategoryNewQuestion");
+					var opts = document.createElement('option');
+		
+					opts.appendChild(document.createTextNode("No category"));
+					sel.appendChild(opts);
 			}		
 	});
 	
@@ -658,23 +703,12 @@ function saveQuestion() {
 }
 
 function selectSingleCheckBox() {
-	//$('#singleCheckBox').click(function(){
-	//if($(this).is(':checked')) { 
-	//	document.getElementById("removeBox").style.display = "block";
-	//	console.log("Active button");
-	//} else { 
-	//	document.getElementById("removeBox").style.display = "none"; }
-	//});
-	
-	$("#singleCheckBox").click(function () {
-		if ($(this).is(":checked")) {
-			$("#removeBox").show();
-		} else {
-			$("#removeBox").hide();
-		}
-	});
-
-	console.log("It's works")
+		$('#singleCheckBox').click(function(){
+			if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
+				document.getElementById("removeBox").style.display = "block";
+			} else { $('input:checkbox').prop('checked', false); 
+				document.getElementById("removeBox").style.display = "none"; }
+		});
 }
 
 
@@ -687,19 +721,17 @@ function selectAllCheckBox() {
 	});
 	
 	$("input[type='checkbox']").change(function(){
-    var a = $("input[type='checkbox']");
-    if(a.length == a.filter(":checked").length){
-        $('#allCheckBoxes').prop('checked', true);
-    }
-    else {
-        $('#allCheckBoxes').prop('checked', false);
-    }
-});
+		var a = $("input[type='checkbox']");
+		if(a.length == a.filter(":checked").length){
+			$('#allCheckBoxes').prop('checked', true);
+		}
+		else {
+			$('#allCheckBoxes').prop('checked', false);
+		}
+	});
 }
 
 function checkSelectedCheckBoxes() {
-	console.log("Selected checkBox:");
-	
 	var arraySelectedCheckBoxes = [];
 	
 	$.each($("input[name='allCheckBox']:checked"), function() {
@@ -719,15 +751,24 @@ function checkSelectedCheckBoxes() {
 			buttonViewCategory();
 		});
 	}
+	//console.log(arraySelectedCheckBoxes);
 }
 
 function actionCheckBox() {
-	$('#allCheckBox').click(function(){
-		if($(this).is(':checked')) { $('input:checkbox').prop('checked', true);
-			document.getElementById("removeBox").style.display = "block";
-		} else { $('input:checkbox').prop('checked', false); 
-			document.getElementById("removeBox").style.display = "none"; }
-		});
+	console.log("Clicked");
+
+	var arraySelectedCheckBoxes = [];
+	
+	$.each($("input[name='allCheckBox']:checked"), function() {
+		arraySelectedCheckBoxes.push($(this).val());
+	});
+
+	if(arraySelectedCheckBoxes.length == 0)
+		document.getElementById("removeBox").style.display = "none";
+	else
+		document.getElementById("removeBox").style.display = "block";
+
+	//console.log(arraySelectedCheckBoxes);
 }
 
 function saveNewCategory() {
@@ -740,6 +781,7 @@ function saveNewCategory() {
 		//console.log(data);
 		$("#cl").empty().append(data);
 		$("#createViewModalNewCategory").modal("hide");
+		buttonViewCategory();
 	});
 }
 
@@ -855,11 +897,8 @@ function changePhoneNumberProfile(email) {
 
 $(document).ready(function() {
 	
-	//readRecords();
-	//readDatabase();
-	
 	//Session time; 
-	var time = 15;
+	var time = 120;
 	var test = document.getElementById('cl');
 	var label1 = document.getElementById('label1');
 	let drawIntrernal;
@@ -867,7 +906,7 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		//test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
-		time = 15;
+		time = 120;
 		//time = 15;
 		//clearInterval(timer);
 	});
@@ -927,4 +966,5 @@ $(document).ready(function() {
 	});
 	
 */
+
 }); 
