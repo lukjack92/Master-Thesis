@@ -33,7 +33,7 @@
 				<a class="nav-link" href="loginProfileApp.php">LogIn to App</a>
 			</li>			
 			<li class="nav-item">
-				<a class="nav-link" href="app/app-debug.apk">Download .apk</a>
+				<a class="nav-link" href="app/app-release.apk">Download .apk</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="info.php">About</a>
