@@ -176,10 +176,11 @@ function readRecords() {
 	$("#record_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	getting.done(function(data) {
-		if(document.readyState == 'complete'){ 
+		//if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#record_content").empty().append(data);
-			document.getElementById("loader").style.display = "none";};
+			document.getElementById("loader").style.display = "none";
+		//};
 	}); 
 }
 
@@ -189,10 +190,11 @@ function readUsersApp() {
 	$("#record_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	getting.done(function(data) {
-		if(document.readyState == 'complete'){ 
+		//if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#record_content").empty().append(data);
-			document.getElementById("loader").style.display = "none";};
+			document.getElementById("loader").style.display = "none";
+		//};
 	}); 
 }
 
@@ -205,11 +207,11 @@ function readDatabase(number_page) {
 	$("#database_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	posting.done(function(data) {
-		if(document.readyState == 'complete'){ 
+		//if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#database_content").empty().append(data);
 			document.getElementById("loader").style.display = "none";
-		};	
+		//};	
 	}); 
 }
 
@@ -533,11 +535,11 @@ function buttonViewCategory(number_page) {
 	document.getElementById("loader").style.display = "block";
 	
 	posting.done(function(data) {
-		if(document.readyState == 'complete'){
+		//if(document.readyState == 'complete'){
 			console.log("Koniec"); 
 			$("#database_content").empty().append(data);	
 			document.getElementById("loader").style.display = "none";
-		}
+		//}
 	});
 	
 /*	//$("#database_content").empty();
