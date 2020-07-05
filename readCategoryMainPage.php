@@ -75,7 +75,8 @@ $data = '<!--The form determine the number a records occurred in table.-->
 							
 					$data .= '<td>'.$row['counter'].'</td>
 						<td>
-							<button type="button" class="btn btn-primary testbutton2" onclick="viewQuestionFromCategory(\''.$row['name'].'\')">View</button> <button type="button" class="btn btn-danger testbutton2" onclick="delCategory('.$row['id'].',\''.$row['name'].'\')">Delete</button>
+							<button type="button" class="btn btn-primary testbutton2" onclick="viewQuestionFromCategory(\''.$row['name'].'\')">View</button>
+							<button type="button" class="btn btn-danger testbutton2" onclick="delCategory('.$row['id'].',\''.$row['name'].'\')">Delete</button>
 						</td></tr>';
 					}
 				} else {		

@@ -32,7 +32,7 @@ error_reporting(0);
 
 	if(isset($_POST['submit'])){
 		$selected_val = $_POST['inputState'];  // Storing Selected Value In Variable
-		echo "You have selected :" .$selected_val;  // Displaying Selected Value
+		//echo "You have selected :" .$selected_val;  // Displaying Selected Value
 	}
 
 	if(isset($_POST['inputState'])) {
@@ -92,7 +92,7 @@ error_reporting(0);
   <div class="pull-right">
 	<button class="btn btn-success testbutton2" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
 	<button class="btn btn-success testbutton2" data-toggle="modal" data-target="#createViewModalNewCategory">Create A Category</button>
-  </div></br></br>
+  </div><br/><br/>
 
 	<div id="ok">
 	<?php 
@@ -193,7 +193,7 @@ error_reporting(0);
       </div>
       <div class="modal-body">
 		<p>If you want to upload a file of the questions, it's should be in the right form. The semicolon is as separator.</p>
-		<p>Look at <a href="infoUpload.php">here</></p>
+		<p>Look at <a href="infoUpload.php">here</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -213,14 +213,22 @@ error_reporting(0);
 		<a href="logoutAdmin.php" class="btn btn-danger testbutton2">Sign Out Of Your Account</a>
     </p>
 <div class="bg-form-upload border rounded">
-<label><b>UPLOAD THE QUESTIONS FROM THE FILE TO DATABASE (SEE <a href="" data-toggle="modal" data-target="#informationToUploadFile">HERE</a>)</b></label>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-		<input type="file" name="fileToUpload" id="fileToUpload">
-		<input type="submit" value="Upload File" name="submit">
-</form>
+	<label><b>UPLOAD THE QUESTIONS FROM THE FILE TO DATABASE (SEE <a href="" data-toggle="modal" data-target="#informationToUploadFile">HERE</a>)</b></label>
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="submit" value="Upload File" name="submit">
+	</form>
+<!-- <hr>
+	<label><b>UPLOAD THE VIDEO TO SERVER</b></label>
+	<form action="uploadVideo.php" method="post" enctype="multipart/form-data">
+			<input type="file" name="videoToUpload" id="videoToUpload">
+			<input type="submit" value="Upload Video" name="submit">
+	</form> -->
 </div>
+
 	<button type="button" class="btn btn-primary testbutton2" onclick="buttonAllDatabases()">View All Database</button>
 	<button type="button" class="btn btn-primary testbutton2" onclick="buttonViewCategory()">Categories</button>
+	<!-- <button type="button" class="btn btn-primary testbutton2" onclick="">Videos</button> -->
 	
 	<div class="form-group">
 		<button type="button" class="btn btn-danger testbutton2" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>
@@ -329,10 +337,10 @@ error_reporting(0);
 </div>-->
 <div class="col-10">
       <select id="spanCorrOdp" class="form-control">
-      <option value="Answer A"><b>Answer A</b></option>
-      <option value="Answer B"><b>Answer B</b></option>
-      <option value="Answer C"><b>Answer C</b></option>
-      <option value="Answer D"><b>Answer D</b></option>
+      <option value="Answer A" class="font-weight-bold">Answer A</option>
+      <option value="Answer B" class="font-weight-bold">Answer B</option>
+      <option value="Answer C" class="font-weight-bold">Answer C</option>
+      <option value="Answer D" class="font-weight-bold">Answer D</option>
       </select>
 </div>
 </div>
@@ -487,10 +495,10 @@ error_reporting(0);
 <label for="permission">Choose the correct answer:</label>
 </div>
       <select id="chooseAnswer" class="form-control">
-      <option><b>Answer A</b></option>
-      <option><b>Answer B</b></option>
-      <option><b>Answer C</b></option>
-      <option><b>Answer D</b></option>
+      <option class="font-weight-bold">Answer A</option>
+      <option class="font-weight-bold">Answer B</option>
+      <option class="font-weight-bold">Answer C</option>
+      <option class="font-weight-bold">Answer D</option>
       </select>
 </div>
 
@@ -588,7 +596,7 @@ error_reporting(0);
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
-  	<script type="text/javascript" src="countdown.js"></script>
+	<script type="text/javascript" src="countdown.js"></script>
   	<script type="text/javascript" src="<?php echo $loadScripts ?>"></script>
 </body>
 </html>

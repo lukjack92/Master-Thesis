@@ -16,7 +16,6 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
 	$array = array("Answer A" => 'ansa', "Answer B" => 'ansb', "Answer C" => 'ansc', "Answer D" => 'ansd');
 	$odp;
 	foreach ($array as $key => $value) {
-		
 		if($key == $_POST['spanCorrOdp']){
 			$odp = $value;
 			break;

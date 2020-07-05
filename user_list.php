@@ -107,21 +107,21 @@
 <div class="pull-left">
 <label for="login">Login</label>
 </div>
-<input type="text" id="login" name="login"placeholder="Login" class="form-control" />
+<input type="text" id="login" name="login" placeholder="Login" class="form-control" />
 </div>
 
 <div class="form-group">
 <div class="pull-left">
 <label for="first_name">First Name</label>
 </div>
-<input type="text" id="first_name" name="first_name"placeholder="First Name" class="form-control" />
+<input type="text" id="first_name" name="first_name" placeholder="First Name" class="form-control" />
 </div>
  
 <div class="form-group">
 <div class="pull-left">
 <label for="last_name">Last Name</label>
 </div>
-<input type="text" id="last_name" name="last_name"placeholder="Last Name" class="form-control" />
+<input type="text" id="last_name" name="last_name" placeholder="Last Name" class="form-control" />
 </div>
 
 <div class="form-group">
@@ -136,8 +136,8 @@
 <label for="permission">Permission</label>
 </div>
       <select id="inputState" class="form-control">
-      <option selected>User</option>
-      <option>Admin</option>
+      	<option selected>User</option>
+      	<option>Admin</option>
       </select>
 </div>
  
@@ -181,21 +181,21 @@
 <div class="pull-left">
 <label for="first_name">Login</label>
 </div>
-<input type="text" id="update_login" name="login"placeholder="Login" class="form-control" />
+<input type="text" id="update_login" name="login" placeholder="Login" class="form-control" />
 </div>
 
 <div class="form-group">
 <div class="pull-left">
 <label for="first_name">First Name</label>
 </div>
-<input type="text" id="update_first_name" name="first_name"placeholder="First Name" class="form-control" />
+<input type="text" id="update_first_name" name="first_name" placeholder="First Name" class="form-control" />
 </div>
  
 <div class="form-group">
 <div class="pull-left">
 <label for="last_name">Last Name</label>
 </div>
-<input type="text" id="update_last_name" name="last_name"placeholder="Last Name" class="form-control" />
+<input type="text" id="update_last_name" name="last_name" placeholder="Last Name" class="form-control" />
 </div>
 
 <div class="form-group">
