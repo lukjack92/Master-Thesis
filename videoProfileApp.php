@@ -2,20 +2,16 @@
     error_reporting(0);
 
 	// Initialize the session
-	session_start();
-
-	//Forcing to go through resetPasswordProfile.php
- 	if($_SESSION["usersInfo"]["requiresReset"] == 'true') {
-		header("Location: resetPasswordProfile.php");
-		exit;
-    }
+    session_start();
+    
 	// Check if the user is logged in, if not then redirect him to login page
 	if(!isset($_SESSION["loggedInApp"]) || $_SESSION["loggedInApp"] !== true) {
 		header("Location: loginProfileApp.php");
 		exit;
-	}
-	
-	require_once "conf_db/config.php";
+    }
+
+    require_once "conf_db/config.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -53,9 +49,10 @@
 	  </nav>
 
 <div class="container color_white">
+	<input type="hidden" id="email" value="<?php echo $_SESSION['usersInfo']['email'] ?>" />
     <div class="page-header">
-        <h1>Hi <?php echo $_SESSION['usersInfo']['username']; ?>. Welcome in your profile.</h1>
-		<h2> <?php echo $_SESSION['usersInfo']['email']; ?> </h2>
+        <h1>Movies</h1>
+		<h5> Account for <?php echo $_SESSION['usersInfo']['email'] ?> </h5>
     </div>
     
     <!--Current time-->
@@ -63,68 +60,70 @@
     
     <!--Session time displaying-->
 	<div id="time"></div>
+    <a href="profileApp.php" class="btn btn-danger testbutton2">Back page</a>
 
-	<!-- Modal (Confirm if you want remove account)-->
-	<div class="modal fade" id="modalRemoveAccount" tabindex="-1" role="dialog" aria-labelledby="modalRemoveAccount" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title">Are you sure to delete this account?</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<div class="modal-body">
-				<button class="btn btn-primary yes"  onclick="yesDeleteAccount('<?php echo $_SESSION['usersInfo']['email']; ?>')" >Yes</button>
-				<button class="btn btn-primary no" data-dismiss="modal">No</button>
-		</div>
-		</div>
-	</div>
-	</div>
+
+
+    <?php
+    if($link->connect_error) {
+    ?> <div class="alert alert-danger" role="alert"><?php echo "Error from database: ".$link->connect_errno;?></div> <?php
+    }else  {
+        if($result = @$link->query("select * from video where isActive = true"))
+        {
+          $how = $result->num_rows;
+
+          if($how == 0) {
+            echo '<div class="alert alert-danger"><center><strong>There are no movies</strong></center></div>';
+          }else {
+            for($i = 1; $i <= $how; $i++) {
+              $row = $result->fetch_assoc();
+              $URL = $row['path'];
+              $URL = str_replace("watch?v=","embed/",$URL);
+              ?>
+                <div class="containerVideo">
+                    <iframe width="480" height="320" src="<?php echo $URL ?>"></iframe>
+                </div>
+<?php
+            }
+        }
+    }
+}
+            ?>
 
 
     <!-- Modal Expired-->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-primary yes">Yes</button>
+                    <button class="btn btn-primary no">No</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-                <button class="btn btn-primary yes">Yes</button>
-                <button class="btn btn-primary no">No</button> 
-        </div>
-        </div>
-    </div>
-    </div>
-    <p class="padding">
-		<a href="quizApplication.php" class="btn btn-primary testbutton2">Go to Quiz</a>
-		<a href="videoProfileApp.php" class="btn btn-primary testbutton2">Movies</a>
-        <a href="resetPasswordProfile.php" class="btn btn-primary testbutton2">Change Password</a>
-		<a href="changePhoneNumberProfile.php" class="btn btn-primary testbutton2">Change PhoneNumber</a>
-		<button class="btn btn-danger testbutton2" data-toggle="modal" data-target="#modalRemoveAccount">Delete account</button>
-		<a href="logoutApp.php" class="btn btn-secondary testbutton2">Sign Out Of Your Account</a>
-	</p>
-
-	<div id="database_content"></div>
+	</div>
 </div>
-
 	<nav class="navbar-fixed-bottom">
 		<div class="footer text-center bg-dark">
 			Copyright &copy; <?php echo date("o"); ?> Designed by Łukasz Jackowski
-			</br><?php if(isset($infoDATABASE) !== '') echo $infoDATABASE; ?>
+			<?php if(isset($infoDATABASE) !== '') echo $infoDATABASE ?>
 		</div>
 	</nav>
-	
+
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="countdown.js"></script>
+    <script type="text/javascript" src="loadCategoriesToQuiz.js"></script>
+    <script type="text/javascript" src="logicQuiz.js"></script>
     <!--<script type="text/javascript"src="bootstrap-4.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.js"></script>-->  
 </body>

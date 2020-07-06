@@ -90,6 +90,7 @@ error_reporting(0);
 	?></div>
 
   <div class="pull-right">
+  <button class="btn btn-success testbutton2" data-toggle="modal" data-target="#addVideoViaURL">Add Video via URL</button>
 	<button class="btn btn-success testbutton2" data-toggle="modal" data-target="#createViewModal1">Create A Question</button>
 	<button class="btn btn-success testbutton2" data-toggle="modal" data-target="#createViewModalNewCategory">Create A Category</button>
   </div><br/><br/>
@@ -136,6 +137,34 @@ error_reporting(0);
       </div>
     </div>
   </div>
+</div>
+
+
+<!--Modal Add Video via URL -->
+<div class="modal fade" id="addVideoViaURL" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="myModalLabel">Add video via URL</h4>
+<div class="pull-left">
+	<button type="button" class="close" id="close" onclick="" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+<div class="modal-body">
+
+<div class="form-group">
+<div class="pull-left">
+<label><b>Type or past URL do movie</b></label>
+</div>
+<input type="text" id="videoUrl" name="videoUrl" placeholder="Add URL" class="form-control" />
+</div>
+</div>
+<div class="modal-footer">
+	<!-- <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>-->
+	<button type="button" class="btn btn-primary btn-next" id="" onclick="addVideoUrl()">Save</button>
+</div>
+</div>
+</div>
 </div>
 
 <!--Modal Create a new category -->
@@ -228,7 +257,7 @@ error_reporting(0);
 
 	<button type="button" class="btn btn-primary testbutton2" onclick="buttonAllDatabases()">View All Database</button>
 	<button type="button" class="btn btn-primary testbutton2" onclick="buttonViewCategory()">Categories</button>
-	<!-- <button type="button" class="btn btn-primary testbutton2" onclick="">Videos</button> -->
+	<a href="video.php" class="btn btn-primary testbutton2">Movies</a>
 	
 	<div class="form-group">
 		<button type="button" class="btn btn-danger testbutton2" id="removeBox" onclick="checkSelectedCheckBoxes()">Remove Selected</button>

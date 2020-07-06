@@ -24,7 +24,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true) {
 		}
 			unset($_POST);
 	} else {
-		echo '<div class="alert alert-danger" role="alert">There is requited this the filed to add it!</div>'; 
+		echo '<div class="alert alert-danger" role="alert">There is requite this the filed to add it!</div>'; 
 	}
 }
 ?>

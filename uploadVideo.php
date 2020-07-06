@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedIn"]) || $_SESSION["loggedIn"] !== true){
             $fileType = pathinfo($fileType,PATHINFO_EXTENSION);
     
             // Check format the file
-            if($fileType != "mp4" && $fileType != "avi" && $fileType != "mov" && $fileType != "3gp" && $fileType != "mpeg" && $fileType != "flv") {
+            if($fileType != "mp4" && $fileType != "avi" && $fileType != "mov" && $fileType != "3gp" && $fileType != "mpeg" && $fileType != "mp3") {
                 $_SESSION['ok'] = "<div class='alert alert-danger' role='alert'><b>The file ". basename( $_FILES["videoToUpload"]["name"]). " do not has supported file format. ".$fileType."</b></div>";
                 msg_logs_users($_SESSION['login'],"The file ". basename( $_FILES["videoToUpload"]["name"]). " do not has supported file format. ".$fileType);
                 header("Location: welcome.php");
