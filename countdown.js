@@ -104,6 +104,22 @@ function updateIsActive(id, active) {
 	});
 }
 
+
+function updateIsActiveVideo(id, active) {
+	
+	//active ? active=false : active=true;  
+	console.log(active);
+
+	var posting = $.post("updateIsActiveVideo.php", {
+		id: id,
+		active: active
+	});
+	
+	posting.done(function(data) {
+		$("#cl").empty().append(data);
+	});
+}
+
 function updateIsActiveCategory(id, active) {
 	
 	active ? active=false : active=true;  
@@ -176,10 +192,11 @@ function readRecords() {
 	$("#record_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	getting.done(function(data) {
-		if(document.readyState == 'complete'){ 
+		//if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#record_content").empty().append(data);
-			document.getElementById("loader").style.display = "none";};
+			document.getElementById("loader").style.display = "none";
+		//};
 	}); 
 }
 
@@ -189,10 +206,11 @@ function readUsersApp() {
 	$("#record_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	getting.done(function(data) {
-		if(document.readyState == 'complete'){ 
+		//if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#record_content").empty().append(data);
-			document.getElementById("loader").style.display = "none";};
+			document.getElementById("loader").style.display = "none";
+		//};
 	}); 
 }
 
@@ -205,11 +223,11 @@ function readDatabase(number_page) {
 	$("#database_content").text("Loading...");
 	document.getElementById("loader").style.display = "block";
 	posting.done(function(data) {
-		if(document.readyState == 'complete'){ 
+		//if(document.readyState == 'complete'){ 
 			console.log("Koniec"); 
 			$("#database_content").empty().append(data);
 			document.getElementById("loader").style.display = "none";
-		};	
+		//};	
 	}); 
 }
 
@@ -339,6 +357,43 @@ modelConfirm(function(confirm){
 	};
 });
 }
+
+
+function delVideo(id_video){
+	console.log(id_video);
+	$("#delVideoModal").modal('show');
+
+	var modelConfirm = function(callback){
+	
+		$("#modal-btn-yes").on("click", function(){
+			callback(true);
+			$("#delVideoModal").modal('hide');
+		});
+	  
+		$("#modal-btn-no").on("click", function(){
+			callback(false);
+			$("#delVideoModal").modal('hide');
+		});
+	};
+	
+	modelConfirm(function(confirm){
+		
+		if(confirm){
+			console.log(id_video);
+			
+			var posting = $.post("removeVideo.php", {
+				id: id_video
+			});	
+		
+			posting.done(function(data) {
+				$("#cl").empty().append(data);
+			});
+
+			location.reload(true);
+		};
+	});
+}
+
 
 function delCategory(id, name){
 	
@@ -533,11 +588,11 @@ function buttonViewCategory(number_page) {
 	document.getElementById("loader").style.display = "block";
 	
 	posting.done(function(data) {
-		if(document.readyState == 'complete'){
+		//if(document.readyState == 'complete'){
 			console.log("Koniec"); 
 			$("#database_content").empty().append(data);	
 			document.getElementById("loader").style.display = "none";
-		}
+		//}
 	});
 	
 /*	//$("#database_content").empty();
@@ -776,14 +831,31 @@ function saveNewCategory() {
 	var posting = $.post("addNewCategory.php", {
 		category: $("#category").val()
 	});
-		
+	$("#category").val("");
 	posting.done(function(data) {
 		//console.log(data);
 		$("#cl").empty().append(data);
 		$("#createViewModalNewCategory").modal("hide");
 		buttonViewCategory();
 	});
+
 }
+
+
+function addVideoUrl() {
+
+	var posting = $.post("addVideoURL.php", {
+		videoUrl: $("#videoUrl").val()
+	});
+	$("#videoUrl").val("");
+	posting.done(function(data) {
+		//console.log(data);
+		$("#cl").empty().append(data);
+		$("#addVideoViaURL").modal("hide");
+	});
+	
+}
+
 
 function yesDeleteAccount(email) {
 	var posting = $.post("removeUserFromApp.php", {
@@ -898,7 +970,7 @@ function changePhoneNumberProfile(email) {
 $(document).ready(function() {
 	
 	//Session time; 
-	var time = 120;
+	var time = 480;
 	var test = document.getElementById('cl');
 	var label1 = document.getElementById('label1');
 	let drawIntrernal;
@@ -906,7 +978,7 @@ $(document).ready(function() {
 	$("html").mouseup(function() {
 		//test.append(" Clicked");
 		//console.log("Time 100 and clicked.");
-		time = 120;
+		time = 480;
 		//time = 15;
 		//clearInterval(timer);
 	});

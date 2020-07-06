@@ -61,9 +61,9 @@
 		<p class="text-primary">Question;Answer_1;Answer_2;Answer_3;Answer_4;CorrectAnswer;CategoryOfQuestions;</p>
 		<p>CorrectAnswer like this: <span class="text-primary">ansa, ansb, ansc, ansd </span></p>
 		<p>Important is keep in mind to add a semicolon ; at the end each lines after CategoryOfQuestions;</p>
-		<p><b>For example: </b></br>
+		<p><b>For example: </b><br/>
 		W słynnym wzorze E=mc2 "c" oznacza;Masę jądra atomu;Stałą upływu czasu;Średnicę pola grawitacyjnego;Prędkość światła;ansd;PytanieTestowe;
-		</p></br>
+		</p><br/>
 		<p>Please remember do not add a new line after last question.</p>
 
 	</main>

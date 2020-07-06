@@ -108,6 +108,9 @@ td {
 	padding: 20px;
 }
 
+.containerVideo {
+	margin-bottom: 6px;
+}
 
 /*
 .footer {
@@ -322,6 +325,7 @@ tr,
 tbody {
     text-align: center;
 }
+
 
 .noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
